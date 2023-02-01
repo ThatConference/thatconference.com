@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+
+		<meta name="theme-color" content="#26529a" media="(prefers-color-scheme: light)" />
+		<meta name="theme-color" content="#16215A" media="(prefers-color-scheme: dark)" />
+
+		<link rel="preconnect" href="https://that.imgix.net" />
+		<link rel="canonical" href="https://www.that.us/" />
+		<link rel="shortcut icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" href="/favicon.ico" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" href="/favicon-16x16.png" sizes="16x16" />
+		<link rel="icon" href="/favicon-32x32.png" sizes="32x32" />
+		<link rel="icon" href="/favicon-96x96.png" sizes="96x96" />
+		<link rel="icon" href="/favicon-128x128.png" sizes="128x128" />
+		<link rel="icon" href="/favicon-256x256.png" sizes="256x256" />
+		<link rel="icon" href="/favicon-512x512.png" sizes="512x512" />
+		<link rel="apple-touch-icon" href="/favicon.png" />
+
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+		%sveltekit.head%
+
+		<script type="application/ld+json">
+			{
+				"@context": "http://schema.org",
+				"@type": "Organization",
+				"url": "https://that.us/",
+				"name": "THAT Logo",
+				"logo": "https://that.us/that-logo.png",
+				"sameAs": [
+					"https://thatconference.com",
+					"https://www.facebook.com/THATconference/",
+					"https://www.instagram.com/THATconference/",
+					"https://twitter.com/THATconference",
+					"https://medium.com/THAT-conference",
+					"https://www.youtube.com/THATconference/",
+					"https://www.flickr.com/photos/THATconference/",
+					"https://www.linkedin.com/company/THAT-conference",
+					"https://github.com/THATconference"
+				]
+			}
+		</script>
+
+		<!-- stripe -->
+		<script defer src="https://js.stripe.com/v3/"></script>
+	</head>
+
+	<body>
+		<div>%sveltekit.body%</div>
+
+		<script src="https://meet.jit.si/external_api.js"></script>
+		<!-- hubspot -->
+		<script
+			type="text/javascript"
+			id="hs-script-loader"
+			async
+			defer
+			src="//js.hs-scripts.com/22769624.js"></script>
+		<script
+			charset="utf-8"
+			type="text/javascript"
+			src="//js.hsforms.net/forms/embed/v2.js"></script>
+
+		<!-- Google Analytics -->
+		<script defer async src="https://www.googletagmanager.com/gtag/js?id=UA-21705613-11"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+
+			gtag('config', 'UA-21705613-11');
+		</script>
+	</body>
+</html>
