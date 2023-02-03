@@ -6,9 +6,9 @@ function configMissing(configKey) {
 }
 
 export default {
-	hostURL: env.PUBLIC_HOST_URL || 'https://that.us',
+	hostURL: env.PUBLIC_HOST_URL || 'https://thatconference.com',
 	nodeEnv: env.NODE_ENV,
-	version: '3.1.1',
+	version: '4.0.0',
 	eventId: 'YWavA70szR8rxSwrLJaL',
 	eventSlug: 'thatus/daily',
 	api: {
@@ -25,7 +25,7 @@ export default {
 export const securityConfig = () => {
 	const config = {
 		clientID: env.PUBLIC_AUTH0_CLIENT_ID || configMissing('PUBLIC_AUTH0_CLIENT_ID'),
-		baseURL: env.PUBLIC_AUTH0_BASE_URL || `https://that.us`,
+		baseURL: env.PUBLIC_AUTH0_BASE_URL || `https://thatconference.com`,
 		issuerBaseURL: `https://auth.that.tech`,
 
 		authorizationParams: {
@@ -46,9 +46,9 @@ export const securityConfig = () => {
 };
 
 export const logging = {
-	dsn: 'https://15d4b436dc0a4366a0ac388c65772926@o235190.ingest.sentry.io/5357492',
+	dsn: 'https://857800ed593d481bb0da2843516d7845@o235190.ingest.sentry.io/4504617287417856',
 	environment: env.NODE_ENV,
-	logRocket: 'c59zeb/that-prod'
+	logRocket: 'c59zeb/thatconferencecom'
 };
 
 export const debug = {
@@ -82,8 +82,8 @@ export const kalahari = {
 			url: 'https://book.passkey.com/'
 		},
 		tx: {
-			opens: '10/21/2022',
-			closes: '12/26/2022',
+			opens: '10/21/2023',
+			closes: '12/26/2023',
 			url: 'https://book.passkey.com/e/50408131'
 		}
 	},
@@ -96,9 +96,9 @@ export const kalahari = {
 		},
 		'tx/2023': {
 			bookingUrl: 'https://book.passkey.com/e/50410736',
-			start: '10/21/2022',
-			end: '12/26/2022',
-			blockCloseDate: '12/26/2022'
+			start: '10/21/2023',
+			end: '12/26/2023',
+			blockCloseDate: '12/26/2023'
 		}
 	}
 };
