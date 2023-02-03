@@ -19,7 +19,7 @@
 			description: "This is what you've missed since your last visit.",
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/releases/changelog-missed/`
+				url: `https://thatconference.com/releases/changelog-missed/`
 			}
 		})
 	}))();

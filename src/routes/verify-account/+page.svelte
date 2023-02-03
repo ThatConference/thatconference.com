@@ -12,7 +12,7 @@
 			description: 'Your account is currently unverified.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/verify-account`
+				url: `https://thatconference.com/verify-account`
 			},
 			noindex: true,
 			nofollow: true

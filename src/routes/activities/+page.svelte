@@ -39,7 +39,7 @@
 			},
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/activities`
+				url: `https://thatconference.com/activities`
 			}
 		})
 	}))();

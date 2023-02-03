@@ -21,7 +21,7 @@
 			},
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/partners/`
+				url: `https://thatconference.com/partners/`
 			}
 		})
 	}))();

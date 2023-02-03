@@ -22,7 +22,7 @@
 			},
 			openGraph: {
 				type: 'website',
-				url: 'https://that.us/events'
+				url: 'https://thatconference.com/events'
 			}
 		})
 	}))();

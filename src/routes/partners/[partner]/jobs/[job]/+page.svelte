@@ -18,7 +18,7 @@
 			description: `${partner.jobListing.description}`,
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/partners/${partner.companyName.toLowerCase()}/${job}`
+				url: `https://thatconference.com/partners/${partner.companyName.toLowerCase()}/${job}`
 			}
 		})
 	}))();
@@ -30,7 +30,7 @@
 		description: partner.jobListing.description,
 		directApply:
 			partner.jobListing.applyNowLink ||
-			`https://that.us/partners/${partner.companyName.toLowerCase()}/${job}`,
+			`https://thatconference.com/partners/${partner.companyName.toLowerCase()}/${job}`,
 
 		datePosted: partner.jobListing.datePosted || '',
 		jobLocationType: 'TELECOMMUTE',

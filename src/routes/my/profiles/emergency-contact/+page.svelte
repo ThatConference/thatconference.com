@@ -30,7 +30,7 @@
 			description: 'Create or update your emergency contact information.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/profiles/emergency-contact/`
+				url: `https://thatconference.com/my/profiles/emergency-contact/`
 			},
 			nofollow: true,
 			noindex: true

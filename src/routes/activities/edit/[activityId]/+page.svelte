@@ -27,7 +27,7 @@
 			description: 'Edit your activity.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/activities/edit`
+				url: `https://thatconference.com/activities/edit`
 			}
 		})
 	}))();

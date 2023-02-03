@@ -15,7 +15,7 @@ function icalWrapper(title) {
 			summary: activity.title,
 			description: activity.shortDescription,
 			location: 'THAT.us',
-			url: `https://that.us/activities/${activity.id}`
+			url: `https://thatconference.com/activities/${activity.id}`
 		});
 
 		return cal.toURL();

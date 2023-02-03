@@ -19,7 +19,7 @@
 			description: "You're list of favorited activities.",
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/favorites`
+				url: `https://thatconference.com/my/favorites`
 			},
 			noindex: true,
 			nofollow: true

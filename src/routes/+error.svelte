@@ -15,7 +15,7 @@
 			description: "Well THAT's No Good.",
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/`
+				url: `https://thatconference.com/`
 			},
 			noindex: true,
 			nofollow: true

@@ -31,7 +31,7 @@
 			imageUrl: cdnUrl(heroImage),
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/blog/posts/${slug}/`
+				url: `https://thatconference.com/blog/posts/${slug}/`
 			}
 		})
 	}))();
@@ -43,7 +43,7 @@
 		'@type': 'NewsArticle',
 		mainEntityOfPage: {
 			'@type': 'WebPage',
-			'@id': `https://that.us/blog/posts/${slug}/`
+			'@id': `https://thatconference.com/blog/posts/${slug}/`
 		},
 		headline: title,
 		image: [cdnUrl(heroImage)],
@@ -52,14 +52,14 @@
 		author: {
 			'@type': 'Person',
 			name: `${author.firstName} ${author.lastName}`,
-			url: `https://that.us/members/${author.slug}/`
+			url: `https://thatconference.com/members/${author.slug}/`
 		},
 		publisher: {
 			'@type': 'Organization',
 			name: 'THAT',
 			logo: {
 				'@type': 'ImageObject',
-				url: 'https://that.us/that-logo.png'
+				url: 'https://thatconference.com/that-logo.png'
 			}
 		}
 	};

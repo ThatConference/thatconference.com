@@ -10,7 +10,7 @@
 		}),
 		openGraph: {
 			type: 'website',
-			url: `https://that.us/sponsorship/prospectus/`
+			url: `https://thatconference.com/sponsorship/prospectus/`
 		},
 		noindex: true,
 		nofollow: true
