@@ -16,7 +16,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/partners/leads`
+				url: `https://thatconference.com/partners/leads`
 			},
 			noindex: true,
 			nofollow: true

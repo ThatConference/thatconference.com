@@ -38,7 +38,7 @@
 				description: `${profile.aboutUs}`,
 				openGraph: {
 					type: 'website',
-					url: `https://that.us/partners/${partner}`
+					url: `https://thatconference.com/partners/${partner}`
 				}
 			})
 		}))();

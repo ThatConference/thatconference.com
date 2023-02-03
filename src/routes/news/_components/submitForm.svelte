@@ -68,7 +68,7 @@
 								autofocus
 								name="url"
 								type="url"
-								placeholder="E.g. https://that.us/blog/article"
+								placeholder="E.g. https://thatconference.com/blog/article"
 								class="form-input mt-1 block w-full rounded-sm text-sm" />
 						</div>
 

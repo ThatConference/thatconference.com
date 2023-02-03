@@ -37,7 +37,7 @@
 			description: `${event.description} at THAT`,
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/events/${eventSlug}`
+				url: `https://thatconference.com/events/${eventSlug}`
 			}
 		})
 	}))();

@@ -20,7 +20,7 @@
 			title,
 			description: 'Create your account today and join in the conversation.',
 			openGraph: {
-				url: `https://that.us/link-tree/`
+				url: `https://thatconference.com/link-tree/`
 			}
 		})
 	}))();

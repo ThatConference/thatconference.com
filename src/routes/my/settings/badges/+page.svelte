@@ -19,7 +19,7 @@
 			description: "You've worked hard to earn some awesome merit badges.",
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/settings/badges/`
+				url: `https://thatconference.com/my/settings/badges/`
 			},
 			nofollow: true,
 			noindex: true

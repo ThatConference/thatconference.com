@@ -30,7 +30,7 @@
 			},
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/communities`
+				url: `https://thatconference.com/communities`
 			}
 		})
 	}))();

@@ -26,7 +26,7 @@
 			description: `${communityDetails.description}`,
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/communities/${communityDetails.slug}`
+				url: `https://thatconference.com/communities/${communityDetails.slug}`
 			}
 		})
 	}))();

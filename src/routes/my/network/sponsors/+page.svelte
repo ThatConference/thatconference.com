@@ -12,7 +12,7 @@
 	// 	noindex: true,
 	// 	openGraph: {
 	// 		type: 'website',
-	// 		url: `https://that.us/my/network/sponsors`
+	// 		url: `https://thatconference.com/my/network/sponsors`
 	// 	}
 	// });
 </script>

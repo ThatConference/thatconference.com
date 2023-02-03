@@ -25,7 +25,7 @@
 			description: 'Become a member and save today',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/membership/`
+				url: `https://thatconference.com/membership/`
 			}
 		})
 	}))();

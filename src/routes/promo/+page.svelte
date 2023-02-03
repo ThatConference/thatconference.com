@@ -21,7 +21,7 @@
 			description: 'Let us help.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/promo`
+				url: `https://thatconference.com/promo`
 			}
 		})
 	}))();
