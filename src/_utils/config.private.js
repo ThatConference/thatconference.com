@@ -7,7 +7,7 @@ function configMissing(configKey) {
 
 export const securityConfig = () => {
 	const config = {
-		baseURL: env.AUTH0_BASE_URL || 'https://that.us',
+		baseURL: env.AUTH0_BASE_URL || 'https://thatconference.com',
 		clientSecret: env.AUTH0_CLIENT_SECRET || configMissing('AUTH0_CLIENT_SECRET'),
 		secret: env.AUTH0_SECRET || configMissing('AUTH0_CLIENT_SECRET')
 	};
