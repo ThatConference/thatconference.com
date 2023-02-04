@@ -13,7 +13,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/transfer-a-ticket`
+				url: `https://thatconference.com/support/transfer-a-ticket`
 			}
 		})
 	}))();

@@ -8,7 +8,7 @@ function icalWrapper(title) {
 
 	function create(activity) {
 		cal.createEvent({
-			prodId: '//THAT Conference//THAT.us//EN',
+			prodId: '//THAT Conference//THATConference.com//EN',
 			uid: `that-${activity.id}`,
 			start: dayjs(activity.startTime).toDate(),
 			end: dayjs(activity.startTime).add(activity.durationInMinutes, 'minutes').toDate(),
