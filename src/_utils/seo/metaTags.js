@@ -88,10 +88,16 @@ const create = (metaData) => {
 		content: ogimages.twitter
 	});
 
-	results.push({ property: 'twitter:site', content: metaData.twitter?.site || 'https://that.us/' });
+	results.push({
+		property: 'twitter:site',
+		content: metaData.twitter?.site || 'https://thatconference.com/'
+	});
 
 	// open graph components
-	results.push({ property: 'og:url', content: metaData.openGraph?.url || 'https://that.us/' });
+	results.push({
+		property: 'og:url',
+		content: metaData.openGraph?.url || 'https://thatconference.com/'
+	});
 	results.push({ property: 'og:site_property', content: 'THAT' });
 	results.push({
 		property: 'og:type',

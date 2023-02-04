@@ -22,8 +22,8 @@ if (!dev) {
 
 	Sentry.init({
 		dsn: logging.dsn,
-		dist: 'that-us:3.1.1',
-		release: 'that-us:3.1.1',
+		dist: 'thatconference-com:4.0.0',
+		release: 'thatconference-com:4.0.0',
 		environment: logging.environment,
 		debug: false,
 		attachStacktrace: true,
