@@ -24,7 +24,7 @@
 		},
 		{
 			q: 'Can I cancel my annual membership?',
-			a: 'Yes, but we will miss you. You can cancel your annual membership at any time by heading to  https://that.us/my/settings/order-history. After cancelling your membership, you will still have access to THAT.us until the last day of your billing cycle. You will not receive a pro-rated refund for the remainder of your billing cycle.'
+			a: 'Yes, but we will miss you. You can cancel your annual membership at any time by heading to  https://thatconference.com/my/settings/order-history. After cancelling your membership, you will still have access to THAT.us until the last day of your billing cycle. You will not receive a pro-rated refund for the remainder of your billing cycle.'
 		},
 		{
 			q: "I'm interested in becoming a sponsor.",

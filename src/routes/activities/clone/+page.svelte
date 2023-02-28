@@ -39,7 +39,7 @@
 			description: 'Clone an existing Activity.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/activities/clone/`
+				url: `https://thatconference.com/activities/clone/`
 			}
 		})
 	}))();

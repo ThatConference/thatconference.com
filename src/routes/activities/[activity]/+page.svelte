@@ -17,7 +17,7 @@
 			imageId,
 			description: `${activity.shortDescription}`,
 			openGraph: {
-				url: `https://that.us/activities/${activity.id}`
+				url: `https://thatconference.com/activities/${activity.id}`
 			}
 		})
 	}))();

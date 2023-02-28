@@ -21,7 +21,7 @@
 			description: 'View your membership settings.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/settings/membership/`
+				url: `https://thatconference.com/my/settings/membership/`
 			},
 			nofollow: true,
 			noindex: true

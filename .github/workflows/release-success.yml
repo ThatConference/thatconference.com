@@ -11,10 +11,10 @@ jobs:
     steps:
       - name: Ping Google
         run: |
-          curl https://www.google.com/ping?sitemap=https://that.us/sitemap.xml
+          curl https://www.google.com/ping?sitemap=https://thatconference.com/sitemap.xml
       - name: Ping Bing
         run: |
-          curl https://www.bing.com/ping?sitemap=https://that.us/sitemap.xml
+          curl https://www.bing.com/ping?sitemap=https://thatconference.com/sitemap.xml
       - name: Purge CloudFlare
         run: |
           curl -X POST "https://api.cloudflare.com/client/v4/zones/${{ secrets.CLOUDFLARE_THATUS_ID }}/purge_cache" -H "Authorization: Bearer ${{ secrets.CLOUDFLARE_PURGE_TOKEN }}" -H "Content-Type:application/json" --data '{"purge_everything":true}'

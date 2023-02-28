@@ -22,8 +22,8 @@ if (!dev) {
 
 	Sentry.init({
 		dsn: logging.dsn,
-		dist: 'that-us:3.1.1',
-		release: 'that-us:3.1.1',
+		//dist: 'thatconference-com:4.0.7',
+		release: '4.0.8', // This needs to match the source map version.
 		environment: logging.environment,
 		debug: false,
 		attachStacktrace: true,

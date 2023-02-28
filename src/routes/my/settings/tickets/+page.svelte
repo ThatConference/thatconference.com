@@ -17,7 +17,7 @@
 			description: 'View your event tickets.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/settings/tickets/`
+				url: `https://thatconference.com/my/settings/tickets/`
 			},
 			nofollow: true,
 			noindex: true

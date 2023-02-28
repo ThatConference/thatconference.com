@@ -15,7 +15,7 @@
 			description: 'That Conference Speakers and Schedule',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/events/${event.slug}/schedule`
+				url: `https://thatconference.com/events/${event.slug}/schedule`
 			}
 		})
 	}))();

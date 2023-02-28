@@ -5,7 +5,7 @@
 
 	let location =
 		event.venues[0].city.toLowerCase() === `internet`
-			? 'Virtual, https://that.us'
+			? 'Virtual, https://thatconference.com'
 			: `${event.venues[0].city}, ${event.venues[0].state}`;
 
 	function getDisplayName(key) {

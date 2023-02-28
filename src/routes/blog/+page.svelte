@@ -20,7 +20,7 @@
 			},
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/blog/}`
+				url: `https://thatconference.com/blog/}`
 			}
 		})
 	}))();

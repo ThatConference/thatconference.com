@@ -32,7 +32,7 @@
 			description: "You've worked hard to earn some awesome merit badges.",
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/settings/order-history/`
+				url: `https://thatconference.com/my/settings/order-history/`
 			},
 			nofollow: true,
 			noindex: true

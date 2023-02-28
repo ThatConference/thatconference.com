@@ -1,5 +1,5 @@
 let name = 'THAT Blog';
-let website = 'https://that.us/blog';
+let website = 'https://thatconference.com/blog';
 
 const xml = (
 	posts

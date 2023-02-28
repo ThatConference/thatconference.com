@@ -30,7 +30,7 @@
 			title,
 			description: '',
 			openGraph: {
-				url: `https://that.us/news/submit/`
+				url: `https://thatconference.com/news/submit/`
 			}
 		})
 	}))();

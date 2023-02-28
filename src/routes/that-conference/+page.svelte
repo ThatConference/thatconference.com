@@ -15,7 +15,7 @@
 			description: 'Join us at THAT Conference Wisconsin or THAT Conference Texas or BOTH!',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/that-conference/`
+				url: `https://thatconference.com/that-conference/`
 			}
 		})
 	}))();

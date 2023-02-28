@@ -11,7 +11,7 @@
 			description: 'Claim your ticket.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/orders/claim`
+				url: `https://thatconference.com/orders/claim`
 			},
 			noindex: true,
 			nofollow: true

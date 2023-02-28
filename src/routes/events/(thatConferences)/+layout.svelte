@@ -37,7 +37,7 @@
 		organizer: {
 			'@type': 'Organization',
 			name: 'THAT Conference',
-			url: 'https://that.us'
+			url: 'thatconference.com'
 		}
 	};
 </script>

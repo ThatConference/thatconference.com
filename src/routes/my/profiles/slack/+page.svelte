@@ -18,7 +18,7 @@
 			description: 'Joing THAT Slack.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/profiles/slack/`
+				url: `https://thatconference.com/my/profiles/slack/`
 			},
 			nofollow: true,
 			noindex: true

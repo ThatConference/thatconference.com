@@ -12,7 +12,7 @@
 			description: 'Your payment was successfully received.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/orders/success/`
+				url: `https://thatconference.com/orders/success/`
 			},
 			noindex: true,
 			nofollow: true
