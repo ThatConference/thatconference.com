@@ -1,5 +1,3 @@
-export let data;
-
 import '../app.css';
 
 import 'lazysizes';
@@ -13,9 +11,9 @@ import LogRocket from 'logrocket';
 
 import { debug, logging } from '$utils/config.public';
 import coreQueryApi from '$dataSources/api.that.tech/core/queries';
+import { version } from '$app/environment';
 
 const correlationId = uuidv4();
-
 if (!dev) {
 	LogRocket.init(logging.logRocket);
 	LogRocket.info('correlationId', correlationId);
@@ -23,7 +21,7 @@ if (!dev) {
 	Sentry.init({
 		dsn: logging.dsn,
 		//dist: 'thatconference-com:4.0.7',
-		release: '4.0.8', // This needs to match the source map version.
+		release: version ?? 'not-set', // This needs to match the source map version.
 		environment: logging.environment,
 		debug: false,
 		attachStacktrace: true,

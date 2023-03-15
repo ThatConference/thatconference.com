@@ -68,11 +68,11 @@ function init(fetch) {
 
 	function secureQuery({ query, variables = {} }) {
 		const dynamicEndpoint = `${config.hostURL}/api/auth/proxy/`;
-
+		console.log('🚀 we are here');
 		if (browser) {
 			loading.set(true);
 		}
-
+		console.log('🚀 we are here 2');
 		return _fetch(dynamicEndpoint, {
 			method: 'POST',
 			headers: {
@@ -90,6 +90,7 @@ function init(fetch) {
 			.then(json)
 			.then((r) => {
 				if (browser) loading.set(false);
+				console.log('🚀 we are here 3', r);
 				return r;
 			})
 			.catch((error) => {

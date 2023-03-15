@@ -12,7 +12,7 @@ const dev = process.env.NODE_ENV === 'development' ? true : false;
 const config = {
 	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	kit: {
-		trailingSlash: 'always',
+		//trailingSlash: 'always',
 		serviceWorker: {
 			register: false
 		},
@@ -25,6 +25,9 @@ const config = {
 			$stores: resolve('./src/_stores'),
 			$machines: resolve('./src/_machines'),
 			$blog: resolve('./src/_blog')
+		},
+		version: {
+			name: process.env?.npm_package_version || '0.0.0'
 		}
 	},
 	preprocess: !dev
