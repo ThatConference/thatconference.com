@@ -27,23 +27,24 @@ export async function POST({ request }) {
 			},
 			body: JSON.stringify(body)
 		})
-			.then((r) => r.json())
+			.then((r) => {
+				console.log('🧨 stream back', r);
+				return r.json();
+			})
 			.catch((err) => {
 				console.error('PROXY POST ERROR', err);
 
 				Sentry.setContext('query', body);
-				Sentry.captureException(new Error(error));
+				Sentry.captureException(new Error(err));
 
 				throw error(500, err);
 			});
 
 		return json(results);
 	} catch (err) {
-		console.log('AUTH0 EXCEPTION err', err);
 		console.error('AUTH0 EXCEPTION', err?.message);
-		// console.error('AUTH0 EXCEPTION-REQ', request);
 
-		Sentry.setContext('AUTH0 GetAccessToken Exception', body);
+		Sentry.setContext('AUTH0 GetAccessToken Exception body', body);
 		Sentry.setContext('AUTH0 Exception-HEADERS', request?.headersList);
 		Sentry.setContext('whole r', { r: request });
 		//Sentry.captureMessage(err.message);
