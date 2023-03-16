@@ -27,8 +27,8 @@ export async function POST({ request }) {
 			},
 			body: JSON.stringify(body)
 		})
-			.then((r) => {
-				console.log('🧨 stream back', JSON.stringify(r.body));
+			.then(async (r) => {
+				if (!r.ok) console.log('🧨 response text body', await r.text());
 				return r.json();
 			})
 			.catch((err) => {
