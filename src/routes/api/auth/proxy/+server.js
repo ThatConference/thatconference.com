@@ -16,6 +16,7 @@ export async function POST({ request }) {
 		if (!accessToken) {
 			throw error(401, 'Unauthorized Access');
 		}
+		console.log('🧨 proxy, have accessToken');
 
 		const results = await fetch(config.api.direct, {
 			method: 'POST',
@@ -41,7 +42,8 @@ export async function POST({ request }) {
 		console.error('AUTH0 EXCEPTION-REQ', request);
 
 		Sentry.setContext('AUTH0 GetAccessToken Exception', body);
-		Sentry.setContext('AUTH0 Exception-HEADERS', request?.headers);
+		Sentry.setContext('AUTH0 Exception-HEADERS', request?.headersList);
+		Sentry.setContext('whole r', request);
 		Sentry.captureMessage(message ?? new Error('Auth0 Exception getting token'));
 
 		return json({});
