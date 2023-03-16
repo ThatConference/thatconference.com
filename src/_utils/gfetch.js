@@ -68,11 +68,9 @@ function init(fetch) {
 
 	function secureQuery({ query, variables = {} }) {
 		const dynamicEndpoint = `${config.hostURL}/api/auth/proxy/`;
-
 		if (browser) {
 			loading.set(true);
 		}
-
 		return _fetch(dynamicEndpoint, {
 			method: 'POST',
 			headers: {
