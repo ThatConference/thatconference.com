@@ -38,9 +38,9 @@ export async function POST({ request }) {
 
 		return json(results);
 	} catch (err) {
+		console.log('AUTH0 EXCEPTION err', err);
 		console.error('AUTH0 EXCEPTION', err?.message);
-		console.error('AUTH0 EXCEPTION err', err);
-		console.error('AUTH0 EXCEPTION-REQ', request);
+		// console.error('AUTH0 EXCEPTION-REQ', request);
 
 		Sentry.setContext('AUTH0 GetAccessToken Exception', body);
 		Sentry.setContext('AUTH0 Exception-HEADERS', request?.headersList);
