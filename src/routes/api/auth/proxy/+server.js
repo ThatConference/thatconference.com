@@ -37,14 +37,16 @@ export async function POST({ request }) {
 			});
 
 		return json(results);
-	} catch ({ message }) {
-		console.error('AUTH0 EXCEPTION', message);
+	} catch (err) {
+		console.error('AUTH0 EXCEPTION', err?.message);
+		console.error('AUTH0 EXCEPTION err', err);
 		console.error('AUTH0 EXCEPTION-REQ', request);
 
 		Sentry.setContext('AUTH0 GetAccessToken Exception', body);
 		Sentry.setContext('AUTH0 Exception-HEADERS', request?.headersList);
-		Sentry.setContext('whole r', request);
-		Sentry.captureMessage(message ?? new Error('Auth0 Exception getting token'));
+		Sentry.setContext('whole r', { r: request });
+		//Sentry.captureMessage(err.message);
+		Sentry.captureException(err);
 
 		return json({});
 	}
