@@ -7,9 +7,7 @@ import * as Sentry from '@sentry/svelte';
 export const trailingSlash = 'always';
 
 export async function POST({ request }) {
-	console.log('🧨 proxy post call');
 	const body = await request.json();
-	console.log('🧨 proxy, body sending along', body);
 
 	try {
 		const { accessToken } = await auth0.getAccessToken(request);
@@ -17,7 +15,6 @@ export async function POST({ request }) {
 		if (!accessToken) {
 			throw error(401, 'Unauthorized Access');
 		}
-		console.log('🧨 proxy, have accessToken', accessToken);
 
 		const results = await fetch(config.api.direct, {
 			method: 'POST',
@@ -28,7 +25,10 @@ export async function POST({ request }) {
 			body: JSON.stringify(body)
 		})
 			.then(async (r) => {
-				if (!r.ok) console.log('🧨 response text body', await r.text());
+				if (!r.ok) {
+					console.error('🧨 proxy request non 200 result', r.status, r.statusText);
+					Sentry.setContext('proxy status', { status: r.status, statusText: r.statusText });
+				}
 				return r.json();
 			})
 			.catch((err) => {
@@ -41,14 +41,11 @@ export async function POST({ request }) {
 			});
 
 		return json(results);
-	} catch (err) {
-		console.error('AUTH0 EXCEPTION', err?.message);
+	} catch ({ message }) {
+		console.error('AUTH0 EXCEPTION', message);
 
-		Sentry.setContext('AUTH0 GetAccessToken Exception body', body);
-		Sentry.setContext('AUTH0 Exception-HEADERS', request?.headersList);
-		Sentry.setContext('whole r', { r: request });
-		//Sentry.captureMessage(err.message);
-		Sentry.captureException(err);
+		Sentry.setContext('AUTH0 GetAccessToken body', { body });
+		Sentry.captureMessage(message);
 
 		return json({});
 	}
