@@ -1,11 +1,11 @@
 {
 	"name": "thatconference.com",
-	"version": "4.0.11",
+	"version": "4.0.12",
 	"description": "THATConference.com website",
 	"main": "index.js",
 	"type": "module",
 	"engines": {
-		"node": "16.x"
+		"node": ">=18 <19"
 	},
 	"repository": {
 		"type": "git",
