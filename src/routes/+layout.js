@@ -25,7 +25,8 @@ if (!dev) {
 		environment: logging.environment,
 		debug: false,
 		attachStacktrace: true,
-		integrations: [new BrowserTracing()]
+		integrations: [new BrowserTracing()],
+		normalizeDepth: 6
 	});
 
 	LogRocket.getSessionURL((sessionURL) => {
