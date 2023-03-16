@@ -11,10 +11,9 @@ export function initAuth0(config) {
 
 	return {
 		getSession: getSession,
-		getAccessToken: auth0WrapperJson((req, res, auth0FnOptions) => {
-			console.log('⚡ getAccessToken', req, '=>', auth0FnOptions);
-			return auth0.getAccessToken(req, res, auth0FnOptions);
-		}),
+		getAccessToken: auth0WrapperJson((req, res, auth0FnOptions) =>
+			auth0.getAccessToken(req, res, auth0FnOptions)
+		),
 
 		handleLogin: auth0Wrapper((req, res, auth0FnOptions) =>
 			auth0.handleLogin(req, res, auth0FnOptions)

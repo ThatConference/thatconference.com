@@ -9,6 +9,7 @@ export const trailingSlash = 'always';
 export async function POST({ request }) {
 	console.log('🧨 proxy post call');
 	const body = await request.json();
+	console.log('🧨 proxy, body sending along', body);
 
 	try {
 		const { accessToken } = await auth0.getAccessToken(request);
@@ -16,7 +17,7 @@ export async function POST({ request }) {
 		if (!accessToken) {
 			throw error(401, 'Unauthorized Access');
 		}
-		console.log('🧨 proxy, have accessToken');
+		console.log('🧨 proxy, have accessToken', accessToken);
 
 		const results = await fetch(config.api.direct, {
 			method: 'POST',
