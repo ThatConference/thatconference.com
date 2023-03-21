@@ -20,7 +20,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/support/travel/wi/`
+				url: `https://that.us/support/travel/wi/`
 			}
 		})
 	}))();
@@ -32,6 +32,7 @@
 	const close = closeTime.format('dddd, MMMM D, YYYY');
 
 	const isRoomBlockOpen = dayjs().isBetween(openTime.subtract(1, 'day'), closeTime.add(1, 'day'));
+	const isNotOpenYet = dayjs().isBefore(openTime);
 </script>
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
@@ -80,13 +81,13 @@
 						<h3>Room Types</h3>
 						<div class="flex space-x-4">
 							<div class="prose-md prose w-full rounded-md border bg-white p-4 shadow-md">
-								<h4>Double Queen Sofa</h4>
-								<p class="text-center">$200 + tax and fees</p>
+								<h4>Run of House</h4>
+								<p class="text-center">$249 + tax and fees</p>
 							</div>
 
 							<div class="prose-md prose w-full rounded-md border bg-white p-4 shadow-md ">
-								<h4>2 Bedroom Suite</h4>
-								<p class="text-center">$324 + tax and fees</p>
+								<h4>2 Bedroom, 2 Bath Patio</h4>
+								<p class="text-center">$369 + tax and fees</p>
 							</div>
 						</div>
 
@@ -102,8 +103,17 @@
 
 						<h3>Booking Your Reservation</h3>
 						<p>A dedicated website is now available for you to book your hotel room online.</p>
+						<p>
+							Please note that in addition to our negotiated room rates, all Kalahari available
+							rooms will show as an option to reserve.
+						</p>
 
-						{#if !isRoomBlockOpen}
+						{#if !isRoomBlockOpen && isNotOpenYet}
+							<p class="text-red-500">
+								Our discount block has not opened yet. Please come back on <span
+									class="font-semibold text-red-500">{open}</span>
+							</p>
+						{:else}
 							<p class="text-red-500">
 								Please note that our block discounts have ended, but you can still book your stay at
 								the Kalahari.
@@ -117,7 +127,7 @@
 				</div>
 			</div>
 
-			<div class="rounded-md bg-gray-100 px-12 shadow-md">
+			<div class="rounded-md bg-gray-100 px-12 shadow-md" hidden>
 				<div class="prose-md prose text-gray-500">
 					<div class="flex flex-col pb-12">
 						<h2>Staybridge Suites</h2>
@@ -158,7 +168,7 @@
 					<div class="prose-md prose mb-10 text-gray-500">
 						<h2>THAT Campsite</h2>
 
-						<p>The Kalahari Resort and Convention Center can be located at:</p>
+						<p>The Kalahari Resort and Convention Center is located at:</p>
 
 						<blockquote>
 							Kalahari Resorts and Convention Center<br />

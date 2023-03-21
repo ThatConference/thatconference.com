@@ -77,28 +77,28 @@ export const events = {
 export const kalahari = {
 	passkey: {
 		wi: {
-			opens: '04/11/2023',
-			closes: '06/22/2023',
-			url: 'https://book.passkey.com/'
+			opens: '03/27/2023',
+			closes: '06/21/2023',
+			url: 'https://book.passkey.com/e/50528959'
 		},
 		tx: {
-			opens: '10/21/2023',
-			closes: '12/26/2023',
-			url: 'https://book.passkey.com/e/50408131'
+			opens: '10/21/2022',
+			closes: '12/26/2022',
+			url: 'https://book.passkey.com/e/'
 		}
 	},
 	speakerPasskey: {
 		'wi/2023': {
-			bookingUrl: 'https://book.passkey.com/',
-			start: '04/11/2023',
-			end: '06/22/2023',
-			blockCloseDate: '06/22/2023'
+			bookingUrl: 'https://book.passkey.com/e/50528993',
+			start: '03/27/2023',
+			end: '06/21/2023',
+			blockCloseDate: '06/21/2023'
 		},
 		'tx/2023': {
-			bookingUrl: 'https://book.passkey.com/e/50410736',
-			start: '10/21/2023',
-			end: '12/26/2023',
-			blockCloseDate: '12/26/2023'
+			bookingUrl: 'https://book.passkey.com/e/',
+			start: '10/21/2022',
+			end: '12/26/2022',
+			blockCloseDate: '12/26/2022'
 		}
 	}
 };
