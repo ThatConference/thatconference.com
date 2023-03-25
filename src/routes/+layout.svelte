@@ -1,6 +1,7 @@
 <script>
 	export let data;
-	import { onMount, setContext } from 'svelte';
+	import { setContext } from 'svelte';
+
 	import { navigating, page } from '$app/stores';
 	import { browser, dev } from '$app/environment';
 	import lodash from 'lodash';
@@ -8,12 +9,9 @@
 	import LogRocket from 'logrocket';
 
 	import loading from '$stores/loading';
-	import { showReleaseNotes } from '$stores/siteVersion';
-	import { messages } from '$stores/notificationCenter';
 
 	import cart from '$utils/cart';
 	import claimTicket from '$utils/claimTicket';
-
 	import Preloading from '$components/preloading.svelte';
 
 	// setup the context on the cart for later usage
@@ -32,18 +30,6 @@
 				_hsq.push(['setPath', to.url.pathname]);
 				_hsq.push(['trackPageView']);
 			}
-		}
-	});
-
-	onMount(() => {
-		if ($showReleaseNotes) {
-			messages.update((m) => [
-				...m,
-				{
-					message: '🙌 We shipped again! 🎉 Check out newest features on THAT.us!!!',
-					url: '/releases/changelog-missed'
-				}
-			]);
 		}
 	});
 

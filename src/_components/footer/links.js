@@ -8,8 +8,8 @@ export const thatLinks = [
 		href: '/events/'
 	},
 	{
-		text: 'Activities',
-		href: '/activities/'
+		text: 'Sessions',
+		href: '/sessions/'
 	},
 	{
 		text: 'Members',

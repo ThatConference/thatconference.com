@@ -1,12 +1,6 @@
 <script>
 	import { fade } from 'svelte/transition';
-	import Icon from 'svelte-awesome';
-	import { plus } from '$components/svelte-awesome-icons';
 
-	import { Activity } from '$elements/svgs';
-	import { hasNotifications } from '$stores/notificationCenter';
-
-	import ActivitySlideOver from '../../activityCenter/ActivitySlideOver.svelte';
 	import DesktopLink from './_DesktopLink.svelte';
 	import UserProfile from '../UserProfile.svelte';
 	import { clickOutside } from '$elements/actions';
@@ -14,12 +8,12 @@
 	import Cart from '../Cart.svelte';
 	import ClaimCart from '../ClaimCart.svelte';
 
-	let activityVisible;
+	// let activityVisible;
 	let helpVisible;
 
-	function handleCloseActivityCenter() {
-		activityVisible = !activityVisible;
-	}
+	// function handleCloseActivityCenter() {
+	// 	activityVisible = !activityVisible;
+	// }
 </script>
 
 <div class="relative flex items-center">
@@ -42,11 +36,11 @@
 
 			<a
 				data-sveltekit-prefetch
-				href="/activities/"
+				href="/sessions/"
 				class="ml-1 rounded-md px-3 py-2 text-sm font-medium text-gray-300
           hover:bg-that-blue hover:text-white focus:bg-that-blue
           focus:text-white focus:outline-none">
-				<DesktopLink>Activities</DesktopLink>
+				<DesktopLink>Sessions</DesktopLink>
 			</a>
 
 			<a
@@ -137,40 +131,11 @@
 
 <div class="hidden lg:block">
 	<div class="ml-4 flex items-center justify-center md:ml-6">
-		{#if $hasNotifications}
-			<button
-				type="button"
-				class="h-10 w-10 max-w-xs rounded-full text-white duration-150 ease-in-out hover:bg-thatBlue-500"
-				class:shadow-solid={activityVisible}
-				class:bg-thatBlue-500={activityVisible}
-				aria-label="Notifications"
-				on:click|preventDefault={() => (activityVisible = !activityVisible)}>
-				<div
-					class="flex transform justify-center transition duration-500 ease-in-out hover:scale-105">
-					<Activity />
-				</div>
-			</button>
-
-			{#if activityVisible}
-				<ActivitySlideOver
-					on:click={handleCloseActivityCenter}
-					on:clicked-outside={handleCloseActivityCenter} />
-			{/if}
-		{/if}
-
 		<div class="text-white">
 			<ClaimCart />
 		</div>
 		<div class="text-white">
 			<Cart />
-		</div>
-
-		<div class="flex items-center justify-center">
-			<div class="ml-4 rounded-full p-1 text-white hover:bg-thatBlue-500">
-				<a href="/activities/create/">
-					<Icon data={plus} class="h-8 w-8" />
-				</a>
-			</div>
 		</div>
 
 		<div class="ml-4 rounded-full text-white hover:bg-thatBlue-500">

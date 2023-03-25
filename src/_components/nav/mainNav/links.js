@@ -8,21 +8,10 @@ export default [
 		href: '/activities/',
 		first: true
 	},
-	{
-		text: 'Members',
-		href: '/members/'
-	},
-	{
-		text: 'Communities',
-		href: '/communities/'
-	},
+
 	{
 		text: 'Sponsors',
 		href: '/partners/'
-	},
-	{
-		text: 'Blog',
-		href: '/blog/'
 	},
 	{
 		text: 'Help',

@@ -1,0 +1,47 @@
+<script>
+	export let data;
+
+	import seoMetaTags from '$utils/seo/metaTags';
+	import Seo from '$components/Seo.svelte';
+	import PartnerCard from '$components/partners/PartnerCard.svelte';
+
+	import Hero from './_components/_PartnersHero.svelte';
+
+	let { partners } = data;
+	const metaTags = ((title = `Visit these sponosors who've made THAT Conference possible.`) => ({
+		title,
+		tags: seoMetaTags({
+			title,
+			description: 'Thank you to those who support our great community every day.',
+			ogImages: {
+				twitter: 'sponsors-Twitter.jpg',
+				facebook: 'sponsors-Facebook.jpg',
+				linkedIn: 'sponsors-LinkedIn.jpg'
+			},
+			openGraph: {
+				type: 'website',
+				url: `https://thatconference.com/sponsors/`
+			}
+		})
+	}))();
+</script>
+
+<Seo title={metaTags.title} tags={metaTags.tags} />
+
+<div class="relative">
+	<div class="mx-auto mt-12 max-w-screen-xl px-4 sm:px-6">
+		<Hero />
+		<div class="mt-12 py-12">
+			<ul class="grid grid-cols-1 gap-6 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+				{#each partners as p, i (p.id)}
+					<li
+						class="col-span-1 flex transform flex-col rounded-lg bg-white text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-that-offWhite">
+						<a href={`/sponsors/${p.slug}`}>
+							<PartnerCard {...p} />
+						</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
+	</div>
+</div>

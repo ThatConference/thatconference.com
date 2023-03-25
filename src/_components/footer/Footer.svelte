@@ -141,8 +141,7 @@
 		<div>
 			<div class="mt-12 border-t border-gray-200 pt-8">
 				<p class="text-base text-gray-400 xl:text-center">
-					&copy; {dayjs().format('YYYY')} THAT&reg; All rights reserved.<br />
-					<em>v{version}</em>
+					&copy; {dayjs().format('YYYY')} THAT&reg; All rights reserved. <em>v{version}</em>
 				</p>
 			</div>
 		</div>

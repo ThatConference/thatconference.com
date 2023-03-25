@@ -6,7 +6,7 @@
 		<header>
 			<h1
 				class="text-center  text-2xl font-extrabold uppercase text-white antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
-				In-Person THAT Conferences
+				Upcoming THAT Conferences
 			</h1>
 		</header>
 	</div>

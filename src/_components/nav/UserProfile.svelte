@@ -35,7 +35,8 @@
 					<Icon data={userIcon} class="h-8 w-8 rounded-full" />
 				{/if}
 			{:else}
-				<div class="transform transition duration-500 ease-in-out hover:scale-110">
+				<div
+					class="transform text-thatOrange-500  transition duration-500 ease-in-out hover:scale-110">
 					<Icon data={userIcon} class="h-8 w-8 rounded-full" />
 				</div>
 			{/if}
@@ -84,13 +85,6 @@
 							</a>
 
 							<a
-								href="/my/settings/badges/"
-								on:click={() => (visible = false)}
-								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-								My Settings
-							</a>
-
-							<a
 								data-sveltekit-prefetch
 								href="/my/network/"
 								on:click={() => (visible = false)}
@@ -110,6 +104,13 @@
 								href="/my/submissions/"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								My Submissions
+							</a>
+
+							<a
+								href="/my/settings/badges/"
+								on:click={() => (visible = false)}
+								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+								Orders and Tickets
 							</a>
 
 							<a

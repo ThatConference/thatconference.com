@@ -25,7 +25,7 @@
 				<p class="text-xl leading-7 text-gray-300">
 					Do you have a ticket?
 					<span class="pl:2 text-that-orange hover:text-thatOrange-500">
-						<a href={`/activities/${event.slug}`}>View the full schedule.</a>
+						<a href={`/sessions/${event.slug}`}>View the full schedule.</a>
 					</span>
 				</p>
 			</div>

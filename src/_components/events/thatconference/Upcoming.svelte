@@ -27,23 +27,6 @@
 	</div>
 </div>
 
-<!--
-	isCallForOnSpeakersOpen: false
-	isCallForSpeakersOpen: false
-
-	show button
-	ticketsOnSaleFrom: "2022-01-01T06:00:17.238Z"
-	ticketsOnSaleUntil: "2022-05-26T22:00:54.718Z"
-
-	button... 
-	callForOnSpeakersOpenDate: "2021-11-01T05:00:38.229Z"
-	callForOnSpeakersCloseDate: "2022-01-01T05:59:26.205Z"
-
-	button ...
-	callForSpeakersOpenDate: "2021-07-28T17:00:13.647Z"
-	callForSpeakersCloseDate: "2021-11-01T04:59:31.504Z"
-
--->
 <style>
 	.backgroundImage {
 		background-image: linear-gradient(rgba(31, 42, 99, 0.8), rgba(31, 42, 99, 0.8)),

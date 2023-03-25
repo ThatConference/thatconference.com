@@ -119,7 +119,7 @@
 	let hasExpired = true;
 
 	onMount(async () => {
-		window.history.replaceState({}, null, `/activities/${id}`);
+		window.history.replaceState({}, null, `/sessions/${id}`);
 
 		let endTime = (durationInMinutes ? durationInMinutes : 60) + 10;
 
@@ -281,7 +281,7 @@
 					{#if canEdit()}
 						<div class="mx-2 mt-2 rounded-md shadow-sm">
 							<a
-								href={`/activities/edit/${id}`}
+								href={`/sessions/edit/${id}`}
 								class="inline-flex justify-center rounded-md border-2 border-thatBlue-500
                   bg-white py-2 px-4 text-sm font-medium
                   leading-5 text-thatBlue-500 transition
@@ -359,7 +359,7 @@
 				class="sm:spaace-y-0 flex flex-col items-center justify-center space-x-0 space-y-4 py-4 sm:flex-row sm:justify-start sm:space-x-8">
 				{#if !isDailyActivity}
 					<div class="h-24 w-24">
-						<a href={`/events/${event.slug}`} class="h-full w-full">
+						<a href={`/${event.slug}`} class="h-full w-full">
 							<img class="lazyload" src={event.logo} alt="Event Logo" />
 						</a>
 					</div>

@@ -1,7 +1,5 @@
 <script>
 	import { getContext } from 'svelte';
-	import Icon from 'svelte-awesome';
-	import { plus } from '$components/svelte-awesome-icons';
 
 	import CartWarning from '../Cart.svelte';
 	import ClaimCartWarning from '../ClaimCart.svelte';
@@ -41,14 +39,6 @@
 
 		<div>
 			<CartWarning />
-		</div>
-
-		<div class="flex items-center justify-center">
-			<div class="ml-4 rounded-full p-1  hover:bg-thatBlue-500  hover:text-white focus:text-white">
-				<a href="/activities/create/">
-					<Icon data={plus} class="h-8 w-8" />
-				</a>
-			</div>
 		</div>
 
 		<div

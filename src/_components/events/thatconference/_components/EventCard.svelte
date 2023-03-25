@@ -37,7 +37,7 @@
 						<div class="pt-2 text-base font-bold leading-6 sm:text-lg sm:leading-7">
 							{#if dayjs().isSameOrAfter(dayjs(event.ticketsOnSaleFrom))}
 								<p class="font-extrabold text-that-red">
-									<a href={`/events/${event.slug}/tickets`} class="hover:text-thatBlue-500">
+									<a href={`/${event.slug}/tickets`} class="hover:text-thatBlue-500">
 										Tickets on sale now!
 									</a>
 								</p>
@@ -47,7 +47,7 @@
 								</p>
 							{/if}
 							<p>
-								<a href={`/events/${event.slug}/schedule`} class="hover:text-thatBlue-500">
+								<a href={`/${event.slug}/schedule`} class="hover:text-thatBlue-500">
 									See the full schedule &rarr;
 								</a>
 							</p>
@@ -55,7 +55,7 @@
 					</div>
 
 					<div class="flex flex-col justify-center pt-12">
-						<ActionLink href={`/events/${event.slug}`}>Conference Details and Tickets</ActionLink>
+						<ActionLink href={`/${event.slug}`}>Conference Details and Tickets</ActionLink>
 					</div>
 				</div>
 			</div>

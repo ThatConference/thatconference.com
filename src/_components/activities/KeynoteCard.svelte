@@ -16,7 +16,7 @@
 </script>
 
 <div>
-	<a href={`/activities/${id}`}>
+	<a href={`/sessions/${id}`}>
 		<div class="rounded bg-thatBlue-800">
 			<div class="relative z-10 rounded-lg shadow-xl">
 				<div class="absolute inset-x-0 top-0 translate-y-px transform">

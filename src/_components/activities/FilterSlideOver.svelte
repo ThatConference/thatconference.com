@@ -54,7 +54,7 @@
 										<Icon data={externalLink} class="h-4 w-4" />
 									</div>
 									<div>
-										<StandardLink href={`/activities/${event.slug}`}>{event.name}</StandardLink>
+										<StandardLink href={`/sessions/${event.slug}`}>{event.name}</StandardLink>
 									</div>
 								</div>
 							</li>

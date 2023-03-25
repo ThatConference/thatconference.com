@@ -5,7 +5,6 @@
 	import MobileUsersProfile from '../MobileUsersProfile.svelte';
 	import ClaimCart from '../ClaimCart.svelte';
 	import Cart from '../Cart.svelte';
-	import AddActivity from '../AddActivity.svelte';
 	import links from './links';
 </script>
 
@@ -23,7 +22,6 @@
 <div class="flex justify-center space-x-4 py-4">
 	<ClaimCart />
 	<Cart />
-	<AddActivity />
 </div>
 
 <div class="my-4 flex flex-col space-y-5 px-4 sm:my-4 sm:px-6">
