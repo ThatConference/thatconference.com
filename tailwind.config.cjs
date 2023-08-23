@@ -1,7 +1,11 @@
 /* eslint-disable global-require */
 module.exports = {
-	content: ['./src/**/*.{html,js,svelte,ts,md}'],
+	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
+		fontFamily: {
+			og: ['Roboto']
+		},
+
 		extend: {
 			colors: {
 				'that-offWhite': '#F7F7F7',
