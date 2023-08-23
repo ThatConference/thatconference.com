@@ -1,0 +1,69 @@
+versionNumber: v1.3.0
+date: September 24th, 2020
+
+notes: The theme of this release was the new user and getting started. A new section called "support" was added which will be the home for all of our help pages. New pages include: Welcome, What is an Activity, Joining, Creating and Staying up to date. In addition to that we added deeper integration with Tidio to aide in debugging. We renamed all Session references to Activities and landed on the Activity Board vs THAT Board. The Nav layout was updated making it like headroom along with better branding. New content layout pages were introduced and refactored for better consistency. Lastly we added filtering! 
+
+[features]
+
+feature: [enhancement] The Join and Favorite buttons are always present and active.
+url: https://github.com/ThatConference/that.us/pull/347
+
+feature: [enhancement] Signup and Login call the login directly rather than redirect through login.svetle.
+url: https://github.com/ThatConference/that.us/pull/346
+
+feature: [bug] timezone message hids on mobile
+url: https://github.com/ThatConference/that.us/pull/339
+
+feature: [regression] Mobile nav on main page displays again.
+url: https://github.com/ThatConference/that.us/pull/338
+
+feature: [enhancement] Sponsor component is now community/event aware.
+url: https://github.com/ThatConference/that.us/pull/337
+
+feature: [enhancement] Activity center cards are now the link, not the text.
+url: https://github.com/ThatConference/that.us/pull/327
+
+feature: [enhancement] Tighter integration with our Tidio Chat bot.
+url: https://github.com/ThatConference/that.us/pull/348
+
+feature: [enhancement] More room options Admins specifically the capability to live stream to YouTube.
+url: https://github.com/ThatConference/that.us/pull/351
+
+feature: [enhancement] @asharonbaltazar adds headroom style nav to content pages.
+url: https://github.com/ThatConference/that.us/pull/342
+
+feature: [enhancement] Converts all references of sessions to activities.
+url: https://github.com/ThatConference/that.us/pull/349
+
+feature: [enhancement] Creates a new content layout for content pages.
+url: https://github.com/ThatConference/that.us/pull/349
+
+feature: [enhancement] Converts home page to new content layout page.
+url: https://github.com/ThatConference/that.us/pull/349
+
+feature: [enhancement] Updates to new nav bar style.
+url: https://github.com/ThatConference/that.us/pull/349
+
+feature: [enhancement] Converts layout for members and partner pages to new content layout page.
+url: https://github.com/ThatConference/that.us/pull/357
+
+feature: [enhancement] adds a redirect from sessions -> activities for existing links.
+url: https://github.com/ThatConference/that.us/pull/358
+
+feature: [enhancement] @scichelli fixes @csell5 bad grammar
+url: https://github.com/ThatConference/that.us/pull/359
+
+feature: [chore] Updates package references. 
+url: https://github.com/ThatConference/that.us/pull/362
+
+feature: [enhancement] Converts the FAQ page to the new layout.
+url: https://github.com/ThatConference/that.us/pull/363
+
+feature: [enhancement] Adds the new user getting started section.
+url: https://github.com/ThatConference/that.us/pull/365
+
+feature: [enhancement] Updates FAQ and introduce search.
+url: https://github.com/ThatConference/that.us/pull/366
+
+feature: [enhancement] Adds search to to the activity lists.
+url: https://github.com/ThatConference/that.us/pull/369
