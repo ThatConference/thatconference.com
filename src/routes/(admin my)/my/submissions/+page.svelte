@@ -33,7 +33,9 @@
 <PageLayout>
 	<div slot="header">
 		<ActionHeader title="My Session Submissions">
-			<HighlightLink href="/activities/create/">Add Session</HighlightLink>
+			<HighlightLink href="/activities/create/">
+				<div>Add Session</div>
+			</HighlightLink>
 		</ActionHeader>
 	</div>
 
