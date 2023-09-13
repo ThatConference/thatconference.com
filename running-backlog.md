@@ -3,13 +3,13 @@
 - Validate Slug
 - fix other profiles
 - forms lib upgraded
-- fix newsletter message
 - event hero image
-  Update mobile drop down links
+- Update mobile drop down links
 
 ## Questions
 
 - just WTF does it matter?
+- wtf is our pitch
 
 ## show stopers
 
@@ -17,16 +17,6 @@
 - show who is going
 - show speakers
 - update pictures
-- add discord
-- make sure the ticket process is on point.
-
-## markting
-
-- wtf is our pitch
-
-## Running Tasks that were skipped but need to get looked at.
-
-- Sentry config and source map upload
 
 # that.us
 
@@ -38,3 +28,10 @@
 - James Online Event
 
 ---
+
+Things to test
+
+- New Account
+- Add Activity
+- Transfer Ticket
+- make sure the ticket process is on point.

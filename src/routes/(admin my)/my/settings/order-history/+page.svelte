@@ -17,7 +17,7 @@
 	import orderQueryApi from '$dataSources/api.that.tech/orders/queries';
 
 	import createMachine from '../../_machines/bulkAllocations';
-	import TicketAllocation from '../_components/ticketAllocation.svelte';
+	import TicketAllocationForm from './ticketAllocationForm.svelte';
 
 	dayjs.extend(isBetween);
 
@@ -32,7 +32,7 @@
 			description: "You've worked hard to earn some awesome merit badges.",
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/settings/order-history/`
+				url: `https://thatconference.com/my/settings/order-history/`
 			},
 			nofollow: true,
 			noindex: true
@@ -124,7 +124,7 @@
 						<div>
 							{#each o.orderAllocations as oa, i (oa.id)}
 								<div class:bg-gray-50={showBackground(i)}>
-									<TicketAllocation orderId={o.id} allocation={oa} />
+									<TicketAllocationForm orderId={o.id} allocation={oa} />
 								</div>
 							{/each}
 						</div>

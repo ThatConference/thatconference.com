@@ -18,7 +18,8 @@
 	import cart from '$lib/cart';
 	import claimTicket from '$lib/claimTicket';
 
-	import Banner from '$components/banners/Success.svelte';
+	import SuccessFlashBanner from '$components/banners/Success.svelte';
+	import ErrorFlashBanner from '$components/banners/Error.svelte';
 	import Preloading from '$components/preloading.svelte';
 	import { recaptcha } from '$lib/config.public';
 
@@ -97,15 +98,21 @@
 	{/if}
 	<div>
 		{#if $flash}
-			{#if $flash.type == 'success'}
-				<div class="relative z-10">
-					<Banner on:dismiss={() => ($flash = null)}>
+			<div class="relative z-10">
+				{#if $flash.type == 'success'}
+					<SuccessFlashBanner on:dismiss={() => ($flash = null)}>
 						<p class="py-2 text-lg font-medium">
 							{$flash.message}
 						</p>
-					</Banner>
-				</div>
-			{/if}
+					</SuccessFlashBanner>
+				{:else if $flash.type == 'error'}
+					<ErrorFlashBanner on:dismiss={() => ($flash = null)}>
+						<p class="py-2 text-lg font-medium">
+							{$flash.message}
+						</p>
+					</ErrorFlashBanner>
+				{/if}
+			</div>
 		{/if}
 	</div>
 	<slot />

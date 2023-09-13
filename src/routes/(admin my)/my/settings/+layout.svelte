@@ -21,7 +21,7 @@
 		<ActionHeader title="Your Settings" />
 	</div>
 
-	<div slot="body">
+	<div>
 		<main class="relative -mx-6">
 			<div class="divide-y divide-gray-200 lg:grid lg:grid-cols-12 lg:divide-x lg:divide-y-0">
 				<aside class="py-6 lg:col-span-3">

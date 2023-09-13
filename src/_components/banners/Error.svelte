@@ -1,13 +1,10 @@
 <script>
-	export let isFailure = false;
 	import { createEventDispatcher } from 'svelte';
 
 	const dispatch = createEventDispatcher();
 </script>
 
-<div
-	class="flex items-center gap-x-6 bg-thatBlue-500 px-6 py-2.5 sm:px-3.5 sm:before:flex-1"
-	class:bg-thatRed-500={isFailure}>
+<div class="flex items-center gap-x-6 bg-thatRed-500 px-6 py-2.5 sm:px-3.5 sm:before:flex-1">
 	<div class="text-sm leading-6 text-white">
 		<slot />
 	</div>
