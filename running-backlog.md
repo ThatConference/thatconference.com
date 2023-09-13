@@ -5,6 +5,7 @@
 - forms lib upgraded
 - fix newsletter message
 - event hero image
+  Update mobile drop down links
 
 ## Questions
 

@@ -1,23 +1,11 @@
 export const thatLinks = [
 	{
-		text: 'Blog',
-		href: '/blog/'
+		text: 'THAT Online',
+		href: 'https://that.us'
 	},
 	{
-		text: 'Newsletter',
-		href: '/newsletter/'
-	},
-	{
-		text: 'Events',
-		href: '/events/'
-	},
-	{
-		text: 'Activities',
-		href: '/activities/'
-	},
-	{
-		text: 'Members',
-		href: '/members/'
+		text: 'THAT Merch',
+		href: 'https://store.that.us/'
 	},
 	{
 		text: 'Membership',
@@ -27,28 +15,20 @@ export const thatLinks = [
 
 export const thatConferenceLinks = [
 	{
-		text: 'THAT Conference',
-		href: '/that-conference/'
-	},
-	{
-		text: 'THAT Field Guide',
+		text: 'Field Guide',
 		href: '/support/that-field-guide/'
 	},
 	{
-		text: 'Job Board',
-		href: '/partners/job-board/'
+		text: 'Sponsors',
+		href: '/sponsors/'
 	},
 	{
-		text: 'THAT Store',
-		href: 'https://store.that.us/'
+		text: 'Job Board',
+		href: '/sponsors/job-board/'
 	},
 	{
 		text: 'Call for Speakers',
 		href: '/cfp/'
-	},
-	{
-		text: 'Sponsors',
-		href: '/partners/'
 	},
 	{
 		text: 'COVID Policies',
@@ -68,10 +48,6 @@ export const supportLinks = [
 	{
 		text: 'Contact Us',
 		href: '/support/contact-us/'
-	},
-	{
-		text: 'Changelog',
-		href: '/releases/changelog/'
 	},
 	{
 		text: 'System Status',
