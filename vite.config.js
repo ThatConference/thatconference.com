@@ -16,7 +16,8 @@ const config = ({ mode }) => {
 			env: 'production'
 		},
 		setCommits: {
-			auto: true
+			auto: true,
+			ignoreMissing: true
 		},
 		sourceMaps: {
 			include: ['./.svelte-kit/output'],
