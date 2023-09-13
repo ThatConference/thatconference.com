@@ -9,9 +9,7 @@
 	import { Highlight as HighlightButton } from '$elements/buttons';
 	import { csvGenerator } from '$lib/csv';
 
-	import Sponsor from '$components/SponsorSimple.svelte';
 	import ActivityList from '$components/activities/List.svelte';
-
 	import PageLayout from '../_components/PageLayout.svelte';
 
 	let { activities } = data;
@@ -69,14 +67,12 @@
 <PageLayout>
 	<div slot="header">
 		<ActionHeader title="My Favorites">
-			<div class="flex flex-col space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0">
-				<HighlightLink href="/support/my-favorites-icalendar/">Subscribe</HighlightLink>
-				<HighlightButton on:click={csvDownloadHandler}>Download</HighlightButton>
-			</div>
+			<HighlightLink href="/support/my-favorites-icalendar/">Subscribe</HighlightLink>
+			<HighlightButton on:click={csvDownloadHandler}>Download</HighlightButton>
 		</ActionHeader>
 	</div>
 
-	<div slot="body">
+	<div>
 		{#if activities.length > 0}
 			<ActivityList reverse={false} {activities} />
 		{:else}
@@ -87,9 +83,5 @@
             on it!" />
 			</div>
 		{/if}
-	</div>
-
-	<div slot="footer">
-		<Sponsor />
 	</div>
 </PageLayout>
