@@ -6,6 +6,7 @@
 </script>
 
 <!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <div
 	class="fixed inset-0 z-50 overflow-hidden"
 	on:click|stopPropagation={() => {
@@ -18,7 +19,7 @@
 			class="absolute inset-y-0 right-0 flex max-w-full"
 			on:click|stopPropagation={() => {}}>
 			<div class="w-screen border-l-4 border-thatOrange-400 md:w-auto">
-				<div class="flex h-full flex-col divide-y divide-gray-200 bg-white ">
+				<div class="flex h-full flex-col divide-y divide-gray-200 bg-white">
 					<div
 						class="flex min-h-0 flex-1 flex-col space-y-6 overflow-y-scroll overscroll-none py-6">
 						<header class="px-4 sm:px-6">

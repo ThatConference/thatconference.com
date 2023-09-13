@@ -1,5 +1,5 @@
-import auth0 from '$utils/security/server';
-import config from '$utils/config.public';
+import auth0 from '$lib/security/server';
+import config from '$lib/config.public';
 import { QUERY_ME } from '$dataSources/api.that.tech/me';
 import { loadFlashMessage } from 'sveltekit-flash-message/server';
 

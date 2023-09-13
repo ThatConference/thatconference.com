@@ -5,8 +5,6 @@
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
-<!-- svelte-ignore missing-declaration -->
-
 <a
 	use:scrollto={href}
 	class="cursor-pointer rounded-md border-2 border-thatBlue-500 bg-white px-8 py-3 text-base

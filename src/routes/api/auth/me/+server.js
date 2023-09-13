@@ -1,4 +1,4 @@
-import auth0 from '$utils/security/server';
+import auth0 from '$lib/security/server';
 
 export const trailingSlash = 'always';
 

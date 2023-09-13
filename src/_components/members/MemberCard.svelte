@@ -8,8 +8,8 @@
 	export let earnedMeritBadges = [];
 	export let profileLinks = [];
 
-	import buildImageSrc from '$utils/image';
-	import config from '$utils/config.public';
+	import buildImageSrc from '$lib/image';
+	import config from '$lib/config.public';
 	import SocialLinks from '$components/social/SocialLink.svelte';
 
 	const userProfileImage = profileImage || config.defaultProfileImage;
@@ -18,7 +18,7 @@
 
 <a data-sveltekit-prefetch href="/members/{profileSlug}/">
 	<div
-		class="h-full transform rounded-lg bg-white text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-100 ">
+		class="h-full transform rounded-lg bg-white text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-100">
 		<div class="flex flex-col p-4">
 			<div>
 				<span class="relative inline-block">

@@ -10,16 +10,17 @@
 
 	import lodash from 'lodash';
 	import * as Sentry from '@sentry/svelte';
-	import { initFlash } from 'sveltekit-flash-message/client';
+	import { getFlash } from 'sveltekit-flash-message/client';
 
-	import loading from '$stores/loading';
-	import { showReleaseNotes } from '$stores/siteVersion';
-	import { messages } from '$stores/notificationCenter';
-	import cart from '$utils/cart';
-	import claimTicket from '$utils/claimTicket';
+	import loading from '$lib/stores/loading';
+	import { showReleaseNotes } from '$lib/stores/siteVersion';
+	import { messages } from '$lib/stores/notificationCenter';
+	import cart from '$lib/cart';
+	import claimTicket from '$lib/claimTicket';
 
+	import Banner from '$components/banners/Success.svelte';
 	import Preloading from '$components/preloading.svelte';
-	import { recaptcha } from '$utils/config.public';
+	import { recaptcha } from '$lib/config.public';
 
 	// setup the context on the cart for later usage
 	setContext('claimTicket', claimTicket);
@@ -28,7 +29,7 @@
 	setContext('DROP_DOWN_KEY_VALUE_PAIRS', data.dropDownKeyValuePairs);
 
 	const { isEmpty } = lodash;
-	const flash = initFlash(page);
+	const flash = getFlash(page);
 
 	beforeNavigate((nav) => {
 		if ($flash && nav.from?.url.toString() !== nav.to?.url.toString()) {
@@ -94,6 +95,19 @@
 			<Preloading />
 		{/if}
 	{/if}
+	<div>
+		{#if $flash}
+			{#if $flash.type == 'success'}
+				<div class="relative z-10">
+					<Banner on:dismiss={() => ($flash = null)}>
+						<p class="py-2 text-lg font-medium">
+							{$flash.message}
+						</p>
+					</Banner>
+				</div>
+			{/if}
+		{/if}
+	</div>
 	<slot />
 </div>
 
@@ -131,10 +145,9 @@
 	}
 
 	:global(select) {
-		/* for Firefox */
 		-moz-appearance: none;
-		/* for Safari, Chrome, Opera */
 		-webkit-appearance: none;
+		appearance: none;
 	}
 
 	:global(.centerIcon) {

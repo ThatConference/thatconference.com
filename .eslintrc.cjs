@@ -8,7 +8,6 @@ module.exports = {
 	},
 	rules: {
 		'no-unused-vars': [2, { args: 'all', argsIgnorePattern: '^_' }]
-		//'import/no-unused-modules': [1, { unusedExports: true }]
 	},
 	env: {
 		browser: true,

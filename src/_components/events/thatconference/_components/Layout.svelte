@@ -1,12 +1,12 @@
 <div class="py-24">
 	<div class="flex flex-col items-center justify-center">
 		<h2 class="py-4 font-extrabold uppercase tracking-wider text-white">
-			By Developers For Developers
+			The only conferences that's also a community!
 		</h2>
 		<header>
 			<h1
-				class="text-center  text-2xl font-extrabold uppercase text-white antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
-				In-Person THAT Conferences
+				class="text-center text-2xl font-extrabold uppercase text-white antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
+				THAT Conference v.Next
 			</h1>
 		</header>
 	</div>

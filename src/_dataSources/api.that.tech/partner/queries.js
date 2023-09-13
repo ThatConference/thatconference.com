@@ -1,7 +1,7 @@
 import lodash from 'lodash';
 
-import gFetch from '$utils/gfetch';
-import config from '$utils/config.public';
+import gFetch from '$lib/gfetch';
+import config from '$lib/config.public';
 
 import { log } from '../utilities/error';
 

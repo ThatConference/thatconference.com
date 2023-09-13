@@ -5,7 +5,7 @@
 	import Icon from 'svelte-awesome';
 	import { plusCircle } from '$components/svelte-awesome-icons';
 
-	import { imageCrops } from '$utils/config.public';
+	import { imageCrops } from '$lib/config.public';
 
 	const baseSlug = '/activities/create/';
 
@@ -13,6 +13,7 @@
 	let createLink = eventId ? `${baseSlug}#/event/${eventId}` : baseSlug;
 </script>
 
+<!-- svelte-ignore a11y-no-static-element-interactions -->
 <a href={createLink}>
 	<div
 		class="h-full w-full transform rounded-lg bg-that-blue px-6 py-10 text-center shadow transition duration-500

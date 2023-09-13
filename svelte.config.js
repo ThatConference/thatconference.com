@@ -15,11 +15,7 @@ const config = {
 		alias: {
 			$components: resolve('./src/_components'),
 			$elements: resolve('./src/_elements'),
-			$utils: resolve('./src/_utils'),
-			$dataSources: resolve('./src/_dataSources'),
-			$stores: resolve('./src/_stores'),
-			$machines: resolve('./src/_machines'),
-			$blog: resolve('./src/_blog')
+			$dataSources: resolve('./src/_dataSources')
 		},
 		version: {
 			name: process.env?.npm_package_version || '0.0.0'

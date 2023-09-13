@@ -17,7 +17,7 @@
 			</p>
 		</div>
 		<div class="m-w-1/3 mt-8 lg:ml-8 lg:mt-0">
-			<HubspotForm />
+			<HubspotForm formId={'newsletter-short'} />
 		</div>
 	</div>
 </section>

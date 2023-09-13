@@ -1,4 +1,6 @@
 <script>
+	export let formId;
+
 	import { page } from '$app/stores';
 	import { fade } from 'svelte/transition';
 	import { superForm, superValidateSync } from 'sveltekit-superforms/client';
@@ -8,7 +10,7 @@
 	import { envelope } from '$components/svelte-awesome-icons';
 	import newsletterSchema from '$lib/formSchemas/newsletter';
 
-	import { recaptcha } from '$utils/config.public';
+	import { recaptcha } from '$lib/config.public';
 
 	async function handleOnSubmit({ data }) {
 		/*eslint-disable no-undef*/
@@ -19,6 +21,7 @@
 	const { form, enhance, constraints, errors, tainted } = superForm(
 		superValidateSync(newsletterSchema),
 		{
+			id: formId,
 			onSubmit: handleOnSubmit,
 			dataType: 'json',
 			validators: newsletterSchema,
@@ -31,12 +34,7 @@
 </script>
 
 <div class="flex flex-col text-gray-500">
-	<form
-		use:enhance
-		method="POST"
-		action="/api/newsletter?ref={$page.url}"
-		id="newsletterForm"
-		class="w-full">
+	<form use:enhance method="POST" action="/api/newsletter?ref={$page.url}" class="w-full">
 		<div class="flex items-center rounded border border-slate-100 bg-white p-2 shadow-lg">
 			<span class="text-slate-400"><Icon data={envelope} class="ml-2 h-6 w-6" /></span>
 			<input

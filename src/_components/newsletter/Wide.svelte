@@ -19,7 +19,7 @@
 			</p>
 		</div>
 		<div class="mt-8 lg:ml-8 lg:mt-0">
-			<HubspotForm />
+			<HubspotForm formId={'newsletter-wide'} />
 		</div>
 	</div>
 </section>

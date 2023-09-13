@@ -4,7 +4,7 @@
 	import { Trees } from '../svgs';
 	import Footer from '$components/footer/Footer.svelte';
 
-	import Nav from '$components/nav/mainNav/MainNav.svelte';
+	import Nav from '$components/nav-old/mainNav/MainNav.svelte';
 </script>
 
 <div>

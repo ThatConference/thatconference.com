@@ -1,5 +1,5 @@
-import { recaptchaConfig } from '$utils/config.private';
-import { recaptcha } from '$utils/config.public';
+import { recaptchaConfig } from '$lib/config.private';
+import { recaptcha } from '$lib/config.public';
 import { json } from '@sveltejs/kit';
 
 const { projectId, apiKey } = recaptchaConfig;
