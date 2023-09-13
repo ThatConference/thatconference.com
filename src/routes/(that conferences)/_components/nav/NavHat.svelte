@@ -47,7 +47,7 @@
 			</div>
 
 			<div class="flex items-center space-x-4">
-				<Cart isDarkBackground={true} />
+				<Cart />
 				<UserProfile />
 			</div>
 		</div>

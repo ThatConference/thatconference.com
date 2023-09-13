@@ -40,7 +40,7 @@
 
 			<div class="flex w-full flex-1 justify-end space-x-4">
 				<ClaimCart />
-				<Cart isDarkBackground={false} />
+				<Cart />
 				<UserProfile />
 			</div>
 		</div>
