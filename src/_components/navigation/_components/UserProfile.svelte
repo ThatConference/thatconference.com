@@ -46,9 +46,7 @@
 		<div use:clickOutside on:click_outside={() => (visible = false)}>
 			{#if $page.data.user.isAuthenticated}
 				{#if isEmpty($page.data.user.profile)}
-					<div
-						class="absolute right-0 z-50 mt-2 w-48 origin-top-right rounded-md shadow-lg"
-						in:fade>
+					<div class="absolute right-0 mt-2 w-48 origin-top-right rounded-md shadow-lg" in:fade>
 						<div class="rounded-md bg-white py-1 ring-1 ring-black ring-opacity-5">
 							<a
 								href="/my/profiles/primary/"
@@ -65,9 +63,7 @@
 						</div>
 					</div>
 				{:else}
-					<div
-						class="on-top absolute right-0 mt-2 w-64 origin-top-right rounded-md shadow-lg"
-						in:fade>
+					<div class="absolute right-0 mt-2 w-64 origin-top-right rounded-md shadow-lg" in:fade>
 						<div class="rounded-md bg-white py-1 ring-1 ring-black ring-opacity-5">
 							<div class="block border-b px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								<a href="/my/profiles/primary/" on:click={() => (visible = false)}>
@@ -128,7 +124,7 @@
 					</div>
 				{/if}
 			{:else}
-				<div in:fade class="absolute right-0 z-50 mt-2 w-48 origin-top-right rounded-md shadow-lg">
+				<div in:fade class="absolute right-0 mt-2 w-48 origin-top-right rounded-md shadow-lg">
 					<div class="rounded-md bg-white py-1 ring-1 ring-black ring-opacity-5">
 						<a
 							rel="external"
@@ -148,9 +144,3 @@
 		</div>
 	{/if}
 </div>
-
-<style>
-	.on-top {
-		z-index: 999;
-	}
-</style>

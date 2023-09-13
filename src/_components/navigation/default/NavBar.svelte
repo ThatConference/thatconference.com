@@ -29,7 +29,7 @@
 	{/if}
 {/if}
 
-<div class="relative z-20">
+<div class="relative z-50">
 	<div
 		class="absolute inset-x-0 top-0 z-30 origin-top-right transform p-2 transition xl:hidden"
 		class:hidden
