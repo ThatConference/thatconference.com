@@ -5,14 +5,14 @@
 	import seoMetaTags from '$lib/seo/metaTags';
 	import Seo from '$components/Seo.svelte';
 	import { ModalWarning, ActionHeader } from '$elements';
-	import StackedLayout from '$elements/layouts/StackedLayout.svelte';
 	import { Highlight as HighlightLink } from '$elements/links';
 	import { Highlight as HighlightButton } from '$elements/buttons';
 	import { csvGenerator } from '$lib/csv';
 
-	import Nav from '$components/nav/interiorNav/Top.svelte';
 	import Sponsor from '$components/SponsorSimple.svelte';
 	import ActivityList from '$components/activities/List.svelte';
+
+	import PageLayout from '../_components/PageLayout.svelte';
 
 	let { activities } = data;
 
@@ -66,9 +66,8 @@
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
-<StackedLayout>
+<PageLayout>
 	<div slot="header">
-		<Nav />
 		<ActionHeader title="My Favorites">
 			<div class="flex flex-col space-y-2 sm:flex-row sm:space-x-4 sm:space-y-0">
 				<HighlightLink href="/support/my-favorites-icalendar/">Subscribe</HighlightLink>
@@ -93,4 +92,4 @@
 	<div slot="footer">
 		<Sponsor />
 	</div>
-</StackedLayout>
+</PageLayout>

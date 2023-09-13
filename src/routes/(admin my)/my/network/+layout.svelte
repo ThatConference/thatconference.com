@@ -5,8 +5,7 @@
 	import Seo from '$components/Seo.svelte';
 	import { ActionHeader } from '$elements';
 	import { User } from '$elements/svgs';
-	import Nav from '$components/nav/interiorNav/Top.svelte';
-	import StackedLayout from '$elements/layouts/StackedLayout.svelte';
+	import PageLayout from '../_components/PageLayout.svelte';
 
 	const metaTags = ((title = 'My Network - THAT') => ({
 		title,
@@ -35,13 +34,12 @@
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
-<StackedLayout>
+<PageLayout>
 	<div slot="header">
-		<Nav />
 		<ActionHeader title="Your Network" />
 	</div>
 
-	<div slot="body">
+	<div>
 		<main class="relative -mx-6">
 			<div class="divide-y divide-gray-200 lg:grid lg:grid-cols-12 lg:divide-x lg:divide-y-0">
 				<aside class="py-6 lg:col-span-3">
@@ -68,4 +66,4 @@
 			</div>
 		</main>
 	</div>
-</StackedLayout>
+</PageLayout>

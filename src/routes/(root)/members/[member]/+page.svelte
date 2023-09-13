@@ -4,7 +4,6 @@
 	import { fade } from 'svelte/transition';
 
 	import seoMetaTags from '$lib/seo/metaTags';
-	import ProfileLayout from '$elements/layouts/Profile.svelte';
 	import Seo from '$components/Seo.svelte';
 	import memberMutationApi from '$dataSources/api.that.tech/members/mutations';
 
@@ -46,30 +45,28 @@
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
-<ProfileLayout>
-	<div class="flex flex-col">
-		<div in:fade={{ delay: getDelay() }}>
-			<Hero {isFollowing} member={profile} on:TOGGLE_FOLLOW={() => followProfile(memberSlug)} />
-		</div>
+<div class="flex flex-col">
+	<div in:fade={{ delay: getDelay() }}>
+		<Hero {isFollowing} member={profile} on:TOGGLE_FOLLOW={() => followProfile(memberSlug)} />
+	</div>
 
-		{#if profile.lifeHack}
-			<div in:fade={{ delay: getDelay() }}>
-				<LifeHack quote={profile.lifeHack} name={`${profile.firstName} ${profile.lastName}`} />
-			</div>
+	{#if profile.lifeHack}
+		<div in:fade={{ delay: getDelay() }}>
+			<LifeHack quote={profile.lifeHack} name={`${profile.firstName} ${profile.lastName}`} />
+		</div>
+	{/if}
+
+	<div in:fade={{ delay: getDelay() }}>
+		<UpNext profileSlug={memberSlug} />
+	</div>
+
+	<div in:fade={{ delay: getDelay() }}>
+		<Followers followers={followers.followers.profiles} />
+
+		{#if profile.earnedMeritBadges.length > 0}
+			<MeritBadges meritBadges={profile.earnedMeritBadges} />
 		{/if}
 
-		<div in:fade={{ delay: getDelay() }}>
-			<UpNext profileSlug={memberSlug} />
-		</div>
-
-		<div in:fade={{ delay: getDelay() }}>
-			<Followers followers={followers.followers.profiles} />
-
-			{#if profile.earnedMeritBadges.length > 0}
-				<MeritBadges meritBadges={profile.earnedMeritBadges} />
-			{/if}
-
-			<CTA {isFollowing} {profile} on:TOGGLE_FOLLOW={() => followProfile(memberSlug)} />
-		</div>
+		<CTA {isFollowing} {profile} on:TOGGLE_FOLLOW={() => followProfile(memberSlug)} />
 	</div>
-</ProfileLayout>
+</div>

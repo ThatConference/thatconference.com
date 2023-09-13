@@ -4,8 +4,6 @@
 	import seoMetaTags from '$lib/seo/metaTags';
 	import Seo from '$components/Seo.svelte';
 
-	import ProfileLayout from '$elements/layouts/Profile.svelte';
-
 	import JobHero from '../../../_components/_JobHero.svelte';
 	import JobDetails from '../../../_components/_JobDetails.svelte';
 
@@ -61,15 +59,13 @@
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
-<ProfileLayout>
-	<section>
-		<JobHero {partner} />
-	</section>
+<section>
+	<JobHero {partner} />
+</section>
 
-	<section>
-		<JobDetails jobListing={partner.jobListing} />
-	</section>
-</ProfileLayout>
+<section>
+	<JobDetails jobListing={partner.jobListing} />
+</section>
 
 <!-- eslint-disable-next-line  svelte/no-at-html-tags -->
 {@html `<script type="application/ld+json">${JSON.stringify(schema) + '<'}/script>`}

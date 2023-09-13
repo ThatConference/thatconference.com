@@ -1,11 +1,9 @@
 <script>
 	import { page } from '$app/stores';
 
-	import Nav from '$components/nav/interiorNav/Top.svelte';
-
 	import { Badge, CreditCard, Ticket, Membership } from '$elements/svgs';
-	import StackedLayout from '$elements/layouts/StackedLayout.svelte';
 	import { ActionHeader } from '$elements';
+	import PageLayout from '../_components/PageLayout.svelte';
 
 	const asideSelected = {
 		item: 'bg-thatBlue-100 bg-opacity-25 hover:bg-opacity-25 hover:bg-thatBlue-100 border-thatBlue-500 text-thatBlue-700 hover:text-thatBlue-700 group mt-1 border-l-4 px-3 py-2 flex items-center text-sm font-medium',
@@ -18,9 +16,8 @@
 	};
 </script>
 
-<StackedLayout>
+<PageLayout>
 	<div slot="header">
-		<Nav />
 		<ActionHeader title="Your Settings" />
 	</div>
 
@@ -87,4 +84,4 @@
 			</div>
 		</main>
 	</div>
-</StackedLayout>
+</PageLayout>

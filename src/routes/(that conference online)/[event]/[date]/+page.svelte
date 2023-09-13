@@ -5,11 +5,9 @@
 	import { fade } from 'svelte/transition';
 	import { goto } from '$app/navigation';
 
-	import Layout from '$elements/layouts/LandingLayout.svelte';
 	import { Highlight as HighlightLink } from '$elements/links';
 
 	import Seo from '$components/Seo.svelte';
-	import Nav from '$components/nav/interiorNav/Top.svelte';
 	import UpNextEvent from '$components/activities/UpNextEvent.svelte';
 
 	import seoMetaTags from '$lib/seo/metaTags';
@@ -87,64 +85,59 @@
 </script>
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
-<Layout>
-	<section in:fade slot="nav">
-		<Nav />
-	</section>
 
-	<section in:fade slot="header">
-		<OnlineHero
-			{event}
-			on:claim-ticket={({ detail }) => handleClaimTicket(event, detail)}
-			on:purchase-event-ticket={() => handleAddEventTicketClick(event.id, event.products)} />
-	</section>
+<section>
+	<OnlineHero
+		{event}
+		on:claim-ticket={({ detail }) => handleClaimTicket(event, detail)}
+		on:purchase-event-ticket={() => handleAddEventTicketClick(event.id, event.products)} />
+</section>
 
-	<section in:fade={{ delay: 200 }}>
-		<EventTicket
-			{event}
-			on:claim-ticket={({ detail }) => handleClaimTicket(event, detail)}
-			on:purchase-event-ticket={() => handleAddEventTicketClick(event.id, event.products)} />
-	</section>
+<section in:fade={{ delay: 200 }}>
+	<EventTicket
+		{event}
+		on:claim-ticket={({ detail }) => handleClaimTicket(event, detail)}
+		on:purchase-event-ticket={() => handleAddEventTicketClick(event.id, event.products)} />
+</section>
 
-	<section in:fade={{ delay: 250 }}>
-		<Membership {event}>
-			<div slot="header">
-				<div class="text-center">
-					<h2 class="text-3xl font-extrabold text-thatBlue-800 sm:text-4xl lg:text-5xl">
-						Support Us, Supporting You.
-					</h2>
-					<p class="mt-4 text-xl text-gray-600">
-						We could create a free platform, but then you become the product. To that we say no
-						thank you, we're the product. We're taking the approach of creating a monetization
-						strategy of help us, help you.
-					</p>
-				</div>
+<section in:fade={{ delay: 250 }}>
+	<Membership {event}>
+		<div slot="header">
+			<div class="text-center">
+				<h2 class="text-3xl font-extrabold text-thatBlue-800 sm:text-4xl lg:text-5xl">
+					Support Us, Supporting You.
+				</h2>
+				<p class="mt-4 text-xl text-gray-600">
+					We could create a free platform, but then you become the product. To that we say no thank
+					you, we're the product. We're taking the approach of creating a monetization strategy of
+					help us, help you.
+				</p>
 			</div>
-		</Membership>
-	</section>
+		</div>
+	</Membership>
+</section>
 
-	<section>
-		<Speakers {event} />
-		<UpNextEvent {event}>
-			<div slot="action">
-				<HighlightLink href={`/activities/${event.slug}`}>View the entire schedule</HighlightLink>
-			</div>
-		</UpNextEvent>
-	</section>
+<section>
+	<Speakers {event} />
+	<UpNextEvent {event}>
+		<div slot="action">
+			<HighlightLink href={`/activities/${event.slug}`}>View the entire schedule</HighlightLink>
+		</div>
+	</UpNextEvent>
+</section>
 
-	{#if event.followers.members.length > 0}
-		<section class="pb-12">
-			<EventFollowers followers={event.followers.members} />
-		</section>
-	{/if}
-
-	<section>
-		<CTA
-			on:purchase-membership={() => handleAddMembershipClick(event.id, event.products)}
-			on:purchase-event-ticket={() => handleAddEventTicketClick(event.id, event.products)} />
+{#if event.followers.members.length > 0}
+	<section class="pb-12">
+		<EventFollowers followers={event.followers.members} />
 	</section>
+{/if}
 
-	<section>
-		<FAQ />
-	</section>
-</Layout>
+<section>
+	<CTA
+		on:purchase-membership={() => handleAddMembershipClick(event.id, event.products)}
+		on:purchase-event-ticket={() => handleAddEventTicketClick(event.id, event.products)} />
+</section>
+
+<section>
+	<FAQ />
+</section>
