@@ -1,0 +1,497 @@
+<script>
+	export let profile;
+	export let isNewProfile;
+	export let sForm;
+
+	import { superForm } from 'sveltekit-superforms/client';
+	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
+	import * as flashModule from 'sveltekit-flash-message/client';
+	import Icon from 'svelte-awesome';
+	import { ScaleOut } from 'svelte-loading-spinners';
+	import Tags from 'svelte-tags-input';
+	import Checkbox from 'svelte-checkbox';
+	import lodash from 'lodash';
+
+	import primaryProfileFormSchema from '$lib/formSchemas/primaryProfile';
+	import { Waiting } from '$elements';
+	import { Shell } from '$elements/buttons';
+	import socialLinks from './socialLinks';
+
+	const { isEmpty } = lodash;
+
+	let initialValues;
+	let profileImageUploading;
+	let profileImageUrl;
+	let slugValues = {};
+	let socialLinkValues = {};
+	let socialLinksState = [];
+
+	function buildSocialLink(linkType, baseAddress, userSlug) {
+		return {
+			isPublic: true,
+			linkType,
+			url: `${baseAddress}${userSlug.trim()}`
+		};
+	}
+
+	function updateLinksInputValues(link, userValue) {
+		console.log('here I am');
+
+		// clear out the value regardless.
+		socialLinksState = socialLinksState.filter((i) => i.linkType !== link.linkType);
+
+		// if we have a value.. add it back
+		if (!isEmpty(userValue)) {
+			let slug = '';
+			if (Array.isArray(link.slug)) slug = slugValues[link.linkType] || link.slug[0];
+			else slug = link.slug;
+
+			socialLinksState.push(buildSocialLink(link.linkType, slug, userValue));
+		}
+
+		return socialLinksState;
+	}
+
+	function getInitialSocialLinkValue(link) {
+		let result = '';
+
+		if (!isNewProfile && profile.profileLinks?.length > 0) {
+			const [socialLink] = profile.profileLinks.filter((i) => i.linkType === link.linkType);
+
+			if (socialLink) {
+				// If link.slugs is an array, match socialLink.url with the proper element
+				if (Array.isArray(link.slug)) {
+					link.slug.forEach((el) => {
+						const [, value] = socialLink.url.split(el);
+						if (value) result = value;
+					});
+				} else {
+					const [, value] = socialLink.url.split(link.slug);
+					result = value;
+				}
+			}
+
+			socialLinkValues[link.linkType] = result;
+		}
+
+		return result;
+	}
+
+	function getInitialSelectValue(link) {
+		// initial state should be the first element in slug array
+		let result = link.slug[0];
+
+		if (!isNewProfile && profile.profileLinks?.length > 0) {
+			const [socialLink] = profile.profileLinks.filter((i) => i.linkType === link.linkType);
+			if (socialLink) {
+				link.slug.forEach((el) => {
+					const [, value] = socialLink.url.split(el);
+					if (value) {
+						result = el;
+						slugValues[link.linkType] = el;
+					}
+				});
+			}
+		}
+
+		return result;
+	}
+
+	// function updateLinkSlugValue(link, userValue) {
+	// 	// This is called from blur so we're looking for:
+	// 	// 1. Link existed in DB and changing url
+	// 	// 2. Already entered/changed slug
+	// 	// 3. No value in User Slug - So either removed or never set
+
+	// 	let userSlug = '';
+	// 	slugValues[link.linkType] = userValue;
+
+	// 	// get existing link if available
+	// 	const existingLink = socialLinksState.filter((l) => l.linkType === link.linkType);
+
+	// 	// clear out the value regardless.
+	// 	socialLinksState = socialLinksState.filter((i) => i.linkType !== link.linkType);
+
+	// 	if (existingLink[0]) {
+	// 		link.slug.forEach((s) => {
+	// 			const [, value] = existingLink[0].url.split(s);
+	// 			if (value) {
+	// 				userSlug = value;
+	// 			}
+	// 		});
+	// 	}
+
+	// 	if (!isEmpty(userSlug)) {
+	// 		socialLinksState.push(buildSocialLink(link.linkType, userValue, userSlug));
+	// 	}
+
+	// 	return socialLinksState;
+	// }
+
+	if (isNewProfile) {
+		initialValues = {
+			firstName: undefined,
+			lastName: undefined,
+			email: undefined,
+			profileSlug: undefined,
+			company: undefined,
+			jobTitle: undefined,
+			bio: undefined,
+			canFeature: false,
+			isOver13: false,
+			acceptedCodeOfConduct: false,
+			acceptedTermsOfService: false,
+			acceptedAntiHarassmentPolicy: false,
+			acceptedCommitmentToDiversity: false,
+			isDeactivated: false,
+			profileImage: undefined,
+			profileLinks: [],
+			interests: [],
+			lifeHack: undefined,
+			...profile
+		};
+	} else {
+		initialValues = profile;
+		profileImageUrl = profile.profileImage;
+		socialLinksState = profile.profileLinks;
+	}
+
+	let interestsInput;
+	let interestsInputValues = initialValues ? initialValues.interests : [];
+
+	// const postProfilePicture = async (profilePhoto) => {
+	// 	profileImageUploading = true;
+	// 	const formData = new FormData();
+	// 	formData.append('file', profilePhoto.currentTarget.files[0]);
+
+	// 	const res = await fetch(config.profileImageApi, {
+	// 		method: 'POST',
+	// 		headers: {
+	// 			Authorization: `Bearer ${$page.data.user.accessToken}`
+	// 		},
+	// 		body: formData
+	// 	});
+
+	// 	if (!res.ok) {
+	// 		// TODO drop an error modal saying there was a problem uploading
+	// 		return null;
+	// 	}
+
+	// 	const json = await res.json();
+
+	// 	profileImageUploading = false;
+	// 	profileImageUrl = json.data.url;
+
+	// 	return json.data.url;
+	// };
+
+	const { form, enhance, constraints, delayed } = superForm(sForm, {
+		dataType: 'json',
+		validators: primaryProfileFormSchema,
+		syncFlashMessage: false,
+		taintedMessage:
+			'Are you sure you want to leave this page? There are changes to your profile and they will not be saved.',
+		flashMessage: {
+			module: flashModule
+		}
+	});
+</script>
+
+<form use:enhance method="POST">
+	<div>
+		<h2 class="text-xl font-bold leading-6 text-gray-900">Public and Speaker Profile</h2>
+		<p class="mt-4 text-sm leading-5 text-gray-500">
+			This information is what we feature about you if you choose to make your profile public.
+		</p>
+
+		<p class="mt-4 text-sm leading-5 text-gray-500">
+			To submit any type activity, your profile will have to be public.
+		</p>
+	</div>
+
+	<div class="mt-8 grid grid-cols-1 gap-x-4 gap-y-12 px-4 sm:grid-cols-6">
+		<div class="sm:col-span-3">
+			<label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">
+				First or Given Name
+			</label>
+			<div class="relative">
+				<span
+					class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+			</div>
+
+			<input
+				bind:value={$form.firstName}
+				{...$constraints.firstName}
+				type="text"
+				name="firstName"
+				id="firstName"
+				class="form-imput mt-4 block w-full rounded-md shadow-sm" />
+		</div>
+
+		<div class="sm:col-span-3">
+			<label for="last_name" class="block text-sm font-medium leading-5 text-gray-700">
+				Last or Family Name
+			</label>
+			<div class="relative">
+				<span
+					class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+			</div>
+
+			<input
+				name="lastName"
+				id="lastName"
+				class="form-imput mt-4 block w-full rounded-md shadow-sm"
+				bind:value={$form.lastName} />
+		</div>
+
+		<div class="sm:col-span-6">
+			<label for="photo" class="block text-sm font-medium leading-5 text-gray-700">
+				Profile Photo
+			</label>
+			<div class="relative">
+				<span
+					class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+			</div>
+
+			<div class="mt-4 flex items-center">
+				<span class="h-12 w-12 overflow-hidden rounded-full border bg-gray-100">
+					{#if profileImageUploading}
+						<div class="flex h-full w-full flex-grow justify-center">
+							<ScaleOut />
+						</div>
+					{:else if profileImageUrl}
+						<img
+							class="h-full w-full"
+							src={`${profileImageUrl}?auto=format&fit=facearea&facepad=10&mask=ellipse&h=100&w=100&q=50`}
+							alt="" />
+					{:else}
+						<svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
+							<path
+								d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904
+                    0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0
+                    018 0z" />
+						</svg>
+					{/if}
+				</span>
+				<span class="ml-5 rounded-md shadow-sm">
+					<input
+						name="profileImage"
+						type="file"
+						accept="image/x-png,image/png,.png,image/jpeg,.jpg,.jpeg,image/gif,.gif"
+						class="focus:ring-blue rounded-md border border-gray-300 px-3 py-2
+                  text-sm font-medium leading-4 text-gray-700
+                  transition duration-150
+                  ease-in-out hover:text-gray-500
+                  focus:border-blue-300 focus:outline-none active:bg-gray-50 active:text-gray-800" />
+				</span>
+			</div>
+			<p class="mt-4 text-sm text-gray-500">
+				Make sure you <strong>hit save</strong> to update your profile picture.
+			</p>
+		</div>
+
+		<div class="sm:col-span-6">
+			<label for="about" class="block text-sm font-medium leading-5 text-gray-700">
+				About Yourself
+			</label>
+			<div class="relative">
+				<span
+					class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+			</div>
+
+			<p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
+			<textarea
+				bind:value={$form.bio}
+				name="bio"
+				id="bio"
+				rows="10"
+				class="form-textarea mt-4 block w-full rounded-md shadow-sm" />
+		</div>
+
+		<div class="sm:col-span-3">
+			<label for="company" class="block text-sm font-medium leading-5 text-gray-700">
+				Company
+			</label>
+			<div class="relative">
+				<span
+					class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+			</div>
+
+			<input
+				bind:value={$form.company}
+				type="text"
+				id="company"
+				name="company"
+				class="form-input mt-4 block w-full rounded-md shadow-sm" />
+		</div>
+
+		<div class="sm:col-span-3">
+			<label for="jobTitle" class="block text-sm font-medium leading-5 text-gray-700">
+				Job Title
+			</label>
+			<div class="relative">
+				<span
+					class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+			</div>
+			<input
+				bind:value={$form.jobTitle}
+				name="jobTitle"
+				id="jobTitle"
+				class="form-input mt-4 block w-full rounded-md shadow-sm" />
+		</div>
+	</div>
+
+	<!-- Social Links -->
+	<div class="mt-24 border-t border-gray-400 px-4 pt-8">
+		<div>
+			<h3 class="text-lg font-medium leading-6 text-gray-900">Social Links</h3>
+			<p class="mt-1 text-sm leading-5 text-gray-500">Where would you like people to follow you?</p>
+		</div>
+
+		<div class="mt-6">
+			<div class="sm:col-span-4">
+				{#each socialLinks as link}
+					<div class="mt-4 flex rounded-md border shadow-sm">
+						<div
+							class="inline-flex w-1/3 items-center rounded-l-md border
+                  border-r-0 border-gray-300 bg-gray-50 px-3 text-gray-500
+                  sm:text-sm">
+							<span class="w-6">
+								<Icon data={link.icon} />
+							</span>
+							{#if Array.isArray(link.slug)}
+								<select
+									class="form-input w-full cursor-pointer border-none bg-transparent p-1 text-gray-500 outline-none sm:text-sm"
+									value={getInitialSelectValue(link)}>
+									{#each link.slug as slug}
+										<option value={slug}>{slug}</option>
+									{/each}
+								</select>
+							{:else}{link.slug}{/if}
+						</div>
+						<input name="profileLinks" bind:value={$form.profileLinks} hidden />
+						<input
+							value={getInitialSocialLinkValue(link)}
+							on:blur={(e) => updateLinksInputValues(link, e.target.value)}
+							type="text"
+							name={link.name}
+							class="form-input block w-full min-w-0 flex-1 rounded-none rounded-r-md
+                  border sm:text-sm
+                  sm:leading-5" />
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+
+	<!-- Campfire Facts -->
+	<div class="mt-24 border-t border-gray-400 pt-8">
+		<div>
+			<h3 class="text-lg font-medium leading-6 text-gray-900">Campfire Facts</h3>
+			<p class="mt-1 text-sm leading-5 text-gray-500">
+				There is more to you than just some social links, tell us a few interesting facts.
+			</p>
+		</div>
+
+		<div class="mt-8">
+			<div class="sm:col-span-6">
+				<div class="mt-6 grid grid-cols-1 gap-y-4 sm:grid-cols-6">
+					<div class="block text-sm font-medium leading-5 text-gray-700 sm:col-span-6">
+						<label for="interests"> What are some things you're interested in? </label>
+						<p class="mt-2 text-gray-500">Please note return/enter is the delimiter.</p>
+
+						<div class="tags-input-override mt-4">
+							<Tags
+								name="interests"
+								bind:this={interestsInput}
+								tags={interestsInputValues}
+								allowBlur={true}
+								maxTags={25}
+								onlyUnique={true} />
+						</div>
+					</div>
+				</div>
+
+				<div class="mt-6 grid grid-cols-1 gap-y-4 sm:grid-cols-6">
+					<div class="sm:col-span-6">
+						<label for="lifeHack" class="block text-sm font-medium leading-5 text-gray-700">
+							What is a 1 sentence "life hack" that you'd share with someone?
+						</label>
+						<textarea
+							bind:value={$form.lifeHack}
+							{...$constraints.lifeHack}
+							type="text"
+							name="lifeHack"
+							placeholder="E.g. `Embrace failure, lean into the journey and if you don't like the road, take the fork.`"
+							class="form-input mt-4 block w-full rounded-md border shadow-sm" />
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Privacy -->
+	<div class="mt-24 border-t border-gray-400 pt-8">
+		<div>
+			<h3 class="text-lg font-medium leading-6 text-gray-900">Make your profile public(ish).</h3>
+
+			<div class="mt-1 text-sm leading-5 text-gray-500">
+				<p>By allowing us to feature you, you can...</p>
+				<p class="pt-4">
+					By selecting this, you can submit an activity on THAT.us. Your profile will then be
+					featured across different areas of the Website. We don't sell or share any of your data.
+				</p>
+				<p class="pt-4 font-semibold">
+					After toggling this, it takes a few moments for our robots to wake up and do their jobs.
+				</p>
+			</div>
+		</div>
+
+		<div class="mt-6">
+			<label for="canFeature" class="block text-sm font-medium leading-5 text-gray-700">
+				Yes, please feature me.
+			</label>
+
+			<div class="mt-2 flex items-start">
+				<Checkbox
+					name="canFeature"
+					bind:checked={$form.canFeature}
+					size="2.5rem"
+					class="flex-none" />
+			</div>
+		</div>
+	</div>
+
+	<div class="mt-24 border-t border-gray-400 pt-8">
+		<div class="flex justify-end space-x-4">
+			<button type="submit">
+				<Shell>
+					<div class="px-8 py-2 font-medium">Save Profile</div>
+				</Shell>
+			</button>
+		</div>
+	</div>
+</form>
+
+{#if $delayed}
+	<div class="flex justify-center py-12">
+		<Waiting />
+	</div>
+{/if}
+
+<div class="py-12">
+	<SuperDebug data={$form} />
+</div>
+
+<style lang="postcss">
+	.tags-input-override :global(.svelte-tags-input-layout) {
+		padding: 15px 10px 15px 10px !important;
+	}
+
+	.tags-input-override :global(.svelte-tags-input-tag) {
+		background: #26529a !important;
+		color: #fff !important;
+		border-radius: 4px !important;
+		padding: 5px 15px 5px 15px !important;
+	}
+</style>
