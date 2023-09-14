@@ -7,7 +7,6 @@
 	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
 	import * as flashModule from 'sveltekit-flash-message/client';
 	import Select from 'svelte-select';
-	import MaskInput from 'svelte-input-mask/MaskInput.svelte';
 
 	import { Shell } from '$elements/buttons';
 	import sharedProfileFormSchema from '$lib/formSchemas/sharedProfile';
@@ -26,6 +25,35 @@
 			module: flashModule
 		}
 	});
+
+	let formattedPhoneNumber = '';
+	function formatPhoneNumber(event) {
+		// Remove all non-numeric characters from the input
+		$form.phone = event.target.value.replace(/\D/g, '');
+
+		// Always add a plus sign before the number
+		$form.phone = '+' + $form.phone;
+
+		// Format the phone number nicely
+		if ($form.phone.startsWith('+1')) {
+			// Format as a US number
+			formattedPhoneNumber = $form.phone.replace(
+				/^(\+\d{1})(\d{3})(\d{3})(\d{4})$/,
+				'$1 ($2) $3-$4'
+			);
+		} else {
+			// Format as an international number
+			formattedPhoneNumber = $form.phone.replace(
+				/^(\+\d{2})(\d{1,3})(\d{1,3})(\d{1,4})$/,
+				'$1 $2 $3 $4'
+			);
+		}
+	}
+
+	// // // Set the phone number when the component is created
+	$: {
+		formatPhoneNumber({ target: { value: $form.phone } });
+	}
 </script>
 
 <form method="POST" use:enhance>
@@ -154,17 +182,15 @@
 					<label for="about" class="block text-sm font-medium leading-5 text-gray-700">
 						Phone Number
 					</label>
-					<div class="mt-1 rounded-md border shadow-sm">
-						<MaskInput
-							name="phone"
-							alwaysShowMask
-							mask="+0 (000) 000 - 0000"
-							size={20}
-							showMask
-							maskChar="_"
-							class="form-input block w-full"
-							bind:value={$form.phone} />
-					</div>
+
+					<input
+						bind:value={formattedPhoneNumber}
+						on:input={formatPhoneNumber}
+						{...constraints.phone}
+						name="phone"
+						id="phone"
+						placeholder="+1 (123) 456-7890"
+						class="form-imput mt-1 block w-full rounded-md shadow-sm" />
 				</div>
 
 				<div class="sm:col-span-3">
