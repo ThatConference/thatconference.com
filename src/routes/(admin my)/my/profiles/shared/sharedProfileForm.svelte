@@ -19,8 +19,7 @@
 		dataType: 'json',
 		validators: sharedProfileFormSchema,
 		syncFlashMessage: false,
-		taintedMessage:
-			'Are you sure you want to leave this page? There are changes to your profile and they will not be saved.',
+		taintedMessage: null, // todo - @csell phone number formatting taints the form.
 		flashMessage: {
 			module: flashModule
 		}

@@ -16,8 +16,7 @@
 	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
 		dataType: 'json',
 		syncFlashMessage: false,
-		taintedMessage:
-			'Are you sure you want to leave this page? There are changes to your contact information and they will not be saved.',
+		taintedMessage: null, // todo - @csell phone number formatting taints the form.
 		flashMessage: {
 			module: flashModule
 		}
