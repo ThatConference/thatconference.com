@@ -143,7 +143,10 @@ export default (fetch) => {
 		return client
 			.mutation({ mutation: MUTATION_UPDATE_EMERGENCY_CONTACT, variables })
 			.then(({ data, errors }) => {
-				if (errors) log({ errors, tag: 'MUTATION_UPDATE_EMERGENCY_CONTACT' });
+				if (errors) {
+					log({ errors, tag: 'MUTATION_UPDATE_EMERGENCY_CONTACT' });
+					throw new Error('An error occurred while updating your emergency contact.');
+				}
 
 				return data.members?.member?.update?.emergencyContact;
 			});

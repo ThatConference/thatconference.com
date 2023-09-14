@@ -9,19 +9,8 @@
 	import { Warning } from '$elements/svgs';
 
 	import EmergencyContactForm from './emergencyContactForm.svelte';
-	import membersMutationApi from '$dataSources/api.that.tech/members/mutations';
 
-	let { emergencyContactInformation } = data;
 	const { isEmpty } = lodash;
-	const { updateEmergencyContact } = membersMutationApi();
-
-	async function handleUpdate({ detail: { values, setSubmitting } }) {
-		setSubmitting(true);
-
-		await updateEmergencyContact(values);
-
-		setSubmitting(false);
-	}
 
 	const metaTags = ((title = 'My Emergency Contact - THAT') => ({
 		title,
@@ -30,7 +19,7 @@
 			description: 'Create or update your emergency contact information.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/profiles/emergency-contact/`
+				url: `https://thatconference.com/my/profiles/emergency-contact/`
 			},
 			nofollow: true,
 			noindex: true
@@ -41,7 +30,7 @@
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
 {#if !isEmpty($page.data.user.profile)}
-	<EmergencyContactForm handleSubmit={handleUpdate} {emergencyContactInformation} />
+	<EmergencyContactForm sForm={data.form} />
 {:else}
 	<div class="mt-8">
 		<div class="flex items-center">

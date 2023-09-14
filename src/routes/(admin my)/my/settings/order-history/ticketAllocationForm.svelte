@@ -40,7 +40,6 @@
 			},
 			onResult: ({ result }) => {
 				if (result.status === 200) {
-					console.log('here');
 					isAllocated = true;
 					allocatedTo = `${result.data.allocatedTo.firstName} ${
 						result.data.allocatedTo.lastInitial || result.data.allocatedTo.lastName

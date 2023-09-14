@@ -35,3 +35,4 @@ Things to test
 - Add Activity
 - Transfer Ticket
 - make sure the ticket process is on point.
+- sponsor claiming ticket
