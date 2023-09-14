@@ -6,14 +6,12 @@
 	import { superForm } from 'sveltekit-superforms/client';
 	import * as flashModule from 'sveltekit-flash-message/client';
 	import Checkbox from 'svelte-checkbox';
+	import { AlertOctagon } from 'lucide-svelte';
 
-	import { ErrorCircle } from '$elements/svgs';
 	import { Shell, DisabledShell } from '$elements/buttons';
-	import primaryProfileFormSchema from '$lib/formSchemas/primaryProfile';
 
 	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
 		dataType: 'json',
-		validators: primaryProfileFormSchema,
 		syncFlashMessage: false,
 		taintedMessage:
 			'Are you sure you want to leave this page? There are changes to your profile and they will not be saved.',
@@ -312,7 +310,7 @@
 			<div class="flex flex-col space-y-3 text-red-500">
 				{#each $allErrors as error}
 					<div class="flex items-center space-x-2">
-						<ErrorCircle />
+						<AlertOctagon />
 						<p class="font-medium leading-5">{error.messages}</p>
 					</div>
 				{/each}
