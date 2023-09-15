@@ -15,6 +15,7 @@
 
 	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
 		dataType: 'json',
+		defaultValidator: 'clear',
 		syncFlashMessage: false,
 		taintedMessage: null, // todo - @csell phone number formatting taints the form.
 		flashMessage: {
