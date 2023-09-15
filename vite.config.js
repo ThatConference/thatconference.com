@@ -1,6 +1,6 @@
-import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig, loadEnv } from 'vite';
-import viteSentry from 'vite-plugin-sentry';
+import { sveltekit } from '@sveltejs/kit/vite';
+import { sentrySvelteKit } from '@sentry/sveltekit';
 import pkg from './package.json';
 
 const config = ({ mode }) => {
@@ -30,7 +30,7 @@ const config = ({ mode }) => {
 	};
 
 	return defineConfig({
-		plugins: [sveltekit(), viteSentry(sentryConfig)],
+		plugins: [sentrySvelteKit(sentryConfig), sveltekit()],
 		build: {
 			sourcemap: true
 		},
