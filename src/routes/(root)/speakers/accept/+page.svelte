@@ -25,7 +25,7 @@
 
 	import speakerAcceptMachine from './_machine';
 
-	let { eventDetails, acceptedSpeaker } = data;
+	let { eventDetails, acceptedSpeaker, currentEmergencyContact } = data;
 
 	const platformText =
 		acceptedSpeaker.platform === 'AT_THAT' ? 'in-person (AT THAT)' : 'online (ON THAT)';
@@ -219,7 +219,11 @@
 				{#if $state.matches(['step_four'])}
 					<div in:fade={{ delay: 100, duration: 400 }}>
 						<EmergencyContactInfo on:submit-step={handleSubmit}>
-							<SectionHeader slot="header" stepNumber="4" title={pluckTitle('emergency')} />
+							<SectionHeader
+								slot="header"
+								stepNumber="4"
+								title={pluckTitle('emergency')}
+								{currentEmergencyContact} />
 						</EmergencyContactInfo>
 					</div>
 				{/if}

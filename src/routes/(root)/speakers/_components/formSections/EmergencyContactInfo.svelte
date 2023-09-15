@@ -1,38 +1,104 @@
-<script context="module">
-	import * as yup from 'yup';
-
-	const schema = yup.object().shape({
-		fullName: yup.string().trim().required('Please enter the full name of your contact.'),
-		email: yup.string().trim().required('Please enter an email address to reach them at.'),
-		phoneNumber: yup
-			.string()
-			.trim()
-			.matches(
-				/^\+(?:[0-9] ?){6,14}[0-9]$/,
-				'Phone number must be in the following format: +13476748428, +493083050, etc.)'
-			)
-			.required('Please enter a phone number we can reach them at.'),
-		relationship: yup.string().trim().required('What is their relationship to you?'),
-		travelingWithYou: yup.boolean().required('Are they traveling with you?')
-	});
-</script>
-
 <script>
+	/*
+		this is duplicated ( sorta ) code with the profile emergency contact form. 
+		Right now this one acts only client side with no post backs.
+	*/
+
+	export let currentEmergencyContact;
+
 	import { createEventDispatcher } from 'svelte';
-	import { Form, Input } from 'sveltejs-forms';
+	import { page } from '$app/stores';
+	import { superForm, superValidateSync } from 'sveltekit-superforms/client';
+	import { getFlash } from 'sveltekit-flash-message';
+	import { AlertOctagon } from 'lucide-svelte';
 	import Select from 'svelte-select';
 
-	import ErrorNotificaiton from '$components/notifications/Error.svelte';
-	import { Shell } from '$elements/buttons';
+	import membersMutationApi from '$dataSources/api.that.tech/members/mutations';
+	import { DisabledShell, Shell } from '$elements/buttons';
+	import emergencyContactSchema from '$lib/formSchemas/emergencyContact';
 
+	const flash = getFlash(page);
 	const dispatch = createEventDispatcher();
 
-	function handleSubmit({ detail: { values, setSubmitting } }) {
-		setSubmitting(true);
+	const yesNoDropDown = [
+		{ label: 'No', value: false },
+		{ label: 'Yes', value: true }
+	];
 
-		dispatch('submit-step', values);
+	let nextStep = false;
 
-		setSubmitting(false);
+	function handleNextStep() {
+		dispatch('submit-step');
+	}
+
+	const { form, enhance, constraints, errors, allErrors } = superForm(
+		superValidateSync(currentEmergencyContact, emergencyContactSchema),
+		{
+			dataType: 'json',
+			validators: emergencyContactSchema,
+			SPA: true,
+			taintedMessage: null, // todo - @csell phone number formatting taints the form.
+			onUpdate: async ({ form }) => {
+				if (form.valid) {
+					const { updateEmergencyContact } = membersMutationApi();
+
+					try {
+						await updateEmergencyContact(form.data);
+
+						// We can head to the next step
+						nextStep = true;
+
+						const successMessage = {
+							type: 'success',
+							message: `Your emergency contact information has been updated.`
+						};
+
+						$flash = successMessage;
+						return { form };
+					} catch (error) {
+						const errorMessage = {
+							type: 'error',
+							message: `Whoops!!! ${error.message}`
+						};
+
+						$flash = errorMessage;
+						return { form };
+					}
+				}
+			}
+		}
+	);
+
+	let relationshipSelect = $form.relationship;
+	let travelingWithYouSelect = yesNoDropDown.find((i) => i.value == $form.travelingWithYou);
+
+	let formattedPhoneNumber = '';
+	function formatPhoneNumber(event) {
+		// Remove all non-numeric characters from the input
+		$form.phoneNumber = event.target.value.replace(/\D/g, '');
+
+		// Always add a plus sign before the number
+		$form.phoneNumber = '+' + $form.phoneNumber;
+
+		// Format the phone number nicely
+		if ($form.phoneNumber.startsWith('+1')) {
+			// Format as a US number
+			formattedPhoneNumber = $form.phoneNumber.replace(
+				/^(\+\d{1})(\d{3})(\d{3})(\d{4})$/,
+				'$1 ($2) $3-$4'
+			);
+		} else {
+			// Format as an international number
+			formattedPhoneNumber = $form.phoneNumber.replace(
+				/^(\+\d{2})(\d{1,3})(\d{1,3})(\d{1,4})$/,
+				'$1 $2 $3 $4'
+			);
+		}
+	}
+
+	// // // Set the phone number when the component is created
+	$: {
+		formatPhoneNumber({ target: { value: $form.phoneNumber } });
 	}
 </script>
 
@@ -45,89 +111,92 @@
 	</p>
 </div>
 
-<Form
-	{schema}
-	validateOnBlur={false}
-	validateOnChange={false}
-	on:submit={handleSubmit}
-	let:isSubmitting
-	let:setValue
-	let:errors
-	let:touched
-	let:isValid>
-	<div class="mt-12">
-		<h2 class="text-xl font-extrabold text-gray-800">
-			Please fill out the appropriate emergency contact information.
-		</h2>
-		<p class="pt-2 text-gray-500">Who would you like us to contact in the event of an emergency?</p>
+<form use:enhance method="POST">
+	<div class="my-4 antialiased">
+		<div class="flex flex-1 items-center justify-between">
+			<div class="flex-1 px-4 py-2 text-sm">
+				<p class="font-semibold text-gray-900">Emergency Contact</p>
 
-		<div class="mt-6 bg-gray-50 antialiased">
-			<div class="flex flex-1 items-center justify-between rounded-sm border">
-				<div class="flex-1 px-4 py-2 text-sm">
-					<p class="font-semibold text-gray-900">Emergency Contact</p>
+				<div>
+					<div class="mt-8 space-y-6 px-4 pb-4">
+						<div>
+							<label for="fullName" class="block">
+								<span class="text-gray-700">Full Name</span>
+							</label>
+							<div class="relative">
+								<span
+									class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+							</div>
+							<input
+								bind:value={$form.fullName}
+								{...constraints.fullName}
+								name="fullName"
+								type="text"
+								placeholder="E.g. Clark Sell"
+								class="form-imput mt-4 block w-full rounded-md shadow-sm" />
+							{#if $errors.fullName}
+								<small>{$errors.fullName}</small>
+							{/if}
+						</div>
 
-					<div>
-						<div class="px-4 pb-4">
-							<div class="mt-4">
-								<label for="fullName" class="block">
-									<span class="text-gray-700">Full Name</span>
-								</label>
-								<div class="relative">
-									<span
-										class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
-								</div>
-								<Input
-									autofocus
-									name="fullName"
-									type="text"
-									required
-									placeholder="E.g. Clark Sell"
-									class="form-input mt-1 block w-full rounded-sm text-sm" />
+						<div>
+							<label for="phoneNumber" class="block">
+								<span class="text-gray-700"
+									>What is the best number to contact them at? (E.g. +13476748428, +493083050, etc.)</span>
+							</label>
+							<div class="relative">
+								<span
+									class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+							</div>
+
+							<input
+								bind:value={formattedPhoneNumber}
+								on:input={formatPhoneNumber}
+								{...constraints.phoneNumber}
+								name="phoneNumber"
+								id="phoneNumber"
+								placeholder="+1 (123) 456-7890"
+								class="form-imput mt-4 block w-full rounded-md shadow-sm" />
+
+							{#if $errors.phoneNumber}
+								<small>{$errors.phoneNumber}</small>
+							{/if}
+						</div>
+
+						<div>
+							<label for="email" class="block">
+								<span class="text-gray-700">What is their email address?</span>
+							</label>
+							<div class="relative">
+								<span
+									class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+							</div>
+							<input
+								name="email"
+								type="email"
+								bind:value={$form.email}
+								{...constraints.email}
+								placeholder="E.g. hello@that.us"
+								size="30"
+								class="form-imput mt-4 block w-full rounded-md shadow-sm" />
+							{#if $errors.email}
+								<small>{$errors.email}</small>
+							{/if}
+						</div>
+
+						<div>
+							<label for="relationship" class="block">
+								<span class="text-gray-700">What is their relationship to you?</span>
+							</label>
+
+							<div class="relative">
+								<span
+									class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
 							</div>
 
 							<div class="mt-4">
-								<label for="phoneNumber" class="block">
-									<span class="text-gray-700"
-										>What is the best number to contact them at? (E.g. +13476748428)</span>
-								</label>
-								<div class="relative">
-									<span
-										class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
-								</div>
-								<Input
-									name="phoneNumber"
-									type="tel"
-									class="form-input mt-1 block w-full rounded-sm text-sm "
-									required
-									placeholder="E.g. +13476748428" />
-							</div>
-
-							<div class="mt-4">
-								<label for="email" class="block">
-									<span class="text-gray-700">What is their email address?</span>
-								</label>
-								<div class="relative">
-									<span
-										class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
-								</div>
-								<Input
-									name="email"
-									type="email"
-									placeholder="E.g. hello@that.us"
-									size="30"
-									required
-									class="form-input mt-1 block w-full rounded-sm text-sm" />
-							</div>
-
-							<div class="mt-4">
-								<label for="relationship" class="block">
-									<span class="text-gray-700">What is their relationship to you?</span>
-								</label>
-								<div class="relative">
-									<span
-										class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
-								</div>
 								<Select
+									clearable={false}
 									inputAttributes={{ name: 'relationship' }}
 									items={[
 										{ label: 'Spouse', value: 'Spouse' },
@@ -135,34 +204,34 @@
 										{ label: 'Kid', value: 'Kid' },
 										{ label: 'Other', value: 'Other' }
 									]}
-									on:select={({ detail }) => setValue('relationship', detail.value)}
-									hasError={touched['relationship'] && errors['relationship']}
-									inputStyles="form-multiselect transition ease-in-out duration-150 sm:text-sm sm:leading-5 hover:border-gray-700" />
-
-								{#if touched['relationship'] && errors['relationship']}
-									<p class="italic text-red-600">{errors['relationship']}</p>
+									bind:value={relationshipSelect}
+									bind:justValue={$form.relationship}
+									inputStyles="form-multiselect block w-full rounded-md shadow-sm" />
+								{#if $errors.relationship}
+									<small>{$errors.relationship}</small>
 								{/if}
 							</div>
+						</div>
 
+						<div>
+							<label for="travelingWithYou" class="block">
+								<span class="text-gray-700">Are they traveling with you?</span>
+							</label>
+							<div class="relative">
+								<span
+									class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
+							</div>
 							<div class="mt-4">
-								<label for="travelingWithYou" class="block">
-									<span class="text-gray-700">Are they traveling with you?</span>
-								</label>
-								<div class="relative">
-									<span
-										class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
-								</div>
 								<Select
+									clearable={false}
 									inputAttributes={{ name: 'travelingWithYou' }}
-									items={[
-										{ label: 'No', value: false },
-										{ label: 'Yes', value: true }
-									]}
-									on:select={({ detail }) => setValue('travelingWithYou', detail.value)}
-									hasError={touched['travelingWithYou'] && errors['travelingWithYou']}
-									inputStyles="form-multiselect transition ease-in-out duration-150 sm:text-sm sm:leading-5 hover:border-gray-700" />
-								{#if touched['travelingWithYou'] && errors['travelingWithYou']}
-									<p class="italic text-red-600">{errors['travelingWithYou']}</p>
+									items={yesNoDropDown}
+									bind:value={travelingWithYouSelect}
+									bind:justValue={$form.travelingWithYou}
+									inputStyles="form-multiselect  block w-full rounded-md shadow-sm" />
+
+								{#if $errors.travelingWithYou}
+									<small>{$errors.travelingWithYou}</small>
 								{/if}
 							</div>
 						</div>
@@ -172,17 +241,44 @@
 		</div>
 	</div>
 
-	<div class="mt-12">
-		<div class="flex justify-end">
-			<button disabled={isSubmitting} type="submit">
-				<Shell>
-					<div class="px-8 py-2 font-extrabold">Next, Campsite</div>
-				</Shell>
-			</button>
+	<div class="mt-24 border-t border-gray-400 pt-8">
+		{#if $allErrors.length}
+			<div class="flex flex-col space-y-3 text-red-500">
+				{#each $allErrors as error}
+					<div class="flex items-center space-x-2">
+						<AlertOctagon />
+						<p class="font-medium leading-5">{error.messages}</p>
+					</div>
+				{/each}
+			</div>
+		{/if}
+
+		<div class="flex justify-end space-x-4">
+			{#if !nextStep}
+				{#if $allErrors.length > 0}
+					<DisabledShell>
+						<div class="px-8 py-2 font-medium">Update Contact Information</div>
+					</DisabledShell>
+				{:else}
+					<button type="submit">
+						<Shell>
+							<div class="px-8 py-2 font-medium">Update Contact Information</div>
+						</Shell>
+					</button>
+				{/if}
+			{:else}
+				<button on:click={handleNextStep}>
+					<Shell>
+						<div class="px-8 py-2 font-medium">Next Step</div>
+					</Shell>
+				</button>
+			{/if}
 		</div>
 	</div>
+</form>
 
-	{#if isValid === false}
-		<ErrorNotificaiton message="Please correct the issues listed above." />
-	{/if}
-</Form>
+<style lang="postcss">
+	small {
+		@apply text-sm font-medium text-red-500;
+	}
+</style>

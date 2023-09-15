@@ -4,7 +4,6 @@ import { createMachine, assign } from 'xstate';
 
 import { log } from '$lib/error';
 import speakerMutationsApi from '$dataSources/api.that.tech/speakers/mutations';
-import membersMutationApi from '$dataSources/api.that.tech/members/mutations';
 import speakerQueryApi from '$dataSources/api.that.tech/speakers/queries';
 
 import config from './config';
@@ -19,7 +18,6 @@ function createServices() {
 	} = speakerMutationsApi();
 
 	const { queryMyOrders } = speakerQueryApi();
-	const { updateEmergencyContact } = membersMutationApi();
 
 	return {
 		guards: {
@@ -49,12 +47,7 @@ function createServices() {
 			stepTwoSubmit: (_, { eventSlug, products }) => orderProducts({ eventSlug, products }),
 
 			stepThreeSubmit: (_, __) => Promise.resolve(),
-			stepFourSubmit: (_, event) => {
-				let modifiedEvent = { ...event };
-				delete modifiedEvent.type;
-
-				return updateEmergencyContact(modifiedEvent);
-			},
+			stepFourSubmit: (_, __) => Promise.resolve(),
 			stepFiveSubmit: (_, event) => {
 				let modifiedEvent = { ...event };
 				delete modifiedEvent.type;
