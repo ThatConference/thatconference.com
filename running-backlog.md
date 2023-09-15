@@ -1,6 +1,5 @@
 # Migration to thatconference.com
 
-- Validate Slug
 - fix other profiles
 - forms lib upgraded
 - event hero image
