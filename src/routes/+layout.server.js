@@ -17,7 +17,7 @@ async function queryMe(accessToken) {
 			credentials: 'include',
 			'Content-Type': 'application/json',
 			Authorization: `Bearer ${accessToken}`,
-			'that-site': 'that.us'
+			'that-site': 'thatconference.com'
 		},
 		body: JSON.stringify(body)
 	})
