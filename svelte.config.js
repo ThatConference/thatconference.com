@@ -9,7 +9,7 @@ const dev = process.env.NODE_ENV === 'development' ? true : false;
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	extensions: ['.svelte', '.md'],
+	extensions: ['.svelte', ...mdsvexConfig.extensions],
 	kit: {
 		serviceWorker: {
 			register: false
