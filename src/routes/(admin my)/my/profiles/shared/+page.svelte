@@ -9,23 +9,8 @@
 	import { Warning } from '$elements/svgs';
 
 	import SharedProfileForm from './sharedProfileForm.svelte';
-	// import meMutationsApi from '$dataSources/api.that.tech/me/mutations';
 
 	const { isEmpty } = lodash;
-	// const { updateSharedProfile } = meMutationsApi();
-
-	// async function handleUpdate({ detail: { values, setSubmitting } }) {
-	// 	setSubmitting(true);
-
-	// 	try {
-	// 		await updateSharedProfile(values);
-	// 	} catch (e) {
-	// 		//todo what do we do here?
-	// 		console.error(e);
-	// 	}
-
-	// 	setSubmitting(false);
-	// }
 
 	const metaTags = ((title = 'My Shared Profile - THAT') => ({
 		title,
@@ -34,7 +19,7 @@
 			description: 'Create or update your shared THAT profile.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/profiles/shared/`
+				url: `https://thatconference.com/my/profiles/shared/`
 			},
 			nofollow: true,
 			noindex: true

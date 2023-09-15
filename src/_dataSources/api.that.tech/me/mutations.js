@@ -32,7 +32,10 @@ export default (fetch) => {
 		return client
 			.mutation({ mutation: MUTATION_UPDATE_SHARED_PROFILE, variables })
 			.then(({ data, errors }) => {
-				if (errors) log({ errors, tag: 'MUTATION_CHECK_IN_USER' });
+				if (errors) {
+					log({ errors, tag: 'MUTATION_CHECK_IN_USER' });
+					throw new Error('An error occurred while updating your shared profile.');
+				}
 
 				let results;
 
