@@ -1,21 +1,13 @@
-# folders
-node_modules
-package
-__testCoverage__
-public
-
-# files
 .DS_Store
+node_modules
+/build
 /.svelte-kit
-
-# env settings
+/package
 .env
-.env.production
-
+.env.*
+!.env.example
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
 .vercel_build_output/
 .vercel
-# Sentry
-.sentryclirc
-
-# Sentry
 .sentryclirc

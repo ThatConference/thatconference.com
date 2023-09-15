@@ -17,7 +17,7 @@
 	import { StandardLink } from '$elements';
 	import SlideOver from '$elements/overlays/BasicSlideOver.svelte';
 
-	import config from '$utils/config.public';
+	import config from '$lib/config.public';
 
 	$: eventsModified = events.filter((e) => e.id !== config.eventId);
 </script>

@@ -9,7 +9,7 @@
 	import Icon from 'svelte-awesome';
 	import { calendarCheckO } from '$components/svelte-awesome-icons';
 
-	import ical from '$utils/ical.js';
+	import ical from '$lib/ical.js';
 
 	// todo.. this needs to be looked at more. Buffer not defined error, might be a vite issue... we used to load nodepolyfills with rollup.
 	let url = '/';

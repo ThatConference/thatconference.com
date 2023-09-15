@@ -1,6 +1,6 @@
 import { superValidate, actionResult } from 'sveltekit-superforms/server';
 import dayjs from 'dayjs';
-import { newsletterConfig } from '$utils/config.private';
+import { newsletterConfig } from '$lib/config.private';
 
 import newsletterSchema from '$lib/formSchemas/newsletter';
 
@@ -63,7 +63,7 @@ export const POST = async ({ request, fetch, url }) => {
 
 		if (hubspotResults.ok) {
 			const r = await hubspotResults.json();
-			successMessage = r.inlineMessage;
+			successMessage = `You're in! ${r.inlineMessage} Double check your inbox.`;
 			if (r.errors) {
 				return actionResult('failure', { form }, r.errors, 400);
 			}

@@ -17,11 +17,11 @@
 
 	<div>
 		<ul class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-			{#each cardsToShow as card}
+			{#each cardsToShow as _card, cardKey}
 				<li class="col-span-1 rounded-lg bg-white shadow-lg">
 					<div class="flex w-full items-center justify-between space-x-6 p-3">
 						<div class="flex-1 truncate">
-							<FacebookLoader uniqueKey="card" />
+							<FacebookLoader uniqueKey={cardKey} />
 						</div>
 					</div>
 				</li>

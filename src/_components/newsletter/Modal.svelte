@@ -42,7 +42,7 @@
 						</div>
 
 						<div class="w-2/3">
-							<HubspotForm />
+							<HubspotForm formId={'newsletter-modal'} />
 						</div>
 
 						<svg

@@ -34,10 +34,10 @@
 	import { page } from '$app/stores';
 	import lodash from 'lodash';
 
-	import config from '$utils/config.public';
-	import buildImageSrc from '$utils/image';
-	import { truncate, isLongerThan } from '$utils/truncate';
-	import { show } from '$stores/profileNotification';
+	import config from '$lib/config.public';
+	import buildImageSrc from '$lib/image';
+	import { truncate, isLongerThan } from '$lib/truncate';
+	import { show } from '$lib/stores/profileNotification';
 
 	import { Tag } from '$elements';
 	import CardLink from './CardLink.svelte';
@@ -214,6 +214,7 @@
 					</h3>
 				</a>
 
+				<!-- svelte-ignore a11y-no-static-element-interactions -->
 				<!-- svelte-ignore a11y-click-events-have-key-events -->
 				<div class="grid grid-cols-2 md:grid-cols-4">
 					<div
@@ -311,7 +312,7 @@
 								<div class="flex h-full">
 									{#if targetLocation === 'IN_PERSON'}
 										<div
-											class="flex w-full justify-center space-x-8 rounded-br-lg  bg-that-blue py-2 text-xs font-medium  text-white">
+											class="flex w-full justify-center space-x-8 rounded-br-lg bg-that-blue py-2 text-xs font-medium text-white">
 											<div class="flex justify-center space-x-2">
 												<Icon data={user} class="h-4 w-4" />
 												<span>In-Person</span>
@@ -397,6 +398,7 @@
 			</div>
 		</div>
 
+		<!-- svelte-ignore a11y-no-static-element-interactions -->
 		<!-- svelte-ignore a11y-click-events-have-key-events -->
 		<div
 			class="flex-grow px-3 pb-3"
@@ -405,7 +407,7 @@
 			{#if status === 'CANCELLED'}
 				<div class="flex items-center justify-center">
 					<img
-						class="lazyload relative h-28 "
+						class="lazyload relative h-28"
 						alt="canceled session"
 						src="/images/canceled-stamp.svg" />
 				</div>
@@ -506,7 +508,7 @@
 					{#if targetLocation === 'IN_PERSON'}
 						<div class="-ml-px flex w-0 flex-1">
 							<div
-								class="flex w-full justify-center space-x-8 rounded-bl-lg rounded-br-lg border border-transparent bg-that-blue py-2 text-xs font-medium  text-white">
+								class="flex w-full justify-center space-x-8 rounded-bl-lg rounded-br-lg border border-transparent bg-that-blue py-2 text-xs font-medium text-white">
 								<div class="flex justify-center space-x-2">
 									<Icon data={user} class="h-4 w-4" />
 									<span>In-Person</span>

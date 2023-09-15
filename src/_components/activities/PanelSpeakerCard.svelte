@@ -1,7 +1,7 @@
 <script>
 	export let speaker;
 
-	import config from '$utils/config.public';
+	import config from '$lib/config.public';
 
 	let imageCrop = '?mask=ellipse&w=500&h=500&fit=crop';
 

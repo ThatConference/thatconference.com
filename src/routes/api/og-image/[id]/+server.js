@@ -1,4 +1,4 @@
-import config from '$utils/config.public';
+import config from '$lib/config.public';
 
 const baseHostImage = 'https://that.imgix.net/og-image';
 

@@ -1,7 +1,7 @@
-import auth0 from '$utils/security/server';
+import auth0 from '$lib/security/server';
 import { json, error } from '@sveltejs/kit';
 import fetch from 'isomorphic-fetch';
-import config from '$utils/config.public';
+import config from '$lib/config.public';
 import * as Sentry from '@sentry/svelte';
 
 export const trailingSlash = 'always';

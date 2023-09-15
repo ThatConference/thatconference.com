@@ -3,8 +3,8 @@
 	export let eventSlug;
 	export let isBlogLayout = false;
 
-	import gFetch from '$utils/gfetch';
-	import envConfig from '$utils/config.public';
+	import gFetch from '$lib/gfetch';
+	import envConfig from '$lib/config.public';
 	import { Standard as StandardLink, Highlight as HighlightLink } from '$elements/links';
 
 	const GET_PARTNERS = `
@@ -55,16 +55,16 @@
 	{#if partners.length > 0 || explorers.length > 0}
 		{#if !isBlogLayout}
 			<div class="relative overflow-hidden">
-				<div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:py-20 lg:px-8">
+				<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
 					<div class="my-12 flex flex-col items-start sm:items-center">
 						<h1
-							class="text-thatBlue-700 antialiased font-extrabold uppercase text-2xl sm:text-3xl lg:text-4xl xl:text-5xl">
+							class="text-2xl font-extrabold uppercase text-thatBlue-700 antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
 							Our Featured Camp Sponsors
 						</h1>
 					</div>
 
-					<div class="flex flex-col sm:grid grid-cols-6 gap-8">
-						<div class="hidden sm:block col-span-2 place-self-center p-4">
+					<div class="flex grid-cols-6 flex-col gap-8 sm:grid">
+						<div class="col-span-2 hidden place-self-center p-4 sm:block">
 							<img
 								class="lazyload w-1/2 sm:w-full"
 								src="/images/characters/octopus_with_flag.png"
@@ -76,9 +76,9 @@
 								<div class="flex flex-wrap items-center justify-center">
 									{#each partners as p}
 										<div
-											class="p-4 w-1/3 transition duration-500 ease-in-out transform hover:scale-105">
+											class="w-1/3 transform p-4 transition duration-500 ease-in-out hover:scale-105">
 											<a href="/partners/{p.slug}/">
-												<img class="lazyload w-full h-24" src={p.companyLogo} alt={p.companyName} />
+												<img class="lazyload h-24 w-full" src={p.companyLogo} alt={p.companyName} />
 											</a>
 										</div>
 									{/each}
@@ -87,9 +87,9 @@
 								<div class="flex flex-wrap items-center justify-center">
 									{#each explorers as p}
 										<div
-											class="p-4 w-1/5 transition duration-500 ease-in-out transform hover:scale-105">
+											class="w-1/5 transform p-4 transition duration-500 ease-in-out hover:scale-105">
 											<a href="/partners/{p.slug}/">
-												<img class="lazyload w-full h-24" src={p.companyLogo} alt={p.companyName} />
+												<img class="lazyload h-24 w-full" src={p.companyLogo} alt={p.companyName} />
 											</a>
 										</div>
 									{/each}
@@ -106,12 +106,12 @@
 					</div>
 
 					<div
-						class="my-12 flex flex-col sm:flex-row justify-around items-center space-y-12 sm:space-x-4">
+						class="my-12 flex flex-col items-center justify-around space-y-12 sm:flex-row sm:space-x-4">
 						<div>
-							<h2 class="font-bold uppercase text-gray-500 text-2xl">
+							<h2 class="text-2xl font-bold uppercase text-gray-500">
 								Learn more about our sponsorship opportunities?
 							</h2>
-							<p class="mt-4 prose text-gray-500 text-xl">
+							<p class="prose mt-4 text-xl text-gray-500">
 								We partner with industry-leading organizations and companies that are looking to
 								connect with software practitioners, businesses, and industry leaders.
 							</p>
@@ -128,15 +128,15 @@
 		{:else}
 			<div class="relative py-8 lg:py-16">
 				<div class="flex flex-col">
-					<div class="font-extrabold uppercase text-gray-500 text-3xl">
+					<div class="text-3xl font-extrabold uppercase text-gray-500">
 						Our Featured Camp Sponsors
 					</div>
 
 					<div class="flex flex-wrap items-center justify-center">
 						{#each partners as p}
-							<div class="p-4 w-1/3 transition duration-500 ease-in-out transform hover:scale-105">
+							<div class="w-1/3 transform p-4 transition duration-500 ease-in-out hover:scale-105">
 								<a href="/partners/{p.slug}/">
-									<img class="lazyload w-full h-24" src={p.companyLogo} alt={p.companyName} />
+									<img class="lazyload h-24 w-full" src={p.companyLogo} alt={p.companyName} />
 								</a>
 							</div>
 						{/each}
@@ -146,11 +146,11 @@
 						<StandardLink href="/partners/{slug}/">View all Sponsors</StandardLink>
 					</div>
 
-					<div class="mt-24 font-bold uppercase text-gray-500 text-2xl">
+					<div class="mt-24 text-2xl font-bold uppercase text-gray-500">
 						Interested In Sponsorship Opportunities?
 					</div>
 
-					<div class="mt-6 prose text-gray-500 text-xl">
+					<div class="prose mt-6 text-xl text-gray-500">
 						We partner with industry-leading organizations and companies that are looking to connect
 						with software developers and practitioners.
 					</div>

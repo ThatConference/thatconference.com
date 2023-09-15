@@ -9,7 +9,7 @@ import { inspect } from '@xstate/inspect';
 import * as Sentry from '@sentry/svelte';
 import { inject } from '@vercel/analytics';
 
-import { debug } from '$utils/config.public';
+import { debug } from '$lib/config.public';
 import coreQueryApi from '$dataSources/api.that.tech/core/queries';
 
 const correlationId = uuidv4();

@@ -13,6 +13,7 @@
 
 					<dd class="mt-2 md:col-span-7 md:mt-0">
 						<p class="text-base leading-6 text-gray-500">
+							<!-- eslint-disable-next-line  svelte/no-at-html-tags -->
 							{@html faq.answer}
 						</p>
 					</dd>
@@ -26,6 +27,7 @@
 					</dt>
 					<dd class="mt-2 md:col-span-7 md:mt-0">
 						<p class="text-base leading-6 text-gray-500">
+							<!-- eslint-disable-next-line  svelte/no-at-html-tags -->
 							{@html faq.answer}
 						</p>
 					</dd>

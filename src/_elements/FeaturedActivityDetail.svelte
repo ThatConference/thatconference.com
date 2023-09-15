@@ -11,7 +11,7 @@
 	import timezone from 'dayjs/plugin/timezone.js';
 	import advancedFormat from 'dayjs/plugin/advancedFormat.js';
 
-	import { truncate, isLongerThan } from '$utils/truncate';
+	import { truncate, isLongerThan } from '$lib/truncate';
 
 	dayjs.extend(utc);
 	dayjs.extend(timezone);
@@ -27,6 +27,7 @@
 		<div class="flex h-full w-full flex-col space-y-4 text-white">
 			<h1 class="text-lg font-semibold tracking-tight">{title}</h1>
 
+			<!-- svelte-ignore a11y-no-static-element-interactions -->
 			<!-- svelte-ignore a11y-click-events-have-key-events -->
 			<div
 				class="flex-grow"

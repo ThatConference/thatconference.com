@@ -1,4 +1,4 @@
-import gFetch from '$utils/gfetch';
+import gFetch from '$lib/gfetch';
 import { log } from '../utilities/error';
 
 export const MUTATION_CREATE_CHECKOUT_SESSION = `

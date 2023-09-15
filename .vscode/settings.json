@@ -11,8 +11,8 @@
 	"workbench.colorCustomizations": {
 		"titleBar.activeForeground": "#000",
 		"titleBar.inactiveForeground": "#000000CC",
-		"titleBar.activeBackground": "#4D51F7",
-		"titleBar.inactiveBackground": "#4D51F7"
+		"titleBar.activeBackground": "#f74646",
+		"titleBar.inactiveBackground": "#f74646"
 	},
 	"[svelte]": {
 		"editor.defaultFormatter": "svelte.svelte-vscode"

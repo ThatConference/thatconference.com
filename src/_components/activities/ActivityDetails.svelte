@@ -29,8 +29,8 @@
 	import lodash from 'lodash';
 
 	import favorites, { toggle } from '$lib/stores/favorites';
-	import buildImageSrc from '$utils/image';
-	import config from '$utils/config.public';
+	import buildImageSrc from '$lib/image';
+	import config from '$lib/config.public';
 
 	import { Avatars, Tag } from '$elements';
 
@@ -383,7 +383,7 @@
 				{:else}
 					<div>
 						<!-- Start Time -->
-						<p class="text-base text-gray-700  sm:mx-auto sm:text-lg md:text-xl lg:mx-0">
+						<p class="text-base text-gray-700 sm:mx-auto sm:text-lg md:text-xl lg:mx-0">
 							{#if durationInMinutes > 0}
 								{dayjs(startTime).format('dddd, MMMM D, YYYY - h:mm A z')}, for
 								{dayjs.duration(durationInMinutes, 'minutes').as('hours')}

@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
 
-import gFetch from '$utils/gfetch';
+import gFetch from '$lib/gfetch';
 
 import { log } from './utilities/error';
 

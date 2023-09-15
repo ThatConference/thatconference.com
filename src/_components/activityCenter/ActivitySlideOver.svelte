@@ -7,7 +7,7 @@
 	import { Activity } from '$elements/svgs';
 	import SlideOver from '$elements/overlays/BasicSlideOver.svelte';
 
-	import { messages } from '$stores/notificationCenter';
+	import { messages } from '$lib/stores/notificationCenter';
 
 	function handleClear() {
 		messages.set([]);
