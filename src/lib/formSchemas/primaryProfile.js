@@ -1,31 +1,4 @@
 import { z } from 'zod';
-// import memberApi from '$dataSources/api.that.tech/members/queries';
-
-function validateSlug(slug) {
-	// const { isSlugTaken } = memberApi();
-
-	console.log('in validate slug', slug);
-
-	// message: 'Slug is already taken. Try again.',
-	if (!/^[a-zA-Z0-9-_]+$/g.test(slug)) {
-		console.log('here');
-		return (
-			false,
-			{
-				message: `Invalid format: use only letters, numbers, dash, and underscore`
-			}
-		);
-	}
-
-	return true;
-
-	// return new Promise((res) =>
-	// 	isSlugTaken(slug).then((r) => {
-	// 		if (isNewProfile) res(!r);
-	// 		res(true);
-	// 	})
-	// );
-}
 
 export default z.object({
 	firstName: z.string().trim().min(1, { message: 'Please enter your first or given name.' }),
@@ -33,9 +6,11 @@ export default z.object({
 	email: z.string().email({ message: 'Please enter your email address.' }).trim(),
 	profileSlug: z
 		.string({ required_error: 'You must enter a value to represent your member page.' })
+		.regex(/^[a-zA-Z0-9-_]+$/, {
+			message: 'Invalid slug format: use only letters, numbers, dash, and underscore'
+		})
 		.trim()
-		.toLowerCase()
-		.refine(validateSlug),
+		.toLowerCase(),
 	acceptedCodeOfConduct: z
 		.literal(true, {
 			errorMap: () => ({ message: 'You must accept our Code of Conduct policy.' })
@@ -61,5 +36,6 @@ export default z.object({
 			errorMap: () => ({ message: 'You Must be 13 years or older.' })
 		})
 		.default(false),
-	isDeactivated: z.literal(false).default(false)
+	isDeactivated: z.literal(false).default(false),
+	canFeature: z.boolean().default(false)
 });

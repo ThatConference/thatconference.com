@@ -3,13 +3,12 @@
 </script>
 
 {#if !wasDismissed}
-	<div class="relative bg-red-400">
+	<div class="relative z-50 bg-red-400">
 		<div class="mx-auto max-w-screen-xl px-3 py-3 sm:px-6 lg:px-8">
 			<div class="pr-16 sm:px-16 sm:text-center">
 				<p class="font-medium text-white">
 					<span class="hidden md:inline">
-						To Favorite, Submit or Join any activity you will first need to complete your user
-						profile.
+						To purchase a ticket, or apply to speak, you first need to complete your user profile.
 					</span>
 					<span class="block sm:ml-2 sm:inline-block">
 						<a href="/my/profiles/primary/" class="font-bold text-white underline">
@@ -24,7 +23,7 @@
 				<button
 					type="button"
 					class="flex rounded-md p-2 transition duration-150
-            ease-in-out hover:bg-indigo-500 focus:bg-indigo-500 focus:outline-none"
+            ease-in-out hover:bg-red-600 focus:bg-red-600 focus:outline-none"
 					aria-label="Dismiss"
 					on:click={() => (wasDismissed = !wasDismissed)}>
 					<svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">

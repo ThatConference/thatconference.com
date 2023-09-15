@@ -26,12 +26,11 @@
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
-<div
-	class="min-h-screen bg-white px-4 py-16 sm:px-6 sm:py-24 md:grid md:place-items-center lg:px-8">
-	<div class="mx-auto max-w-max">
+<section class="relative overflow-x-hidden">
+	<div class="mx-auto my-12 max-w-screen-xl px-4 sm:px-6">
 		<main class="sm:flex">
-			<div>
-				<img class="h-28" src="/images/characters/Preston@2x.png" alt="Confused Preston" />
+			<div class="hidden md:block">
+				<img class="max-h-52" src="/images/characters/Preston@2x.png" alt="Confused Preston" />
 			</div>
 
 			<div class="sm:ml-6">
@@ -69,4 +68,4 @@
 			</div>
 		</main>
 	</div>
-</div>
+</section>

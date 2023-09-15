@@ -1,12 +1,13 @@
 import lodash from 'lodash';
 import { fail } from '@sveltejs/kit';
-import { superValidate } from 'sveltekit-superforms/server';
+import { superValidate, setError } from 'sveltekit-superforms/server';
 import { redirect } from 'sveltekit-flash-message/server';
 
 import primaryProfileSchema from '$lib/formSchemas/primaryProfile';
 
 import meApi from '$dataSources/api.that.tech/me';
 import memberApi from '$dataSources/api.that.tech/members/mutations';
+import memberApiQueries from '$dataSources/api.that.tech/members/queries';
 
 const { isNil, isEmpty } = lodash;
 
@@ -29,15 +30,10 @@ async function getProfile({ parent, fetch }) {
 
 export const load = async (request) => {
 	let currentProfile = {};
-	const { isNewProfile, me, authUser } = await getProfile(request);
+	const { isNewProfile, me } = await getProfile(request);
 
 	if (isNewProfile) {
-		currentProfile = {
-			firstName: authUser.baseUser?.given_name ? authUser.baseUser.given_name : '',
-			lastName: authUser.baseUser?.family_name ? authUser.baseUser.family_name : '',
-			profileSlug: authUser.baseUser?.nickname ? authUser.baseUser.nickname : '',
-			email: authUser.baseUser?.email ? authUser.baseUser.email : ''
-		};
+		currentProfile = undefined;
 	} else {
 		currentProfile = me;
 	}
@@ -54,6 +50,7 @@ export const actions = {
 	default: async (event) => {
 		const { queryMe } = meApi(event.fetch);
 		const { createProfile, updateProfile } = memberApi(event.fetch);
+		const { isSlugTaken } = memberApiQueries(event.fetch);
 
 		const form = await superValidate(event, primaryProfileSchema);
 
@@ -66,11 +63,20 @@ export const actions = {
 		let isNewProfile = false;
 		const me = await queryMe(fetch);
 
-		if (me) {
-			if (!isNil(me) && !isEmpty(me)) {
-				isNewProfile = false;
-			} else {
-				isNewProfile = true;
+		if (!isNil(me) && !isEmpty(me)) {
+			isNewProfile = false;
+		} else {
+			// this is a new profile
+			isNewProfile = true;
+
+			// we need to validate the slug hasn't already been taken.
+			const isTaken = await isSlugTaken(form.data.profileSlug);
+
+			if (isTaken) {
+				setError(form, 'profileSlug', 'This member slug is already taken.');
+				return fail(400, {
+					form
+				});
 			}
 		}
 

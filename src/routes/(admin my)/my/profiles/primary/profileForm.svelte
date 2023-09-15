@@ -12,13 +12,13 @@
 
 	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
 		dataType: 'json',
-		syncFlashMessage: false,
+		defaultValidator: 'clear',
 		taintedMessage:
 			'Are you sure you want to leave this page? There are changes to your profile and they will not be saved.',
 		flashMessage: {
 			module: flashModule
 		},
-		onUpdated({ form }) {
+		onUpdated: ({ form }) => {
 			if (form.valid) {
 				invalidateAll();
 			}
@@ -133,8 +133,13 @@
 					disabled={!isNewProfile}
 					name="profileSlug"
 					class="form-input block w-full min-w-0 flex-1 rounded-none rounded-r-md
-                  border bg-gray-50 text-gray-500" />
+                  border bg-gray-50 text-gray-500"
+					class:bg-white={isNewProfile} />
 			</div>
+
+			{#if $errors.profileSlug}
+				<small>{$errors.profileSlug}</small>
+			{/if}
 		</div>
 	</div>
 
@@ -268,6 +273,8 @@
 									</div>
 								</div>
 							</div>
+
+							<input name="canFeature" hidden bind:value={$form.canFeature} />
 						</div>
 					</div>
 				</div>
