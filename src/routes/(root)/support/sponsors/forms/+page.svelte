@@ -12,7 +12,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/sponsors/forms/`
+				url: `https://thatconference.com/support/sponsors/forms/`
 			}
 		})
 	}))();

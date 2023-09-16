@@ -14,7 +14,7 @@
 			title,
 			description: 'Create your account today and join in the conversation.',
 			openGraph: {
-				url: `https://that.us/signup`
+				url: `https://thatconference.com/signup`
 			}
 		})
 	}))();

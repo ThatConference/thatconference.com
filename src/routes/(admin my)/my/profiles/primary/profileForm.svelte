@@ -123,7 +123,7 @@
 				<span
 					class="form-input inline-flex items-center rounded-l-md border border-r-0
                 border-gray-300 bg-gray-50 px-3 text-gray-500">
-					https://that.us/members/
+					https://thatconference.com/members/
 				</span>
 
 				<input

@@ -34,7 +34,7 @@
 			description: 'Create or update your shared THAT profile.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/profiles/shared/`
+				url: `https://thatconference.com/my/profiles/shared/`
 			},
 			nofollow: true,
 			noindex: true

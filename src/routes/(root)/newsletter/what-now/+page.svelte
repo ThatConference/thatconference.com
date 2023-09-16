@@ -14,7 +14,7 @@
 			title,
 			description: '.',
 			openGraph: {
-				url: `https://that.us/newsletter/what-now`
+				url: `https://thatconference.com/newsletter/what-now`
 			}
 		})
 	}))();

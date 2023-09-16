@@ -8,14 +8,14 @@ function icalWrapper(title) {
 
 	function create(activity) {
 		cal.createEvent({
-			prodId: '//THAT Conference//THAT.us//EN',
+			prodId: '//THAT Conference//thatconference.com//EN',
 			uid: `that-${activity.id}`,
 			start: dayjs(activity.startTime).toDate(),
 			end: dayjs(activity.startTime).add(activity.durationInMinutes, 'minutes').toDate(),
 			summary: activity.title,
 			description: activity.shortDescription,
 			location: 'THAT.us',
-			url: `https://that.us/activities/${activity.id}`
+			url: `https://thatconference.com/activities/${activity.id}`
 		});
 
 		return cal.toURL();

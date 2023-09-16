@@ -11,7 +11,7 @@
 			description: 'View the items in your cart.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/orders/summary`
+				url: `https://thatconference.com/orders/summary`
 			},
 			noindex: true,
 			nofollow: true

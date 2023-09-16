@@ -16,7 +16,7 @@
 			description: 'Thank you to those who support our great community every day.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/events/tx/${event.slug}/sponsors/`
+				url: `https://thatconference.com/events/tx/${event.slug}/sponsors/`
 			}
 		})
 	}))();

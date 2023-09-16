@@ -10,7 +10,7 @@
 			description: 'Your payment was cancelled.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/orders/cancelled/`
+				url: `https://thatconference.com/orders/cancelled/`
 			},
 			noindex: true,
 			nofollow: true

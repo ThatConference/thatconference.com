@@ -14,7 +14,7 @@
 			description: 'Event check-in',
 			openGraph: {
 				type: 'website',
-				url: 'https://that.us/'
+				url: 'https://thatconference.com/'
 			},
 			noindex: true,
 			nofollow: true

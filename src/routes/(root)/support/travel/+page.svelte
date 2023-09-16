@@ -11,7 +11,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/travel`
+				url: `https://thatconference.com/support/travel`
 			}
 		})
 	}))();

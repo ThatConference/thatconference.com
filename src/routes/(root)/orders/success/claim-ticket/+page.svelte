@@ -42,7 +42,8 @@
 		</li>
 		<li>
 			If you haven’t done so already, make sure you’ve booked your hotel room. All booking
-			information can be found here: <a href="/support/travel/">https://that.us/support/travel/</a>
+			information can be found here: <a href="/support/travel/"
+				>https://thatconference.com/support/travel/</a>
 		</li>
 		<li>
 			When you get to the event make sure you check in at registration to get your sponsor badge.

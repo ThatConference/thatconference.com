@@ -9,7 +9,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/speakers/declined/`
+				url: `https://thatconference.com/speakers/declined/`
 			},
 			noindex: true,
 			nofollow: true
