@@ -429,8 +429,7 @@
 						src="/images/canceled-stamp.svg" />
 				</div>
 			{:else}
-				<p
-					class="lineBreaks prose mt-3 text-gray-500 sm:mx-auto sm:mt-5 sm:text-lg md:text-xl lg:mx-0">
+				<p class="lineBreaks mt-3 text-gray-500 sm:mx-auto sm:mt-5 sm:text-lg md:text-xl lg:mx-0">
 					{#if longDescription}
 						{longDescription}
 					{:else}
