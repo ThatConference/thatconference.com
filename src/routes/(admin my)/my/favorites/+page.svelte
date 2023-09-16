@@ -40,7 +40,7 @@
 			title: a.title ? a.title : '',
 			speakers: a.speakers.map((s) => `${s.firstName} ${s.lastName}`).join(';'),
 			priCategory: a.priCategory ? a.priCategory : '',
-			sessionLink: `https://thatconference.com/activites/${a.id}/`,
+			sessionLink: `https://thatconference.com/activities/${a.id}/`,
 			sessionType: a.type
 		}));
 
