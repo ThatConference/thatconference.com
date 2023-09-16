@@ -2,8 +2,6 @@ import config from '$lib/config.public';
 
 const baseHostImage = 'https://that.imgix.net/og-image';
 
-export const trailingSlash = 'always';
-
 export async function GET({ params }) {
 	let { id } = params;
 	const response = await fetch(`${baseHostImage}/${id}.png`);

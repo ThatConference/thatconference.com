@@ -121,7 +121,7 @@
 		</div>
 		<div class="mt-3 text-sm">
 			<a
-				href="/my/profiles/primary/"
+				href="/my/profiles/primary"
 				class="font-medium text-thatOrange-400 hover:text-thatOrange-500">
 				Complete Your Profile
 				<span aria-hidden="true">&rarr;</span>

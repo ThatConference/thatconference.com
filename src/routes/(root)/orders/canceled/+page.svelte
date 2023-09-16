@@ -43,7 +43,7 @@
 			</p>
 		</div>
 		<div class="mt-12 flex justify-end space-x-5">
-			<HighlightLink href="/orders/summary/">Return to Cart</HighlightLink>
+			<HighlightLink href="/orders/summary">Return to Cart</HighlightLink>
 		</div>
 	</div>
 </div>

@@ -43,7 +43,7 @@
 			<p class="mt-4 text-xl leading-7 text-gray-500">
 				Please join us in welcoming the newest Geeks to THAT. Not a member yet?
 
-				<a href="/membership/" class="text-thatOrange-400 hover:text-thatOrange-500">
+				<a href="/membership" class="text-thatOrange-400 hover:text-thatOrange-500">
 					Join today!
 				</a>
 			</p>
@@ -60,7 +60,7 @@
 		</div>
 
 		<div class="relative flex justify-end py-12">
-			<StandardLink href="/members/">View Everyone</StandardLink>
+			<StandardLink href="/members">View Everyone</StandardLink>
 		</div>
 	</div>
 </section>

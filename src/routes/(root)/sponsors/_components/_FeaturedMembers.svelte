@@ -22,7 +22,7 @@
 					{#each members.filter((m) => !!m) as member}
 						<li
 							class="transform cursor-pointer transition duration-500 ease-in-out hover:scale-105">
-							<a href="/members/{member.profileSlug}/">
+							<a href="/members/{member.profileSlug}">
 								<div class="flex items-center space-x-4 lg:space-x-6">
 									<img
 										class="lazyload h-16 w-16 rounded-full lg:h-24 lg:w-24"

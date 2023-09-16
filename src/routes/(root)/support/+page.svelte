@@ -39,11 +39,11 @@
 		</p>
 	</div>
 	<div
-		class="text-base text-lg leading-7 text-gray-500 lg:grid lg:grid-cols-2
+		class="text-lg leading-7 text-gray-500 lg:grid lg:grid-cols-2
         lg:items-start lg:gap-8">
 		<div class="relative mb-12 lg:mb-0">
 			<div
-				class="prose mx-auto mb-10 text-base text-lg leading-7
+				class="prose mx-auto mb-10 text-lg leading-7
             text-gray-500 lg:max-w-none">
 				<h2>The What</h2>
 
@@ -66,25 +66,25 @@
 				<p>Things you should know:</p>
 				<ul>
 					<li>
-						<a href="/support/what-is-an-activity/"> What is an Activity? </a>
+						<a href="/support/what-is-an-activity"> What is an Activity? </a>
 					</li>
 					<li>
-						<a href="/support/joining-an-activity/"> How to join an Activity. </a>
+						<a href="/support/joining-an-activity"> How to join an Activity. </a>
 					</li>
 					<li>
-						<a href="/support/creating-an-activity/"> How to create an Activity. </a>
+						<a href="/support/creating-an-activity"> How to create an Activity. </a>
 					</li>
 					<li>
-						<a href="/support/staying-up-to-date/"> How to stay up to date. </a>
+						<a href="/support/staying-up-to-date"> How to stay up to date. </a>
 					</li>
 					<li>
-						<a href="/my/profiles/primary/">Keep your profile up to date.</a>
+						<a href="/my/profiles/primary">Keep your profile up to date.</a>
 					</li>
 				</ul>
 			</div>
 			<div class="mx-auto flex max-w-prose space-x-4 text-base lg:max-w-none">
-				<StandardLink href="/activities/">Upcoming Activities</StandardLink>
-				<HighlightLink href="/support/what-is-an-activity/">What is an Activity?</HighlightLink>
+				<StandardLink href="/activities">Upcoming Activities</StandardLink>
+				<HighlightLink href="/support/what-is-an-activity">What is an Activity?</HighlightLink>
 			</div>
 		</div>
 		<div class="relative mx-auto max-w-prose text-base lg:max-w-none">

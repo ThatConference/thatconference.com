@@ -28,7 +28,7 @@
 						</div>
 
 						<div class="space-y-2 text-center">
-							<div class="p-8 ">
+							<div class="p-8">
 								<p class="text-xl font-extrabold tracking-tight text-gray-500">
 									{dayjs(event.startDate).format('MMM D, YYYY')} - {dayjs(event.endDate).format(
 										'MMM D, YYYY'
@@ -52,7 +52,7 @@
 						<p>Become a Counselor</p>
 						<p>
 							<a
-								href={`/call-for-counselors/${event.slug}/`}
+								href={`/call-for-counselors/${event.slug}`}
 								class="text-that-orange hover:text-thatOrange-500">
 								Learn More &rarr;
 							</a>

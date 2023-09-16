@@ -28,7 +28,7 @@
 
 	<ol>
 		<li>
-			Ensure your <a href="/my/profiles/primary/">profile</a> is up-to-date with a photo. This is a great
+			Ensure your <a href="/my/profiles/primary">profile</a> is up-to-date with a photo. This is a great
 			way for folks who have visited your booth another way to get in contact with you after the event.
 		</li>
 		<li>
@@ -42,7 +42,7 @@
 		</li>
 		<li>
 			If you haven’t done so already, make sure you’ve booked your hotel room. All booking
-			information can be found here: <a href="/support/travel/"
+			information can be found here: <a href="/support/travel"
 				>https://thatconference.com/support/travel/</a>
 		</li>
 		<li>
@@ -56,7 +56,7 @@
 	</ol>
 
 	<p>
-		Visit <a href="/support/sponsors/forms/">https://sponsor.thatconference.com</a> for a one-stop resource
+		Visit <a href="/support/sponsors/forms">https://sponsor.thatconference.com</a> for a one-stop resource
 		for your sponsorship. It contains links to lead generation, a sponsor handbook and many other important
 		resources.
 	</p>

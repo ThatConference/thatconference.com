@@ -65,7 +65,7 @@
 			</span>
 			<span class="flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto">
 				<a
-					href="/signup/"
+					href="/signup"
 					class="focus:ring-blue inline-flex w-full justify-center rounded-md
 						border border-gray-300 bg-white px-4 py-2 text-base font-medium
 						leading-6 text-gray-700 shadow-sm transition

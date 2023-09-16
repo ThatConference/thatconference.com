@@ -5,49 +5,49 @@ export const thatLinks = [
 	},
 	{
 		text: 'THAT Merch',
-		href: 'https://store.that.us/'
+		href: 'https://store.that.us'
 	},
 	{
 		text: 'Membership',
-		href: '/membership/'
+		href: '/membership'
 	}
 ];
 
 export const thatConferenceLinks = [
 	{
 		text: 'Field Guide',
-		href: '/support/that-field-guide/'
+		href: '/support/that-field-guide'
 	},
 	{
 		text: 'Sponsors',
-		href: '/sponsors/'
+		href: '/sponsors'
 	},
 	{
 		text: 'Job Board',
-		href: '/sponsors/job-board/'
+		href: '/sponsors/job-board'
 	},
 	{
 		text: 'Call for Speakers',
-		href: '/cfp/'
+		href: '/cfp'
 	},
 	{
 		text: 'COVID Policies',
-		href: '/support/covid-policies/'
+		href: '/support/covid-policies'
 	}
 ];
 
 export const supportLinks = [
 	{
 		text: 'Getting Started',
-		href: '/support/'
+		href: '/support'
 	},
 	{
 		text: 'FAQ',
-		href: '/support/faq/'
+		href: '/support/faq'
 	},
 	{
 		text: 'Contact Us',
-		href: '/support/contact-us/'
+		href: '/support/contact-us'
 	},
 	{
 		text: 'System Status',
@@ -58,57 +58,57 @@ export const supportLinks = [
 export const companyLinks = [
 	{
 		text: 'Code of Conduct',
-		href: '/support/code-of-conduct/'
+		href: '/support/code-of-conduct'
 	},
 	{
 		text: 'Commitment to Diversity',
-		href: '/support/commitment-to-diversity/'
+		href: '/support/commitment-to-diversity'
 	},
 	{
 		text: 'Anti-Harassment Policy',
-		href: '/support/anti-harassment/'
+		href: '/support/anti-harassment'
 	}
 ];
 
 export const legalLinks = [
 	{
 		text: 'Privacy',
-		href: '/support/privacy-policy/'
+		href: '/support/privacy-policy'
 	},
 	{
 		text: 'Terms of Use',
-		href: '/support/terms-of-use/'
+		href: '/support/terms-of-use'
 	},
 	{
 		text: 'Copyright Policy',
-		href: '/support/copyright/'
+		href: '/support/copyright'
 	}
 ];
 
 export const myProfileLinks = [
 	{
 		text: 'Signup',
-		href: '/signup/'
+		href: '/signup'
 	},
 	{
 		text: 'My Profile',
-		href: '/my/profile/'
+		href: '/my/profile'
 	},
 	{
 		text: 'My Settings',
-		href: '/my/settings/'
+		href: '/my/settings'
 	},
 
 	{
 		text: 'My Network',
-		href: '/my/network/'
+		href: '/my/network'
 	},
 	{
 		text: 'My Favorites',
-		href: '/my/favorites/'
+		href: '/my/favorites'
 	},
 	{
 		text: 'My Submissions',
-		href: '/my/submissions/'
+		href: '/my/submissions'
 	}
 ];

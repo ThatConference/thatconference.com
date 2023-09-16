@@ -11,7 +11,7 @@
 						To purchase a ticket, or apply to speak, you first need to complete your user profile.
 					</span>
 					<span class="block sm:ml-2 sm:inline-block">
-						<a href="/my/profiles/primary/" class="font-bold text-white underline">
+						<a href="/my/profiles/primary" class="font-bold text-white underline">
 							Create Your Profile &rarr;
 						</a>
 					</span>
