@@ -12,7 +12,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/transfer-a-ticket`
+				url: `https://thatconference.com/support/transfer-a-ticket`
 			}
 		})
 	}))();
@@ -49,10 +49,10 @@
 		</p>
 
 		<p>
-			Transferring is easy, just enter a valid THAT.us account profile email address and click
-			transfer. The page will inform you if the email address is not found. Check with the person
-			you are transferring the ticket to for the email address they're using in their profile (<strong
-				>Note:</strong> Their profile email address may be different than their login email address)
+			Transferring is easy, just enter a valid THAT Conference account profile email address and
+			click transfer. The page will inform you if the email address is not found. Check with the
+			person you are transferring the ticket to for the email address they're using in their profile
+			(<strong>Note:</strong> Their profile email address may be different than their login email address)
 		</p>
 
 		<div class="transform text-center">

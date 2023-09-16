@@ -25,7 +25,7 @@
 			title,
 			description: `${profile.bio}`,
 			openGraph: {
-				url: `https://that.us/members/${memberSlug}`
+				url: `https://thatconference.com/members/${memberSlug}`
 			}
 		})
 	}))();

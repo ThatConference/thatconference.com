@@ -2,7 +2,7 @@
 	export let event;
 </script>
 
-<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 ">
+<div class="relative mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
 	<div class="flex flex-col justify-center text-center">
 		<h2 class="text-4xl font-extrabold uppercase tracking-tighter text-thatBlue-800">
 			Perks If You're Selected To Speak At That Conference
@@ -36,12 +36,12 @@
 				</div>
 
 				<p class="py-4 text-center text-lg font-extrabold tracking-wide text-gray-600">
-					Hotel Accomodations
+					Hotel Accommodations
 				</p>
 
 				<p class="prose text-center text-gray-500">
-					For each talk accepted we cover 2 standard room nights at the Kalahari, up to a 3 nights
-					max per family.
+					For each talk accepted we cover 2 Double Queen Sofa nights at the Kalahari, up to a 3
+					nights max per family.
 				</p>
 			</div>
 		</a>

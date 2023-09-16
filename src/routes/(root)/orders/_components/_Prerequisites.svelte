@@ -134,7 +134,7 @@
 				To fully complete this purchase, upon continue we will redirect your browser to
 				https://checkout.stripe.com. This is our credit card processor, Stripe. It's here where you
 				will enter your payment details, and finalize this order. Once completed you will be
-				redirected back to THAT.us.
+				redirected back to thatconference.com.
 			</p>
 		</div>
 	{/if}

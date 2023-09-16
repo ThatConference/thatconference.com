@@ -12,7 +12,7 @@
 			description: 'Your payment was successfully received.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/orders/success/`
+				url: `https://thatconference.com/orders/success/`
 			},
 			noindex: true,
 			nofollow: true
@@ -124,9 +124,9 @@
 				<h4>Action Required - You have unallocated tickets.</h4>
 				<p>
 					You've purchased multiple tickets, and some or all of those tickets now need to be
-					allocated to someone. To gain access, that someone has to have a valid account on THAT.us.
-					You need that user's email address to assign the ticket. Once assigned, THAT.us will
-					contact them and take care of the rest.
+					allocated to someone. To gain access, that someone has to have a valid account on
+					thatconference.com. You need that user's email address to assign the ticket. Once
+					assigned, thatconference.com will contact them and take care of the rest.
 				</p>
 				{#if targetLocations.includes('AT')}
 					<p>

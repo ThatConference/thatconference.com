@@ -13,7 +13,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support`
+				url: `https://thatconference.com/support`
 			}
 		})
 	}))();

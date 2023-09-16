@@ -21,7 +21,7 @@
 			description: "You're list of favorited activities.",
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/favorites`
+				url: `https://thatconference.com/my/favorites`
 			},
 			noindex: true,
 			nofollow: true
@@ -40,7 +40,7 @@
 			title: a.title ? a.title : '',
 			speakers: a.speakers.map((s) => `${s.firstName} ${s.lastName}`).join(';'),
 			priCategory: a.priCategory ? a.priCategory : '',
-			sessionLink: `https://that.us/activites/${a.id}/`,
+			sessionLink: `https://thatconference.com/activites/${a.id}/`,
 			sessionType: a.type
 		}));
 

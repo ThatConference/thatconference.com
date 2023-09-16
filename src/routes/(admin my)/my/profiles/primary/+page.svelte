@@ -14,7 +14,7 @@
 			description: 'Create or update your system profile.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/profiles/primary/`
+				url: `https://thatconference.com/my/profiles/primary/`
 			},
 			nofollow: true,
 			noindex: true

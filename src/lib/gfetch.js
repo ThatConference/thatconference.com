@@ -13,7 +13,7 @@ function init(fetch) {
 	let headers = {
 		credentials: 'include',
 		'Content-Type': 'application/json',
-		'that-site': 'that.us'
+		'that-site': 'thatconference.com'
 		// 'that-correlation-id': createCorrelationId()
 	};
 

@@ -1,7 +1,5 @@
 {
-	"files": [
-		"README.md"
-	],
+	"files": ["README.md"],
 	"imageSize": 100,
 	"commit": false,
 	"contributors": [
@@ -10,26 +8,18 @@
 			"name": "Clark Sell",
 			"avatar_url": "https://avatars1.githubusercontent.com/u/772569?v=4",
 			"profile": "http://unspecified.io",
-			"contributions": [
-				"code",
-				"content",
-				"design"
-			]
+			"contributions": ["code", "content", "design"]
 		},
 		{
 			"login": "brettski",
 			"name": "Brett Slaski",
 			"avatar_url": "https://avatars3.githubusercontent.com/u/473633?v=4",
 			"profile": "http://blog.brettski.com",
-			"contributions": [
-				"code",
-				"infra",
-				"maintenance"
-			]
+			"contributions": ["code", "infra", "maintenance"]
 		}
 	],
 	"contributorsPerLine": 7,
-	"projectName": "that.us",
+	"projectName": "thatconference.com",
 	"projectOwner": "ThatConference",
 	"repoType": "github",
 	"repoHost": "https://github.com",

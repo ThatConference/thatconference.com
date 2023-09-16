@@ -20,7 +20,7 @@
 			description: 'Call For Counselors is now open',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/call-for-counselors/${event.slug}`
+				url: `https://thatconference.com/call-for-counselors/${event.slug}`
 			}
 		})
 	}))();

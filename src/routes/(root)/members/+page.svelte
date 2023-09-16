@@ -28,7 +28,7 @@
 			},
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/members`
+				url: `https://thatconference.com/members`
 			}
 		})
 	}))();

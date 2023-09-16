@@ -14,7 +14,7 @@
 			description: 'Your Network.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/network`
+				url: `https://thatconference.com/my/network`
 			},
 			nofollow: true,
 			noindex: true

@@ -37,7 +37,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/speakers/accept`
+				url: `https://thatconference.com/speakers/accept`
 			},
 			noindex: true,
 			nofollow: true

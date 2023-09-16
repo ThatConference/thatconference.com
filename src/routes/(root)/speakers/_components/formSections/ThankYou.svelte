@@ -4,7 +4,7 @@
 	import Icon from 'svelte-awesome';
 	import { linkedin, twitter } from '$components/svelte-awesome-icons';
 
-	let sessionurl = `https://that.us/activities/${sessions[0].id}`;
+	let sessionurl = `https://thatconference.com/activities/${sessions[0].id}`;
 	let tweettext = encodeURIComponent(
 		`I'm speaking at @THATconference on ${sessions[0].title}. Learn more at`
 	);

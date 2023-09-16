@@ -12,7 +12,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/join-activity`
+				url: `https://thatconference.com/support/join-activity`
 			}
 		})
 	}))();

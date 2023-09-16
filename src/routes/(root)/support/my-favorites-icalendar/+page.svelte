@@ -21,7 +21,7 @@
 			description: 'Learn how to add your favorites to your calendar.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/my-favorites-icalendar`
+				url: `https://thatconference.com/support/my-favorites-icalendar`
 			}
 		})
 	}))();
