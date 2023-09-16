@@ -11,10 +11,10 @@
 
 		<!-- links -->
 		<div class="ml-12 flex text-sm font-bold">
-			<NavLink href="/wi/">Wisconsin</NavLink>
-			<NavLink href="/tx/">Texas</NavLink>
-			<NavLink href="/partners/">Sponsors</NavLink>
-			<NavLink href="/support/travel/">Travel</NavLink>
+			<NavLink href="/wi">Wisconsin</NavLink>
+			<NavLink href="/tx">Texas</NavLink>
+			<NavLink href="/partners">Sponsors</NavLink>
+			<NavLink href="/support/travel">Travel</NavLink>
 		</div>
 
 		<div class="flex w-full flex-1 justify-end space-x-4">

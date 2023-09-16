@@ -37,7 +37,7 @@
 			{#each tickets as t (t.id)}
 				<li
 					class="col-span-1 transform divide-y divide-gray-200 rounded-lg bg-white shadow hover:scale-105 hover:bg-gray-50">
-					<a href="/{t.event.slug}/">
+					<a href="/{t.event.slug}">
 						<div class="relative rounded-lg shadow-xl">
 							{#if !dayjs().isAfter(dayjs(t.event.startDate), 'day')}
 								<div

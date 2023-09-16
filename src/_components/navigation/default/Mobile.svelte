@@ -29,6 +29,6 @@
 	{#if $page.data.user.isAuthenticated}
 		<MobileUsersProfile />
 	{:else}
-		<StandardLink rel="external" href="/login/">Log in</StandardLink>
+		<StandardLink rel="external" href="/login">Log in</StandardLink>
 	{/if}
 </div>

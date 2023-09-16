@@ -31,7 +31,7 @@
 		<h2 class="text-xl font-bold leading-6 text-gray-900">System Profile</h2>
 		<p class="mt-4 text-sm leading-5 text-gray-500">
 			To submit any type sessions, you will also need to create a
-			<a class="text-that-blue hover:text-thatBlue-800" href="/my/profiles/public/"
+			<a class="text-that-blue hover:text-thatBlue-800" href="/my/profiles/public"
 				>public / speaker profile</a
 			>.
 		</p>
@@ -172,7 +172,7 @@
 							<label for="comments" class="font-medium text-gray-700">
 								<a
 									tabindex="-1"
-									href="/support/code-of-conduct/"
+									href="/support/code-of-conduct"
 									class="font-medium text-that-blue transition
 										duration-150 ease-in-out hover:text-thatBlue-800">
 									Code of Conduct
@@ -193,7 +193,7 @@
 								<label for="comments" class="font-medium text-gray-700">
 									<a
 										tabindex="-1"
-										href="/suppoprt/anti-harassment/"
+										href="/suppoprt/anti-harassment"
 										class="font-medium text-that-blue transition
 											duration-150 ease-in-out hover:text-thatBlue-800">
 										Commitment Anti-Harassment
@@ -215,7 +215,7 @@
 									<label for="comments" class="font-medium text-gray-700">
 										<a
 											tabindex="-1"
-											href="/support/commitment-to-diversity/"
+											href="/support/commitment-to-diversity"
 											class="font-medium text-that-blue
 												transition duration-150 ease-in-out
 												hover:text-thatBlue-800">
@@ -242,7 +242,7 @@
 										<label for="candidates" class="font-medium text-gray-700">
 											<a
 												tabindex="-1"
-												href="/support/terms-of-use/"
+												href="/support/terms-of-use"
 												class="font-medium text-that-blue
 													transition duration-150 ease-in-out
 													hover:text-thatBlue-800">
@@ -299,7 +299,7 @@
 						<label for="comments" class="font-medium text-gray-700">
 							<a
 								tabindex="-1"
-								href="/support/code-of-conduct/"
+								href="/support/code-of-conduct"
 								class="font-medium text-that-blue transition
 									duration-150 ease-in-out hover:text-thatBlue-800">
 								Deactivate my account.

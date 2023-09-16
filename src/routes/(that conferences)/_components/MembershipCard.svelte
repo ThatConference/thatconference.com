@@ -25,7 +25,7 @@
 	}
 </script>
 
-<div class="relative ">
+<div class="relative">
 	<div class="pt-12 sm:pt-16 lg:pt-20">
 		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 			<slot name="header" />
@@ -113,7 +113,7 @@
 						</div>
 
 						<p class="mt-4 text-sm">
-							<a href="/membership/" class="font-medium text-gray-500 underline"> Learn More </a>
+							<a href="/membership" class="font-medium text-gray-500 underline"> Learn More </a>
 						</p>
 						<div class="mt-8">
 							<div class="flex flex-col">

@@ -31,7 +31,7 @@
 					<div
 						class="flex w-48 flex-shrink-0 justify-center rounded-md bg-gray-100 shadow-md hover:bg-gray-200">
 						<a
-							href={`/support/travel/${event}/`}
+							href={`/support/travel/${event}`}
 							class="border-transparentpx-5 border py-3 text-base font-medium text-gray-900">
 							Travel Information
 						</a>
@@ -117,8 +117,8 @@
 					<div
 						class="flex w-48 flex-shrink-0 justify-center rounded-md bg-gray-100 shadow-md hover:bg-gray-200">
 						<a
-							href="/support/covid-policies/"
-							class="border border-transparent px-5 py-3 text-base font-medium text-gray-900 ">
+							href="/support/covid-policies"
+							class="border border-transparent px-5 py-3 text-base font-medium text-gray-900">
 							Learn More
 						</a>
 					</div>

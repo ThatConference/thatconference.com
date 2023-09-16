@@ -50,9 +50,9 @@
 			</li>
 			<li>Help spread the good word. Tell all your friends.</li>
 			<li>
-				Make your <a class="hover" target="_blank" href="/my/profiles/primary/">profile</a> shine.
+				Make your <a class="hover" target="_blank" href="/my/profiles/primary">profile</a> shine.
 			</li>
-			<li>Tweak your <a class="hover" target="_blank" href="/my/submissions/">session</a>.</li>
+			<li>Tweak your <a class="hover" target="_blank" href="/my/submissions">session</a>.</li>
 		</ul>
 	</div>
 </div>

@@ -62,7 +62,7 @@
 						<StandardLink class="h-3/4" href="/">Home</StandardLink>
 					</div>
 					<div class="flex sm:border-l sm:border-transparent sm:pl-6">
-						<StandardLink class="h-3/4" href="/logout/" rel="external">Logout</StandardLink>
+						<StandardLink class="h-3/4" href="/logout" rel="external">Logout</StandardLink>
 					</div>
 				</div>
 			</div>

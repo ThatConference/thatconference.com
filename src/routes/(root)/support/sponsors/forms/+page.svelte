@@ -113,7 +113,7 @@
 								</a>
 							</li>
 							<li>
-								<a href="/partners/my-network/" target="_blank">Lead Generation Results</a>
+								<a href="/partners/my-network" target="_blank">Lead Generation Results</a>
 							</li>
 							<li>
 								<a href="/my/network/sponsors" target="_blank">Your Network</a>

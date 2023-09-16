@@ -12,7 +12,7 @@ export default {
 	eventId: 'YWavA70szR8rxSwrLJaL',
 	eventSlug: 'thatus/daily',
 	api: {
-		cache: env.PUBLIC_CACHE_THAT_API || 'https://that.graphcdn.app/',
+		cache: env.PUBLIC_CACHE_THAT_API || 'https://that.graphcdn.app',
 		direct: env.PUBLIC_THAT_API || configMissing('PUBLIC_THAT_API')
 	},
 	ogImageApi: env.PUBLIC_THAT_OG_IMAGE_API || 'https://og-image.that.tech/og-image',
@@ -34,7 +34,7 @@ export const securityConfig = () => {
 		},
 
 		routes: {
-			login: '/login/',
+			login: '/login',
 			callback: '/api/auth/callback',
 			redirectUri: env.PUBLIC_REDIRECT_URI || configMissing('PUBLIC_REDIRECT_URI'),
 			postLogoutRedirectUri:

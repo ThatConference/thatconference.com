@@ -46,7 +46,7 @@
 					<div class="sticky top-4">
 						<nav>
 							<a
-								href="/my/network/sponsors/"
+								href="/my/network/sponsors"
 								class={$page.url.pathname.startsWith('/my/network/sponsors')
 									? asideSelected.item
 									: asideDefault.item}>

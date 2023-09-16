@@ -77,7 +77,7 @@
 						{:else}
 							<StandardShell>
 								<div class="px-4 py-2">
-									<a rel="external" href="/login/">Log in</a>
+									<a rel="external" href="/login">Log in</a>
 								</div>
 							</StandardShell>
 						{/if}

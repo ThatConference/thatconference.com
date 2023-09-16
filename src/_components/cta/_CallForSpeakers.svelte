@@ -14,7 +14,7 @@
 </script>
 
 <div class="bg-that-navy">
-	<div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 ">
+	<div class="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8">
 		<div class="lg:grid lg:grid-cols-5 lg:items-start lg:gap-8">
 			<div class="col-span-5">
 				<h3
@@ -33,7 +33,7 @@
 				</p>
 
 				<div class="pt-12">
-					<HighlightLink href={`/call-for-counselors/${event.slug}/`}>Learn More</HighlightLink>
+					<HighlightLink href={`/call-for-counselors/${event.slug}`}>Learn More</HighlightLink>
 				</div>
 			</div>
 

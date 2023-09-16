@@ -145,10 +145,10 @@
 		</p>
 
 		<div class="flex justify-start space-x-6">
-			<a class="hover" href="/support/code-of-conduct/" target="_blank">Code Of Conduct</a>
-			<a class="hover" href="/support/commitment-to-diversity/" target="_blank"
+			<a class="hover" href="/support/code-of-conduct" target="_blank">Code Of Conduct</a>
+			<a class="hover" href="/support/commitment-to-diversity" target="_blank"
 				>Commitment to Diversity</a>
-			<a class="hover" href="/support/anti-harassment/" target="_blank">Anti-Harassment Policy</a>
+			<a class="hover" href="/support/anti-harassment" target="_blank">Anti-Harassment Policy</a>
 		</div>
 	</div>
 </div>

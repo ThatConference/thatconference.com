@@ -74,7 +74,7 @@
 		</div>
 
 		<div class="relative flex justify-end pt-16">
-			<StandardLink href="/events/">View our Past Events</StandardLink>
+			<StandardLink href="/events">View our Past Events</StandardLink>
 		</div>
 	</div>
 </section>

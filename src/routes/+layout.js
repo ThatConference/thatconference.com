@@ -1,5 +1,3 @@
-// export const trailingSlash = 'always';
-
 import '../app.css';
 import 'lazysizes';
 import { browser, dev } from '$app/environment';

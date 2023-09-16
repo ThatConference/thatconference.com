@@ -16,13 +16,13 @@
 		<div class="space-y-12">
 			<div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
 				<h2
-					class=" text-2xl  font-extrabold uppercase text-white antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
+					class=" text-2xl font-extrabold uppercase text-white antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
 					Upcoming Activities
 				</h2>
 				<p class="text-xl leading-7 text-gray-300">
 					Check out these activities currently on the schedule.
 					<span class="pl:2 text-that-orange hover:text-thatOrange-500">
-						<a href="/activities/"> View all of the upcoming activities. </a>
+						<a href="/activities"> View all of the upcoming activities. </a>
 					</span>
 				</p>
 			</div>
@@ -49,13 +49,13 @@
 						type="button"
 						on:click={() => dispatch('next')}
 						class="rounded-md bg-that-blue px-8 py-2 text-base leading-6
-                    text-white  
+                    text-white
                     shadow
                     transition
-                    duration-150 
-                    ease-in-out 
+                    duration-150
+                    ease-in-out
                     hover:bg-thatBlue-400
-                    focus:border-thatBlue-800 
+                    focus:border-thatBlue-800
                     focus:bg-thatBlue-400 focus:text-white focus:ring-white md:px-10 md:text-lg">
 						<span>View Next</span>
 					</button>
@@ -66,13 +66,13 @@
 						type="button"
 						on:click={() => dispatch('refresh')}
 						class="rounded-md bg-that-blue px-8 py-2 text-base leading-6
-                      text-white  
+                      text-white
                       shadow
                       transition
-                      duration-150 
-                      ease-in-out 
+                      duration-150
+                      ease-in-out
                       hover:bg-thatBlue-400
-                      focus:border-thatBlue-800 
+                      focus:border-thatBlue-800
                       focus:bg-thatBlue-400 focus:text-white focus:ring-white md:px-10 md:text-lg">
 						<span>Refresh</span>
 					</button>

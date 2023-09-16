@@ -69,8 +69,8 @@
 			title="Currently Not Sponsoring"
 			text="This partner isn't currently an active sponsor.">
 			<div class="flex justify-center space-x-6">
-				<StandardLink href="/partners/">Current Sponsors</StandardLink>
-				<StandardLink href="/sponsorships/apply/">Become a Sponsor</StandardLink>
+				<StandardLink href="/partners">Current Sponsors</StandardLink>
+				<StandardLink href="/sponsorships/apply">Become a Sponsor</StandardLink>
 			</div>
 		</ActionModal>
 	{/if}

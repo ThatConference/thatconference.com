@@ -31,8 +31,8 @@
 
 		<div class="scale-75 transform text-center">
 			<div class="space-x-8">
-				<StandardLink href="/my/settings/order-history/">Order History</StandardLink>
-				<StandardLink href="/my/settings/tickets/">My Assigned Tickets</StandardLink>
+				<StandardLink href="/my/settings/order-history">Order History</StandardLink>
+				<StandardLink href="/my/settings/tickets">My Assigned Tickets</StandardLink>
 			</div>
 		</div>
 
@@ -44,8 +44,8 @@
 
 		<h2>Transferring/Assigning Tickets</h2>
 		<p>
-			Head over to your <a href="/my/settings/order-history/"> Order History </a> where you'll see a
-			list of your orders. Listed under each order will be its tickets as either assigned or unassigned.
+			Head over to your <a href="/my/settings/order-history"> Order History </a> where you'll see a list
+			of your orders. Listed under each order will be its tickets as either assigned or unassigned.
 		</p>
 
 		<p>
@@ -70,7 +70,7 @@
 		</p>
 		<p>
 			If a ticket was transferred/assigned to you it will be listed under your profile at
-			<a href="/my/settings/tickets/">Event Tickets</a>.
+			<a href="/my/settings/tickets">Event Tickets</a>.
 		</p>
 
 		<h2>Family Tickets</h2>
