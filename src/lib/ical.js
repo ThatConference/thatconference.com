@@ -1,7 +1,7 @@
 import ical from 'ical-generator'; // https://github.com/sebbo2002/ical-generator
 import dayjs from 'dayjs';
 
-const domain = 'that.us';
+const domain = 'thatconference.com/';
 
 function icalWrapper(title) {
 	const cal = ical({ domain, name: title });
@@ -14,7 +14,7 @@ function icalWrapper(title) {
 			end: dayjs(activity.startTime).add(activity.durationInMinutes, 'minutes').toDate(),
 			summary: activity.title,
 			description: activity.shortDescription,
-			location: 'THAT.us',
+			location: 'THAT Conference',
 			url: `https://thatconference.com/activities/${activity.id}`
 		});
 

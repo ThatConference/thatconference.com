@@ -239,7 +239,7 @@
 		<ul>
 			<li>Complete your ticket enrollment.</li>
 			<li>Book your stay.</li>
-			<li>Update your that.us profile.</li>
+			<li>Update your THAT Conference profile.</li>
 			<li>Read the Sponsorship Handbook.</li>
 			<li>Review your company's spotlight page.</li>
 		</ul>

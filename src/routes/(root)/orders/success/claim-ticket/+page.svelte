@@ -56,8 +56,8 @@
 	</ol>
 
 	<p>
-		Visit <a href="/support/sponsors/forms/">https://sponsor.that.us</a> for a one-stop resource for
-		your sponsorship. It contains links to lead generation, a sponsor handbook and many other important
+		Visit <a href="/support/sponsors/forms/">https://sponsor.thatconference.com</a> for a one-stop resource
+		for your sponsorship. It contains links to lead generation, a sponsor handbook and many other important
 		resources.
 	</p>
 	<p>

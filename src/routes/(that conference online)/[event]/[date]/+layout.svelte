@@ -14,7 +14,7 @@
 		location: [
 			{
 				'@type': 'VirtualLocation',
-				url: `https://thatconference.com/events/${event.slug}`
+				url: `https://that.us/events/${event.slug}`
 			}
 		],
 		image: [event.logo],

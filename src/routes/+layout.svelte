@@ -60,7 +60,7 @@
 			messages.update((m) => [
 				...m,
 				{
-					message: '🙌 We shipped again! 🎉 Check out newest features on THAT.us!!!',
+					message: '🙌 We shipped again! 🎉 Check out newest features on thatconference.com!!!',
 					url: '/releases/changelog-missed'
 				}
 			]);
