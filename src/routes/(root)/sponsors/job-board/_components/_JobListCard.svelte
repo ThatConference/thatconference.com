@@ -9,7 +9,7 @@
 
 <div
 	class="transform rounded-md p-4 transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-100">
-	<a href={`/partners/${job.partnerSlug}/jobs/${job.jobSlug}`}>
+	<a href={`/sponsors/${job.partnerSlug}/jobs/${job.jobSlug}`}>
 		<div class="flex flex-col items-center sm:flex-row sm:space-x-12">
 			<div class="flex-shrink-0 pb-8 sm:pb-0">
 				<img class="lazyload h-full w-48" alt="{job.companyName} logo" src={job.companyLogo} />

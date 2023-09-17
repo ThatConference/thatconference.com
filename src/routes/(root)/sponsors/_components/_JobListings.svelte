@@ -24,7 +24,7 @@
 				<ul class="divide-y divide-gray-200">
 					{#each listings as listing}
 						<li in:fade>
-							<a href={`/partners/${partner}/jobs/${listing.slug}`} class="block hover:bg-gray-50">
+							<a href={`/sponsors/${partner}/jobs/${listing.slug}`} class="block hover:bg-gray-50">
 								<div class="px-4 py-4 sm:px-6">
 									<div class="flex items-center justify-between">
 										<p class="truncate text-sm font-medium text-thatBlue-500">

@@ -18,7 +18,7 @@ export default [
 	},
 	{
 		text: 'Sponsors',
-		href: '/partners'
+		href: '/sponsors'
 	},
 	{
 		text: 'Help',

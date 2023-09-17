@@ -108,12 +108,12 @@
 						<h3>Important Event Links</h3>
 						<ul>
 							<li>
-								<a href={`/partners/leads/${txEventId}`} target="_blank" rel="noreferrer">
+								<a href={`/sponsors/leads/${txEventId}`} target="_blank" rel="noreferrer">
 									Lead Generation
 								</a>
 							</li>
 							<li>
-								<a href="/partners/my-network" target="_blank">Lead Generation Results</a>
+								<a href="/sponsors/my-network" target="_blank">Lead Generation Results</a>
 							</li>
 							<li>
 								<a href="/my/network/sponsors" target="_blank">Your Network</a>
@@ -203,10 +203,10 @@
 						<h3>Important Event Links</h3>
 						<ul>
 							<li>
-								<a href={`/partners/leads/${wiEventId}`} target="_blank">Lead Generation</a>
+								<a href={`/sponsors/leads/${wiEventId}`} target="_blank">Lead Generation</a>
 							</li>
 							<li>
-								<a href="/partners/my-network/" target="_blank">Lead Generation Results</a>
+								<a href="/sponsors/my-network/" target="_blank">Lead Generation Results</a>
 							</li>
 							<li>
 								<a href="/my/network/sponsors" target="_blank">Your Network</a>
