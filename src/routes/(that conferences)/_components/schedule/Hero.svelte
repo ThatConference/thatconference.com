@@ -45,9 +45,9 @@
 			{/each}
 		</div>
 
-		<div class="p-10 pb-24 text-center text-green-500">
-			<p class="font-semibold tracking-wider">Times are represented in your browser's timezone.</p>
-			<p class="font-semibold tracking-wider">THAT Conference is in Central Time.</p>
+		<div class="pt-10 text-center text-2xl font-bold tracking-wider text-green-500">
+			<p>Times are represented in your browser's timezone.</p>
+			<p>THAT Conference is in Central Time.</p>
 		</div>
 	</div>
 </Hero>
