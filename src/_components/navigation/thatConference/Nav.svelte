@@ -1,4 +1,5 @@
 <script>
+	export let event;
 	import { page } from '$app/stores';
 	import lodash from 'lodash';
 
@@ -26,12 +27,12 @@
 	{/if}
 
 	<div class="block xl:hidden">
-		<MobileNavHat />
-		<MobileEventNav {hidden} on:show={handleShow} />
+		<MobileNavHat {event} />
+		<MobileEventNav {hidden} {event} on:show={handleShow} />
 	</div>
 
 	<div class="hidden xl:block">
-		<NavHat />
-		<EventNav />
+		<NavHat {event} />
+		<EventNav {event} />
 	</div>
 </nav>

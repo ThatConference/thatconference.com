@@ -1,4 +1,5 @@
 <script>
+	export let event;
 	export let hidden;
 
 	import { page } from '$app/stores';
@@ -6,10 +7,18 @@
 	import { clickOutside } from '$elements/actions';
 	import { StandardShell } from '$elements/buttons';
 
-	import MobileUsersProfile from '$components/nav/MobileUsersProfile.svelte';
-	import NavLink from './components/navLink.svelte';
+	import MobileUsersProfile from '$components/navigation/_components/MobileUsersProfile.svelte';
+	import NavLink from '../_components/NavLink.svelte';
 
 	const dispatch = createEventDispatcher();
+
+	function buildUrl(page) {
+		return `/events/${event.slug}/${page}/`;
+	}
+
+	function buildAnchorLink(anchor) {
+		return `/events/${event.slug}#${anchor}`;
+	}
 </script>
 
 <div
@@ -19,7 +28,9 @@
 	<div class="mx-8 flex items-center justify-between">
 		<!-- logo -->
 		<div class="cursor">
-			<img class="h-16" src="/images/ThatConferenceLogo.svg" alt="THAT Logo" />
+			<a data-sveltekit-prefetch href="/that-conference">
+				<img class="h-16" src="/images/ThatConferenceLogo.svg" alt="THAT Logo" />
+			</a>
 		</div>
 
 		<!-- button -->
@@ -64,20 +75,23 @@
 		<div class="mx-4 mt-6">
 			<div class=" border-t">
 				<div class="flex w-full flex-col space-y-2 py-6 text-base font-medium">
-					<NavLink href="/wi">Wisconsin</NavLink>
-					<NavLink href="/tx">Texas</NavLink>
-					<NavLink href="/partners">Sponsors</NavLink>
-					<NavLink href="/support/travel">Travel</NavLink>
+					<NavLink href={buildUrl('tickets')}>Tickets</NavLink>
+					<NavLink href={buildUrl('speakers')}>Speakers</NavLink>
+					<NavLink href={buildUrl('schedule')}>Schedule</NavLink>
+					<NavLink href={buildUrl('sponsors')}>Sponsors</NavLink>
+					<NavLink href={buildAnchorLink('dates')}>Dates</NavLink>
+					<NavLink href={buildAnchorLink('faq')}>FAQ</NavLink>
+					<NavLink href={buildUrl('travel')}>Travel</NavLink>
 				</div>
 
 				<div class="py-6">
 					<div>
 						{#if $page.data.user.isAuthenticated}
-							<MobileUsersProfile />
+							<MobileUsersProfile darkMode={true} />
 						{:else}
 							<StandardShell>
 								<div class="px-4 py-2">
-									<a rel="external" href="/login">Log in</a>
+									<a rel="external" href="/login/">Log in</a>
 								</div>
 							</StandardShell>
 						{/if}
