@@ -227,6 +227,37 @@ export const QUERY_EVENT_WITH_SPEAKERS_BY_SLUG = `
 		}
 	}
 `;
+export const QUERY_EVENT_SPEAKERS_BY_SLUG = `
+	${eventFieldsFragment}
+	query QUERY_EVENT_SPEAKERS_BY_SLUG ($slug: String) {
+		events {
+			event (findBy: {slug: $slug}) {
+				get {
+					speakers {
+						id
+						firstName
+						lastName
+						jobTitle
+						company
+						profileImage
+						earnedMeritBadges {
+							id
+							name
+							image
+							description
+						}
+						profileSlug
+						profileLinks {
+							isPublic
+							linkType
+							url					
+						}						
+					}
+				}
+			}
+		}
+	}
+`;
 
 export const QUERY_EVENT_BY_ID = `
 	${eventFieldsFragment}
@@ -582,6 +613,18 @@ export default (fetch) => {
 			});
 	}
 
+	function queryEventSpeakers(eventSlug) {
+		const variables = { eventSlug };
+
+		return client
+			.query({ query: QUERY_EVENT_SPEAKERS_BY_SLUG, variables })
+			.then(({ data, errors }) => {
+				if (errors) log({ errors, tag: 'QUERY_EVENT_SPEAKERS_BY_SLUG' });
+
+				return data?.events?.event?.get || null;
+			});
+	}
+
 	return {
 		queryEvents,
 		queryEventsByCommunity,
@@ -594,6 +637,7 @@ export default (fetch) => {
 		canAccessEvent,
 		queryThatConferenceEvent,
 		queryActiveEventsByCommunitiesForJobs,
-		queryActiveEventsForProducts
+		queryActiveEventsForProducts,
+		queryEventSpeakers
 	};
 };
