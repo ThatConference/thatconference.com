@@ -22,5 +22,5 @@ Disallow: /join/
 Disallow: /my/
 Disallow: /api/
 
-Sitemap: https://that.us/sitemap.xml
+Sitemap: https://thatconference.com/sitemap.xml
 

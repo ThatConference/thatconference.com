@@ -11,7 +11,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/covid-policies`
+				url: `https://thatconference.com/support/covid-policies`
 			}
 		})
 	}))();

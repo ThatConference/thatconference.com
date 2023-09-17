@@ -10,7 +10,7 @@
 			description: 'Your payment was cancelled.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/orders/cancelled/`
+				url: `https://thatconference.com/orders/cancelled/`
 			},
 			noindex: true,
 			nofollow: true
@@ -43,7 +43,7 @@
 			</p>
 		</div>
 		<div class="mt-12 flex justify-end space-x-5">
-			<HighlightLink href="/orders/summary/">Return to Cart</HighlightLink>
+			<HighlightLink href="/orders/summary">Return to Cart</HighlightLink>
 		</div>
 	</div>
 </div>

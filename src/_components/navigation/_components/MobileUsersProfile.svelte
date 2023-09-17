@@ -7,32 +7,32 @@
 	const { isEmpty } = lodash;
 	const loggedInMenuItems = [
 		{
-			href: '/my/profiles/',
+			href: '/my/profiles',
 			text: 'My Profiles'
 		},
 		{
-			href: '/my/network/',
+			href: '/my/network',
 			text: 'My Network'
 		},
 		{
-			href: '/my/submissions/',
+			href: '/my/submissions',
 			text: 'My Submissions'
 		},
 		{
-			href: '/my/favorites/',
+			href: '/my/favorites',
 			text: 'My Favorites'
 		},
 		{
-			href: '/my/notification-preferences/',
+			href: '/my/notification-preferences',
 			text: 'My Notification Preferences'
 		},
 		{
-			href: '/my/settings/',
+			href: '/my/settings',
 			text: 'Orders, Tickets, Membership'
 		},
 
 		{
-			href: '/logout/',
+			href: '/logout',
 			text: 'Logout',
 			rel: 'external'
 		}
@@ -73,14 +73,14 @@
 		{#if $page.data.user.isAuthenticated}
 			{#if isEmpty($page.data.user.profile)}
 				<a
-					href="/my/profiles/primary/"
+					href="/my/profiles/primary"
 					class="block rounded-md px-3 pb-2 text-base font-medium
            hover:bg-that-blue focus:bg-that-blue focus:text-white focus:outline-none">
 					<span class="text-gray-300 hover:text-white"> Create Profile </span>
 				</a>
 				<a
 					rel="external"
-					href="/logout/"
+					href="/logout"
 					class="mt-1 block rounded-md px-3 py-2 text-base font-medium hover:bg-that-blue
             focus:bg-that-blue focus:text-white focus:outline-none">
 					<span class="text-gray-300 hover:text-white"> Logout </span>
@@ -101,13 +101,13 @@
 			<div class="flex flex-row">
 				<a
 					rel="external"
-					href="/login/"
+					href="/login"
 					class="mb-1 mr-1 mt-4 block w-full flex-grow rounded-md bg-white py-2 text-center text-sm font-semibold text-that-blue">
 					Login
 				</a>
 				<a
 					rel="external"
-					href="/login/"
+					href="/login"
 					class="mb-1 ml-1 mt-4 block w-full flex-grow rounded-md bg-that-orange py-2 text-center text-sm font-semibold text-white">
 					Sign Up
 				</a>

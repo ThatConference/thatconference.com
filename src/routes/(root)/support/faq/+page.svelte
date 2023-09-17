@@ -14,7 +14,7 @@
 			description: 'A common list of frequently asked questions, answered.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/faq`
+				url: `https://thatconference.com/support/faq`
 			}
 		})
 	}))();

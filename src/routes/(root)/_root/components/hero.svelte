@@ -16,11 +16,11 @@
 
 				<p class="mt-6 text-2xl text-gray-500">
 					We geek-out in
-					<a href="/tx/">
+					<a href="/tx">
 						<span class="font-extrabold text-thatRed-500">Texas</span>
 					</a>
 					and
-					<a href="/wi/">
+					<a href="/wi">
 						<span class="font-extrabold text-thatRed-500">Wisconsin</span>
 					</a>
 					once a year but we host digital events all the time.
@@ -28,9 +28,9 @@
 				<div
 					class="mt-20 flex flex-col items-center justify-center space-y-12 sm:flex-row sm:justify-start sm:space-x-4 sm:space-y-0">
 					<div>
-						<ActionLink href="/support/">What is THAT Community?</ActionLink>
+						<ActionLink href="/support">What is THAT Community?</ActionLink>
 					</div>
-					<div><StandardLink href="/events/">View all Events</StandardLink></div>
+					<div><StandardLink href="/events">View all Events</StandardLink></div>
 				</div>
 			</div>
 			<div class="col-span-3 flex flex-col items-center justify-center">

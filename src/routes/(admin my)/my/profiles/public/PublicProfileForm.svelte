@@ -1,30 +1,46 @@
 <script>
-	export let profile;
-	export let isNewProfile;
 	export let sForm;
 
+	import { page } from '$app/stores';
+	import { invalidateAll } from '$app/navigation';
 	import { superForm } from 'sveltekit-superforms/client';
-	import SuperDebug from 'sveltekit-superforms/client/SuperDebug.svelte';
+	import { getFlash } from 'sveltekit-flash-message';
 	import * as flashModule from 'sveltekit-flash-message/client';
 	import Icon from 'svelte-awesome';
 	import { ScaleOut } from 'svelte-loading-spinners';
 	import Tags from 'svelte-tags-input';
 	import Checkbox from 'svelte-checkbox';
 	import lodash from 'lodash';
+	import { AlertOctagon } from 'lucide-svelte';
 
-	import primaryProfileFormSchema from '$lib/formSchemas/primaryProfile';
-	import { Waiting } from '$elements';
-	import { Shell } from '$elements/buttons';
+	import config from '$lib/config.public';
+	import publicProfileSchema from '$lib/formSchemas/publicProfile';
+	import { Shell, DisabledShell } from '$elements/buttons';
 	import socialLinks from './socialLinks';
 
+	const flash = getFlash(page);
 	const { isEmpty } = lodash;
 
-	let initialValues;
+	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
+		dataType: 'json',
+		validators: publicProfileSchema,
+		syncFlashMessage: false,
+		taintedMessage:
+			'Are you sure you want to leave this page? There are changes to your profile and they will not be saved.',
+		flashMessage: {
+			module: flashModule
+		},
+		onUpdated: ({ form }) => {
+			if (form.valid) {
+				invalidateAll();
+			}
+		}
+	});
+
 	let profileImageUploading;
-	let profileImageUrl;
 	let slugValues = {};
 	let socialLinkValues = {};
-	let socialLinksState = [];
+	let socialLinksState = $form.profileLinks || [];
 
 	function buildSocialLink(linkType, baseAddress, userSlug) {
 		return {
@@ -35,7 +51,7 @@
 	}
 
 	function updateLinksInputValues(link, userValue) {
-		console.log('here I am');
+		console.log('updateLinksInputValues', link, userValue);
 
 		// clear out the value regardless.
 		socialLinksState = socialLinksState.filter((i) => i.linkType !== link.linkType);
@@ -55,8 +71,8 @@
 	function getInitialSocialLinkValue(link) {
 		let result = '';
 
-		if (!isNewProfile && profile.profileLinks?.length > 0) {
-			const [socialLink] = profile.profileLinks.filter((i) => i.linkType === link.linkType);
+		if ($form.profileLinks?.length > 0) {
+			const [socialLink] = $form.profileLinks.filter((i) => i.linkType === link.linkType);
 
 			if (socialLink) {
 				// If link.slugs is an array, match socialLink.url with the proper element
@@ -81,8 +97,8 @@
 		// initial state should be the first element in slug array
 		let result = link.slug[0];
 
-		if (!isNewProfile && profile.profileLinks?.length > 0) {
-			const [socialLink] = profile.profileLinks.filter((i) => i.linkType === link.linkType);
+		if ($form.profileLinks?.length > 0) {
+			const [socialLink] = $form.profileLinks.filter((i) => i.linkType === link.linkType);
 			if (socialLink) {
 				link.slug.forEach((el) => {
 					const [, value] = socialLink.url.split(el);
@@ -97,104 +113,68 @@
 		return result;
 	}
 
-	// function updateLinkSlugValue(link, userValue) {
-	// 	// This is called from blur so we're looking for:
-	// 	// 1. Link existed in DB and changing url
-	// 	// 2. Already entered/changed slug
-	// 	// 3. No value in User Slug - So either removed or never set
+	function updateLinkSlugValue(link, userValue) {
+		// This is called from blur so we're looking for:
+		// 1. Link existed in DB and changing url
+		// 2. Already entered/changed slug
+		// 3. No value in User Slug - So either removed or never set
 
-	// 	let userSlug = '';
-	// 	slugValues[link.linkType] = userValue;
+		let userSlug = '';
+		slugValues[link.linkType] = userValue;
 
-	// 	// get existing link if available
-	// 	const existingLink = socialLinksState.filter((l) => l.linkType === link.linkType);
+		// get existing link if available
+		const existingLink = socialLinksState.filter((l) => l.linkType === link.linkType);
 
-	// 	// clear out the value regardless.
-	// 	socialLinksState = socialLinksState.filter((i) => i.linkType !== link.linkType);
+		// clear out the value regardless.
+		socialLinksState = socialLinksState.filter((i) => i.linkType !== link.linkType);
 
-	// 	if (existingLink[0]) {
-	// 		link.slug.forEach((s) => {
-	// 			const [, value] = existingLink[0].url.split(s);
-	// 			if (value) {
-	// 				userSlug = value;
-	// 			}
-	// 		});
-	// 	}
+		if (existingLink[0]) {
+			link.slug.forEach((s) => {
+				const [, value] = existingLink[0].url.split(s);
+				if (value) {
+					userSlug = value;
+				}
+			});
+		}
 
-	// 	if (!isEmpty(userSlug)) {
-	// 		socialLinksState.push(buildSocialLink(link.linkType, userValue, userSlug));
-	// 	}
+		if (!isEmpty(userSlug)) {
+			socialLinksState.push(buildSocialLink(link.linkType, userValue, userSlug));
+		}
 
-	// 	return socialLinksState;
-	// }
-
-	if (isNewProfile) {
-		initialValues = {
-			firstName: undefined,
-			lastName: undefined,
-			email: undefined,
-			profileSlug: undefined,
-			company: undefined,
-			jobTitle: undefined,
-			bio: undefined,
-			canFeature: false,
-			isOver13: false,
-			acceptedCodeOfConduct: false,
-			acceptedTermsOfService: false,
-			acceptedAntiHarassmentPolicy: false,
-			acceptedCommitmentToDiversity: false,
-			isDeactivated: false,
-			profileImage: undefined,
-			profileLinks: [],
-			interests: [],
-			lifeHack: undefined,
-			...profile
-		};
-	} else {
-		initialValues = profile;
-		profileImageUrl = profile.profileImage;
-		socialLinksState = profile.profileLinks;
+		return socialLinksState;
 	}
 
-	let interestsInput;
-	let interestsInputValues = initialValues ? initialValues.interests : [];
+	async function postProfilePicture(profilePhoto) {
+		profileImageUploading = true;
+		const formData = new FormData();
+		formData.append('file', profilePhoto.currentTarget.files[0]);
 
-	// const postProfilePicture = async (profilePhoto) => {
-	// 	profileImageUploading = true;
-	// 	const formData = new FormData();
-	// 	formData.append('file', profilePhoto.currentTarget.files[0]);
+		const res = await fetch(config.profileImageApi, {
+			method: 'POST',
+			headers: {
+				Authorization: `Bearer ${$page.data.user.accessToken}`
+			},
+			body: formData
+		});
 
-	// 	const res = await fetch(config.profileImageApi, {
-	// 		method: 'POST',
-	// 		headers: {
-	// 			Authorization: `Bearer ${$page.data.user.accessToken}`
-	// 		},
-	// 		body: formData
-	// 	});
+		if (!res.ok) {
+			console.log('yea error');
+			const errorMessage = {
+				type: 'error',
+				message: `There was an error uploading your profile picture.`
+			};
 
-	// 	if (!res.ok) {
-	// 		// TODO drop an error modal saying there was a problem uploading
-	// 		return null;
-	// 	}
-
-	// 	const json = await res.json();
-
-	// 	profileImageUploading = false;
-	// 	profileImageUrl = json.data.url;
-
-	// 	return json.data.url;
-	// };
-
-	const { form, enhance, constraints, delayed } = superForm(sForm, {
-		dataType: 'json',
-		validators: primaryProfileFormSchema,
-		syncFlashMessage: false,
-		taintedMessage:
-			'Are you sure you want to leave this page? There are changes to your profile and they will not be saved.',
-		flashMessage: {
-			module: flashModule
+			$flash = errorMessage;
+			return null;
 		}
-	});
+
+		const json = await res.json();
+
+		console.log(json.data.url);
+
+		profileImageUploading = false;
+		return json.data.url;
+	}
 </script>
 
 <form use:enhance method="POST">
@@ -210,6 +190,7 @@
 	</div>
 
 	<div class="mt-8 grid grid-cols-1 gap-x-4 gap-y-12 px-4 sm:grid-cols-6">
+		<!-- First Name -->
 		<div class="sm:col-span-3">
 			<label for="first_name" class="block text-sm font-medium leading-5 text-gray-700">
 				First or Given Name
@@ -220,14 +201,19 @@
 			</div>
 
 			<input
-				bind:value={$form.firstName}
-				{...$constraints.firstName}
-				type="text"
 				name="firstName"
 				id="firstName"
+				type="text"
+				bind:value={$form.firstName}
+				{...$constraints.firstName}
 				class="form-imput mt-4 block w-full rounded-md shadow-sm" />
+
+			{#if $errors.firstName}
+				<small>{$errors.firstName}</small>
+			{/if}
 		</div>
 
+		<!-- Last Name -->
 		<div class="sm:col-span-3">
 			<label for="last_name" class="block text-sm font-medium leading-5 text-gray-700">
 				Last or Family Name
@@ -240,10 +226,16 @@
 			<input
 				name="lastName"
 				id="lastName"
-				class="form-imput mt-4 block w-full rounded-md shadow-sm"
-				bind:value={$form.lastName} />
+				type="text"
+				bind:value={$form.lastName}
+				{...$constraints.lastName}
+				class="form-imput mt-4 block w-full rounded-md shadow-sm" />
+			{#if $errors.lastName}
+				<small>{$errors.lastName}</small>
+			{/if}
 		</div>
 
+		<!-- Profile Photo -->
 		<div class="sm:col-span-6">
 			<label for="photo" class="block text-sm font-medium leading-5 text-gray-700">
 				Profile Photo
@@ -254,15 +246,15 @@
 			</div>
 
 			<div class="mt-4 flex items-center">
-				<span class="h-12 w-12 overflow-hidden rounded-full border bg-gray-100">
+				<span class="h-16 w-16 overflow-hidden rounded-full ring-4 ring-that-blue">
 					{#if profileImageUploading}
 						<div class="flex h-full w-full flex-grow justify-center">
 							<ScaleOut />
 						</div>
-					{:else if profileImageUrl}
+					{:else if $form.profileImage}
 						<img
-							class="h-full w-full"
-							src={`${profileImageUrl}?auto=format&fit=facearea&facepad=10&mask=ellipse&h=100&w=100&q=50`}
+							class="h-full w-full object-cover"
+							src={`${$form.profileImage}?auto=format&fit=facearea&facepad=5&mask=ellipse&h=200&w=200&q=75`}
 							alt="" />
 					{:else}
 						<svg class="h-full w-full text-gray-300" fill="currentColor" viewBox="0 0 24 24">
@@ -274,8 +266,10 @@
 					{/if}
 				</span>
 				<span class="ml-5 rounded-md shadow-sm">
+					<input name="profileImage" bind:value={$form.profileImage} hidden />
 					<input
-						name="profileImage"
+						name="profileImageFile"
+						on:change={(e) => postProfilePicture(e).then((r) => ($form.profileImage = r))}
 						type="file"
 						accept="image/x-png,image/png,.png,image/jpeg,.jpg,.jpeg,image/gif,.gif"
 						class="focus:ring-blue rounded-md border border-gray-300 px-3 py-2
@@ -290,6 +284,7 @@
 			</p>
 		</div>
 
+		<!-- Bio -->
 		<div class="sm:col-span-6">
 			<label for="about" class="block text-sm font-medium leading-5 text-gray-700">
 				About Yourself
@@ -301,13 +296,20 @@
 
 			<p class="mt-2 text-sm text-gray-500">Write a few sentences about yourself.</p>
 			<textarea
-				bind:value={$form.bio}
 				name="bio"
 				id="bio"
+				type="text"
+				bind:value={$form.bio}
+				{...$constraints.bio}
 				rows="10"
 				class="form-textarea mt-4 block w-full rounded-md shadow-sm" />
+
+			{#if $errors.bio}
+				<small>{$errors.bio}</small>
+			{/if}
 		</div>
 
+		<!-- Company -->
 		<div class="sm:col-span-3">
 			<label for="company" class="block text-sm font-medium leading-5 text-gray-700">
 				Company
@@ -318,13 +320,18 @@
 			</div>
 
 			<input
-				bind:value={$form.company}
-				type="text"
-				id="company"
 				name="company"
+				id="company"
+				type="text"
+				bind:value={$form.company}
+				{...$constraints.company}
 				class="form-input mt-4 block w-full rounded-md shadow-sm" />
+			{#if $errors.company}
+				<small>{$errors.company}</small>
+			{/if}
 		</div>
 
+		<!-- Job Title -->
 		<div class="sm:col-span-3">
 			<label for="jobTitle" class="block text-sm font-medium leading-5 text-gray-700">
 				Job Title
@@ -334,10 +341,15 @@
 					class="absolute left-0 top-0 block h-2 w-2 -translate-x-4 -translate-y-4 transform rounded-full bg-red-400" />
 			</div>
 			<input
-				bind:value={$form.jobTitle}
 				name="jobTitle"
 				id="jobTitle"
+				type="text"
+				bind:value={$form.jobTitle}
+				{...$constraints.jobTitle}
 				class="form-input mt-4 block w-full rounded-md shadow-sm" />
+			{#if $errors.jobTitle}
+				<small>{$errors.jobTitle}</small>
+			{/if}
 		</div>
 	</div>
 
@@ -362,19 +374,20 @@
 							{#if Array.isArray(link.slug)}
 								<select
 									class="form-input w-full cursor-pointer border-none bg-transparent p-1 text-gray-500 outline-none sm:text-sm"
-									value={getInitialSelectValue(link)}>
+									value={getInitialSelectValue(link)}
+									on:blur={(e) => ($form.profileLinks = updateLinkSlugValue(link, e.target.value))}>
 									{#each link.slug as slug}
 										<option value={slug}>{slug}</option>
 									{/each}
 								</select>
 							{:else}{link.slug}{/if}
 						</div>
-						<input name="profileLinks" bind:value={$form.profileLinks} hidden />
+
 						<input
-							value={getInitialSocialLinkValue(link)}
-							on:blur={(e) => updateLinksInputValues(link, e.target.value)}
-							type="text"
 							name={link.name}
+							type="text"
+							value={getInitialSocialLinkValue(link)}
+							on:change={(e) => ($form.profileLinks = updateLinksInputValues(link, e.target.value))}
 							class="form-input block w-full min-w-0 flex-1 rounded-none rounded-r-md
                   border sm:text-sm
                   sm:leading-5" />
@@ -384,7 +397,7 @@
 		</div>
 	</div>
 
-	<!-- Campfire Facts -->
+	<!-- Interests -->
 	<div class="mt-24 border-t border-gray-400 pt-8">
 		<div>
 			<h3 class="text-lg font-medium leading-6 text-gray-900">Campfire Facts</h3>
@@ -403,8 +416,7 @@
 						<div class="tags-input-override mt-4">
 							<Tags
 								name="interests"
-								bind:this={interestsInput}
-								tags={interestsInputValues}
+								bind:tags={$form.interests}
 								allowBlur={true}
 								maxTags={25}
 								onlyUnique={true} />
@@ -418,12 +430,16 @@
 							What is a 1 sentence "life hack" that you'd share with someone?
 						</label>
 						<textarea
+							name="lifeHack"
+							id="lifeHack"
+							type="text"
+							placeholder="E.g. `Embrace failure, lean into the journey and if you don't like the road, take the fork.`"
 							bind:value={$form.lifeHack}
 							{...$constraints.lifeHack}
-							type="text"
-							name="lifeHack"
-							placeholder="E.g. `Embrace failure, lean into the journey and if you don't like the road, take the fork.`"
 							class="form-input mt-4 block w-full rounded-md border shadow-sm" />
+						{#if $errors.lifeHack}
+							<small>{$errors.lifeHack}</small>
+						{/if}
 					</div>
 				</div>
 			</div>
@@ -438,7 +454,7 @@
 			<div class="mt-1 text-sm leading-5 text-gray-500">
 				<p>By allowing us to feature you, you can...</p>
 				<p class="pt-4">
-					By selecting this, you can submit an activity on THAT.us. Your profile will then be
+					Submit an activity across THAT (that.us or thatconference.com). Your profile will then be
 					featured across different areas of the Website. We don't sell or share any of your data.
 				</p>
 				<p class="pt-4 font-semibold">
@@ -455,35 +471,51 @@
 			<div class="mt-2 flex items-start">
 				<Checkbox
 					name="canFeature"
+					id="canFeature"
 					bind:checked={$form.canFeature}
+					{...$constraints.canFeature}
 					size="2.5rem"
 					class="flex-none" />
+				{#if $errors.canFeature}
+					<small>{$errors.canFeature}</small>
+				{/if}
 			</div>
 		</div>
 	</div>
 
 	<div class="mt-24 border-t border-gray-400 pt-8">
+		{#if $allErrors.length}
+			<div class="flex flex-col space-y-3 text-red-500">
+				{#each $allErrors as error}
+					<div class="flex items-center space-x-2">
+						<AlertOctagon />
+						<p class="font-medium leading-5">{error.messages}</p>
+					</div>
+				{/each}
+			</div>
+		{/if}
+
 		<div class="flex justify-end space-x-4">
-			<button type="submit">
-				<Shell>
+			{#if $allErrors.length > 0}
+				<DisabledShell>
 					<div class="px-8 py-2 font-medium">Save Profile</div>
-				</Shell>
-			</button>
+				</DisabledShell>
+			{:else}
+				<button type="submit">
+					<Shell>
+						<div class="px-8 py-2 font-medium">Save Profile</div>
+					</Shell>
+				</button>
+			{/if}
 		</div>
 	</div>
 </form>
 
-{#if $delayed}
-	<div class="flex justify-center py-12">
-		<Waiting />
-	</div>
-{/if}
-
-<div class="py-12">
-	<SuperDebug data={$form} />
-</div>
-
 <style lang="postcss">
+	small {
+		@apply text-sm font-medium text-red-500;
+	}
+
 	.tags-input-override :global(.svelte-tags-input-layout) {
 		padding: 15px 10px 15px 10px !important;
 	}

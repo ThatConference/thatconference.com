@@ -176,10 +176,10 @@
 
 		<div class="flex space-x-4">
 			<div>
-				<StandardLink href="/events/">View Upcoming Events</StandardLink>
+				<StandardLink href="/events">View Upcoming Events</StandardLink>
 			</div>
 			<div>
-				<StandardLink href="/membership/">View Membership Options</StandardLink>
+				<StandardLink href="/membership">View Membership Options</StandardLink>
 			</div>
 		</div>
 	</section>

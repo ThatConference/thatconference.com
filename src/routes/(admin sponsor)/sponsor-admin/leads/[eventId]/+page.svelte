@@ -19,7 +19,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/partners/leads`
+				url: `https://thatconference.com/sponsors/leads`
 			},
 			noindex: true,
 			nofollow: true

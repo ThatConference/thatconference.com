@@ -197,7 +197,7 @@
 					{#each speakers as s}
 						<div class="flex flex-col items-center md:flex-row">
 							<div class="flex-shrink-0">
-								<a href="/members/{s.profileSlug}/">
+								<a href="/members/{s.profileSlug}">
 									<span class="relative inline-block">
 										<img
 											class="lazyload h-24 w-24 rounded-full"
@@ -273,7 +273,7 @@
 						<div class="mx-2 mt-2 rounded-md shadow-sm">
 							<a
 								rel="external"
-								href="/login/"
+								href="/login"
 								class="focus:ring-blue relative inline-flex items-center rounded-md border-2
                   border-thatBlue-500 bg-white px-4 py-2 text-sm
                   font-medium leading-5 text-gray-700 transition
@@ -429,8 +429,7 @@
 						src="/images/canceled-stamp.svg" />
 				</div>
 			{:else}
-				<p
-					class="lineBreaks prose mt-3 text-gray-500 sm:mx-auto sm:mt-5 sm:text-lg md:text-xl lg:mx-0">
+				<p class="lineBreaks mt-3 text-gray-500 sm:mx-auto sm:mt-5 sm:text-lg md:text-xl lg:mx-0">
 					{#if longDescription}
 						{longDescription}
 					{:else}

@@ -12,7 +12,7 @@ export default {
 	eventId: 'YWavA70szR8rxSwrLJaL',
 	eventSlug: 'thatus/daily',
 	api: {
-		cache: env.PUBLIC_CACHE_THAT_API || 'https://that.graphcdn.app/',
+		cache: env.PUBLIC_CACHE_THAT_API || 'https://that.graphcdn.app',
 		direct: env.PUBLIC_THAT_API || configMissing('PUBLIC_THAT_API')
 	},
 	ogImageApi: env.PUBLIC_THAT_OG_IMAGE_API || 'https://og-image.that.tech/og-image',
@@ -25,7 +25,7 @@ export default {
 export const securityConfig = () => {
 	const config = {
 		clientID: env.PUBLIC_AUTH0_CLIENT_ID || configMissing('PUBLIC_AUTH0_CLIENT_ID'),
-		baseURL: env.PUBLIC_AUTH0_BASE_URL || `https://that.us`,
+		baseURL: env.PUBLIC_AUTH0_BASE_URL || `https://thatconference.com`,
 		issuerBaseURL: `https://auth.that.tech`,
 
 		authorizationParams: {
@@ -34,7 +34,7 @@ export const securityConfig = () => {
 		},
 
 		routes: {
-			login: '/login/',
+			login: '/login',
 			callback: '/api/auth/callback',
 			redirectUri: env.PUBLIC_REDIRECT_URI || configMissing('PUBLIC_REDIRECT_URI'),
 			postLogoutRedirectUri:
@@ -69,13 +69,13 @@ export const imageCrops = {
 
 export const claimCodes = [
 	{
-		72423: {
-			eventSlug: 'wi/2023',
+		73024: {
+			eventSlug: 'wi/2024',
 			eventTitle: 'THAT Conference Wisconsin'
 		}
 	},
 	{
-		12924: {
+		13024: {
 			eventSlug: 'tx/2024',
 			eventTitle: 'THAT Conference Texas'
 		}
@@ -101,23 +101,25 @@ export const kalahari = {
 			url: 'https://book.passkey.com/e/50528959'
 		},
 		tx: {
-			opens: '10/21/2022',
-			closes: '12/26/2022',
-			url: 'https://book.passkey.com/e/'
+			opens: '09/19/2023',
+			closes: '01/08/2024',
+			url: 'https://book.passkey.com/e/50671911'
 		}
 	},
 	speakerPasskey: {
-		'wi/2023': {
+		'wi/2024': {
 			bookingUrl: 'https://book.passkey.com/e/50528993',
 			start: '03/27/2023',
 			end: '06/21/2023',
-			blockCloseDate: '06/21/2023'
+			blockCloseDate: '06/21/2023',
+			accessCode: null
 		},
-		'tx/2023': {
-			bookingUrl: 'https://book.passkey.com/e/',
-			start: '10/21/2022',
-			end: '12/26/2022',
-			blockCloseDate: '12/26/2022'
+		'tx/2024': {
+			bookingUrl: 'https://book.passkey.com/e/50671918',
+			start: '09/19/2023',
+			end: '01/08/2024',
+			blockCloseDate: '01/08/2023',
+			accessCode: 'THATSPEAK'
 		}
 	}
 };

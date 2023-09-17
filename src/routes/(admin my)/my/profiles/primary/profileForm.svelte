@@ -12,13 +12,13 @@
 
 	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
 		dataType: 'json',
-		syncFlashMessage: false,
+		defaultValidator: 'clear',
 		taintedMessage:
 			'Are you sure you want to leave this page? There are changes to your profile and they will not be saved.',
 		flashMessage: {
 			module: flashModule
 		},
-		onUpdated({ form }) {
+		onUpdated: ({ form }) => {
 			if (form.valid) {
 				invalidateAll();
 			}
@@ -31,7 +31,7 @@
 		<h2 class="text-xl font-bold leading-6 text-gray-900">System Profile</h2>
 		<p class="mt-4 text-sm leading-5 text-gray-500">
 			To submit any type sessions, you will also need to create a
-			<a class="text-that-blue hover:text-thatBlue-800" href="/my/profiles/public/"
+			<a class="text-that-blue hover:text-thatBlue-800" href="/my/profiles/public"
 				>public / speaker profile</a
 			>.
 		</p>
@@ -123,7 +123,7 @@
 				<span
 					class="form-input inline-flex items-center rounded-l-md border border-r-0
                 border-gray-300 bg-gray-50 px-3 text-gray-500">
-					https://that.us/members/
+					https://thatconference.com/members/
 				</span>
 
 				<input
@@ -133,8 +133,13 @@
 					disabled={!isNewProfile}
 					name="profileSlug"
 					class="form-input block w-full min-w-0 flex-1 rounded-none rounded-r-md
-                  border bg-gray-50 text-gray-500" />
+                  border bg-gray-50 text-gray-500"
+					class:bg-white={isNewProfile} />
 			</div>
+
+			{#if $errors.profileSlug}
+				<small>{$errors.profileSlug}</small>
+			{/if}
 		</div>
 	</div>
 
@@ -167,7 +172,7 @@
 							<label for="comments" class="font-medium text-gray-700">
 								<a
 									tabindex="-1"
-									href="/support/code-of-conduct/"
+									href="/support/code-of-conduct"
 									class="font-medium text-that-blue transition
 										duration-150 ease-in-out hover:text-thatBlue-800">
 									Code of Conduct
@@ -188,7 +193,7 @@
 								<label for="comments" class="font-medium text-gray-700">
 									<a
 										tabindex="-1"
-										href="/suppoprt/anti-harassment/"
+										href="/suppoprt/anti-harassment"
 										class="font-medium text-that-blue transition
 											duration-150 ease-in-out hover:text-thatBlue-800">
 										Commitment Anti-Harassment
@@ -210,7 +215,7 @@
 									<label for="comments" class="font-medium text-gray-700">
 										<a
 											tabindex="-1"
-											href="/support/commitment-to-diversity/"
+											href="/support/commitment-to-diversity"
 											class="font-medium text-that-blue
 												transition duration-150 ease-in-out
 												hover:text-thatBlue-800">
@@ -237,7 +242,7 @@
 										<label for="candidates" class="font-medium text-gray-700">
 											<a
 												tabindex="-1"
-												href="/support/terms-of-use/"
+												href="/support/terms-of-use"
 												class="font-medium text-that-blue
 													transition duration-150 ease-in-out
 													hover:text-thatBlue-800">
@@ -268,6 +273,8 @@
 									</div>
 								</div>
 							</div>
+
+							<input name="canFeature" hidden bind:value={$form.canFeature} />
 						</div>
 					</div>
 				</div>
@@ -292,7 +299,7 @@
 						<label for="comments" class="font-medium text-gray-700">
 							<a
 								tabindex="-1"
-								href="/support/code-of-conduct/"
+								href="/support/code-of-conduct"
 								class="font-medium text-that-blue transition
 									duration-150 ease-in-out hover:text-thatBlue-800">
 								Deactivate my account.

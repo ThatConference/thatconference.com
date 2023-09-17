@@ -28,7 +28,7 @@
 					<div class="sticky top-4">
 						<nav>
 							<a
-								href="/my/settings/badges/"
+								href="/my/settings/badges"
 								class={$page.url.pathname.startsWith('/my/settings/badges')
 									? asideSelected.item
 									: asideDefault.item}>
@@ -40,7 +40,7 @@
 							</a>
 
 							<a
-								href="/my/settings/membership/"
+								href="/my/settings/membership"
 								class={$page.url.pathname.startsWith('/my/settings/membership')
 									? asideSelected.item
 									: asideDefault.item}>
@@ -52,7 +52,7 @@
 							</a>
 
 							<a
-								href="/my/settings/order-history/"
+								href="/my/settings/order-history"
 								class={$page.url.pathname.startsWith('/my/settings/order-history')
 									? asideSelected.item
 									: asideDefault.item}>
@@ -64,7 +64,7 @@
 							</a>
 
 							<a
-								href="/my/settings/tickets/"
+								href="/my/settings/tickets"
 								class={$page.url.pathname.startsWith('/my/settings/tickets')
 									? asideSelected.item
 									: asideDefault.item}>

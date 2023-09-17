@@ -12,7 +12,7 @@
 
 <div class="flex h-full w-full flex-col">
 	<div class="flex items-center justify-center space-x-3 p-3">
-		<a open href="/members/{speaker.profileSlug}/" class="flex-shrink-0">
+		<a open href="/members/{speaker.profileSlug}" class="flex-shrink-0">
 			<span class="relative inline-block">
 				<img
 					class="lazyload h-40 w-40 rounded-full"

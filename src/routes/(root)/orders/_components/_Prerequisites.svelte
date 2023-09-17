@@ -121,7 +121,7 @@
 		</div>
 		<div class="mt-3 text-sm">
 			<a
-				href="/my/profiles/primary/"
+				href="/my/profiles/primary"
 				class="font-medium text-thatOrange-400 hover:text-thatOrange-500">
 				Complete Your Profile
 				<span aria-hidden="true">&rarr;</span>
@@ -134,7 +134,7 @@
 				To fully complete this purchase, upon continue we will redirect your browser to
 				https://checkout.stripe.com. This is our credit card processor, Stripe. It's here where you
 				will enter your payment details, and finalize this order. Once completed you will be
-				redirected back to THAT.us.
+				redirected back to thatconference.com.
 			</p>
 		</div>
 	{/if}

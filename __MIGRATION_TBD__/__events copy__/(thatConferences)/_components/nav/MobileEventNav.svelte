@@ -13,7 +13,7 @@
 	const dispatch = createEventDispatcher();
 
 	function buildUrl(page) {
-		return `/events/${event.slug}/${page}/`;
+		return `/events/${event.slug}/${page}`;
 	}
 
 	function buildAnchorLink(anchor) {

@@ -1,6 +1,5 @@
 # Migration to thatconference.com
 
-- Validate Slug
 - fix other profiles
 - forms lib upgraded
 - event hero image
@@ -29,10 +28,24 @@
 
 ---
 
-Things to test
+# Things to test
 
 - New Account
-- Add Activity
+
+- Create New Account
+- Can buy ticket from new account.
+- Can accept speaker
+  - specifically emergency contact
+- can set emergency contact on profile.
 - Transfer Ticket
-- make sure the ticket process is on point.
+- broken hyper links
 - sponsor claiming ticket
+
+# known broken
+
+- shared profile
+- public profile
+- add activity
+- no about page
+- events
+  - no speakers page

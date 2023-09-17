@@ -36,7 +36,7 @@
 			</div>
 			<div
 				class="mt-6 flex flex-col-reverse justify-stretch space-y-4 space-y-reverse sm:flex-row-reverse sm:justify-end sm:space-x-3 sm:space-y-0 sm:space-x-reverse md:mt-0 md:flex-row md:space-x-3">
-				<StandardLink href="/my/submissions/">View Your Past Submissions</StandardLink>
+				<StandardLink href="/my/submissions">View Your Past Submissions</StandardLink>
 			</div>
 		</div>
 

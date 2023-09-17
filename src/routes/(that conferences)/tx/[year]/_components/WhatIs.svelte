@@ -34,13 +34,13 @@
 				together.
 			</h2>
 			<p class="prose prose-xl text-gray-500">
-				THAT Conference is unlike any other technical conference. This unique four-day summer camp
+				THAT Conference is unlike any other technical conference. This unique three-day summer camp
 				is full of workshops, sessions, open spaces, family events, and networking, all nestled in
 				the gorgeous Kalahari Resort and Waterpark. This family-friendly event is comprised of
 				professional and family tracks, so there is something to learn and experience at all ages.
 			</p>
 			<div class="pt-8">
-				<ActionLink href={`/events/${event.slug}/schedule/`}>View Schedule</ActionLink>
+				<ActionLink href={`/events/${event.slug}/schedule`}>View Schedule</ActionLink>
 			</div>
 		</div>
 	</div>

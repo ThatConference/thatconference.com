@@ -5,7 +5,7 @@
 	import Seo from '$components/Seo.svelte';
 	import ProfileForm from './profileForm.svelte';
 
-	let { form } = data;
+	let { form, isNewProfile } = data;
 
 	const metaTags = ((title = 'System Profile - THAT Conference') => ({
 		title,
@@ -14,7 +14,7 @@
 			description: 'Create or update your system profile.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/profiles/primary/`
+				url: `https://thatconference.com/my/profiles/primary/`
 			},
 			nofollow: true,
 			noindex: true
@@ -23,4 +23,4 @@
 </script>
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
-<ProfileForm sForm={form} />
+<ProfileForm sForm={form} {isNewProfile} />

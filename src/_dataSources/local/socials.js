@@ -35,7 +35,7 @@ export default [
 		ariaLabel: 'Twitch'
 	},
 	{
-		href: '/signup/',
+		href: '/signup',
 		network: 'SLACK',
 		ariaLabel: 'Join Us on Slack'
 	}

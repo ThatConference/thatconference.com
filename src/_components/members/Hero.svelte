@@ -12,7 +12,7 @@
 
 	<p
 		class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5
-    sm:max-w-5xl sm:text-lg  
+    sm:max-w-5xl sm:text-lg
     md:mt-5 md:text-xl
     lg:mx-0">
 		At the heart of everything we do, you can find our THAT Community Geeks. We absolutely love our
@@ -24,7 +24,7 @@
 		<div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
 			<div class="rounded-md shadow">
 				<a
-					href="/membership/"
+					href="/membership"
 					class="flex w-full items-center justify-center rounded-md border border-transparent
             bg-thatOrange-400 px-8 py-3 text-base font-medium
             leading-6 text-white transition
@@ -39,7 +39,7 @@
 		<div class="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
 			<div class="rounded-md shadow">
 				<a
-					href="/membership/"
+					href="/membership"
 					class="flex w-full items-center justify-center rounded-md border border-transparent
             bg-thatOrange-400 px-8 py-3 text-base font-medium
             leading-6 text-white transition

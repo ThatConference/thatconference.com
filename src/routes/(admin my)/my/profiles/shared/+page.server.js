@@ -1,7 +1,9 @@
 import { fail } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
+import { redirect, setFlash } from 'sveltekit-flash-message/server';
 
 import meQueryApi from '$dataSources/api.that.tech/me/queries';
+import meMutationsApi from '$dataSources/api.that.tech/me/mutations';
 import sharedProfileSchema from '$lib/formSchemas/sharedProfile';
 
 export async function load({ fetch }) {
@@ -17,9 +19,10 @@ export async function load({ fetch }) {
 }
 
 export const actions = {
-	default: async ({ request }) => {
-		const form = await superValidate(request, sharedProfileSchema);
-		console.log('POST', form);
+	default: async (event) => {
+		const { updateSharedProfile } = meMutationsApi(event.fetch);
+
+		const form = await superValidate(event, sharedProfileSchema);
 
 		if (!form.valid) {
 			return fail(400, {
@@ -27,6 +30,23 @@ export const actions = {
 			});
 		}
 
-		return { form };
+		try {
+			await updateSharedProfile(form.data);
+
+			const successMessage = {
+				type: 'success',
+				message: `Your shared profile contact information has been updated.`
+			};
+
+			setFlash(successMessage, event);
+			return { form };
+		} catch (error) {
+			const errorMessage = {
+				type: 'error',
+				message: `Whoops!!! ${error.message}`
+			};
+
+			throw redirect(errorMessage, event);
+		}
 	}
 };

@@ -151,7 +151,7 @@
 						<a
 							data-sveltekit-prefetch
 							open
-							href="/members/{host.profileSlug}/"
+							href="/members/{host.profileSlug}"
 							class="flex-shrink-0">
 							<span class="relative inline-block">
 								<img
@@ -170,7 +170,7 @@
 
 				<div class="w-100 visible flex flex-row justify-between px-5 md:hidden">
 					<div class="text-center">
-						<CardLink href="/activities/{id}/" icon={info} text="" />
+						<CardLink href="/activities/{id}" icon={info} text="" />
 					</div>
 
 					{#if !hasExpired}
@@ -192,7 +192,7 @@
 							</button>
 						{:else}
 							<a
-								href="/login/"
+								href="/login"
 								class="focus:ring-blue relative inline-flex items-center
 									justify-center rounded-br-lg border border-transparent py-2 text-xs
 									font-medium leading-4 text-gray-700
@@ -208,7 +208,7 @@
 
 			<div class="flex flex-grow flex-col justify-between">
 				<!-- COLUMN 2-->
-				<a data-sveltekit-prefetch href="/activities/{id}/">
+				<a data-sveltekit-prefetch href="/activities/{id}">
 					<h3 class="break-words pt-1 text-base font-medium leading-5 text-gray-900">
 						{title}
 					</h3>
@@ -244,7 +244,7 @@
 				<div class="border-t border-gray-200">
 					<div class="-mt-px grid grid-cols-2 md:grid-cols-4">
 						<div class="hidden border-l pl-1 text-center md:block">
-							<CardLink href="/activities/{id}/" icon={info} text={'More Details'} />
+							<CardLink href="/activities/{id}" icon={info} text={'More Details'} />
 						</div>
 
 						{#if !hasExpired}
@@ -273,7 +273,7 @@
 									</button>
 								{:else}
 									<a
-										href="/login/"
+										href="/login"
 										class="focus:ring-blue relative inline-flex flex-1 basis-0 items-center
 										justify-center rounded-br-lg border border-transparent py-2 text-xs
 										font-medium leading-4 text-gray-700
@@ -293,7 +293,7 @@
 							{#if canEdit()}
 								<div class="border-l pl-1 text-center">
 									<a
-										href="/activities/edit/{id}/"
+										href="/activities/edit/{id}"
 										class="focus:ring-blue relative inline-flex flex-1 basis-0 items-center
 											justify-center rounded-br-lg border border-transparent py-2 text-xs
 											font-medium leading-4 text-gray-700
@@ -366,7 +366,7 @@
 			</div>
 		{/if}
 		<div class="flex w-full flex-col items-center p-3">
-			<a data-sveltekit-prefetch href="/members/{host.profileSlug}/" class="flex-shrink-0">
+			<a data-sveltekit-prefetch href="/members/{host.profileSlug}" class="flex-shrink-0">
 				<span class="relative inline-block">
 					<img
 						class="lazyload h-24 w-24 rounded-full"
@@ -387,7 +387,7 @@
 			</a>
 
 			<div class="flex w-full flex-col justify-center text-center">
-				<a data-sveltekit-prefetch href="/activities/{id}/">
+				<a data-sveltekit-prefetch href="/activities/{id}">
 					<h3 class="break-words pt-1 text-base font-medium leading-5 text-gray-900">
 						{title}
 					</h3>
@@ -437,7 +437,7 @@
 
 		<div class="flex border-t border-gray-200">
 			<div class="flex flex-1">
-				<CardLink href="/activities/{id}/" icon={info} text="More Details" />
+				<CardLink href="/activities/{id}" icon={info} text="More Details" />
 			</div>
 
 			{#if !hasExpired}
@@ -469,7 +469,7 @@
 					<div class="-ml-px flex flex-1 border-l border-t border-gray-200">
 						<a
 							rel="external"
-							href="/login/"
+							href="/login"
 							class="focus:ring-blue relative inline-flex flex-1 basis-0 items-center
                 justify-center rounded-br-lg border border-transparent py-2 text-xs
                 font-medium leading-4 text-gray-700
@@ -487,7 +487,7 @@
 				{#if canEdit()}
 					<div class="-ml-px flex flex-1 basis-0 border-l border-gray-200">
 						<a
-							href="/activities/edit/{id}/"
+							href="/activities/edit/{id}"
 							class="focus:ring-blue relative inline-flex flex-1 basis-0 items-center
                 justify-center rounded-br-lg border border-transparent py-2 text-xs
                 font-medium leading-4 text-gray-700

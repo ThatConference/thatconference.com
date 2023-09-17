@@ -19,7 +19,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/travel/wi/`
+				url: `https://thatconference.com/support/travel/wi/`
 			}
 		})
 	}))();

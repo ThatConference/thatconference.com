@@ -27,7 +27,7 @@
 
 <a
 	href={url}
-	download={`${slug}@that.us.ics`}
+	download={`${slug}@thatconference.com.ics`}
 	on:click={createICal}
 	class="inline-flex items-center justify-center px-4 py-2">
 	<Icon data={calendarCheckO} class="-ml-1 mr-2 h-4 w-4" />

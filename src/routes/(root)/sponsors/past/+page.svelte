@@ -19,7 +19,7 @@
 			description: 'Thank you to those who support our great community every day.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/partners/past`
+				url: `https://thatconference.com/sponsors/past`
 			}
 		})
 	}))();

@@ -12,7 +12,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/join-activity`
+				url: `https://thatconference.com/support/join-activity`
 			}
 		})
 	}))();
@@ -29,16 +29,16 @@
 		</p>
 
 		<div class="scale-75 transform text-center">
-			<StandardLink href="/activities/create/">Create an Activity</StandardLink>
+			<StandardLink href="/activities/create">Create an Activity</StandardLink>
 		</div>
 
 		<p>
 			To create an Activity you first need to
-			<a rel="external" href="/login/">log in</a>
+			<a rel="external" href="/login">log in</a>
 			if you're not already. If you still need an account simply
-			<a href="/signup/">create one here</a>, and then update your
-			<a href="/my/profiles/primary/">profile accordingly</a>. Once completed you can then create a
-			<a href="/activities/create/">New Activity</a>. It's here where you will detail out the
+			<a href="/signup">create one here</a>, and then update your
+			<a href="/my/profiles/primary">profile accordingly</a>. Once completed you can then create a
+			<a href="/activities/create">New Activity</a>. It's here where you will detail out the
 			conversation, inviting others to join in. The submission process isn't complex but it's
 			important as you want to make sure the right people join in your Activity.
 		</p>
@@ -80,15 +80,15 @@
 
 		<p>
 			If you'd like to browse through some of our past Activities you will find them
-			<a href="/events/thatUs/">here</a>. Once you've submitted your Activity you'll receive an
-			email confirmation which will also include a calendar attachment.
+			<a href="https://that.us/events">here</a>. Once you've submitted your Activity you'll receive
+			an email confirmation which will also include a calendar attachment.
 		</p>
 
 		<h2>Need to Update your Activity?</h2>
 		<p>
 			No problem we all make mistakes or maybe you just want to tweak things a bit further. No
 			problem. You can find all of your submitted Activities
-			<a href="/my/submissions/">here</a>, we call it
+			<a href="/my/submissions">here</a>, we call it
 			<span class="italic">My Submissions</span> and you will always find it under your profile picture.
 			Just pick the correct Activity and then select edit.
 		</p>
@@ -97,8 +97,8 @@
 		class="mx-auto my-12 flex max-w-prose flex-col items-center justify-center
         lg:max-w-none">
 		<div class="flex space-x-4 text-base">
-			<StandardLink href="/support/joining-an-activity/">Joining an Activity</StandardLink>
-			<HighlightLink href="/support/staying-up-to-date/">Staying Up To Date</HighlightLink>
+			<StandardLink href="/support/joining-an-activity">Joining an Activity</StandardLink>
+			<HighlightLink href="/support/staying-up-to-date">Staying Up To Date</HighlightLink>
 		</div>
 	</div>
 </section>

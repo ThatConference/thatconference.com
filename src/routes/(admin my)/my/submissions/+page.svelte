@@ -20,7 +20,7 @@
 			description: 'Your activities.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/submissions`
+				url: `https://thatconference.com/my/submissions`
 			},
 			nofollow: true,
 			noindex: true

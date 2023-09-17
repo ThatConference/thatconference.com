@@ -14,7 +14,7 @@
 			title,
 			description: 'Create your account today and join in the conversation.',
 			openGraph: {
-				url: `https://that.us/signup`
+				url: `https://thatconference.com/signup`
 			}
 		})
 	}))();
@@ -43,7 +43,7 @@
 
 							<!-- Complete Step -->
 							<!-- todo how do we redirect after login? -->
-							<a rel="external" href="/login/" class="group relative flex items-center p-3">
+							<a rel="external" href="/login" class="group relative flex items-center p-3">
 								<span class="flex h-20 items-center">
 									<span
 										class="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-white p-3 ring-4 ring-thatOrange-500 group-hover:bg-thatOrange-500 group-hover:text-white">
@@ -62,7 +62,7 @@
 						<li class="relative pb-10" in:fade={{ delay: 300, duration: 500 }}>
 							<div class="absolute left-12 top-4 ml-0.5 mt-0.5 h-full w-1 bg-thatOrange-500" />
 
-							<a href="/my/profiles/primary/" class="group relative flex items-center p-3">
+							<a href="/my/profiles/primary" class="group relative flex items-center p-3">
 								<span class="flex h-20 items-center">
 									<span
 										class="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-white p-3 ring-4 ring-thatOrange-500 group-hover:bg-thatOrange-500 group-hover:text-white">
@@ -79,7 +79,7 @@
 							</a>
 						</li>
 						<li class="relative pb-10" in:fade={{ delay: 500, duration: 500 }}>
-							<a href="/support/" class="group relative flex items-center p-3">
+							<a href="/support" class="group relative flex items-center p-3">
 								<span class="flex h-20 items-center">
 									<span
 										class="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-white p-3 ring-4 ring-thatOrange-500 group-hover:bg-thatOrange-500 group-hover:text-white">
@@ -116,7 +116,7 @@
 								you to it as well. Requesting access is easy, just head over to your profile and hit
 								a button.
 							</p>
-							<StandardLink href="/my/profiles/slack/">Request Access Today</StandardLink>
+							<StandardLink href="/my/profiles/slack">Request Access Today</StandardLink>
 						</div>
 					</div>
 				</section>

@@ -60,7 +60,7 @@
 								to easily connect and support one another in achieving their best self, each and
 								every day. Together we can accomplish amazing things and we all have a role in
 								making our community the best it can be.
-								<a class="text-thatOrange-400 hover:text-thatOrange-500" href="/signup/">
+								<a class="text-thatOrange-400 hover:text-thatOrange-500" href="/signup">
 									Join us today!
 								</a>
 							</p>
@@ -76,7 +76,7 @@
 								activities. Monthly events cost $15 per person. For access to all online events and
 								other benefits, we've created THAT Membership. THAT Membership is $150 per year,
 								gives you full access and even a discount on a THAT Conference ticket.
-								<a class="text-thatOrange-400 hover:text-thatOrange-500" href="/membership/">
+								<a class="text-thatOrange-400 hover:text-thatOrange-500" href="/membership">
 									Upgrade today.
 								</a>
 							</p>

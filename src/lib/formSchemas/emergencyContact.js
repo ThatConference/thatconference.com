@@ -1,5 +1,7 @@
 import { z } from 'zod';
 
+const phoneNumberRegEx = /^\+(?:[0-9] ?){6,14}[0-9]$/;
+
 export default z.object({
 	fullName: z
 		.string({ required_error: 'Please enter the name of your contact.' })
@@ -16,7 +18,7 @@ export default z.object({
 	}),
 	phoneNumber: z
 		.string()
-		.regex(/^\+(?:[0-9] ?){6,14}[0-9]$/, {
+		.regex(phoneNumberRegEx, {
 			message: 'Phone number must be in the following format: +13476748428, +493083050, etc.'
 		})
 		.min(1, { message: 'Please enter a phone number we can reach them at.' })

@@ -17,15 +17,13 @@ async function queryMe(accessToken) {
 			credentials: 'include',
 			'Content-Type': 'application/json',
 			Authorization: `Bearer ${accessToken}`,
-			'that-site': 'that.us'
+			'that-site': 'thatconference.com'
 		},
 		body: JSON.stringify(body)
 	})
 		.then((r) => r.json())
 		.then((results) => results.data.members?.me);
 }
-
-export const trailingSlash = 'always';
 
 export const load = loadFlashMessage(async (event) => {
 	let { request, locals } = event;

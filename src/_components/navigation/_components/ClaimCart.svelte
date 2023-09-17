@@ -8,7 +8,7 @@
 {#if ['claim.pending'].some($state.matches)}
 	<div class="relative flex items-center justify-center">
 		<div class="ml-4 rounded-full p-1 hover:bg-thatBlue-500 hover:text-white focus:text-white">
-			<a href="/orders/claim/">
+			<a href="/orders/claim">
 				<Ticket />
 				<span class="absolute bottom-0 right-0 block animate-pulse">
 					<span

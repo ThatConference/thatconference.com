@@ -4,8 +4,6 @@ import fetch from 'isomorphic-fetch';
 import config from '$lib/config.public';
 import * as Sentry from '@sentry/svelte';
 
-export const trailingSlash = 'always';
-
 export async function POST({ request }) {
 	const body = await request.json();
 

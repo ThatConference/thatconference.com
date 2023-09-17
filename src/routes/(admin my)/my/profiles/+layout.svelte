@@ -30,7 +30,7 @@
 				<div class="sticky top-4">
 					<nav>
 						<a
-							href="/my/profiles/primary/"
+							href="/my/profiles/primary"
 							class={$page.url.pathname.startsWith('/my/profiles/primary')
 								? asideSelected.item
 								: asideDefault.item}>
@@ -43,7 +43,7 @@
 
 						{#if !isEmpty($page.data.user.profile)}
 							<a
-								href="/my/profiles/shared/"
+								href="/my/profiles/shared"
 								class={$page.url.pathname.startsWith('/my/profiles/shared')
 									? asideSelected.item
 									: asideDefault.item}>
@@ -54,7 +54,7 @@
 								<span class="truncate">Shared Profile </span>
 							</a>
 							<a
-								href="/my/profiles/public/"
+								href="/my/profiles/public"
 								class={$page.url.pathname.startsWith('/my/profiles/public')
 									? asideSelected.item
 									: asideDefault.item}>
@@ -66,7 +66,7 @@
 							</a>
 
 							<a
-								href="/my/profiles/emergency-contact/"
+								href="/my/profiles/emergency-contact"
 								class={$page.url.pathname.startsWith('/my/profiles/emergency-contact')
 									? asideSelected.item
 									: asideDefault.item}>
@@ -78,7 +78,7 @@
 							</a>
 
 							<a
-								href="/my/profiles/slack/"
+								href="/my/profiles/slack"
 								class={$page.url.pathname.startsWith('/my/profiles/slack')
 									? asideSelected.item
 									: asideDefault.item}>
@@ -90,6 +90,8 @@
 							</a>
 							<a
 								href="https://that.community"
+								target="_blank"
+								rel="external noopener noreferrer"
 								class={$page.url.pathname.startsWith('/my/profiles/discord')
 									? asideSelected.item
 									: asideDefault.item}>

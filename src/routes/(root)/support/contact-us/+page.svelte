@@ -10,7 +10,7 @@
 			title,
 			description: 'Need a little help, contact us today.',
 			openGraph: {
-				url: `https://that.us/support/contact-us`
+				url: `https://thatconference.com/support/contact-us`
 			}
 		})
 	}))();

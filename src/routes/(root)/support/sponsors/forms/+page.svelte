@@ -12,7 +12,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/sponsors/forms/`
+				url: `https://thatconference.com/support/sponsors/forms/`
 			}
 		})
 	}))();
@@ -69,18 +69,30 @@
 							</div>
 
 							<div class="transform transition duration-500 ease-in-out hover:scale-105">
-								<a href="/sponsors/tx/TX-Exhibitor-Order-Form.pdf" target="_blank">
+								<a href="/sponsors/tx/TX-AV-Exhibitor-Order-Form.pdf" target="_blank">
 									<div class="prose prose-lg w-full rounded-md border bg-white p-4 shadow-md">
-										<h4>Service Order Form</h4>
+										<h4>AV Order Form</h4>
 										<p class="prose-md prose text-gray-500">
-											Information on ordering additional items and services through the Kalahari.
+											Information on ordering additional AV-related items and services through the
+											Kalahari.
 										</p>
 									</div>
 								</a>
 							</div>
 
 							<div class="transform transition duration-500 ease-in-out hover:scale-105">
-								<a href="/sponsors/tx/TX-Kalahari-Parcel-Form.pdf" target="_blank">
+								<a href="/sponsors/tx/TX-Exhibitor-Pre-Order-Menu-Form.pdf" target="_blank">
+									<div class="prose prose-lg w-full rounded-md border bg-white p-4 shadow-md">
+										<h4>Pre-Order Menu Form</h4>
+										<p class="prose-md prose text-gray-500">
+											Information on ordering food and beverages to your booth.
+										</p>
+									</div>
+								</a>
+							</div>
+
+							<div class="transform transition duration-500 ease-in-out hover:scale-105">
+								<a href="/sponsors/tx/TX-Kalahari-FedEx-Parcel-Form.pdf" target="_blank">
 									<div class="prose prose-lg w-full rounded-md border bg-white p-4 shadow-md">
 										<h4>Shipping Information</h4>
 										<p class="prose-md prose text-gray-500">
@@ -96,12 +108,12 @@
 						<h3>Important Event Links</h3>
 						<ul>
 							<li>
-								<a href={`/partners/leads/${txEventId}`} target="_blank" rel="noreferrer">
+								<a href={`/sponsors/leads/${txEventId}`} target="_blank" rel="noreferrer">
 									Lead Generation
 								</a>
 							</li>
 							<li>
-								<a href="/partners/my-network/" target="_blank">Lead Generation Results</a>
+								<a href="/sponsors/my-network" target="_blank">Lead Generation Results</a>
 							</li>
 							<li>
 								<a href="/my/network/sponsors" target="_blank">Your Network</a>
@@ -191,10 +203,10 @@
 						<h3>Important Event Links</h3>
 						<ul>
 							<li>
-								<a href={`/partners/leads/${wiEventId}`} target="_blank">Lead Generation</a>
+								<a href={`/sponsors/leads/${wiEventId}`} target="_blank">Lead Generation</a>
 							</li>
 							<li>
-								<a href="/partners/my-network/" target="_blank">Lead Generation Results</a>
+								<a href="/sponsors/my-network/" target="_blank">Lead Generation Results</a>
 							</li>
 							<li>
 								<a href="/my/network/sponsors" target="_blank">Your Network</a>
@@ -227,7 +239,7 @@
 		<ul>
 			<li>Complete your ticket enrollment.</li>
 			<li>Book your stay.</li>
-			<li>Update your that.us profile.</li>
+			<li>Update your THAT Conference profile.</li>
 			<li>Read the Sponsorship Handbook.</li>
 			<li>Review your company's spotlight page.</li>
 		</ul>

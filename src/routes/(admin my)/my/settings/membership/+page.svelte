@@ -21,7 +21,7 @@
 			description: 'View your membership settings.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/my/settings/membership/`
+				url: `https://thatconference.com/my/settings/membership/`
 			},
 			nofollow: true,
 			noindex: true
@@ -64,7 +64,7 @@
 			</div>
 
 			<div class="mt-8 flex">
-				<StandardLink href="/membership/">View Membership Options</StandardLink>
+				<StandardLink href="/membership">View Membership Options</StandardLink>
 			</div>
 		</div>
 	{:else}

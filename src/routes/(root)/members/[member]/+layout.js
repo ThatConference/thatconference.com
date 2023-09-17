@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import memberQueryApi from '$dataSources/api.that.tech/members/queries';
 import meQueryApi from '$dataSources/api.that.tech/me/queries';
 
@@ -18,6 +19,7 @@ export async function load({ params, parent, fetch }) {
 	let queries = getQueries(member);
 
 	let [profile, followers, myFollowers = []] = await Promise.all(queries);
+	if (!profile) throw error(404);
 
 	return {
 		memberSlug: member,

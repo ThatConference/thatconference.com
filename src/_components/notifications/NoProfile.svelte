@@ -45,7 +45,7 @@
                 sm:w-auto">
 							<div class="rounded-md shadow-sm">
 								<a
-									href="/my/profiles/primary/"
+									href="/my/profiles/primary"
 									class="flex items-center justify-center rounded-md border border-transparent
                     bg-white px-4 py-2 text-sm font-medium
                     leading-5 text-indigo-600 transition

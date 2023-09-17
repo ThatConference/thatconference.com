@@ -12,7 +12,7 @@
 			description: 'Your payment was successfully received.',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/orders/success/`
+				url: `https://thatconference.com/orders/success/`
 			},
 			noindex: true,
 			nofollow: true
@@ -69,11 +69,11 @@
 					>If you do not see those, please check your junk/spam folders, as sometimes we manage to
 					land there accidentally.</span>
 				At any time you can view your
-				<a class="hover" href="/my/settings/order-history/">order history</a> and reprint your receipt.
+				<a class="hover" href="/my/settings/order-history">order history</a> and reprint your receipt.
 			</p>
 
 			<div class="my-8 flex justify-center md:justify-end">
-				<StandardLink href="/my/settings/order-history/">View Your Order History</StandardLink>
+				<StandardLink href="/my/settings/order-history">View Your Order History</StandardLink>
 			</div>
 
 			<h3>Next steps</h3>
@@ -91,11 +91,10 @@
 
 						<div class="my-8 flex justify-center md:justify-end">
 							{#if eventLocation.toUpperCase() === 'WI'}
-								<StandardLink href="/support/travel/wi/"
-									>Book Your Travel To Wisconsin</StandardLink>
+								<StandardLink href="/support/travel/wi">Book Your Travel To Wisconsin</StandardLink>
 							{/if}
 							{#if eventLocation.toUpperCase() === 'TX'}
-								<StandardLink href="/support/travel/tx/">Book Your Travel To Texas</StandardLink>
+								<StandardLink href="/support/travel/tx">Book Your Travel To Texas</StandardLink>
 							{/if}
 						</div>
 
@@ -114,7 +113,7 @@
 						</p>
 
 						<div class="my-8 flex justify-center md:justify-end">
-							<StandardLink href="/activities/create/">Create an Activity</StandardLink>
+							<StandardLink href="/activities/create">Create an Activity</StandardLink>
 						</div>
 					{/if}
 				{/if}
@@ -124,9 +123,9 @@
 				<h4>Action Required - You have unallocated tickets.</h4>
 				<p>
 					You've purchased multiple tickets, and some or all of those tickets now need to be
-					allocated to someone. To gain access, that someone has to have a valid account on THAT.us.
-					You need that user's email address to assign the ticket. Once assigned, THAT.us will
-					contact them and take care of the rest.
+					allocated to someone. To gain access, that someone has to have a valid account on
+					thatconference.com. You need that user's email address to assign the ticket. Once
+					assigned, thatconference.com will contact them and take care of the rest.
 				</p>
 				{#if targetLocations.includes('AT')}
 					<p>
@@ -136,7 +135,7 @@
 				{/if}
 
 				<div class="my-8 flex justify-center md:justify-end">
-					<StandardLink href="/my/settings/order-history/">Allocate Tickets</StandardLink>
+					<StandardLink href="/my/settings/order-history">Allocate Tickets</StandardLink>
 				</div>
 			{/if}
 
@@ -161,15 +160,15 @@
 				</li>
 				<li>
 					Get involved on THAT.us! Better yet, create an activity.
-					<a class="hover" href="/support/">Learn how to get started.</a>
+					<a class="hover" href="/support">Learn how to get started.</a>
 				</li>
 				<li>
-					Stay up to date. <a class="hover" href="/support/staying-up-to-date/"
+					Stay up to date. <a class="hover" href="/support/staying-up-to-date"
 						>Subscribe to the calendar.</a>
 				</li>
 				<li>
 					Get ready for what's coming. Did you know we have an event every month?
-					<a class="hover" href="/events/">Check out our past and upcoming events.</a>
+					<a class="hover" href="/events">Check out our past and upcoming events.</a>
 				</li>
 				<li>Signup for our newsletter!</li>
 			</ul>

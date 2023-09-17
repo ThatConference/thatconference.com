@@ -12,7 +12,7 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/support/join-activity`
+				url: `https://thatconference.com/support/join-activity`
 			}
 		})
 	}))();
@@ -64,8 +64,8 @@
 		class="mx-auto my-12 flex max-w-prose flex-col items-center justify-center
         lg:max-w-none">
 		<div class="flex space-x-4 text-base">
-			<StandardLink href="/support/what-is-an-activity/">What Is An Activity</StandardLink>
-			<HighlightLink href="/support/creating-an-activity/">Creating an Activity</HighlightLink>
+			<StandardLink href="/support/what-is-an-activity">What Is An Activity</StandardLink>
+			<HighlightLink href="/support/creating-an-activity">Creating an Activity</HighlightLink>
 		</div>
 	</div>
 </section>

@@ -40,7 +40,7 @@
 			description: `Activities for ${event.name}.`,
 			openGraph: {
 				type: 'website',
-				url: `https://that.us/activities/${event.slug}`
+				url: `https://thatconference.com/activities/${event.slug}`
 			}
 		})
 	}))();

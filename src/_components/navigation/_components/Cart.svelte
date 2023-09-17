@@ -9,7 +9,7 @@
 {#if cartItems > 0}
 	<div class="relative flex items-center justify-center">
 		<div class="ml-4 rounded-full p-1 hover:bg-thatBlue-500 hover:text-white focus:text-white">
-			<a href="/orders/summary/">
+			<a href="/orders/summary">
 				<Cart />
 
 				<span class="absolute bottom-0 right-0 block animate-pulse">

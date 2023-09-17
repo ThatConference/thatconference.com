@@ -5,7 +5,7 @@
 	import NavLink from './components/navLink.svelte';
 
 	function buildUrl(page) {
-		return `/events/${event.slug}/${page}/`;
+		return `/events/${event.slug}/${page}`;
 	}
 
 	function buildAnchorLink(anchor) {
@@ -17,7 +17,7 @@
 	<div class="mx-auto flex max-w-screen-xl items-center">
 		<!-- logo -->
 		<div class="cursor">
-			<a data-sveltekit-prefetch href="/events/{event.slug}/">
+			<a data-sveltekit-prefetch href="/events/{event.slug}">
 				<img class="h-16" src="/images/ThatConferenceLogo.svg" alt="THAT Logo" />
 			</a>
 		</div>

@@ -49,14 +49,14 @@
 					<div class="absolute right-0 mt-2 w-48 origin-top-right rounded-md shadow-lg" in:fade>
 						<div class="rounded-md bg-white py-1 ring-1 ring-black ring-opacity-5">
 							<a
-								href="/my/profiles/primary/"
+								href="/my/profiles/primary"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								Create Profile
 							</a>
 
 							<a
 								rel="external"
-								href="/logout/"
+								href="/logout"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								Logout
 							</a>
@@ -66,14 +66,14 @@
 					<div class="absolute right-0 mt-2 w-64 origin-top-right rounded-md shadow-lg" in:fade>
 						<div class="rounded-md bg-white py-1 ring-1 ring-black ring-opacity-5">
 							<div class="block border-b px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-								<a href="/my/profiles/primary/" on:click={() => (visible = false)}>
+								<a href="/my/profiles/primary" on:click={() => (visible = false)}>
 									<p>{$page.data.user.profile.firstName} {$page.data.user.profile.lastName}</p>
 									<p class="truncate pt-2">{$page.data.user.profile.email}</p>
 								</a>
 							</div>
 
 							<a
-								href="/my/profiles/primary/"
+								href="/my/profiles/primary"
 								on:click={() => (visible = false)}
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								My Profiles
@@ -81,7 +81,7 @@
 
 							<a
 								data-sveltekit-prefetch
-								href="/my/network/"
+								href="/my/network"
 								on:click={() => (visible = false)}
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								My Network
@@ -89,14 +89,14 @@
 
 							<a
 								data-sveltekit-prefetch
-								href="/my/favorites/"
+								href="/my/favorites"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								My Favorites
 							</a>
 
 							<a
 								data-sveltekit-prefetch
-								href="/my/submissions/"
+								href="/my/submissions"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								My Submissions
 							</a>
@@ -108,7 +108,7 @@
 							</a>
 
 							<a
-								href="/my/settings/badges/"
+								href="/my/settings/badges"
 								on:click={() => (visible = false)}
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								Orders, Tickets, Membership
@@ -116,7 +116,7 @@
 
 							<a
 								rel="external"
-								href="/logout/"
+								href="/logout"
 								class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 								Logout
 							</a>
@@ -128,13 +128,13 @@
 					<div class="rounded-md bg-white py-1 ring-1 ring-black ring-opacity-5">
 						<a
 							rel="external"
-							href="/login/"
+							href="/login"
 							class="block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 							Login
 						</a>
 						<a
 							rel="external"
-							href="/api/auth/signup/"
+							href="/api/auth/signup"
 							class="block cursor-pointer px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
 							Sign Up
 						</a>

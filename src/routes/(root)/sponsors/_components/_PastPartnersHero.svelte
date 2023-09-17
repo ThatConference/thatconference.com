@@ -27,7 +27,7 @@
 			</p>
 		</div>
 		<div class="mt-5 flex sm:justify-end">
-			<StandardLink href={`/sponsors/`}>
+			<StandardLink href={`/sponsors`}>
 				<span class="text-xl"> View Current Partners and Sponsors </span>
 			</StandardLink>
 		</div>
