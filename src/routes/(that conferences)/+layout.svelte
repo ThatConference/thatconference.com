@@ -5,7 +5,7 @@
 
 	import { Trees } from '$elements/svgs';
 	import Footer from '$components/footer/Footer.svelte';
-	import Nav from './_components/nav/Nav.svelte';
+	import Nav from '$components/navigation/thatConference/Nav.svelte';
 
 	let { event } = data;
 	const [venue] = event.venues;
