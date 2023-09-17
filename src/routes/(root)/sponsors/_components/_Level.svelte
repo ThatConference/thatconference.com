@@ -15,7 +15,7 @@
 			{#each partners as p, _i (p.id)}
 				<li
 					class="col-span-1 flex transform flex-col rounded-lg bg-white text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-that-offWhite">
-					<a href={`/partners/${p.slug}`}>
+					<a href={`/sponsors/${p.slug}`}>
 						<PartnerCard {...p} />
 					</a>
 				</li>

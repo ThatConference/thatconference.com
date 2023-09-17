@@ -38,7 +38,7 @@
 				description: `${profile.aboutUs}`,
 				openGraph: {
 					type: 'website',
-					url: `https://thatconference.com/partners/${partner}`
+					url: `https://thatconference.com/sponsors/${partner}`
 				}
 			})
 		}))();
@@ -69,7 +69,7 @@
 			title="Currently Not Sponsoring"
 			text="This partner isn't currently an active sponsor.">
 			<div class="flex justify-center space-x-6">
-				<StandardLink href="/partners">Current Sponsors</StandardLink>
+				<StandardLink href="/sponsors">Current Sponsors</StandardLink>
 				<StandardLink href="/sponsorships/apply">Become a Sponsor</StandardLink>
 			</div>
 		</ActionModal>

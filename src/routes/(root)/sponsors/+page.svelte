@@ -20,7 +20,7 @@
 			},
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/partners/`
+				url: `https://thatconference.com/sponsors/`
 			}
 		})
 	}))();

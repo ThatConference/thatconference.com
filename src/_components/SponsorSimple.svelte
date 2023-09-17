@@ -77,7 +77,7 @@
 									{#each partners as p}
 										<div
 											class="w-1/2 transform p-2 transition duration-500 ease-in-out hover:scale-105">
-											<a href="/partners/{p.slug}">
+											<a href="/sponsors/{p.slug}">
 												<img class="lazyload h-24 w-full" src={p.companyLogo} alt={p.companyName} />
 											</a>
 										</div>
@@ -88,7 +88,7 @@
 									{#each explorers as p}
 										<div
 											class="w-1/5 transform p-4 transition duration-500 ease-in-out hover:scale-105">
-											<a href="/partners/{p.slug}">
+											<a href="/sponsors/{p.slug}">
 												<img class="lazyload h-24 w-full" src={p.companyLogo} alt={p.companyName} />
 											</a>
 										</div>
@@ -96,7 +96,7 @@
 								</div>
 
 								<div class="flex flex-col items-center">
-									<a class="font-semibold text-gray-500" href="/partners/{slug}"
+									<a class="font-semibold text-gray-500" href="/sponsors/{slug}"
 										>Visit This Year's<span class="pl-1 font-extrabold text-thatRed-500"
 											>Sponsors</span
 										></a>
@@ -135,7 +135,7 @@
 					<div class="flex flex-wrap items-center justify-center">
 						{#each partners as p}
 							<div class="w-1/3 transform p-4 transition duration-500 ease-in-out hover:scale-105">
-								<a href="/partners/{p.slug}">
+								<a href="/sponsors/{p.slug}">
 									<img class="lazyload h-24 w-full" src={p.companyLogo} alt={p.companyName} />
 								</a>
 							</div>
@@ -143,7 +143,7 @@
 					</div>
 
 					<div class="flex justify-center">
-						<StandardLink href="/partners/{slug}">View all Sponsors</StandardLink>
+						<StandardLink href="/sponsors/{slug}">View all Sponsors</StandardLink>
 					</div>
 
 					<div class="mt-24 text-2xl font-bold uppercase text-gray-500">
