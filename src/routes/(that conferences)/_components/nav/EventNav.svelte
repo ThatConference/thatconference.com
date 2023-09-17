@@ -13,7 +13,7 @@
 	}
 </script>
 
-<div class="relative bg-white py-12">
+<div class=" bg-white py-12">
 	<div class="mx-auto flex max-w-screen-xl items-center justify-between">
 		<!-- logo -->
 		<div class="flex items-center">
