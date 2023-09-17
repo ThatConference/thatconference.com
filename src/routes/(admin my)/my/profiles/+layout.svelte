@@ -90,6 +90,8 @@
 							</a>
 							<a
 								href="https://that.community"
+								target="_blank"
+								rel="external noopener noreferrer"
 								class={$page.url.pathname.startsWith('/my/profiles/discord')
 									? asideSelected.item
 									: asideDefault.item}>
