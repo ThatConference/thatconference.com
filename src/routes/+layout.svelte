@@ -115,7 +115,9 @@
 			</div>
 		{/if}
 	</div>
-	<slot />
+	<div class="overflow-hidden">
+		<slot />
+	</div>
 </div>
 
 <style>
