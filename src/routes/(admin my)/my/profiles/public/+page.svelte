@@ -1,57 +1,10 @@
 <script>
 	export let data;
 
-	import { goto } from '$app/navigation';
-	import { invalidateAll } from '$app/navigation';
-
-	import { tagEvent } from '$lib/tagEvent';
 	import seoMetaTags from '$lib/seo/metaTags';
 	import Seo from '$components/Seo.svelte';
 
-	import memberApi from '$dataSources/api.that.tech/members/mutations';
-	import ProfileForm from './profileForm.svelte';
-
-	let { currentProfile, isNewProfile } = data;
-	const { createProfile, updateProfile } = memberApi();
-
-	async function handleNew({ detail: { values, setSubmitting, resetForm } }) {
-		setSubmitting(true);
-		await createProfile({ profileLinks: [], ...values });
-
-		tagEvent('created', 'profile');
-
-		setSubmitting(false);
-		resetForm();
-
-		invalidateAll();
-
-		goto(`/`);
-	}
-
-	async function handleUpdate({ detail: { values, setSubmitting, resetForm } }) {
-		console.log('in here');
-		let updatedProfile = {
-			profileLinks: [],
-			...values
-		};
-
-		// we don't allow the following to get updated
-		delete updatedProfile.profileSlug;
-		delete updatedProfile.isOver13;
-		delete updatedProfile.acceptedCodeOfConduct;
-		delete updatedProfile.acceptedTermsOfService;
-
-		setSubmitting(true);
-		await updateProfile(updatedProfile);
-
-		tagEvent('update', 'profile');
-		setSubmitting(false);
-		resetForm();
-
-		invalidateAll();
-
-		goto(`/`);
-	}
+	import PublicProfileForm from './PublicProfileForm.svelte';
 
 	const metaTags = ((title = 'My Profile - THAT') => ({
 		title,
@@ -70,8 +23,6 @@
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
-<ProfileForm
-	handleSubmit={isNewProfile ? handleNew : handleUpdate}
-	profile={currentProfile}
-	{isNewProfile}
-	sForm={data.form} />
+<div>
+	<PublicProfileForm sForm={data.form} />
+</div>

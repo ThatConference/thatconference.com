@@ -61,7 +61,7 @@ export const actions = {
 		}
 
 		let isNewProfile = false;
-		const me = await queryMe(fetch);
+		const me = await queryMe();
 
 		if (!isNil(me) && !isEmpty(me)) {
 			isNewProfile = false;
@@ -80,19 +80,27 @@ export const actions = {
 			}
 		}
 
-		if (isNewProfile) {
-			await createProfile(form.data);
-		} else {
-			// these fields cannot be updated.
-			delete form.data.profileSlug;
-			delete form.data.isOver13;
-			delete form.data.acceptedCodeOfConduct;
-			delete form.data.acceptedTermsOfService;
+		try {
+			if (isNewProfile) {
+				await createProfile(form.data);
+			} else {
+				// these fields cannot be updated.
+				delete form.data.profileSlug;
+				delete form.data.isOver13;
+				delete form.data.acceptedCodeOfConduct;
+				delete form.data.acceptedTermsOfService;
 
-			await updateProfile(form.data);
+				await updateProfile(form.data);
+			}
+			const message = { type: 'success', message: 'Your system profile has been saved!' };
+			throw redirect(303, '/', message, event);
+		} catch (error) {
+			const errorMessage = {
+				type: 'error',
+				message: `Whoops!!! ${error.message}`
+			};
+
+			throw redirect(errorMessage, event);
 		}
-
-		const message = { type: 'success', message: 'Your system profile has been saved!' };
-		throw redirect(303, '/', message, event);
 	}
 };

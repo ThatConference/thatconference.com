@@ -122,7 +122,10 @@ export default (fetch) => {
 	function createProfile(profile) {
 		const variables = { profile };
 		return client.mutation({ mutation: MUTATION_CREATE, variables }).then(({ data, errors }) => {
-			if (errors) log({ errors, tag: 'MUTATION_CREATE' });
+			if (errors) {
+				log({ errors, tag: 'MUTATION_CREATE' });
+				throw new Error('An error occurred while creating your profile.');
+			}
 
 			return data.members.create;
 		});
@@ -131,7 +134,10 @@ export default (fetch) => {
 	function updateProfile(profile) {
 		const variables = { profile };
 		return client.mutation({ mutation: MUTATION_UPDATE, variables }).then(({ data, errors }) => {
-			if (errors) log({ errors, tag: 'MUTATION_UPDATE' });
+			if (errors) {
+				log({ errors, tag: 'MUTATION_UPDATE' });
+				throw new Error('An error occurred while updating your profile.');
+			}
 
 			return data.members.member.update;
 		});
