@@ -1,27 +1,22 @@
 export default [
 	{
-		text: 'Events',
-		href: '/events'
+		text: 'THAT Conference Texas',
+		href: '/tx'
 	},
 	{
-		text: 'Activities',
-		href: '/activities',
-		first: true
+		text: 'THAT Conference Wisconsin',
+		href: '/wi'
 	},
 	{
-		text: 'Members',
-		href: '/members'
+		text: 'Call For Speakers',
+		href: '/call-for-speakers'
 	},
 	{
-		text: 'Communities',
-		href: '/communities'
+		text: 'Sponsor THAT',
+		href: '/sponsorships/apply'
 	},
 	{
-		text: 'Sponsors',
-		href: '/sponsors'
-	},
-	{
-		text: 'Help',
-		href: '/support'
+		text: 'Newsletter',
+		href: '/newsletter'
 	}
 ];
