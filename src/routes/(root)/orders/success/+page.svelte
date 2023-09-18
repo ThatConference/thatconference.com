@@ -168,7 +168,7 @@
 				</li>
 				<li>
 					Get ready for what's coming. Did you know we have an event every month?
-					<a class="hover" href="/events">Check out our past and upcoming events.</a>
+					<a class="hover" href="/">Check out our past and upcoming events.</a>
 				</li>
 				<li>Signup for our newsletter!</li>
 			</ul>

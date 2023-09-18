@@ -22,7 +22,7 @@
 		{/if}
 
 		{#if ['claim.pending'].some($state.matches)}
-			<a href="/events/{$state.context.eventDetails?.slug}">
+			<a href="/{$state.context.eventDetails?.slug}">
 				<img
 					src={$state.context.eventDetails?.logo}
 					alt="Event Logo"
@@ -32,7 +32,7 @@
 			<div class="ml-4 grid grid-cols-5 place-items-center gap-6">
 				<div class="col-span-2">
 					<h3 class="font-medium text-gray-900">
-						<a href="/events/{$state.context.eventDetails?.slug}"
+						<a href="/{$state.context.eventDetails?.slug}"
 							>{$state.context.eventDetails?.name || 'THAT Online'}</a>
 					</h3>
 					<p class="mt-1 text-gray-500">Expo Hall Only Ticket</p>
@@ -49,8 +49,8 @@
 						<button
 							type="button"
 							disabled
-							class="whitespace-nowrap rounded-md border-2 
-							border-gray-500 bg-gray-200 px-8 py-2 
+							class="whitespace-nowrap rounded-md border-2
+							border-gray-500 bg-gray-200 px-8 py-2
 							text-base font-medium
 							leading-6 text-gray-500 shadow md:px-10 md:text-lg">
 							Claim Ticket
