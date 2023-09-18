@@ -60,12 +60,12 @@
 
 		<h2>Activity Board and My Favorites</h2>
 		<p>
-			<a href="/activities">The Activity Board</a>
+			<a href="https://that.us/activities">The Activity Board</a>
 			as we call it, is your main place to find out what's up next. It will always show all Activities
 			from today looking forward. You can also find
 			<strong class="italic">all</strong>
 			Activities
-			<a href="/events/thatUs">here</a>.
+			<a href="https://that.us/activities">here</a>.
 		</p>
 
 		<p>
