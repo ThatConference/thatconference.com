@@ -76,6 +76,5 @@
 				</a>
 			</div>
 		</div>
-		Hero.svelte
 	</div>
 </Hero>
