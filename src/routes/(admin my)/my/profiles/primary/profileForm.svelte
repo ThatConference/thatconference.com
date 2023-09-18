@@ -21,7 +21,7 @@
 		},
 		onResult: ({ result }) => {
 			if (result.status === 303) {
-				va.track('Profile Updated');
+				va.track('form:system-profile:submitted');
 				invalidateAll();
 			}
 		}

@@ -3,6 +3,7 @@ import { createMachine, assign } from 'xstate';
 import lodash from 'lodash';
 import dayjs from 'dayjs';
 import isBetween from 'dayjs/plugin/isBetween.js';
+import va from '@vercel/analytics';
 
 import { log } from '../error';
 import createConfig from './cartConfig';
@@ -148,6 +149,7 @@ function createServices() {
 					}
 
 					const { id, quantity = 1, price, name, description, productType } = event;
+					va.track('cart:add-item', { name, price, productType });
 
 					const currentCart = context.cart;
 
