@@ -6,6 +6,7 @@
 	import { superForm, superValidateSync } from 'sveltekit-superforms/client';
 	import Icon from 'svelte-awesome';
 	import * as flashModule from 'sveltekit-flash-message/client';
+	import va from '@vercel/analytics';
 
 	import { envelope } from '$components/svelte-awesome-icons';
 	import newsletterSchema from '$lib/formSchemas/newsletter';
@@ -28,6 +29,9 @@
 			syncFlashMessage: false,
 			flashMessage: {
 				module: flashModule
+			},
+			onResult: () => {
+				va.track('form:newsletter:submitted');
 			}
 		}
 	);

@@ -2,11 +2,13 @@
 	export let sForm;
 
 	import { getContext } from 'svelte';
+	import { invalidateAll } from '$app/navigation';
 
 	import { superForm } from 'sveltekit-superforms/client';
 	import * as flashModule from 'sveltekit-flash-message/client';
 	import { AlertOctagon } from 'lucide-svelte';
 	import Select from 'svelte-select';
+	import va from '@vercel/analytics';
 
 	import { DisabledShell, Shell } from '$elements/buttons';
 	import sharedProfileFormSchema from '$lib/formSchemas/sharedProfile';
@@ -20,6 +22,12 @@
 		taintedMessage: null, // todo - @csell phone number formatting taints the form.
 		flashMessage: {
 			module: flashModule
+		},
+		onUpdated: ({ form }) => {
+			if (form.valid) {
+				invalidateAll();
+				va.track('form:public-profile:submitted');
+			}
 		}
 	});
 

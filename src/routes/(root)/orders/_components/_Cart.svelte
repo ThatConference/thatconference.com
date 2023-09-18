@@ -12,6 +12,7 @@
 	import orderMutations from '$dataSources/api.that.tech/orders/mutations';
 	import CartItem from './_CartItem.svelte';
 	import { tagEvent } from '$lib/tagEvent';
+	import va from '@vercel/analytics';
 
 	const { state, send } = getContext('cart');
 	let apiErrorMessage = '';
@@ -23,6 +24,7 @@
 			level: 'info'
 		});
 
+		va.track('cart:handle-checkout');
 		Sentry.configureScope((scope) => scope.setTransactionName('Handle Checkout'));
 
 		const { eventId, cart } = $state.context;
@@ -47,6 +49,7 @@
 			);
 
 			if (checkoutSessionResults.success) {
+				va.track('cart:handle-checkout:redirect');
 				stripe.redirectToCheckout({ sessionId: checkoutSessionResults.stripeCheckoutId });
 			} else {
 				Sentry.captureException(checkoutSessionResults.message);

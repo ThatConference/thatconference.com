@@ -12,6 +12,7 @@
 	import Checkbox from 'svelte-checkbox';
 	import lodash from 'lodash';
 	import { AlertOctagon } from 'lucide-svelte';
+	import va from '@vercel/analytics';
 
 	import config from '$lib/config.public';
 	import publicProfileSchema from '$lib/formSchemas/publicProfile';
@@ -33,6 +34,7 @@
 		onUpdated: ({ form }) => {
 			if (form.valid) {
 				invalidateAll();
+				va.track('form:public-profile:submitted');
 			}
 		}
 	});
