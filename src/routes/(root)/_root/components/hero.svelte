@@ -1,5 +1,5 @@
 <script>
-	import { Standard as StandardLink, Action as ActionLink } from '$elements/links';
+	import { Action as ActionLink } from '$elements/links';
 </script>
 
 <section class="relative overflow-x-hidden">
@@ -28,9 +28,12 @@
 				<div
 					class="mt-20 flex flex-col items-center justify-center space-y-12 sm:flex-row sm:justify-start sm:space-x-4 sm:space-y-0">
 					<div>
-						<ActionLink href="/support">What is THAT Community?</ActionLink>
+						<ActionLink href="/tx">THAT Conference Texas</ActionLink>
 					</div>
-					<div><StandardLink href="/events">View all Events</StandardLink></div>
+
+					<div>
+						<ActionLink href="/wi">THAT Conference Wisconsin</ActionLink>
+					</div>
 				</div>
 			</div>
 			<div class="col-span-3 flex flex-col items-center justify-center">
