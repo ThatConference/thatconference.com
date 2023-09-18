@@ -7,6 +7,7 @@
 	import * as flashModule from 'sveltekit-flash-message/client';
 	import Checkbox from 'svelte-checkbox';
 	import { AlertOctagon } from 'lucide-svelte';
+	import va from '@vercel/analytics';
 
 	import { Shell, DisabledShell } from '$elements/buttons';
 
@@ -18,8 +19,9 @@
 		flashMessage: {
 			module: flashModule
 		},
-		onUpdated: ({ form }) => {
-			if (form.valid) {
+		onResult: ({ result }) => {
+			if (result.status === 303) {
+				va.track('Profile Updated');
 				invalidateAll();
 			}
 		}
