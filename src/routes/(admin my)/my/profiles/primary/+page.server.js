@@ -80,27 +80,37 @@ export const actions = {
 			}
 		}
 
-		try {
-			if (isNewProfile) {
+		if (isNewProfile) {
+			try {
 				await createProfile(form.data);
-			} else {
-				// these fields cannot be updated.
-				delete form.data.profileSlug;
-				delete form.data.isOver13;
-				delete form.data.acceptedCodeOfConduct;
-				delete form.data.acceptedTermsOfService;
+			} catch (error) {
+				const errorMessage = {
+					type: 'error',
+					message: `Whoops!!! ${error.message}`
+				};
 
-				await updateProfile(form.data);
+				throw redirect(errorMessage, event);
 			}
-			const message = { type: 'success', message: 'Your system profile has been saved!' };
-			throw redirect(303, '/', message, event);
-		} catch (error) {
-			const errorMessage = {
-				type: 'error',
-				message: `Whoops!!! ${error.message}`
-			};
+		} else {
+			// these fields cannot be updated.
+			delete form.data.profileSlug;
+			delete form.data.isOver13;
+			delete form.data.acceptedCodeOfConduct;
+			delete form.data.acceptedTermsOfService;
 
-			throw redirect(errorMessage, event);
+			try {
+				await updateProfile(form.data);
+			} catch (error) {
+				const errorMessage = {
+					type: 'error',
+					message: `Whoops!!! ${error.message}`
+				};
+
+				throw redirect(errorMessage, event);
+			}
 		}
+
+		const message = { type: 'success', message: 'Your system profile has been saved!' };
+		throw redirect(303, '/', message, event);
 	}
 };
