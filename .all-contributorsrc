@@ -1,29 +1,48 @@
 {
-	"files": ["README.md"],
-	"imageSize": 100,
-	"commit": false,
-	"contributors": [
-		{
-			"login": "csell5",
-			"name": "Clark Sell",
-			"avatar_url": "https://avatars1.githubusercontent.com/u/772569?v=4",
-			"profile": "http://unspecified.io",
-			"contributions": ["code", "content", "design"]
-		},
-		{
-			"login": "brettski",
-			"name": "Brett Slaski",
-			"avatar_url": "https://avatars3.githubusercontent.com/u/473633?v=4",
-			"profile": "http://blog.brettski.com",
-			"contributions": ["code", "infra", "maintenance"]
-		}
-	],
-	"contributorsPerLine": 7,
-	"projectName": "thatconference.com",
-	"projectOwner": "ThatConference",
-	"repoType": "github",
-	"repoHost": "https://github.com",
-	"skipCi": true,
-	"commitConvention": "angular",
-	"commitType": "docs"
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "csell5",
+      "name": "Clark Sell",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/772569?v=4",
+      "profile": "http://unspecified.io",
+      "contributions": [
+        "code",
+        "content",
+        "design"
+      ]
+    },
+    {
+      "login": "brettski",
+      "name": "Brett Slaski",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/473633?v=4",
+      "profile": "http://blog.brettski.com",
+      "contributions": [
+        "code",
+        "infra",
+        "maintenance"
+      ]
+    },
+    {
+      "login": "nateemerson",
+      "name": "Nate Emerson",
+      "avatar_url": "https://avatars.githubusercontent.com/u/596293?v=4",
+      "profile": "http://nate.codes",
+      "contributions": [
+        "bug"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "thatconference.com",
+  "projectOwner": "ThatConference",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true,
+  "commitConvention": "angular",
+  "commitType": "docs"
 }
