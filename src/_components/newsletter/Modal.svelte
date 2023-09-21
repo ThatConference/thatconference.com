@@ -28,7 +28,7 @@
 					on:click_outside={() => (dismissed = true)}
 					class="mx-auto max-w-7xl sm:px-6 lg:px-8">
 					<div
-						class="relative isolate flex flex-col gap-10 overflow-hidden bg-thatBlue-800 px-6 py-24 shadow-2xl sm:rounded-3xl sm:px-24 xl:flex-row xl:items-center xl:py-32">
+						class="relative isolate flex flex-col gap-10 overflow-hidden bg-thatBlue-800 px-6 py-12 shadow-2xl sm:rounded-3xl sm:px-24 sm:py-24 xl:flex-row xl:items-center xl:py-32">
 						<div class="space-y-4 text-white">
 							<h2
 								class="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl xl:max-w-none xl:flex-auto">
@@ -41,7 +41,7 @@
 							</p>
 						</div>
 
-						<div class="w-2/3">
+						<div class="lg:w-2/3">
 							<HubspotForm formId={'newsletter-modal'} />
 						</div>
 
