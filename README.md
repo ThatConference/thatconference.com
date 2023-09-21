@@ -1,7 +1,7 @@
 # THAT CONFERENCE.COM
 
 [![GitHub issues open](https://img.shields.io/github/issues/thatconference/that.us.svg)](https://github.com/thatconference/thatconference.com/issues) [![release](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/thatconference/thatconference.com/issues) <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-3-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 ## Get started
@@ -71,6 +71,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://unspecified.io"><img src="https://avatars1.githubusercontent.com/u/772569?v=4?s=100" width="100px;" alt="Clark Sell"/><br /><sub><b>Clark Sell</b></sub></a><br /><a href="https://github.com/ThatConference/thatconference.com/commits?author=csell5" title="Code">💻</a> <a href="#content-csell5" title="Content">🖋</a> <a href="#design-csell5" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://blog.brettski.com"><img src="https://avatars3.githubusercontent.com/u/473633?v=4?s=100" width="100px;" alt="Brett Slaski"/><br /><sub><b>Brett Slaski</b></sub></a><br /><a href="https://github.com/ThatConference/thatconference.com/commits?author=brettski" title="Code">💻</a> <a href="#infra-brettski" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#maintenance-brettski" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://nate.codes"><img src="https://avatars.githubusercontent.com/u/596293?v=4?s=100" width="100px;" alt="Nate Emerson"/><br /><sub><b>Nate Emerson</b></sub></a><br /><a href="https://github.com/ThatConference/thatconference.com/issues?q=author%3Anateemerson" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://hachyderm.io/@alzaudtke"><img src="https://avatars.githubusercontent.com/u/1631560?v=4?s=100" width="100px;" alt="Al"/><br /><sub><b>Al</b></sub></a><br /><a href="https://github.com/ThatConference/thatconference.com/issues?q=author%3Azaudtke" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
