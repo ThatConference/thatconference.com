@@ -1,7 +1,3 @@
-<script>
-	import { Action as ActionLink } from '$elements/links';
-</script>
-
 <section class="relative overflow-x-hidden">
 	<div class="mx-auto my-12 max-w-screen-xl px-4 sm:px-6">
 		<div class="flex flex-col space-y-24 lg:grid lg:grid-cols-7">
@@ -25,15 +21,13 @@
 					</a>
 					once a year but we host digital events all the time.
 				</p>
-				<div
-					class="mt-20 flex flex-col items-center justify-center space-y-12 sm:flex-row sm:justify-start sm:space-x-4 sm:space-y-0">
-					<div>
-						<ActionLink href="/tx">THAT Conference Texas</ActionLink>
-					</div>
-
-					<div>
-						<ActionLink href="/wi">THAT Conference Wisconsin</ActionLink>
-					</div>
+				<div class="mt-20 flex flex-wrap">
+					<a href="/tx" class="anchorButton m-2 grow">
+						<div>THAT CONFERENCE TEXAS</div>
+					</a>
+					<a href="/wi" class="anchorButton m-2 grow">
+						<div>THAT CONFERENCE WISCONSIN</div>
+					</a>
 				</div>
 			</div>
 			<div class="col-span-3 flex flex-col items-center justify-center">
@@ -51,3 +45,16 @@
 		</div>
 	</div>
 </section>
+
+<style lang="postcss">
+	.anchorButton {
+		@apply rounded-md bg-thatBlue-500 px-4 py-4 text-center font-medium tracking-wide text-white shadow-md md:text-xl;
+	}
+
+	.anchorButton:hover {
+		@apply bg-thatBlue-400 transition duration-150 ease-in-out;
+	}
+	.anchorButton:focus {
+		@apply underline underline-offset-4;
+	}
+</style>
