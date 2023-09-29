@@ -7,28 +7,26 @@ const config = ({ mode }) => {
 	process.env = { ...process.env, ...loadEnv(mode, process.cwd(), '') };
 
 	const sentryConfig = {
-		sourceMapsUploadOptions: {
-			url: 'https://sentry.io',
-			authToken: process.env.SENTRY_SRC_MAP_UPLOAD,
-			org: 'that-conference',
-			project: 'thatconference-com',
-			release: pkg.version,
-			setCommits: {
-				auto: true,
-				ignoreMissing: true
-			},
-			sourceMaps: {
-				assets: ['./.svelte-kit/output'],
-				ignore: ['node_modules'],
-				validate: true
-			},
-			deploy: {
-				env: 'production'
-			},
-			debug: false,
-			dryRun: false,
-			cleanArtifacts: true
-		}
+		url: 'https://sentry.io',
+		authToken: process.env.SENTRY_SRC_MAP_UPLOAD,
+		org: 'that-conference',
+		project: 'thatconference-com',
+		release: pkg.version,
+		setCommits: {
+			auto: true,
+			ignoreMissing: true
+		},
+		sourceMaps: {
+			assets: ['./.svelte-kit/output'],
+			ignore: ['node_modules'],
+			validate: true
+		},
+		deploy: {
+			env: 'production'
+		},
+		debug: false,
+		dryRun: false,
+		cleanArtifacts: true
 	};
 
 	return defineConfig({
