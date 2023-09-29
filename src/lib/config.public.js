@@ -1,4 +1,5 @@
 import { env } from '$env/dynamic/public';
+import { version } from '$app/environment';
 
 function configMissing(configKey) {
 	const message = `Missing required public environment varable: ${configKey}`;
@@ -7,8 +8,8 @@ function configMissing(configKey) {
 
 export default {
 	hostURL: env.PUBLIC_HOST_URL || 'https://thatconference.com',
-	nodeEnv: env.NODE_ENV,
-	version: '5.0.0',
+	nodeEnv: env.PUBLIC_VERCEL_ENV,
+	version: version ?? '0.0.0.0',
 	eventId: 'YWavA70szR8rxSwrLJaL',
 	eventSlug: 'thatus/daily',
 	api: {
@@ -47,7 +48,7 @@ export const securityConfig = () => {
 
 export const logging = {
 	dsn: 'https://857800ed593d481bb0da2843516d7845@o235190.ingest.sentry.io/4504617287417856',
-	environment: env.NODE_ENV
+	environment: env.PUBLIC_VERCEL_ENV
 };
 
 export const debug = {

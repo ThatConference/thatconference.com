@@ -12,17 +12,17 @@ const config = ({ mode }) => {
 		org: 'that-conference',
 		project: 'thatconference-com',
 		release: pkg.version,
-		deploy: {
-			env: 'production'
-		},
 		setCommits: {
 			auto: true,
 			ignoreMissing: true
 		},
 		sourceMaps: {
-			include: ['./.svelte-kit/output'],
+			assets: ['./.svelte-kit/output'],
 			ignore: ['node_modules'],
 			validate: true
+		},
+		deploy: {
+			env: 'production'
 		},
 		debug: false,
 		dryRun: false,
@@ -41,3 +41,6 @@ const config = ({ mode }) => {
 };
 
 export default config;
+
+// Sentry vite plugin reference:
+// https://github.com/getsentry/sentry-javascript-bundler-plugins/tree/259018857f1fd58b29a8fa92fa573953a9c30fca/packages/vite-plugin
