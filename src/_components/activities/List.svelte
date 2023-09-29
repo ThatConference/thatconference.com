@@ -248,13 +248,22 @@
 	{#if sorted.length}
 		{#each sorted as day}
 			<div>
-				<h2
-					id={dayjs(day.dayOfYear).format('dddd').toLowerCase()}
-					class="sticky top-0 z-20 -ml-5 -mr-5 mb-7 whitespace-nowrap
+				{#if day.dayOfYear !== 'Invalid Date'}
+					<h2
+						id={dayjs(day.dayOfYear).format('dddd').toLowerCase()}
+						class="sticky top-0 z-20 -ml-5 -mr-5 mb-7 whitespace-nowrap
                  bg-gray-100 pl-5 pt-4 text-xl
                  font-extrabold leading-9 tracking-tight text-thatBlue-800 sm:-ml-6 sm:-mr-6 sm:mb-9 sm:pl-6 sm:leading-10 md:text-4xl">
-					{dayjs(day.dayOfYear).format("dddd, MMMM D, 'YY")}
-				</h2>
+						{dayjs(day.dayOfYear).format("dddd, MMMM D, 'YY")}
+					</h2>
+				{:else}
+					<h2
+						class="sticky top-0 z-20 -ml-5 -mr-5 mb-7 whitespace-nowrap
+                 bg-gray-100 pl-5 pt-4 text-xl
+                 font-extrabold leading-9 tracking-tight text-thatBlue-800 sm:-ml-6 sm:-mr-6 sm:mb-9 sm:pl-6 sm:leading-10 md:text-4xl">
+						Unscheduled
+					</h2>
+				{/if}
 
 				{#each day.timeSlots as ts}
 					<div class="relative">
