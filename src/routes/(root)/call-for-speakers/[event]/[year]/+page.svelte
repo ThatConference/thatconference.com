@@ -13,6 +13,10 @@
 	import CTA from '../../_components/cta.svelte';
 
 	let { event } = data;
+	let showBecomeCounselorButt =
+		dayjs() >= dayjs(event.callForSpeakersOpenDate) &&
+		dayjs() <= dayjs(event.callForSpeakersCloseDate);
+
 	const metaTags = ((title = `${event?.name} Call For Counselors - THAT`) => ({
 		title,
 		tags: seoMetaTags({
@@ -20,7 +24,7 @@
 			description: 'Call For Counselors is now open',
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/call-for-counselors/${event.slug}`
+				url: `https://thatconference.com/call-for-speakers/${event.slug}`
 			}
 		})
 	}))();
@@ -67,12 +71,13 @@
 				</p>
 
 				<div class="flex justify-center space-x-4 pt-12">
-					<div class="flex-none">
-						<StandardLink href={`/activities/create/?event=${event.id}`}>
-							Become a Counselor
-						</StandardLink>
-					</div>
-
+					{#if showBecomeCounselorButt}
+						<div class="flex-none">
+							<StandardLink href={`/activities/create/?event=${event.id}`}>
+								Become a Counselor
+							</StandardLink>
+						</div>
+					{/if}
 					<div class="flex-none">
 						<StandardScroll href="#formatAndDates">View Formats and Dates</StandardScroll>
 					</div>
