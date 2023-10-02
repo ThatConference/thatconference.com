@@ -30,7 +30,7 @@
 				<NavLink href={buildUrl('sponsors')}>Sponsors</NavLink>
 				<NavLink href={buildAnchorLink('dates')}>Dates</NavLink>
 				<NavLink href={buildUrl('travel')}>Travel</NavLink>
-				<NavLink href={buildAnchorLink('fieldGuide')}>Field Guide</NavLink>
+				<NavLink href="/support/that-field-guide">Field Guide</NavLink>
 			</div>
 		</div>
 
