@@ -1,6 +1,6 @@
 {
 	"name": "thatconference.com",
-	"version": "5.0.4",
+	"version": "5.0.5",
 	"description": "THATConference.com website",
 	"main": "index.js",
 	"type": "module",
@@ -35,8 +35,8 @@
 		"@fortawesome/free-regular-svg-icons": "^6.4.2",
 		"@fullhuman/postcss-purgecss": "^5.0.0",
 		"@playwright/test": "^1.37.1",
-		"@sentry/svelte": "^7.69.0",
-		"@sentry/tracing": "^7.69.0",
+		"@sentry/svelte": "^7.73.0",
+		"@sentry/tracing": "^7.73.0",
 		"@stripe/stripe-js": "^2.1.5",
 		"@sveltejs/adapter-auto": "2.1.0",
 		"@sveltejs/kit": "1.25.0",
