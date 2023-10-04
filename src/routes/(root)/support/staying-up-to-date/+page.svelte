@@ -121,7 +121,8 @@
         lg:max-w-none">
 		<div class="flex space-x-4 text-base">
 			<StandardLink href="/support/creating-an-activity">Create an Activity</StandardLink>
-			<HighlightLink href="/activities">Check out the upcoming Activities</HighlightLink>
+			<HighlightLink href="https://that.us/activities"
+				>Check out the upcoming Activities</HighlightLink>
 		</div>
 	</div>
 </section>

@@ -12,5 +12,7 @@
 
 <slot />
 <div class="mt-24">
+	<!-- svelte-ignore a11y-missing-content -->
+	<a name="newsletter"></a>
 	<NewsletterSignup />
 </div>

@@ -12,7 +12,7 @@
 			description: 'Your payment was successfully received.',
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/orders/success/`
+				url: `https://thatconference.com/orders/success`
 			},
 			noindex: true,
 			nofollow: true
@@ -35,9 +35,11 @@
 	const eventLocation = $page.url.searchParams.has('EL')
 		? $page.url.searchParams.get('EL')
 		: undefined;
-	const targetLocations = $page.url.searchParams.has('TL')
-		? $page.url.searchParams.getAll('TL')
-		: [];
+	let targetLocations = [];
+	if ($page.url.searchParams.has('TL')) {
+		targetLocations = $page.url.searchParams.getAll('TL');
+		targetLocations = targetLocations.map((tl) => tl.toUpperCase());
+	}
 </script>
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
@@ -73,35 +75,38 @@
 			</p>
 
 			<div class="my-8 flex justify-center md:justify-end">
-				<StandardLink href="/my/settings/order-history">View Your Order History</StandardLink>
+				<StandardLink href="/my/settings/order-history" target="_blank"
+					>View Your Order History</StandardLink>
 			</div>
 
-			<h3>Next steps</h3>
-			<p>Based on your purchase we have a few follow up things for you.</p>
-
 			{#if eventLocation}
+				<h3>Next steps</h3>
+				<p>Based on your purchase we have follow-up things for you.</p>
+
 				{#if targetLocations.length > 0}
-					<h4>You have event tickets!!!</h4>
+					<h4>You have event tickets!</h4>
 
 					{#if targetLocations.includes('AT')}
 						<p>
-							First things first, let's get your travel and rooms sorted. Just head over to our
-							travel page for room blocks, addresses, and other details.
+							Time to get your travel and hotel rooms sorted. Head over to our travel page for hotel
+							room blocks, addresses, and other details.
 						</p>
 
 						<div class="my-8 flex justify-center md:justify-end">
 							{#if eventLocation.toUpperCase() === 'WI'}
-								<StandardLink href="/support/travel/wi">Book Your Travel To Wisconsin</StandardLink>
+								<StandardLink href="/support/travel/wi" target="_blank"
+									>Book Your Travel To Wisconsin</StandardLink>
 							{/if}
 							{#if eventLocation.toUpperCase() === 'TX'}
-								<StandardLink href="/support/travel/tx">Book Your Travel To Texas</StandardLink>
+								<StandardLink href="/support/travel/tx" target="_blank"
+									>Book Your Travel To Texas</StandardLink>
 							{/if}
 						</div>
 
-						<p>
+						<!-- <p>
 							Soon we will also send you an email asking for your dietary restrictions, shirt sizes,
 							and a few other items.
-						</p>
+						</p> -->
 					{/if}
 
 					{#if targetLocations.includes('ON')}
@@ -113,34 +118,41 @@
 						</p>
 
 						<div class="my-8 flex justify-center md:justify-end">
-							<StandardLink href="/activities/create">Create an Activity</StandardLink>
+							<StandardLink href="https://that.us/activities/create" target="_blank"
+								>Create an Activity</StandardLink>
 						</div>
 					{/if}
 				{/if}
 			{/if}
 
 			{#if isBulkPurchase}
-				<h4>Action Required - You have unallocated tickets.</h4>
+				<h4>Action Required – You have unallocated tickets</h4>
 				<p>
-					You've purchased multiple tickets, and some or all of those tickets now need to be
-					allocated to someone. To gain access, that someone has to have a valid account on
-					thatconference.com. You need that user's email address to assign the ticket. Once
-					assigned, thatconference.com will contact them and take care of the rest.
+					You've purchased multiple tickets, and those tickets need to be allocated (assigned) to
+					someone. The process is easy, all you need to transfer a ticket is the
+					<strong>profile email address</strong> of the person you are transferring the ticket to.
+					We've put together the steps
+					<a class="hover" href="/support/transfer-a-ticket" target="_blank">in this handy guide</a>
+					for your reference.
+				</p>
+				<p>
+					Remember to allocate a ticket to <em>yourself</em> if you're attending!
 				</p>
 				{#if targetLocations.includes('AT')}
 					<p>
-						If one of those tickets is for a spouse or child, they do not need to be allocated, but
+						If any of those tickets are for a spouse or child, they don't need to be allocated, but
 						you will need to answer the follow-up questions on their behalf.
 					</p>
 				{/if}
 
 				<div class="my-8 flex justify-center md:justify-end">
-					<StandardLink href="/my/settings/order-history">Allocate Tickets</StandardLink>
+					<StandardLink href="/my/settings/order-history" target="_blank"
+						>Allocate Tickets Now</StandardLink>
 				</div>
 			{/if}
 
 			{#if isMembership}
-				<h4>Thank you purchasing an annual membership.</h4>
+				<h3>Thank you purchasing an annual membership</h3>
 				<p>
 					We're grateful to have you as an annual member. Your membership helps us run the daily
 					operations while also having direct input into how things evolve. You will soon see
@@ -156,24 +168,40 @@
 			</p>
 			<ul>
 				<li>
-					<a class="hover" href="/my/profiles/slack">Join us in Slack.</a>
+					Join us in <a class="hover" href="/my/profiles/slack" target="_blank">THAT Slack</a> and
+					<a class="hover" href="https://that.community" target="_blank"> THAT Discord</a>
 				</li>
 				<li>
 					Get involved on THAT.us! Better yet, create an activity.
-					<a class="hover" href="/support">Learn how to get started.</a>
+					<a class="hover" href="https://that.us/support/" target="_blank"
+						>Learn how to get started.</a>
 				</li>
 				<li>
-					Stay up to date. <a class="hover" href="/support/staying-up-to-date"
-						>Subscribe to the calendar.</a>
+					<a class="hover" href="/support/staying-up-to-date" target="_blank">Stay up to date</a>.
 				</li>
 				<li>
-					Get ready for what's coming. Did you know we have an event every month?
-					<a class="hover" href="/">Check out our past and upcoming events.</a>
+					❤️ your favorite sessions to receive emails on session updates, see them in your
+					<a class="hover" href="/my/favorites" target="_blank">favorites feed</a>
+					and add them to
+					<a class="hover" href="/support/my-favorites-icalendar" target="_blank"
+						>your own calendar</a
+					>.
 				</li>
-				<li>Signup for our newsletter!</li>
+				<li>Signup for our <a class="hover" href="#newsletter">newsletter</a>!</li>
 			</ul>
+			{#if targetLocations.length > 0}
+				<p>
+					Say hello to <strong>Meet THAT Camper</strong> – your weekly chance to connect with a
+					fellow geek before THAT Conference. Every Monday at 9 AM central, we'll introduce you to
+					another attendee headed to the event. Getting started is easy, go to your
+					<a class="hover" href="/my/notification-preferences" target="_blank"
+						>notification preferences</a> and enable the Meet THAT Camper notification. It's that simple,
+					and you can shut it off at any time. There are more details about Meet THAT Camper on the notification
+					preferences page.
+				</p>
+			{/if}
 
-			<h3>Lastly, we’re here to help.</h3>
+			<h3>Lastly, we're here to help</h3>
 			<p>
 				We're here to support you and the community. Anything we can do to improve, or if you wish
 				there was a particular feature, please tell us. Our entire platform is open source, and
