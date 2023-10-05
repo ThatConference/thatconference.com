@@ -139,8 +139,8 @@
 					<p>
 						You've purchased multiple tickets, and those tickets need to be allocated (assigned) to
 						someone. The process is easy. All you need to transfer a ticket is the
-						<strong>profile email address</strong> of the person you are transferring the ticket to.
-						We've put together the steps
+						<span class="font-bold">profile email address</span> of the person you are transferring
+						the ticket to. We've put together the steps
 						<a class="hover" href="/support/transfer-a-ticket" target="_blank"
 							>in this handy guide</a>
 						for your reference.
@@ -157,6 +157,15 @@
 							>Allocate Tickets Now</StandardLink>
 					</div>
 				{/if}
+
+				<h4>Ticket Refunds</h4>
+				<p>
+					Ticket refunds will not be issued on any ticket <span class="font-bold">30 days</span> before
+					the event or thereafter. Prior to that, a $30.00 (per ticket) processing fee will be applied
+					to each Camper ticket refund and a $10.00 (per ticket) processing fee will be applied to each
+					Geekling and Campmate ticket refund.
+				</p>
+
 				<h4>Meet THAT Camper</h4>
 				<p>
 					Say hello to Meet THAT Camper – your weekly chance to connect with a fellow geek before
