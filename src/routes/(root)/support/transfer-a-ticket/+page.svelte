@@ -49,10 +49,13 @@
 		</p>
 
 		<p>
-			Transferring is easy, just enter a valid THAT Conference account profile email address and
-			click transfer. The page will inform you if the email address is not found. Check with the
-			person you are transferring the ticket to for the email address they're using in their profile
-			(<strong>Note:</strong> Their profile email address may be different than their login email address)
+			Transferring is easy, just enter a valid THAT Conference profile email address and click
+			transfer. The page will inform you if the email address is not found. Check with the person
+			you are transferring the ticket to for the email address they're using in their profile.
+		</p>
+		<p>
+			(<span class="font-bold">Note:</span> Their profile email address may be different than their login
+			email address)
 		</p>
 
 		<div class="transform text-center">
@@ -75,7 +78,7 @@
 
 		<h2>Family Tickets</h2>
 		<p>
-			All family tickets (Campmate, Geekling, etc.) also need to be assigned to someone. If the
+			All family tickets (Campmate, Geekling, etc.) also should to be assigned to someone. If the
 			family member isn't old enough to have a THAT account or doesn't wish to have one, then simply
 			assign the family ticket to the Camper they are coming with.
 		</p>
