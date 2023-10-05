@@ -14,5 +14,6 @@ export default z.object({
 	company: z.string().trim().nullable().optional(),
 	jobTitle: z.string().trim().nullable().optional(),
 
-	phone: z.string().trim().regex(PHONE_NUMBER_REGEX).optional() // todo.. this feels werid.
+	// THAT api cannot accept '' as phone value. Must be valid phone # or null
+	phone: z.string().trim().regex(PHONE_NUMBER_REGEX).or(z.literal(null)) // todo.. this feels werid.
 });
