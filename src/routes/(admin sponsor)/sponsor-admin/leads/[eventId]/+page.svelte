@@ -64,7 +64,7 @@
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
-<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<div class="mx-auto max-w-md px-4 sm:px-6 lg:px-8">
 	<h1 class="mt-2 text-xl font-bold leading-6 text-thatBlue-800">THAT Contact Exchange</h1>
 	<div
 		class:opacity-100={showBanner}
