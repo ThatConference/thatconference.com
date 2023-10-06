@@ -2,6 +2,7 @@
 	import { Standard as StandardLink } from '$elements/links';
 	import seoMetaTags from '$lib/seo/metaTags';
 	import Seo from '$components/Seo.svelte';
+	import { events } from '$lib/config.public';
 
 	import Header from '../../_components/_Header.svelte';
 
@@ -12,13 +13,13 @@
 			description: '',
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/support/sponsors/forms/`
+				url: `https://thatconference.com/support/sponsors/forms`
 			}
 		})
 	}))();
 
-	const txEventId = 'THATConferenceTexas2023';
-	const wiEventId = 'THATConferenceWisconsin2023';
+	const txEventId = events.next.tx.id;
+	const wiEventId = events.next.wi.id;
 </script>
 
 <Seo title={metaTags.title} tags={metaTags.tags} />
@@ -108,12 +109,12 @@
 						<h3>Important Event Links</h3>
 						<ul>
 							<li>
-								<a href={`/sponsors/leads/${txEventId}`} target="_blank" rel="noreferrer">
+								<a href={`/sponsor-admin/leads/${txEventId}`} target="_blank" rel="noreferrer">
 									Lead Generation
 								</a>
 							</li>
 							<li>
-								<a href="/sponsors/my-network" target="_blank">Lead Generation Results</a>
+								<a href="/sponsor-admin/my-network" target="_blank">Lead Generation Results</a>
 							</li>
 							<li>
 								<a href="/my/network/sponsors" target="_blank">Your Network</a>
@@ -237,8 +238,8 @@
 	<div class="prose prose-lg mt-4 text-gray-500">
 		<h3>Don't forget to:</h3>
 		<ul>
-			<li>Complete your ticket enrollment.</li>
 			<li>Book your stay.</li>
+			<li>Complete your ticket enrollment.</li>
 			<li>Update your THAT Conference profile.</li>
 			<li>Read the Sponsorship Handbook.</li>
 			<li>Review your company's spotlight page.</li>
@@ -248,6 +249,6 @@
 
 <style lang="postcss">
 	a:hover {
-		@apply text-thatBlue-700;
+		@apply hover:text-thatOrange-400;
 	}
 </style>

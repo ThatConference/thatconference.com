@@ -86,10 +86,12 @@ export const claimCodes = [
 export const events = {
 	next: {
 		tx: {
-			slug: 'tx/2024'
+			slug: 'tx/2024',
+			id: 'THATConferenceTexas2024'
 		},
 		wi: {
-			slug: 'wi/2024'
+			slug: 'wi/2024',
+			id: 'THATConferenceWisconsin2024'
 		}
 	}
 };
