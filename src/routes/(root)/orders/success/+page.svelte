@@ -216,7 +216,7 @@
 						>your own calendar</a
 					>.
 				</li>
-				<li>Signup for our <a class="hover" href="#newsletter">newsletter</a>!</li>
+				<li>Signup for our newsletter!</li>
 			</ul>
 
 			<h3>Lastly, we're here to help</h3>
