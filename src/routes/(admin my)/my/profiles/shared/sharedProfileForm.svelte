@@ -34,25 +34,27 @@
 	let countryCodeSelect = countryCode?.options?.find(({ value }) => value === $form.country);
 	let formattedPhoneNumber = '';
 	function formatPhoneNumber(event) {
-		// Remove all non-numeric characters from the input
-		$form.phone = event.target.value.replace(/\D/g, '');
+		if (!$form.phone || $form.phone === '+') $form.phone = null;
+		if (event.target.value) {
+			// Remove all non-numeric characters from the input
+			$form.phone = event.target.value.replace(/\D/g, '');
 
-		// Always add a plus sign before the number
-		$form.phone = '+' + $form.phone;
-
-		// Format the phone number nicely
-		if ($form.phone.startsWith('+1')) {
-			// Format as a US number
-			formattedPhoneNumber = $form.phone.replace(
-				/^(\+\d{1})(\d{3})(\d{3})(\d{4})$/,
-				'$1 ($2) $3-$4'
-			);
-		} else {
-			// Format as an international number
-			formattedPhoneNumber = $form.phone.replace(
-				/^(\+\d{2})(\d{1,3})(\d{1,3})(\d{1,4})$/,
-				'$1 $2 $3 $4'
-			);
+			// Always add a plus sign before the number
+			$form.phone = '+' + $form.phone;
+			// Format the phone number nicely
+			if ($form.phone.startsWith('+1')) {
+				// Format as a US number
+				formattedPhoneNumber = $form.phone.replace(
+					/^(\+\d{1})(\d{3})(\d{3})(\d{4})$/,
+					'$1 ($2) $3-$4'
+				);
+			} else {
+				// Format as an international number
+				formattedPhoneNumber = $form.phone.replace(
+					/^(\+\d{2})(\d{1,3})(\d{1,3})(\d{1,4})$/,
+					'$1 $2 $3 $4'
+				);
+			}
 		}
 	}
 
