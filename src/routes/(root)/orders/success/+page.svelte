@@ -71,7 +71,8 @@
 					>If you do not see those, please check your junk/spam folders, as sometimes we manage to
 					land there accidentally.</span>
 				At any time you can view your
-				<a class="hover" href="/my/settings/order-history">order history</a> and reprint your receipt.
+				<a class="hover" href="/my/settings/order-history" target="_blank">order history</a> and reprint
+				your receipt.
 			</p>
 
 			<div class="my-8 flex justify-center md:justify-end">
