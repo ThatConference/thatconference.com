@@ -20,7 +20,7 @@
 	let pinNumber = '';
 	let waiting = false;
 	let checkInError = false;
-	let checkInErroMessage;
+	let checkInErrorMessage;
 	let setPin = false;
 
 	async function handleResetPin() {
@@ -34,7 +34,7 @@
 			dispatch('checkinUpdated');
 		} else {
 			checkInError = true;
-			checkInErroMessage = message;
+			checkInErrorMessage = message;
 		}
 	}
 
@@ -50,13 +50,13 @@
 			dispatch('checkinUpdated');
 		} else {
 			checkInError = true;
-			checkInErroMessage = message;
+			checkInErrorMessage = message;
 		}
 	}
 
 	function tryAgain() {
 		checkInError = false;
-		checkInErroMessage = undefined;
+		checkInErrorMessage = undefined;
 	}
 
 	async function handleOweSwag() {
@@ -69,7 +69,7 @@
 			dispatch('checkinUpdated');
 		} else {
 			checkInError = false;
-			checkInErroMessage = message;
+			checkInErrorMessage = message;
 		}
 	}
 </script>
@@ -131,7 +131,7 @@
 					<div class="relative my-6 flex flex-col space-y-6">
 						<div class="mt-2 w-full">
 							<p class="text-md leading-5 text-gray-500">
-								{checkInErroMessage}
+								{checkInErrorMessage}
 							</p>
 						</div>
 
@@ -171,7 +171,7 @@
 						</div>
 
 						<div class="flex items-center space-x-4">
-							<div>
+							<div title="Checked when owed a shirt, and submit">
 								<Checkbox
 									name="isOwedShirt"
 									bind:checked={isOwedShirt}
@@ -183,7 +183,7 @@
 									type="button"
 									class="w-full py-4 text-sm font-medium leading-5"
 									on:click={() => handleOweSwag()}>
-									<span class="text-lg">Owe Shirt</span>
+									<span class="text-lg">Submit Owe Shirt</span>
 								</button>
 							</Shell>
 						</div>

@@ -25,6 +25,9 @@
 	let editCheckInClicked = false;
 	let displayPin = ticket.partnerPin ?? 'PIN not set';
 	let tempPin;
+	let titleText = ticket.isAllocated
+		? `Assigned to ${ticketHolder.firstName ?? ''} ${ticketHolder.lastName ?? ''}`
+		: 'Unassigned to anyone';
 
 	// keeps ticket object up-to-date with pin changes.
 	$: {
@@ -38,7 +41,8 @@
 <div
 	class="transform overflow-hidden bg-gray-50 bg-opacity-75 px-4 py-4 shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-100 sm:rounded-md sm:px-6"
 	class:bg-yellow-100={!ticket.isAllocated}
-	class:hover:bg-yellow-200={!ticket.isAllocated}>
+	class:hover:bg-yellow-200={!ticket.isAllocated}
+	title={titleText}>
 	<div class="flex flex-col space-y-6 sm:flex-row sm:space-y-0 md:items-center">
 		<div class="flex min-w-0 flex-1 md:items-center">
 			<div class="flex-shrink-0">
@@ -147,6 +151,7 @@
 		text="Please enter the user's pin."
 		eventId={ticket.event.id}
 		ticketId={ticket.id}
+		isAllocated={ticket.isAllocated}
 		bind:returnPin={tempPin}
 		on:checkinCompleted={() => {
 			checkInClicked = false;
