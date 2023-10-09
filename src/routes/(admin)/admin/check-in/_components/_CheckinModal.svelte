@@ -4,6 +4,7 @@
 	export let title;
 	export let text;
 	export let returnPin;
+	export let isAllocated = true;
 
 	import { createEventDispatcher } from 'svelte';
 	import { Circle3 } from 'svelte-loading-spinners';
@@ -19,6 +20,7 @@
 	let waiting = false;
 	let checkInError = false;
 	let checkInErrorMessage;
+	let cursorNotAllowed = isAllocated ? '' : 'cursor-not-allowed';
 
 	async function handleCheckIn() {
 		waiting = true;
@@ -79,7 +81,13 @@
 					{title}
 				</h1>
 				<div class="mt-2">
-					<p class="text-md leading-5 text-gray-500">{text}</p>
+					{#if isAllocated === true}
+						<p class="text-md leading-5 text-gray-500">{text}</p>
+					{:else}
+						<p class="text-bold rounded-lg bg-thatOrange-400 p-2 text-white">
+							Ticket is UNASSIGNED
+						</p>
+					{/if}
 				</div>
 
 				{#if waiting}
@@ -142,7 +150,8 @@
 						<div class="flex">
 							<Shell>
 								<button
-									class="w-full py-4 text-sm font-medium leading-5"
+									disabled={!isAllocated}
+									class="w-full py-4 text-sm font-medium leading-5 {cursorNotAllowed}"
 									on:click={() => handleCheckIn()}>
 									<span class="text-lg">Complete Check-In</span>
 								</button>

@@ -43,7 +43,7 @@
 							</h1>
 
 							<h2
-								class="mt-1 text-4xl font-extrabold tracking-tight text-white sm:mt-2 sm:text-6xl lg:mt-3 xl:text-6xl ">
+								class="mt-1 text-4xl font-extrabold tracking-tight text-white sm:mt-2 sm:text-6xl lg:mt-3 xl:text-6xl">
 								{dayjs(event.startDate).format('MMMM D, YYYY')}
 							</h2>
 						</div>
@@ -60,15 +60,15 @@
 				<div class="col-span-3 mt-6 flex flex-col items-center space-y-6 font-extrabold">
 					<div>
 						<div class="transform transition duration-500 ease-in-out hover:scale-105">
-							<a href={`/activities/${event.slug}`}>
+							<a href={`https://that.us/activities/${event.slug}`}>
 								<span
 									class="rounded-md bg-thatOrange-400 px-4 py-2 text-lg uppercase leading-5 tracking-wide text-white transition duration-500 ease-in-out hover:bg-thatOrange-500"
-									>View Event Schedule</span>
+									>View Event Schedule on THAT.us</span>
 							</a>
 						</div>
 					</div>
 
-					<p class="text-lg lowercase italic tracking-tight text-white ">
+					<p class="text-lg lowercase italic tracking-tight text-white">
 						all dates/times are represented in your time zone.
 					</p>
 				</div>

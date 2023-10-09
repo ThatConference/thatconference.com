@@ -38,21 +38,6 @@
 	let searchterm = '';
 	let viewAll = false;
 
-	let statsCounselorTotal = 0;
-	let statsCounselorCheckedIn = 0;
-
-	let statsCamperTotal = 0;
-	let statsCamperCheckedIn = 0;
-
-	let statsVirtualCamperTotal = 0;
-	let statsVirtualCamperCheckedIn = 0;
-
-	let statsCampSwagTotal = 0;
-	let statsCampSwagCheckedIn = 0;
-
-	let statsPigRoastTotal = 0;
-	let statsPigRoastCheckedIn = 0;
-
 	$: if (searchterm?.length < searchOptions.minMatchCharLength || searchterm === '') {
 		registrationsSearched = registrationsFiltered;
 	} else {
@@ -63,51 +48,6 @@
 		registrationsFiltered = [...registrations];
 	} else {
 		registrationsFiltered = registrations.filter((x) => !x.hasCheckedIn);
-	}
-
-	$: {
-		registrations.forEach((r) => {
-			switch (r.product.name.toUpperCase()) {
-				//In-Person Counselors
-				case 'COUNSELOR IN-PERSON':
-					statsCounselorTotal = statsCounselorTotal + 1;
-					statsCounselorCheckedIn = r.hasCheckedIn
-						? statsCounselorCheckedIn + 1
-						: statsCounselorCheckedIn;
-					break;
-
-				case 'EVERYTHING CAMPER':
-				case 'CAMPER':
-				case 'CAMPER NO FOOD':
-					statsCamperTotal = statsCamperTotal + 1;
-					statsCamperCheckedIn = r.hasCheckedIn ? statsCamperCheckedIn + 1 : statsCamperCheckedIn;
-					break;
-
-				case 'VIRTUAL CAMPER':
-					statsVirtualCamperTotal = statsVirtualCamperTotal + 1;
-					statsVirtualCamperCheckedIn = r.hasCheckedIn
-						? statsVirtualCamperCheckedIn + 1
-						: statsVirtualCamperCheckedIn;
-					break;
-
-				case 'CAMP SWAG':
-					statsCampSwagTotal = statsCampSwagTotal + 1;
-					statsCampSwagCheckedIn = r.hasCheckedIn
-						? statsCampSwagCheckedIn + 1
-						: statsCampSwagCheckedIn;
-					break;
-
-				case 'PIG ROAST':
-					statsPigRoastTotal = statsPigRoastTotal + 1;
-					statsPigRoastCheckedIn = r.hasCheckedIn
-						? statsPigRoastCheckedIn + 1
-						: statsPigRoastCheckedIn;
-					break;
-
-				default:
-					break;
-			}
-		});
 	}
 
 	$: fuse = new Fuse(registrations, searchOptions);
@@ -125,31 +65,6 @@
 		<slot name="toggle" />
 
 		<Toggle title="All" subTitle="Regardless of status" bind:checked={viewAll} />
-	</div>
-
-	<div class="mt-12 flex flex-col justify-center">
-		<!-- <div class="flex justify-evenly">
-			<SemiCircle
-				title="Counselors"
-				series={((statsCounselorCheckedIn / statsCounselorTotal) * 100).toFixed()}
-			/>
-			<SemiCircle
-				title="Campers"
-				series={((statsCamperCheckedIn / statsCamperTotal) * 100).toFixed()}
-			/>
-			<SemiCircle
-				title="Virtual Campers"
-				series={((statsVirtualCamperCheckedIn / statsVirtualCamperTotal) * 100).toFixed()}
-			/>
-			<SemiCircle
-				title="Camp Swag"
-				series={((statsCampSwagCheckedIn / statsCampSwagTotal) * 100).toFixed()}
-			/>
-			<SemiCircle
-				title="Pig Roast"
-				series={((statsPigRoastCheckedIn / statsPigRoastTotal) * 100).toFixed()}
-			/>
-		</div> -->
 	</div>
 
 	<div class="mt-12">
