@@ -1,3 +1,4 @@
+import { error } from '@sveltejs/kit';
 import eventsApi from '$dataSources/api.that.tech/events/queries';
 
 export const trailingSlash = 'always';
@@ -17,6 +18,8 @@ export async function load({ params, url }) {
 
 	const { queryEventWithSpeakersBySlug } = eventsApi();
 	const event = await queryEventWithSpeakersBySlug(eventSlug);
+
+	if (!event) throw error(404, 'Event not found');
 
 	return {
 		eventName,

@@ -63,10 +63,10 @@
 						</div>
 					</div>
 					<div class="mt-4 flex items-baseline text-6xl font-extrabold">
-						{#if eventTickets['CLAIMABLE_TICKET'].price === 0}
+						{#if eventTickets['CLAIMABLE_TICKET']?.price === 0}
 							Free
 						{:else}
-							${eventTickets['CLAIMABLE_TICKET'].price}
+							${eventTickets['CLAIMABLE_TICKET']?.price ?? 15}
 							<span class="ml-1 text-2xl font-medium text-gray-500"> USD </span>
 						{/if}
 					</div>
@@ -107,7 +107,7 @@
 
 					<StandardButton
 						on:click={() =>
-							dispatch('claim-ticket', { product: { id: eventTickets['CLAIMABLE_TICKET'].id } })}>
+							dispatch('claim-ticket', { product: { id: eventTickets['CLAIMABLE_TICKET']?.id } })}>
 						Claim Your Ticket
 					</StandardButton>
 				</div>
@@ -133,7 +133,7 @@
 					<p class="text-lg text-gray-500">
 						{dayjs(event.startDate).format('dddd, MMMM D, YYYY - h:mm A z')}
 					</p>
-					<p class="mt-6  text-lg text-gray-500">
+					<p class="mt-6 text-lg text-gray-500">
 						{eventTickets['VIRTUAL_CAMPER'].description}
 					</p>
 				</div>
@@ -175,7 +175,7 @@
 			</div>
 		</div>
 
-		<div class="relative mt-12  lg:mt-24">
+		<div class="relative mt-12 lg:mt-24">
 			<div class="flex flex-col">
 				<h3 class="text-2xl font-extrabold tracking-tight text-thatBlue-800 sm:text-3xl">
 					Built to support the practitioners
