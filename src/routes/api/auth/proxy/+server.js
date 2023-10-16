@@ -1,14 +1,14 @@
-import auth0 from '$lib/security/server';
 import { json, error } from '@sveltejs/kit';
 import fetch from 'isomorphic-fetch';
 import config from '$lib/config.public';
 import * as Sentry from '@sentry/svelte';
 
-export async function POST({ request }) {
+export async function POST({ request, locals }) {
 	const body = await request.json();
 
 	try {
-		const { accessToken } = await auth0.getAccessToken(request);
+		const session = await locals.getSession();
+		const accessToken = session?.accessToken;
 
 		if (!accessToken) {
 			throw error(401, 'Unauthorized Access');

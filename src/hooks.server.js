@@ -1,12 +1,97 @@
+import { redirect } from '@sveltejs/kit';
 import { sequence } from '@sveltejs/kit/hooks';
-import { env } from '$env/dynamic/public';
+import { SvelteKitAuth } from '@auth/sveltekit';
+import Auth0Provider from '@auth/core/providers/auth0';
 import * as Sentry from '@sentry/sveltekit';
 
+import { logging } from '$lib/config.public';
+import { AUTH0_CLIENT_SECRET, AUTH0_SECRET } from '$env/static/private';
+import { PUBLIC_AUTH0_CLIENT_ID, PUBLIC_AUTH0_ISSUER_BASE_URL } from '$env/static/public';
+import { parseOnly } from '$lib/svelteAuth/parseJwt';
+
 Sentry.init({
-	dsn: 'https://857800ed593d481bb0da2843516d7845@o235190.ingest.sentry.io/4504617287417856',
-	tracesSampleRate: 1,
-	environment: env.PUBLIC_VERCEL_ENV
+	dsn: logging.dsn,
+	environment: logging.environment,
+	tracesSampleRate: 1
 });
 
+const loginRedirectPaths = ['/my', '/sponsor-admin', '/admin', '/speakers'];
+
+async function authorization({ event, resolve }) {
+	if (
+		loginRedirectPaths.reduce((a, c) => {
+			if (event.url.pathname.startsWith(c)) {
+				a = true;
+			}
+			return a;
+		}, false)
+	) {
+		const session = await event.locals.getSession();
+		if (!session?.user) {
+			throw redirect(303, `/login-redirect?returnTo=${event.url.pathname}`);
+		}
+	}
+
+	return resolve(event);
+}
+
+const authConfig = {
+	providers: [
+		Auth0Provider({
+			id: 'auth0',
+			name: 'Auth0',
+			clientId: PUBLIC_AUTH0_CLIENT_ID,
+			clientSecret: AUTH0_CLIENT_SECRET,
+			issuer: 'https://auth.that.tech/',
+			PUBLIC_AUTH0_ISSUER_BASE_URL,
+			wellKnown: 'https://auth.that.tech/.well-known/openid-configuration',
+			authorization: {
+				params: {
+					audience: 'https://api.that.tech/graphql',
+					scope: 'openid profile email offline_access'
+				}
+			}
+		})
+	],
+	secret: AUTH0_SECRET,
+	debug: false,
+	session: {
+		maxAge: 3600 * 24 // 1440 mins, 1 day
+	},
+	callbacks: {
+		redirect(redirectGoo) {
+			const { url, baseUrl } = redirectGoo;
+			if (url.startsWith('/')) return `${baseUrl}${url}`;
+			// Allows callback URLs on the same origin
+			else if (new URL(url).origin === baseUrl) return url;
+			return baseUrl;
+		},
+		jwt(jwtGoo) {
+			const { account, token } = jwtGoo;
+			if (account) {
+				token.accessToken = account.access_token;
+				token.idToken = account.id_token;
+			}
+			return token;
+		},
+		session(sessionGoo) {
+			const { session, token } = sessionGoo;
+			session.accessToken = token.accessToken;
+			session.idToken = token.idToken;
+			session.user.id = token.sub;
+			session.user.sub = token.sub;
+			const payload = parseOnly(token.accessToken);
+			if (payload) {
+				const { permissions } = payload;
+				if (permissions && Array.isArray(permissions)) {
+					session.user.permissions = permissions;
+				}
+			}
+			return session;
+		}
+	}
+};
+
 export const handleError = Sentry.handleErrorWithSentry();
-export const handle = sequence(Sentry.sentryHandle());
+// export const handle = sequence(Sentry.sentryHandle());
+export const handle = sequence(Sentry.sentryHandle(), SvelteKitAuth(authConfig), authorization);
