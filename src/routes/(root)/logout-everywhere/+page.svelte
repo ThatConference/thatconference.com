@@ -1,4 +1,5 @@
 <script>
+	// Logs user out at oAuth layer as well as local
 	import { redirect } from '@sveltejs/kit';
 	import { onMount } from 'svelte';
 	import { securityConfig } from '$lib/config.public';
