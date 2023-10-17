@@ -12,7 +12,7 @@
 		if (idToken) {
 			window.location.href = `${
 				config.issuerBaseURL
-			}/oidc/logout?post_logout_redirect_uri=${encodeURIComponent(
+			}oidc/logout?post_logout_redirect_uri=${encodeURIComponent(
 				window.location.origin + '/logout'
 			)}&id_token_hint=${idToken}`;
 		}

@@ -5,9 +5,13 @@ import Auth0Provider from '@auth/core/providers/auth0';
 import * as Sentry from '@sentry/sveltekit';
 
 import { logging } from '$lib/config.public';
-import { AUTH0_CLIENT_SECRET, AUTH0_SECRET } from '$env/static/private';
-import { PUBLIC_AUTH0_CLIENT_ID, PUBLIC_AUTH0_ISSUER_BASE_URL } from '$env/static/public';
 import { parseOnly } from '$lib/svelteAuth/parseJwt';
+
+import { securityConfig as publicConfig } from '$lib/config.public';
+import { securityConfig as privateConfig } from '$lib/config.private';
+
+const { clientID, issuerBaseURL } = publicConfig();
+const { clientSecret, secret } = privateConfig();
 
 Sentry.init({
 	dsn: logging.dsn,
@@ -40,10 +44,9 @@ const authConfig = {
 		Auth0Provider({
 			id: 'auth0',
 			name: 'Auth0',
-			clientId: PUBLIC_AUTH0_CLIENT_ID,
-			clientSecret: AUTH0_CLIENT_SECRET,
-			issuer: 'https://auth.that.tech/',
-			PUBLIC_AUTH0_ISSUER_BASE_URL,
+			clientId: clientID,
+			clientSecret,
+			issuer: issuerBaseURL,
 			wellKnown: 'https://auth.that.tech/.well-known/openid-configuration',
 			authorization: {
 				params: {
@@ -53,7 +56,7 @@ const authConfig = {
 			}
 		})
 	],
-	secret: AUTH0_SECRET,
+	secret,
 	debug: false,
 	session: {
 		maxAge: 3600 * 24 // 1440 mins, 1 day
@@ -93,5 +96,4 @@ const authConfig = {
 };
 
 export const handleError = Sentry.handleErrorWithSentry();
-// export const handle = sequence(Sentry.sentryHandle());
 export const handle = sequence(Sentry.sentryHandle(), SvelteKitAuth(authConfig), authorization);
