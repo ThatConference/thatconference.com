@@ -32,7 +32,11 @@ async function authorization({ event, resolve }) {
 	) {
 		const session = await event.locals.getSession();
 		if (!session?.user) {
-			throw redirect(303, `/login-redirect?returnTo=${event.url.pathname}`);
+			let toPath = event.url.pathname;
+			if (event.url.searchParams.size > 0) {
+				toPath += `?${event.url.searchParams.toString()}`;
+			}
+			throw redirect(303, `/login-redirect?returnTo=${toPath}`);
 		}
 	}
 
