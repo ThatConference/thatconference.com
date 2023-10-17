@@ -1,12 +1,18 @@
 import { redirect, error } from '@sveltejs/kit';
 import * as Sentry from '@sentry/sveltekit';
+import { securityConfig } from '$lib/config.public';
+
+const config = securityConfig();
 
 export async function GET({ fetch, locals, url }) {
-	let _url = '/';
+	let idToken = '';
+
 	try {
 		const session = await locals.getSession();
+		idToken = session?.idToken;
 
 		if (session && !!session.accessToken) {
+			// logout from app
 			const tokenCall = await fetch('/auth/csrf');
 			const csrfTokenResponse = await new Response(tokenCall.body).json();
 			const csrfToken = csrfTokenResponse.csrfToken;
@@ -24,18 +30,18 @@ export async function GET({ fetch, locals, url }) {
 				},
 				body: formData.toString()
 			});
-			const signOutResponse = await new Response(signOutRequest.body).json();
-
-			if (signOutResponse?.url) {
-				_url = signOutResponse.url;
-			}
+			await new Response(signOutRequest.body).json();
 		}
 	} catch (err) {
 		Sentry.setContext('error', { err });
 		throw error(500, 'Authentication Logout Error');
 	}
-
-	if (_url) {
-		throw redirect(302, _url);
+	// logout from oAuth layer
+	let oidcLogout = '/';
+	if (idToken) {
+		oidcLogout = `${config.issuerBaseURL}oidc/logout?post_logout_redirect_uri=${encodeURIComponent(
+			url.origin
+		)}&id_token_hint=${idToken}`;
 	}
+	throw redirect(302, oidcLogout);
 }
