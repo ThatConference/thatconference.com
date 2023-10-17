@@ -6,14 +6,14 @@ import * as Sentry from '@sentry/svelte';
 export async function POST({ request, locals }) {
 	const body = await request.json();
 
+	const session = await locals.getSession();
+	const accessToken = session?.accessToken;
+
+	if (!accessToken) {
+		throw error(401, 'Unauthorized Access');
+	}
+
 	try {
-		const session = await locals.getSession();
-		const accessToken = session?.accessToken;
-
-		if (!accessToken) {
-			throw error(401, 'Unauthorized Access');
-		}
-
 		const results = await fetch(config.api.direct, {
 			method: 'POST',
 			headers: {
