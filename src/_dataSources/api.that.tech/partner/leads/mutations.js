@@ -50,7 +50,7 @@ export default (fetch) => {
 
 			if (data) {
 				if (data.partners.us?.leads) {
-					results = data.partners.us.leads;
+					results = data.partners.us.leads.add;
 				} else {
 					let message = 'There was an issue saving the lead';
 					if (errors) message = errors[0]?.message ?? message;
