@@ -1,3 +1,4 @@
+// file needs to be page.server.js to ensure security fires in hooks.server.js handle
 import lodash from 'lodash';
 
 import partnerNetworkApi from '$dataSources/api.that.tech/partner/leads/queries';
