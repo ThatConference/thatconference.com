@@ -1,7 +1,8 @@
-import { redirect } from '@sveltejs/kit';
+import { redirect, error } from '@sveltejs/kit';
+import * as Sentry from '@sentry/sveltekit';
 
-export async function load({ fetch, locals, url }) {
-	let _url = '';
+export async function GET({ fetch, locals, url }) {
+	let _url = '/';
 	try {
 		const session = await locals.getSession();
 
@@ -30,7 +31,8 @@ export async function load({ fetch, locals, url }) {
 			}
 		}
 	} catch (err) {
-		console.error('Error during logout:', err);
+		Sentry.setContext('error', { err });
+		throw error(500, 'Authentication Logout Error');
 	}
 
 	if (_url) {

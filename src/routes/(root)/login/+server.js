@@ -1,8 +1,9 @@
-import { redirect } from '@sveltejs/kit';
+import { redirect, error } from '@sveltejs/kit';
+import * as Sentry from '@sentry/sveltekit';
 
-export async function load({ fetch, locals, url }) {
+export async function GET({ fetch, locals, url }) {
 	const returnTo = url.searchParams?.get('returnTo') || '/';
-	let _url = '';
+	let _url = '/';
 	try {
 		const session = await locals.getSession();
 		if (!session?.user) {
@@ -30,7 +31,8 @@ export async function load({ fetch, locals, url }) {
 			}
 		}
 	} catch (err) {
-		console.error(err);
+		Sentry.setContext('error', { err });
+		throw error(500, 'Authentication Login Error');
 	}
 
 	if (_url) {

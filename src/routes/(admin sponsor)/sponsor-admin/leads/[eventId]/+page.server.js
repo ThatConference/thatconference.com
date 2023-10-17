@@ -1,1 +1,5 @@
-// This file ensures hooks.server.js is run whenever this route is accessed
+/* This empty page is intentional
+ * having this +page.server page here forces the hooks.server handler to execute
+ * regardless if page.svelte is fully loaded or not
+ * https://github.com/sveltejs/kit/issues/6315
+ */
