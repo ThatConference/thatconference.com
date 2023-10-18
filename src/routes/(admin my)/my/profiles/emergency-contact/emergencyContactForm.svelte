@@ -26,6 +26,7 @@
 			if (form.valid) {
 				va.track('form:emergency-contact:submitted');
 			}
+			window.scrollTo(0, 0);
 		}
 	});
 
