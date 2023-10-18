@@ -36,6 +36,7 @@
 				invalidateAll();
 				va.track('form:public-profile:submitted');
 			}
+			window.scrollTo(0, 0);
 		}
 	});
 
