@@ -107,7 +107,7 @@
 				</a>
 				<a
 					rel="external"
-					href="/login"
+					href="/signup"
 					class="mb-1 ml-1 mt-4 block w-full flex-grow rounded-md bg-that-orange py-2 text-center text-sm font-semibold text-white">
 					Sign Up
 				</a>

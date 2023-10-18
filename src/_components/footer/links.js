@@ -92,7 +92,7 @@ export const myProfileLinks = [
 	},
 	{
 		text: 'My Profile',
-		href: '/my/profile'
+		href: '/my/profiles'
 	},
 	{
 		text: 'My Settings',
