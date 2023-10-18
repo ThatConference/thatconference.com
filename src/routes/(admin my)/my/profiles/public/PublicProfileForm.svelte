@@ -22,7 +22,7 @@
 	const flash = getFlash(page);
 	const { isEmpty } = lodash;
 
-	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
+	const { form, enhance, constraints, errors, allErrors, capture, restore } = superForm(sForm, {
 		dataType: 'json',
 		validators: publicProfileSchema,
 		syncFlashMessage: false,
@@ -40,6 +40,7 @@
 		}
 	});
 
+	export const snapshot = { capture, restore };
 	let profileImageUploading;
 	let slugValues = {};
 	let socialLinkValues = {};

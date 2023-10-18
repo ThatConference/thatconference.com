@@ -19,7 +19,7 @@
 		data.append('recaptchaToken', token);
 	}
 
-	const { form, enhance, constraints, errors, tainted } = superForm(
+	const { form, enhance, constraints, errors, tainted, capture, restore } = superForm(
 		superValidateSync(newsletterSchema),
 		{
 			id: formId,
@@ -35,6 +35,8 @@
 			}
 		}
 	);
+
+	export const snapshot = { capture, restore };
 </script>
 
 <div class="flex flex-col text-gray-500">

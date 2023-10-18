@@ -15,7 +15,7 @@
 
 	const { countryCode } = getContext('DROP_DOWN_KEY_VALUE_PAIRS');
 
-	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
+	const { form, enhance, constraints, errors, allErrors, capture, restore } = superForm(sForm, {
 		dataType: 'json',
 		validators: sharedProfileFormSchema,
 		syncFlashMessage: false,
@@ -32,6 +32,7 @@
 		}
 	});
 
+	export const snapshot = { capture, restore };
 	let countryCodeSelect = countryCode?.options?.find(({ value }) => value === $form.country);
 	let formattedPhoneNumber = '';
 	function formatPhoneNumber(event) {

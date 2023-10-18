@@ -14,7 +14,7 @@
 		{ label: 'Yes', value: true }
 	];
 
-	const { form, enhance, constraints, errors, allErrors } = superForm(sForm, {
+	const { form, enhance, constraints, errors, allErrors, capture, restore } = superForm(sForm, {
 		dataType: 'json',
 		defaultValidator: 'clear',
 		syncFlashMessage: false,
@@ -30,6 +30,8 @@
 		}
 	});
 
+	// enable the svelte snapshot
+	export const snapshot = { capture, restore };
 	let relationshipSelect = $form.relationship;
 	let travelingWithYouSelect = yesNoDropDown.find((i) => i.value == $form.travelingWithYou);
 
