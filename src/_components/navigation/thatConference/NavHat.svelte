@@ -20,14 +20,14 @@
 			</div>
 			<div>-</div>
 			<div class="font-semibold antialiased">
-				<a href="/that-conference" class="flex items-center space-x-2">
+				<a href="/" class="flex items-center space-x-2">
 					<span>Ticket are currently on sale</span>
 				</a>
 			</div>
 		</div>
 		<div class="flex items-center space-x-12">
 			<div class="flex items-center space-x-3">
-				<a href={`/that-conference`}>
+				<a href={`/`}>
 					<div class="flex space-x-4 font-semibold uppercase tracking-wide antialiased">
 						<div>THAT Conference</div>
 					</div>
