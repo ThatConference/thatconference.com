@@ -3,6 +3,66 @@
 
 	const items = [
 		{
+			src: '/images/gallery/tx/52682420922.jpeg',
+			url: 'https://flickr.com/thatconference/52682420922'
+		},
+		{
+			src: '/images/gallery/tx/52221125957.jpeg',
+			url: 'https://flickr.com/thatconference/52221125957'
+		},
+		{
+			src: '/images/gallery/tx/52682422662.jpeg',
+			url: 'https://flickr.com/thatconference/52682422662'
+		},
+		{
+			src: '/images/gallery/tx/52682929506.jpeg',
+			url: 'https://flickr.com/thatconference/52682929506'
+		},
+		{
+			src: '/images/gallery/tx/52682413507.jpeg',
+			url: 'https://flickr.com/thatconference/52682413507'
+		},
+		{
+			src: '/images/gallery/tx/52682425742.jpeg',
+			url: 'https://flickr.com/thatconference/52682425742'
+		},
+		{
+			src: '/images/gallery/tx/52683217939.jpeg',
+			url: 'https://flickr.com/thatconference/52683217939'
+		},
+		{
+			src: '/images/gallery/tx/52683232524.jpeg',
+			url: 'https://flickr.com/thatconference/52683232524'
+		},
+		{
+			src: '/images/gallery/tx/52683359850.jpeg',
+			url: 'https://flickr.com/thatconference/52683359850'
+		},
+		{
+			src: '/images/gallery/tx/52683376215.jpeg',
+			url: 'https://flickr.com/thatconference/52683376215'
+		},
+		{
+			src: '/images/gallery/tx/52682924066.jpeg',
+			url: 'https://flickr.com/thatconference/52682924066'
+		},
+		{
+			src: '/images/gallery/tx/52683376855.jpeg',
+			url: 'https://flickr.com/thatconference/52683376855'
+		},
+		{
+			src: '/images/gallery/tx/52683380625.jpeg',
+			url: 'https://flickr.com/thatconference/52683380625'
+		},
+		{
+			src: '/images/gallery/tx/52683441438.jpeg',
+			url: 'https://flickr.com/thatconference/52683441438'
+		},
+		{
+			src: '/images/gallery/tx/52683450183.jpeg',
+			url: 'https://flickr.com/thatconference/5268345018'
+		},
+		{
 			src: '/images/gallery/tx/52221053172.jpeg',
 			url: 'https://flickr.com/thatconference/52221053172'
 		},
@@ -26,10 +86,7 @@
 			src: '/images/gallery/tx/52221117502.jpeg',
 			url: 'https://flickr.com/thatconference/52221117502'
 		},
-		{
-			src: '/images/gallery/tx/52221125957.jpeg',
-			url: 'https://flickr.com/thatconference/52221125957'
-		},
+
 		{
 			src: '/images/gallery/tx/52221126047.jpeg',
 			url: 'https://flickr.com/thatconference/52221126047'
