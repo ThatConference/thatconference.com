@@ -1,6 +1,6 @@
 import { writable } from 'svelte/store';
-import { page } from '$app/stores';
 import { browser } from '$app/environment';
+import { page } from '$app/stores';
 
 import favoritesQueryApi from '$dataSources/api.that.tech/me/favorites/queries';
 import favoritesMutationsApi from '$dataSources/api.that.tech/me/favorites/mutations';
@@ -28,15 +28,11 @@ export async function toggle(sessionId, eventId) {
 	return results;
 }
 
-async function create() {
-	const initalValues = await get();
-	favoritesStore.set(initalValues);
-}
-
 if (browser) {
-	page.subscribe((values) => {
-		if (values?.data?.user?.profile) {
-			create();
+	page.subscribe(async (values) => {
+		if (values?.data?.user?.isAuthenticated) {
+			const initalValues = await get();
+			favoritesStore.set(initalValues);
 		}
 	});
 }
