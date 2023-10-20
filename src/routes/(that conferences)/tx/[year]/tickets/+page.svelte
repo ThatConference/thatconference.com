@@ -21,7 +21,7 @@
 			description: 'Ticket Breakdown',
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/events/${event.slug}/tickets`
+				url: `https://thatconference.com/${event.slug}/tickets`
 			}
 		})
 	}))();

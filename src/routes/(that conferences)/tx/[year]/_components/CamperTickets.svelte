@@ -266,7 +266,7 @@
 
 		<div class="mt-24 flex flex-col items-center">
 			<div class="animate-pulse">
-				<HighlightLink href={`/events/${event.slug}/tickets`}>
+				<HighlightLink href={`/${event.slug}/tickets`}>
 					<span class="text-xl font-bold uppercase tracking-wider"> View all ticket options </span>
 				</HighlightLink>
 			</div>

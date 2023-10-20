@@ -35,7 +35,7 @@
 
 				<span>-</span>
 
-				<a href={`/events/${event.slug}`}>
+				<a href={`/${event.slug}`}>
 					<div class="flex space-x-4 font-semibold uppercase tracking-wide antialiased">
 						<div class="flex items-center space-x-2 uppercase text-white">
 							<span>{venue.city}</span>
