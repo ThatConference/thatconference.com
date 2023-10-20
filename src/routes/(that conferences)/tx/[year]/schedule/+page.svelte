@@ -16,7 +16,7 @@
 			description: 'That Conference Texas Speakers and Schedule',
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/events/tx/${event.slug}/schedule`
+				url: `https://thatconference.com/tx/${event.slug}/schedule`
 			}
 		})
 	}))();
