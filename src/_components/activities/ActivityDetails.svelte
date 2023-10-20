@@ -369,7 +369,7 @@
 				class="flex flex-col items-center justify-center space-x-0 space-y-4 py-4 sm:flex-row sm:justify-start sm:space-x-8 sm:space-y-0">
 				{#if !isDailyActivity}
 					<div class="h-24 w-24">
-						<a href={`/events/${event.slug}`} class="h-full w-full">
+						<a href={`/${event.slug}`} class="h-full w-full">
 							<img class="lazyload" src={event.logo} alt="Event Logo" />
 						</a>
 					</div>
