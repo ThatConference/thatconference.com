@@ -13,7 +13,7 @@
 		<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
 			<div class="inline-flex rounded-md shadow">
 				<a
-					href="/membership/"
+					href="/membership"
 					class="rounded-md border-2 border-transparent bg-thatOrange-400 px-8 py-3
             text-base font-medium leading-6 text-white shadow
             transition duration-150
