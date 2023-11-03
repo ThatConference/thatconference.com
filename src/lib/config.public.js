@@ -48,7 +48,15 @@ export const securityConfig = () => {
 
 export const logging = {
 	dsn: 'https://857800ed593d481bb0da2843516d7845@o235190.ingest.sentry.io/4504617287417856',
-	environment: env.PUBLIC_VERCEL_ENV
+	environment: env.PUBLIC_VERCEL_ENV,
+	denyUrls: [
+		'/cdn-cgi/zaraz/',
+		'https://js.zi-scripts.com/', // zoom info
+		/^chrome:\/\//i,
+		/^https?:\/\/(?:\w+\.)?cloudflareinsights\.com\//,
+		/^https?:\/\/(?:\w+\.)?gstatic\.com\//,
+		'bpm:///conversations-embed'
+	]
 };
 
 export const debug = {
