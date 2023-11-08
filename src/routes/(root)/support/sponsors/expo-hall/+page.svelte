@@ -22,8 +22,10 @@
 				// add ticket to basket
 				const to = {
 					eventId: event.id,
+					eventType: event.type,
 					eventDetails: event,
-					productId: ticket.id
+					productId: ticket.id,
+					productDetails: ticket
 				};
 				claimTicket.send('ADD_ITEM', to);
 				goto('/orders/claim/');
