@@ -35,7 +35,7 @@
 						<a href="/{$state.context.eventDetails?.slug}"
 							>{$state.context.eventDetails?.name || 'THAT Online'}</a>
 					</h3>
-					<p class="mt-1 text-gray-500">Expo Hall Only Ticket</p>
+					<p class="mt-1 text-gray-500">{$state.context.productDetails?.name}</p>
 				</div>
 
 				<p class="font-semibold text-gray-900">FREE</p>
