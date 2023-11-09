@@ -204,10 +204,10 @@
 						<h3>Important Event Links</h3>
 						<ul>
 							<li>
-								<a href={`/sponsors/leads/${wiEventId}`} target="_blank">Lead Generation</a>
+								<a href={`/sponsor-admin/leads/${wiEventId}`} target="_blank">Lead Generation</a>
 							</li>
 							<li>
-								<a href="/sponsors/my-network/" target="_blank">Lead Generation Results</a>
+								<a href="/sponsor-admin/my-network" target="_blank">Lead Generation Results</a>
 							</li>
 							<li>
 								<a href="/my/network/sponsors" target="_blank">Your Network</a>
