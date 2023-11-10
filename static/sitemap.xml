@@ -2,667 +2,1693 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://thatconference.com/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsorships/apply</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/support/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/newsletter</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/sponsorships/apply/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/faq</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/newsletter/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/signup</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/signup/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/unspecified</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/support/faq/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/casey-software</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/sponsors/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/drifting-creatives</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/sponsors/job-board/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/appwrite</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/support/covid-policies/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/martinez-media</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/support/contact-us/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/atc</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/jenniferannegarcia-bestresumecoach/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/baker-staging</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/ryandotfurrer/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/software-defined-talk</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/fernandachicamigut/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/astro-course</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/jngpf2gc48/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/sticker-mule</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/trevis/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/chicam-studios</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/swharr/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/polypane</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/keegandonley/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/www</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/elichtman/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/that-field-guide</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/gavincoyle/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/ajuna/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/job-board</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/cavin/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/covid-policies</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/zeucapua/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/cjfreeman/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/contact-us</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/drusellers/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/code-of-conduct</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/hhthacker/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/commitment-to-diversity</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/phatboyg/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/anti-harassment</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/bob-fornal/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/privacy-policy</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/charca/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/terms-of-use</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/ryan_holck/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/davidkpiano/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/aaronploetz/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/ftisiot/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/willklein/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/thestorycatcher/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/joshwaddell/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/amyherold/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/rachael-yomtoob/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/giorgi/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/jan-niklas-wortmann/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/chris_hyde/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/dianaalt/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/nifr/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/markcallen/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/francescociulla/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/ideographist/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/thomas_quinn/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/samvanhoutte/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/michaelagarwal/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/asop/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/rrobinett/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/russu/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/maxwellivey/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/valerie-phoenix/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/nolan/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/hannahlorenzo/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/cochranannie/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/stephaniethoma/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/sgtq/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/michael_webster_qactual/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/juancaicedo/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/support/what-is-an-activity/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/support/joining-an-activity/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/support/creating-an-activity/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/support/staying-up-to-date/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/tx/2024/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/copyright</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://thatconference.com/wi/2024/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/sponsors/casey-software/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/call-for-speakers/wi/2024</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/sponsors/unspecified/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/drifting-creatives/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/appwrite/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/martinez-media/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/atc/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/baker-staging/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/software-defined-talk/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/astro-course/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/chicam-studios/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/polypane/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/sponsors/past/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/members/calebjenkins/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/call-for-speakers/wi/2024/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/tx/2024/sponsors/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/tx/2024/schedule/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/tx/2024/tickets/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/wi/2024/schedule/</loc>
-    <lastmod>2023-09-17</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://thatconference.com/wi/2024/sponsors/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/tx/2024/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://thatconference.com/wi/2024/tickets/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/support/travel/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/wi/2024/schedule/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/support/travel/tx/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/tx/2024/tickets/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/thatconference/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/tx/2024/schedule/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/support/travel/wi/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/past</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/clark/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/unspecified/jobs/web-and-graphics-designer</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/davearonson/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/unspecified/jobs/web-developer</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/sup3r_m/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/sponsors/unspecified/jobs/video-and-audio-editor</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/hiluw/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/what-is-an-activity</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/glennmiller/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/joining-an-activity</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/marcellis/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/creating-an-activity</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/brettski/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/staying-up-to-date</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/accidentaldeveloper/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/wi/2024/speakers/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/benshannon/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/wi/2024/sponsors/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/russell/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/support/travel</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/kyle/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/tx/2024/speakers/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/eswat2/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/tx/2024/sponsors/</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/drew_nys/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/cre8iveii</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/alzaudtke/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/kulkarniankita</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/fijiaaron/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/hummusonrails</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/payne/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/robbiethewagner</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/2112/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/chuckcarpenter</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/mjphillips/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/mandyhubbard</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/jweyenberg/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/scboedie</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://thatconference.com/members/rileymajor/</loc>
-    <lastmod>2023-09-17</lastmod>
+    <loc>https://thatconference.com/members/caseysoftware</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/poojamistry</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/devyn</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/VHltaYrbqosZWzwIdsLT</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/2k7uMZ3H2YM1N3tv0AYn</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/AgoWor6SHxfMECAYHiwp</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/Y9NbSYqDGFlBX4VHTHCm</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/6STZJh3gCktOSO0AXHtk</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/qAa66fGSbMmK7EOB2xXI</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/9lolGfE2RMsn0V6WZp03</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/JTXtuMHWy5A3SJgd8C4o</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/pJUbNNG9P7c5ieD2HZix</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/support/travel/wi</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/support/my-favorites-icalendar</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/support/travel/tx</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jamesqquick</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/thatconference</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/qYC0VRCTq22vNOf8p0pq</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jessicajuneknaak</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/yINiPMXhNB9OWV430pi8</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/lH1UGJ8VCZ3RvjLEPXGM</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/mZxVIQvIKR4LYSwTC72J</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/eie7fFqUULoSjrqzXHrS</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/yxpCzGuf0KPY7QZJwPx8</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/dthompsondev</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/amanintech</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/kevin-powell</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/amerawhite</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/yummygoods</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/marktechson</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/kBNTZ3Xms2qQ2fMISAyP</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/X0gXnNxDpwhO7GCN9HLF</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/pemhQve1FRqUK32oWavH</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/2jWp1sqhkZXAAuxbFHi2</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/yboVoYkNTJMd1HG39huQ</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/C1CUhOxomyN5udB1KiuK</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/tdesseyn</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/brianmmdev</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/Y6KaStzhNKL4VzMyD95X</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/nicknisi</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/hcfrmtk0iN4be8sQc6ZL</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/shrutikapoor</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/mYNO2jmVB8h3gwfn3DoY</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/WPCmQQ4YHNPT5cO87kuf</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/veronika_dev</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jan-niklas-wortmann</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/pUjHTNZVqDwA067jYL1x</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/markpruett</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/AqLTQ8AX3XPXCcQnXRhE</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/emmyc</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/yFJwUAuRqRuK5ZALN1qL</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/coridrew</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/t9eEIuqiAAQDHR6odso5</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/2PeiAZpY08DkmPmGFD8e</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/kboedie</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/qzltbU5znKl3yxyfFNgQ</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/GsZfMjWKH6eZzPyTbmjm</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jennifer-wadella</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/1kevgriff</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/WfQgBRrtM5rUBDLiLgXp</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/tejas</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/E9g1aplsJPADkvBJcmOt</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/G5ruuoPNBB971HMoHopk</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/5KnCtOcBu1lReG8HUIqo</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/2W3L6DHlPP3FKflOhUMF</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/QiURt6lQ1ZctUXCnW08H</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/8FQeg7jWjuj9r7ZqDjGj</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/FGrWYJub2qhjCQxSuC9q</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/iotHScKkKMaqk17PbxGH</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/kvlly</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/UsU9dIDhqUIvITdkXeBB</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/raymondcamden</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/1BRtzkdV3hE1tEtOyahS</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/reverentgeek</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/GeySf9NSauWWrrUJlSLV</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/sam</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/eI0BLRUac1nBZaZ9lZsk</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jamesbender</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/jh5FVtjI7hlSmBniXGz1</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/rachael-yomtoob</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/sXoLpsxBQZQBga2NgcoC</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/rishabkumar7</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/uyRPitLOtK1m5o8jsXER</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/ZGD9qDEzONHXyrfbibWP</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/yboVoYkNTJMd1HG39huQWednesday</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/chris_ruddell</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/EZZ32EtRb0I3hr0RRcED</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/gracefranciscosf</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/ueQiprx1xPQwFPz79t5e</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/cameron</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/r7WKPARrxxOHXq4Nnv6y</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/nate_codes</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/9qB1UJuA3s0vXAhRbHSa</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/braydon</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/mvK36pHln0OdQSqe3NE5</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/shashi_lo</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/GioRwgjprB2pnBE9cT30</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/calebjenkins</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/v1QWQXLfpTk7gV1qIbno</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ebonylawrence</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/nI54vR9vUHx3ulkFyzRO</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/anXizbrzccnIhwYR3XBj</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/xirclebox</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/alEUJ5RRxN8PS3IRSsdp</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jwright</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/kabrinabudwell</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/dianaalt</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/j1J2tnFiubJufRKiuhiZ</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/jZKvXsPo2MjBn4x1XsUf</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/JpcKrMlE3qP4Vt0kXrmT</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/tessak22</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/davidkpiano</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/n8g96Onhw3D6ZFAtDfub</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/Azr2Ht43Rq82pcwpzvSP</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/41xXBDNocwtCAob39rRo</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/5W6mo36HcdY2iGyADJRK</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/C4lLICfMFOx9ppWOiyy6</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/jnRMBGuS7BhlftIVRNch</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/u9x16flFccv1bPDZIm0D</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/skAR4Um0UBUlnibqGx8N</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/shaundai</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/MDyS13095ZNFFuJTSRfL</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ericlaw</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/kevinwhinnery</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/Dzh2H3g36WRswsGFNrPt</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/davegray</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/qOKj96bVmRdLz91qcLK2</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/adhithiravi</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/Sd5Km7TGDEFbfvMOel0O</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/peterritchie</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/q15NjRqPwcezkUMa0KLC</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/fLZxARjkp9UJJ0tMhgJA</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/yboVoYkNTJMd1HG39huQThursday</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/avindrafernando</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/eelA5VY1GK7u80i1iPzA</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/oakparkgirl</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/2YmmHxk7RzrKoOachJhx</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/rqJwaCk0l8U8Llpa6C6v</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/bas</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/R7ruJ8kBnKzSQts5rNn4</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/3Liv0nSI4WmUlxvVJuLB</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/allenheltondev</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/yKbV8VgdT2lhTRljyJV0</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/eddyvinck</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/kax8L0S53KMknvSu4vO7</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/sjones</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/G46oK058taa6y49sMxYu</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/8F6RHZaX27zais5Ilr3k</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/9RcIJ3aXgqcRrZoicRwB</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/activities/gWccRHM7qDS5qeeOeEr6</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/nifr</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/justin</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/clark</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/second_life</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ryandotfurrer</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/micha</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/wesley83</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/davearonson</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/hiluw</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/sup3r_m</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/glennmiller</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/marcellis</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/brettski</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/bardmeier</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/zekejuel</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/payne</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/bryanshannon</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/kenssamson</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/yurshiax20</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/semierogers</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/troyweis</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ramblingadam</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jcthedev</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/anthonydmays</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/sputina</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/one2code</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/leahmthompson03</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jenniferannegarcia-bestresumecoach</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/fernandachicamigut</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jngpf2gc48</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/trevis</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/swharr</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/keegandonley</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/elichtman</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/gavincoyle</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ajuna</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/cavin</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/zeucapua</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/cjfreeman</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/drusellers</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/hhthacker</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/phatboyg</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/bob-fornal</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/charca</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ryan_holck</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ftisiot</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/aaronploetz</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/willklein</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/thestorycatcher</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/joshwaddell</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/amyherold</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/giorgi</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/chris_hyde</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/markcallen</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/francescociulla</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/ideographist</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/thomas_quinn</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/samvanhoutte</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/michaelagarwal</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/asop</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/rrobinett</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/mjphillips</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/accidentaldeveloper</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/benshannon</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/russell</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/kyle</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/eswat2</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/drew_nys</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/alzaudtke</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/fijiaaron</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/carlwebb</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/jweyenberg</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/2112</loc>
+    <lastmod>2023-11-10</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://thatconference.com/members/rileymajor</loc>
+    <lastmod>2023-11-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
