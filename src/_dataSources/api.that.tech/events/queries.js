@@ -453,27 +453,66 @@ export const QUERY_ACTIVE_COMMUNITY_EVENTS_FOR_JOBS = `
 `;
 
 export const QUERY_ACTIVE_EVENTS_PRODUCTS = `
-${productBaseFieldsFragment}
-query getActiveEventJobs($community: CommunityQueryInput!) {
-	communities {
-		community(findBy: $community) {
-			get {
-				id
-				name
-				events(filter: ACTIVE) {
+	${productBaseFieldsFragment}
+	query getActiveEventProducts($community: CommunityQueryInput!) {
+		communities {
+			community(findBy: $community) {
+				get {
 					id
 					name
-					slug
-					type
-					logo
-					products {
-						...productBaseFields
-					}			
+					events(filter: ACTIVE) {
+						id
+						name
+						slug
+						type
+						logo
+						products {
+							...productBaseFields
+						}			
+					}
 				}
 			}
 		}
 	}
-}
+`;
+
+export const QUERY_EVENTS_VENUE_PRODUCTS = `
+	${productBaseFieldsFragment}
+	query getFutureEventsWithProducts ($community: CommunityQueryInput!, $eventsFilter: CommunityEventsFilter) {
+		communities {
+			community(findBy: $community) {
+				get {
+					__typename
+					id
+					name
+					events(filter: $eventsFilter) {
+						__typename
+						id
+						name
+						slug
+						type
+						startDate
+						endDate
+						logo
+						products {
+							__typename
+							...productBaseFields
+						}
+						venues {
+							id
+							name
+							address
+							addressLineTwo
+							city
+							state
+							zip
+						}
+						isActive
+					}
+				}
+			}
+		}
+	}
 `;
 
 export default (fetch) => {
@@ -614,6 +653,20 @@ export default (fetch) => {
 			});
 	}
 
+	function queryEventsForVenueAndProducts(communitySlug = 'that', eventsFilter = 'FUTURE') {
+		const variables = {
+			community: { slug: communitySlug },
+			eventsFilter
+		};
+		return client
+			.query({ query: QUERY_EVENTS_VENUE_PRODUCTS, variables })
+			.then(({ data, errors }) => {
+				if (errors) log({ errors, tag: 'QUERY_EVENTS_VENUE_PRODUCTS' });
+
+				return data?.communities?.community?.get?.events ?? [];
+			});
+	}
+
 	function queryEventSpeakers(eventSlug) {
 		const variables = { eventSlug };
 
@@ -639,6 +692,7 @@ export default (fetch) => {
 		queryThatConferenceEvent,
 		queryActiveEventsByCommunitiesForJobs,
 		queryActiveEventsForProducts,
+		queryEventsForVenueAndProducts,
 		queryEventSpeakers
 	};
 };
