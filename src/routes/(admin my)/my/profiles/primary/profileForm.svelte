@@ -198,7 +198,7 @@
 								<label for="comments" class="font-medium text-gray-700">
 									<a
 										tabindex="-1"
-										href="/suppoprt/anti-harassment"
+										href="/support/anti-harassment"
 										class="font-medium text-that-blue transition
 											duration-150 ease-in-out hover:text-thatBlue-800">
 										Commitment Anti-Harassment
