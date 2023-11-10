@@ -55,8 +55,6 @@
 	}
 
 	function updateLinksInputValues(link, userValue) {
-		console.log('updateLinksInputValues', link, userValue);
-
 		// clear out the value regardless.
 		socialLinksState = socialLinksState.filter((i) => i.linkType !== link.linkType);
 
@@ -162,7 +160,6 @@
 		});
 
 		if (!res.ok) {
-			console.log('yea error');
 			const errorMessage = {
 				type: 'error',
 				message: `There was an error uploading your profile picture.`
@@ -173,8 +170,6 @@
 		}
 
 		const json = await res.json();
-
-		console.log(json.data.url);
 
 		profileImageUploading = false;
 		return json.data.url;
