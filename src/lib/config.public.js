@@ -72,6 +72,11 @@ export const analytics = {
 	google: 'UA-21705613-11'
 };
 
+export const storyblok = {
+	accessToken: env.PUBLIC_STORYBLOK_ACCESS_TOKEN || 'TGwr7m1UR5CBqlnr0YHDLAtt',
+	version: 'published'
+};
+
 export const imageCrops = {
 	profile: '?mask=ellipse&w=500&h=500&fit=crop&q=75&fm=jpg'
 };
