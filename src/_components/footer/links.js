@@ -15,6 +15,10 @@ export const thatLinks = [
 
 export const thatConferenceLinks = [
 	{
+		text: 'Convince Your Boss',
+		href: '/support/convince-your-boss'
+	},
+	{
 		text: 'Field Guide',
 		href: '/support/that-field-guide'
 	},

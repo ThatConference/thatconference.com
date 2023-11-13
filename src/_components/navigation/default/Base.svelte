@@ -34,9 +34,9 @@
 			</EventLink>
 
 			<NavLink href="/call-for-speakers">Call For Speakers</NavLink>
-			<NavLink href="/sponsorships/apply">Sponsor THAT</NavLink>
+			<NavLink href="/sponsorships/apply">Sponsorship Opportunities</NavLink>
 			<NavLink href="/newsletter">Join Our Newsletter</NavLink>
-			<NavLink href="/blog">THAT Blog</NavLink>
+			<NavLink href="/blog">Blog and News</NavLink>
 
 			<div class="flex w-full flex-1 justify-end space-x-4">
 				<ClaimCart />
