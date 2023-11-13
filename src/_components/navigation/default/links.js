@@ -12,11 +12,15 @@ export default [
 		href: '/call-for-speakers'
 	},
 	{
-		text: 'Sponsor THAT',
+		text: 'Sponsorship Opportunities',
 		href: '/sponsorships/apply'
 	},
 	{
-		text: 'Newsletter',
+		text: 'Join Our Newsletter',
 		href: '/newsletter'
+	},
+	{
+		text: 'Blog and News',
+		href: '/blog'
 	}
 ];
