@@ -56,6 +56,17 @@
 										: asideDefault.image} />
 								<span class="truncate"> Sponsor Network </span>
 							</a>
+							<a
+								href="/my/network/members"
+								class={$page.url.pathname.startsWith('/my/network/members')
+									? asideSelected.item
+									: asideDefault.item}>
+								<User
+									classes={$page.url.pathname.startsWith('/my/network/members')
+										? asideSelected.image
+										: asideDefault.image} />
+								<span class="truncate"> Member Network </span>
+							</a>
 						</nav>
 					</div>
 				</aside>
