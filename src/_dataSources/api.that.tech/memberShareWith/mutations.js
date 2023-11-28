@@ -68,6 +68,25 @@ export const MUTATION_ADD_SHARE_WITH_PROFILE = `
 		}
 	}
 `;
+export const MUTATION_UPDATE_SHARE_WITH = `
+	${secureProfileFields}	
+	mutation updateShareWith($memberId: ID!, $shareWithData: ShareWithUpdateInput!) {
+		members {
+			network {
+				sharingWith (sharedWithId: $memberId) {
+					update(shareWith: $shareWithData) {
+						notes
+						sharingWithProfile {
+							...secureProfileFields
+						}
+						createdAt
+						lastUpdatedAt
+					}
+				 } 
+			}
+		}
+	}
+`;
 export const MUTATION_REMOVE_SHARE = `
 	mutation removeShareWith($memberId: ID!) {
 		members {
@@ -121,6 +140,26 @@ export default (fetch) => {
 			});
 	}
 
+	function updateShareWith(memberId, notes = '') {
+		const variables = {
+			memberId,
+			shareWithData: {
+				notes
+			}
+		};
+
+		return client
+			.mutation({ mutation: MUTATION_UPDATE_SHARE_WITH, variables })
+			.then(({ data, errors }) => {
+				if (errors) {
+					log({ errors, tag: 'MUTATION_UPDATE_SHARE_WITH' });
+					throw new Error('An error occurred while updating share information');
+				}
+
+				return data.members.network.sharingWith.update;
+			});
+	}
+
 	function removeShareWith(memberId) {
 		const variables = { memberId };
 		return client
@@ -138,6 +177,7 @@ export default (fetch) => {
 	return {
 		shareWithByPin,
 		shareWithByProfile,
+		updateShareWith,
 		removeShareWith
 	};
 };

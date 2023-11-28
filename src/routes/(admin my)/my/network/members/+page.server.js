@@ -1,4 +1,8 @@
+import { superValidate } from 'sveltekit-superforms/server';
+import { redirect } from 'sveltekit-flash-message/server';
+import sharingFormSchema from '$lib/formSchemas/sharingForm.js';
 import sharingQueryApi from '$dataSources/api.that.tech/memberShareWith/queries';
+import sharingMutationApi from '$dataSources/api.that.tech/memberShareWith/mutations';
 
 export async function load({ fetch }) {
 	const { getMeSharingWith, getSharingWithMe } = sharingQueryApi(fetch);
@@ -31,6 +35,7 @@ export async function load({ fetch }) {
 			index,
 			sharingWithMe: {
 				sharedWithMeProfile: swm.sharedWithMeProfile,
+				createdAt: swm.createdAt,
 				...swm.sharedWithMeSharedProfile
 			},
 			meSharing: meShareResult
@@ -57,3 +62,20 @@ export async function load({ fetch }) {
 		sharing
 	};
 }
+
+export const actions = {
+	default: async (event) => {
+		const form = await superValidate(event, sharingFormSchema);
+		console.log('form action!', form);
+
+		try {
+			const { updateShareWith } = sharingMutationApi(event.fetch);
+			const { id: memberId, notes } = form.data;
+			await updateShareWith(memberId, notes);
+		} catch (err) {
+			throw redirect(err, event);
+		}
+
+		return { form };
+	}
+};

@@ -15,6 +15,7 @@ const secureProfileFields = `
 			id
 			firstName
 			lastName
+			profileImage
 		}
 	}
 `;
