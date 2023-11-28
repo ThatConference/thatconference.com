@@ -12,7 +12,6 @@
 		const shareWithId = sharing[idx]?.sharingWithMe?.sharedWithMeProfile?.id ?? '';
 		if (shareWithId) {
 			const result = await shareWithByProfile({ id: shareWithId });
-			console.log('shareBack, shareWithByProfile result:', result);
 			if (result.isSuccess) {
 				sharing[idx].meSharing = {
 					notes: result.sharedWith.notes,
@@ -22,14 +21,11 @@
 			} else {
 				throw new Error(`Share back failed: ${result.message}`);
 			}
-		} else {
-			// return message: No id present (or something like that)
 		}
 	};
 	const remove = async (idx) => {
 		const memberId = sharing[idx].meSharing.id;
 		const result = await removeShareWith(memberId);
-		console.log('memberId, result', memberId, result);
 		if (memberId === result) {
 			sharing[idx].meSharing = null;
 			if (!sharing[idx].sharingWithMe) {

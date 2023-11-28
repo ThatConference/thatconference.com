@@ -12,11 +12,13 @@ export async function load({ fetch }) {
 	try {
 		[meSharing, sharingWithMe] = await Promise.all([getMeSharingWith(), getSharingWithMe()]);
 	} catch (err) {
-		console.log(err);
-	}
+		const errorMessage = {
+			type: 'error',
+			message: `Whoops!!! ${err.message}`
+		};
 
-	// console.log('sharingWithMe', sharingWithMe);
-	// console.log('meSharing', meSharing);
+		throw redirect(errorMessage, event);
+	}
 
 	let index = 1;
 	const sharing = [];
@@ -66,14 +68,18 @@ export async function load({ fetch }) {
 export const actions = {
 	default: async (event) => {
 		const form = await superValidate(event, sharingFormSchema);
-		console.log('form action!', form);
 
 		try {
 			const { updateShareWith } = sharingMutationApi(event.fetch);
 			const { id: memberId, notes } = form.data;
 			await updateShareWith(memberId, notes);
 		} catch (err) {
-			throw redirect(err, event);
+			const errorMessage = {
+				type: 'error',
+				message: `Whoops!!! ${err.message}`
+			};
+
+			throw redirect(errorMessage, event);
 		}
 
 		return { form };

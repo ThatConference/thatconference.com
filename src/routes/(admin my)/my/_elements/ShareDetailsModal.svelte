@@ -50,9 +50,6 @@
 			}
 		}
 	);
-	if ($allErrors?.length > 0) {
-		console.log('🚨 Why?', $allErrors);
-	}
 
 	const stopSharingAction = () => {
 		dispatch('stopSharing', rowIndex);
