@@ -16,7 +16,6 @@ export async function load({ fetch }) {
 			type: 'error',
 			message: `Whoops!!! ${err.message}`
 		};
-
 		throw redirect(errorMessage, event);
 	}
 
@@ -78,7 +77,6 @@ export const actions = {
 				type: 'error',
 				message: `Whoops!!! ${err.message}`
 			};
-
 			throw redirect(errorMessage, event);
 		}
 

@@ -71,7 +71,7 @@
 		</div>
 	</div>
 	<div>
-		<!-- Heroicon name: solid/chevron-right -->
+		<!-- Heroicon name: pencil-square -->
 		{#if share.meSharing}
 			<button on:click={() => (showDetailsModal = true)}>
 				<svg
