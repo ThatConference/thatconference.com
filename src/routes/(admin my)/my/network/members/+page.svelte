@@ -2,7 +2,7 @@
 	export let data;
 
 	import shareWithMutationApi from '$dataSources/api.that.tech/memberShareWith/mutations';
-	import SharingRow from '../../_elements/SharingRow.svelte';
+	import SharingRow from '../../_components/SharingRow.svelte';
 
 	const { sharing } = data;
 	const { removeShareWith, shareWithByProfile } = shareWithMutationApi();

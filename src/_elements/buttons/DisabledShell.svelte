@@ -1,6 +1,6 @@
 <div class="block">
 	<div
-		class="bg-grey-50 h-full w-full cursor-pointer
+		class="bg-grey-50 h-full w-full
 		rounded-md border-2 border-gray-500 text-base
 		font-medium text-gray-500 shadow
 		md:text-lg">

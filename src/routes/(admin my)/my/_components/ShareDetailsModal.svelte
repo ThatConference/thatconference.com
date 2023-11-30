@@ -19,7 +19,7 @@
 	import defaultConfig from '$lib/config.public';
 	import buildImageSrc from '$lib/image';
 
-	import { Standard as StandardButton, ActionShell } from '$elements/buttons';
+	import { DisabledShell } from '$elements/buttons';
 
 	const dispatch = createEventDispatcher();
 	let { profileImage } = sharedWithMeProfile ?? {};
@@ -60,7 +60,7 @@
 
 <div>
 	<div
-		class="fixed inset-0 z-30 overflow-y-auto overscroll-none"
+		class="fixed inset-0 z-50 overflow-y-auto overscroll-none"
 		aria-labelledby="modal-title"
 		role="dialog"
 		aria-modal="true">
@@ -116,15 +116,15 @@
 									{/if}
 								</div>
 								<div class="mt-2 flex flex-row-reverse space-x-4 space-x-reverse">
-									<button disabled={$allErrors?.length > 0} type="submit">
-										<ActionShell>Update Notes</ActionShell>
-									</button>
+									{#if $allErrors?.length > 0}
+										<DisabledShell>
+											<div class="px-8 py-2 font-medium">Update Notes</div>
+										</DisabledShell>
+									{:else}
+										<button type="submit" class="anchorButtonHighlight"> Update Notes </button>
+									{/if}
 
-									<StandardButton on:click={handleStopSharing}>
-										<div class="flex items-center space-x-4">
-											<span>Stop Sharing</span>
-										</div>
-									</StandardButton>
+									<button on:click={handleStopSharing} class="anchorButton"> Stop Sharing </button>
 								</div>
 							</form>
 						</div>
@@ -134,3 +134,27 @@
 		</div>
 	</div>
 </div>
+
+<style lang="postcss">
+	.anchorButton {
+		@apply rounded-md bg-slate-50 px-4 py-2 text-center font-normal tracking-wide text-thatBlue-500 shadow-md md:text-xl;
+	}
+
+	.anchorButton:hover {
+		@apply bg-slate-200 transition duration-150 ease-in-out;
+	}
+	.anchorButton:focus {
+		@apply underline underline-offset-4;
+	}
+
+	.anchorButtonHighlight {
+		@apply rounded-md bg-thatBlue-500 px-4 py-2 text-center font-normal tracking-wide text-white shadow-md md:text-xl;
+	}
+
+	.anchorButtonHighlight:hover {
+		@apply bg-thatBlue-400 transition duration-150 ease-in-out;
+	}
+	.anchorButtonHighlight:focus {
+		@apply underline underline-offset-4;
+	}
+</style>
