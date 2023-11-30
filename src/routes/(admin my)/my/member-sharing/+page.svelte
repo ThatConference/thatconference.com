@@ -52,7 +52,7 @@
 				</p>
 
 				<div class="prose">
-					<a href="/my/network">View My Existing Connections</a>
+					<a href="/my/network/members">View My Existing Connections</a>
 				</div>
 
 				<div class="flex flex-wrap pt-12">
