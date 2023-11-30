@@ -165,11 +165,11 @@
 					<textarea
 						name="messageToShareWith"
 						type="textarea"
-						rows="4"
+						rows="5"
 						multiline={true}
 						bind:value={messageToShareWith}
 						class="form-input w-full rounded-md border border-gray-300 hover:border-gray-700 sm:text-sm sm:leading-5"
-						placeholder="Add a custom message along with the share notification. &#13;E.g. It was great meeting you at THAT, let's discus more about Sveltekit." />
+						placeholder="Add a custom message along with the share notification. &#13;&#13;E.g. It was great meeting you at THAT, let's discus more about Sveltekit." />
 				</div>
 
 				<div class="flex">
@@ -178,7 +178,7 @@
 							disabled={pinNumber.length < 1}
 							type="button"
 							class="w-full py-4 text-sm font-medium leading-5"
-							on:click={() => handleContactShare()}>
+							on:click={handleContactShare}>
 							<span class="text-lg">Connect</span>
 						</button>
 					</Shell>
@@ -188,11 +188,11 @@
 					<textarea
 						name="notes"
 						type="textarea"
-						rows="6"
+						rows="5"
 						multiline={true}
 						bind:value={privateNotes}
 						class="form-input w-full rounded-md border border-gray-300 hover:border-gray-700 sm:text-sm sm:leading-5"
-						placeholder="Add any private notes here. &#13;E.g. Great Sveltekit discussion with Jane." />
+						placeholder="Add any private notes here. &#13;&#13;E.g. Great Sveltekit discussion with Jane." />
 				</div>
 			</div>
 		{/if}

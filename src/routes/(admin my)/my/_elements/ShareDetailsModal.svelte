@@ -18,7 +18,8 @@
 	import sharingSchema from '$lib/formSchemas/sharingForm';
 	import defaultConfig from '$lib/config.public';
 	import buildImageSrc from '$lib/image';
-	import RowButton from './RowButton.svelte';
+
+	import { Standard as StandardButton, ActionShell } from '$elements/buttons';
 
 	const dispatch = createEventDispatcher();
 	let { profileImage } = sharedWithMeProfile ?? {};
@@ -51,10 +52,10 @@
 		}
 	);
 
-	const stopSharingAction = () => {
+	function handleStopSharing() {
 		dispatch('stopSharing', rowIndex);
 		dispatch('closeDetail');
-	};
+	}
 </script>
 
 <div>
@@ -100,8 +101,8 @@
 							{/if}
 							<form use:enhance method="POST">
 								<div class="mt-4">
-									<label for="notes" class="block text-sm font-medium text-gray-500"
-										>Private notes</label>
+									<label for="notes" class="my-2 block text-sm font-medium text-gray-500"
+										>Your private notes:</label>
 									<textarea
 										name="notes"
 										id="notes"
@@ -109,15 +110,21 @@
 										type="text"
 										rows="6"
 										class="w-full rounded-md border-gray-500 p-2"
-										placeholder="We met at THAT Conference discussing..." />
+										placeholder="E.g. We met at THAT Conference discussing..." />
 									{#if $errors.notes}
 										<small class="max-md text-red-500">{$errors.notes}</small>
 									{/if}
 								</div>
-								<div class="mt-2 flex space-x-4">
-									<RowButton on:click={() => stopSharingAction()}>Stop Sharing</RowButton>
-									<RowButton disabled={$allErrors?.length > 0} type={'submit'}
-										>Update Notes</RowButton>
+								<div class="mt-2 flex flex-row-reverse space-x-4 space-x-reverse">
+									<button disabled={$allErrors?.length > 0} type="submit">
+										<ActionShell>Update Notes</ActionShell>
+									</button>
+
+									<StandardButton on:click={handleStopSharing}>
+										<div class="flex items-center space-x-4">
+											<span>Stop Sharing</span>
+										</div>
+									</StandardButton>
 								</div>
 							</form>
 						</div>

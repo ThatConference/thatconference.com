@@ -1,14 +1,13 @@
 <script>
 	export let data;
 
-	import { Standard as StandardLink } from '$elements/links';
 	import shareWithMutationApi from '$dataSources/api.that.tech/memberShareWith/mutations';
 	import SharingRow from '../../_elements/SharingRow.svelte';
 
-	const { removeShareWith, shareWithByProfile } = shareWithMutationApi();
 	const { sharing } = data;
+	const { removeShareWith, shareWithByProfile } = shareWithMutationApi();
 
-	const shareBack = async (idx) => {
+	async function shareBack({ detail: idx }) {
 		const shareWithId = sharing[idx]?.sharingWithMe?.sharedWithMeProfile?.id ?? '';
 		if (shareWithId) {
 			const result = await shareWithByProfile({ id: shareWithId });
@@ -22,8 +21,9 @@
 				throw new Error(`Share back failed: ${result.message}`);
 			}
 		}
-	};
-	const remove = async (idx) => {
+	}
+
+	async function removeShare({ detail: idx }) {
 		const memberId = sharing[idx].meSharing.id;
 		const result = await removeShareWith(memberId);
 		if (memberId === result) {
@@ -36,13 +36,6 @@
 		} else {
 			throw new Error('Remove share result memberId mismatch');
 		}
-	};
-
-	function shareBackCallback(event) {
-		return shareBack(event.detail);
-	}
-	function stopSharingCallback(event) {
-		return remove(event.detail);
 	}
 </script>
 
@@ -55,20 +48,15 @@
 					See who's sharing their information with you and who you're sharing with.
 				</p>
 			</div>
-			<StandardLink href="/my/member-sharing">New Share</StandardLink>
 		</div>
 
 		<div class="px-4 py-8">
-			<div class="flex items-center px-4 py-4 sm:px-6">
-				<div class="flex min-w-0 flex-1 items-center">
-					<div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
-						<div>
-							<span class="text-lg font-semibold text-gray-900">Who is Sharing With Me</span>
-						</div>
-						<div>
-							<span class="text-lg font-semibold text-gray-900">Who I'm Sharing With</span>
-						</div>
-					</div>
+			<div class="grid grid-cols-7 gap-4 p-4">
+				<div class="col-span-3">
+					<span class="text-lg font-semibold text-gray-900">Who is Sharing With Me</span>
+				</div>
+				<div class="col-span-3">
+					<span class="text-lg font-semibold text-gray-900">Who I'm Sharing With</span>
 				</div>
 			</div>
 
@@ -79,8 +67,8 @@
 							<SharingRow
 								{share}
 								rowIndex={idx}
-								on:shareBack={shareBackCallback}
-								on:stopSharing={stopSharingCallback} />
+								on:shareBack={shareBack}
+								on:stopSharing={removeShare} />
 						</li>
 					{/each}
 				</ul>

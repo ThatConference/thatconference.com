@@ -1,10 +1,14 @@
 <script>
 	import { page } from '$app/stores';
+	import { Share2 } from 'lucide-svelte';
 
 	import seoMetaTags from '$lib/seo/metaTags';
-	import Seo from '$components/Seo.svelte';
+
 	import { ActionHeader } from '$elements';
 	import { User } from '$elements/svgs';
+	import { Highlight as HighlightLink } from '$elements/links';
+
+	import Seo from '$components/Seo.svelte';
 	import PageLayout from '../_components/PageLayout.svelte';
 
 	const metaTags = ((title = 'My Network - THAT') => ({
@@ -36,13 +40,21 @@
 
 <PageLayout>
 	<div slot="header">
-		<ActionHeader title="Your Network" />
+		<h2 class="font-extrabold uppercase tracking-wider text-thatRed-500">my network</h2>
+		<ActionHeader title="Sponsor and Member Connections">
+			<HighlightLink href="/my/member-sharing">
+				<div class="flex items-center space-x-4">
+					<span><Share2 /></span>
+					<span>New Connection Request</span>
+				</div>
+			</HighlightLink>
+		</ActionHeader>
 	</div>
 
 	<div>
 		<main class="relative -mx-6">
 			<div class="divide-y divide-gray-200 lg:grid lg:grid-cols-12 lg:divide-x lg:divide-y-0">
-				<aside class="py-6 lg:col-span-3">
+				<aside class="py-3 lg:col-span-3">
 					<div class="sticky top-4">
 						<nav>
 							<a
@@ -54,7 +66,7 @@
 									classes={$page.url.pathname.startsWith('/my/network/sponsors')
 										? asideSelected.image
 										: asideDefault.image} />
-								<span class="truncate"> Sponsor Network </span>
+								<span> Sponsor Network </span>
 							</a>
 							<a
 								href="/my/network/members"
@@ -65,7 +77,7 @@
 									classes={$page.url.pathname.startsWith('/my/network/members')
 										? asideSelected.image
 										: asideDefault.image} />
-								<span class="truncate"> Member Network </span>
+								<span> Member Network </span>
 							</a>
 						</nav>
 					</div>
