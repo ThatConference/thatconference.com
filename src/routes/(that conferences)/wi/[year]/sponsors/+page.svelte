@@ -39,13 +39,13 @@
 			{#if levels['SCOUT']}
 				<Level header="Scout Sponsors" partners={levels['SCOUT']} />
 			{/if}
-			
+
 			{#if levels['RANGER']}
-				<Level header="Ranger Sponsors" partners={levels['SCOUT']} />
+				<Level header="Ranger Sponsors" partners={levels['RANGER']} />
 			{/if}
-			
+
 			{#if levels['TRAILBLAZER']}
-				<Level header="Trailblazer Sponsors" partners={levels['SCOUT']} />
+				<Level header="Trailblazer Sponsors" partners={levels['TRAILBLAZER']} />
 			{/if}
 
 			{#if levels['CUB']}
