@@ -39,6 +39,14 @@
 			{#if levels['SCOUT']}
 				<Level header="Scout Sponsors" partners={levels['SCOUT']} />
 			{/if}
+			
+			{#if levels['RANGER']}
+				<Level header="Ranger Sponsors" partners={levels['SCOUT']} />
+			{/if}
+			
+			{#if levels['TRAILBLAZER']}
+				<Level header="Trailblazer Sponsors" partners={levels['SCOUT']} />
+			{/if}
 
 			{#if levels['CUB']}
 				<Level header="Family Sponsors" partners={levels['CUB']} />
@@ -49,7 +57,7 @@
 			{/if}
 
 			{#if levels['MEDIA']}
-				<Level header="Media Sponsors" partners={levels['MEDIA']} />
+				<Level header="Additional Sponsors and Partners" partners={levels['MEDIA']} />
 			{/if}
 		</div>
 	</div>
