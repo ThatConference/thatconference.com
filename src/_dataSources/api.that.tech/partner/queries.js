@@ -6,7 +6,17 @@ import config from '$lib/config.public';
 import { log } from '../utilities/error';
 
 const { uniqBy } = lodash;
-const levelSortOrder = ['PIONEER', 'EXPLORER', 'SCOUT', 'CUB', 'PATRON', 'MEDIA', 'CHARITY'];
+const levelSortOrder = [
+	'PIONEER',
+	'EXPLORER',
+	'SCOUT',
+	'RANGER',
+	'TRAILBLAZER',
+	'CUB',
+	'PATRON',
+	'MEDIA',
+	'CHARITY'
+];
 
 const coreFieldsFragment = `
 	fragment coreFieldsFragment on Partner {
