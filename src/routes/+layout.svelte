@@ -4,7 +4,7 @@
 	import '../app.css';
 
 	import { onMount, setContext } from 'svelte';
-	import { navigating, page } from '$app/stores';
+	import { navigating, page, updated } from '$app/stores';
 	import { beforeNavigate } from '$app/navigation';
 	import { browser, dev } from '$app/environment';
 
@@ -13,8 +13,6 @@
 	import { getFlash } from 'sveltekit-flash-message/client';
 
 	import loading from '$lib/stores/loading';
-	import { showReleaseNotes } from '$lib/stores/siteVersion';
-	import { messages } from '$lib/stores/notificationCenter';
 	import cart from '$lib/cart';
 	import claimTicket from '$lib/claimTicket';
 
@@ -32,8 +30,13 @@
 	const { isEmpty } = lodash;
 	const flash = getFlash(page);
 
-	beforeNavigate((nav) => {
-		if ($flash && nav.from?.url.toString() !== nav.to?.url.toString()) {
+	beforeNavigate(({ willUnload, to, from }) => {
+		// https://kit.svelte.dev/docs/configuration#version
+		if ($updated && !willUnload && to?.url) {
+			location.href = to.url.href;
+		}
+
+		if ($flash && from?.url.toString() !== to?.url.toString()) {
 			$flash = undefined;
 		}
 	});
@@ -52,20 +55,10 @@
 	onMount(() => {
 		if (window.grecaptcha) {
 			/* eslint-disable no-undef */
-			grecaptcha.enterprise.ready(async () => {
+			window.grecaptcha.enterprise.ready(async () => {
 				/* eslint-disable no-undef */
-				await grecaptcha.enterprise.execute(recaptcha.siteKey, { action: 'site_load' });
+				await window.grecaptcha.enterprise.execute(recaptcha.siteKey, { action: 'site_load' });
 			});
-		}
-
-		if ($showReleaseNotes) {
-			messages.update((m) => [
-				...m,
-				{
-					message: '🙌 We shipped again! 🎉 Check out newest features on thatconference.com!!!',
-					url: '/releases/changelog-missed'
-				}
-			]);
 		}
 	});
 
