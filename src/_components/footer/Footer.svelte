@@ -39,7 +39,7 @@
 					{/each}
 				</div>
 			</div>
-			<div class="col-span-2 mt-12 flex justify-end xl:mt-0 ">
+			<div class="col-span-2 mt-12 flex justify-end xl:mt-0">
 				<Newsletter />
 			</div>
 		</div>
@@ -143,7 +143,10 @@
 			<div class="mt-12 border-t border-gray-200 pt-8">
 				<p class="text-base text-gray-400 xl:text-center">
 					&copy; {dayjs().format('YYYY')} THAT&reg; All rights reserved.<br />
-					<em>v{version}</em>
+					<em
+						><a href={`https://github.com/thatconference/thatconference.com/commit/${version}`}
+							>v.{version.substring(0, 7)}</a
+						></em>
 				</p>
 			</div>
 		</div>
