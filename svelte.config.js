@@ -2,6 +2,7 @@ import adapter from '@sveltejs/adapter-auto';
 import preprocess from 'svelte-preprocess';
 import { resolve } from 'path';
 import { mdsvex } from 'mdsvex';
+import * as child_process from 'node:child_process';
 
 import mdsvexConfig from './mdsvex.config.js';
 
@@ -21,7 +22,9 @@ const config = {
 			$dataSources: resolve('./src/_dataSources')
 		},
 		version: {
-			name: process.env?.npm_package_version || '0.0.0'
+			// name: process.env?.npm_package_version || '0.0.0'
+			// Changing this based on https://kit.svelte.dev/docs/configuration#version
+			name: child_process.execSync('git rev-parse HEAD').toString().trim()
 		}
 	},
 	preprocess: !dev
