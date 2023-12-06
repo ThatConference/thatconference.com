@@ -60,6 +60,13 @@
 				await window.grecaptcha.enterprise.execute(recaptcha.siteKey, { action: 'site_load' });
 			});
 		}
+
+		if (window.FrontChat) {
+			window.FrontChat('init', {
+				chatId: '7b05ee77044ae53947facbe0aae7d894',
+				useDefaultLauncher: true
+			});
+		}
 	});
 
 	$: if (!isEmpty(data.user.profile)) {
