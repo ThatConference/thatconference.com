@@ -116,17 +116,30 @@
 						md:text-6xl lg:text-left">
 						Join The Daily Conversation
 					</h2>
-					<div class="space-y-8 lg:grid lg:grid-cols-6 lg:items-center lg:gap-8">
-						<div class="col-span-2">
-							<img class="w-72" src="/images/SlackLogo.svg" alt="slack logo" />
-						</div>
-						<div class="col-span-4 flex flex-col items-start space-y-6 text-lg text-gray-500">
-							<p class="prose prose-lg">
-								Yes we have a Slack channel too. It's also a very active one and we'd love to invite
-								you to it as well. Requesting access is easy, just head over to your profile and hit
-								a button.
-							</p>
+
+					<p class="prose prose-lg">
+						Join either our Slack or Discord groups, both where collaboration and camaraderie
+						converge. Connect with like-minded individuals, share insights, and engage in the daily
+						discussions. Whether you're a seasoned professional or just starting your journey, our
+						online communities is the perfect place to network, learn, and grow between the times
+						when we get together. Requesting access is easy, just head over to your profile and hit
+						a button.
+					</p>
+
+					<div class="space-y-24">
+						<div class="mt-12 flex items-center space-x-12">
+							<div>
+								<img class="w-72" src="/images/SlackLogo.svg" alt="slack logo" />
+							</div>
+
 							<StandardLink href="/my/profiles/slack">Request Access Today</StandardLink>
+						</div>
+
+						<div class="mt-12 flex items-center space-x-12">
+							<div>
+								<img class="w-72" src="/images/discord-logo-blue.svg" alt="discord logo" />
+							</div>
+							<StandardLink href="https://that.community">Join Discord Today</StandardLink>
 						</div>
 					</div>
 				</section>
@@ -141,6 +154,17 @@
 						<Newsletter />
 					</div>
 				</section>
+
+				<!-- <section class="col-span-2 pt-16">
+					<h2
+						class="pb-16 text-4xl font-extrabold leading-10 tracking-tight text-thatBlue-800 sm:text-center sm:text-5xl sm:leading-none
+						md:text-6xl lg:text-left">
+						Follow Us On The Socials
+					</h2>
+					<div class="space-y-8">
+						<p>social icons</p>
+					</div>
+				</section> -->
 			</div>
 		</main>
 	</div>
