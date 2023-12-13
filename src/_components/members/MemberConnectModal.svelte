@@ -56,7 +56,7 @@
 			onUpdated({ form }) {
 				if (form.valid) {
 					notes = form.data.notes;
-					//dispatch('closeDetail');
+					dispatch('closeDetail');
 				}
 			}
 		}
@@ -81,7 +81,7 @@
 			</div>
 			<div
 				use:clickOutside
-				on:click_outside={() => dispatch('closeModal')}
+				on:click_outside={() => dispatch('closeDetail')}
 				class="transform overflow-hidden rounded-lg bg-white px-4 pb-4
 		pt-5 shadow-xl transition-all sm:w-full sm:max-w-sm sm:p-6 md:max-w-2xl"
 				role="dialog"
@@ -142,7 +142,7 @@
 										href="/my/profiles/shared">Shared Profile</a>
 									with {firstName}
 								</p>
-								<form use:enhance method="POST">
+								<form use:enhance method="POST" action="/my/network/members">
 									<div class="mt-2">
 										<label for="notes" class="my-2 block text-sm font-medium text-gray-500"
 											>Your private notes:</label>

@@ -40,7 +40,7 @@
 		bind:meSharingWith
 		bind:isFollowing
 		bind:notes
-		on:closeModal={() => (showMemberConnectModal = false)}
+		on:closeDetail={() => (showMemberConnectModal = false)}
 		on:STOP_SHARING={() => stopShareWith()}
 		on:START_SHARING={() => shareWith()}></MemberConnectModal>
 {/if}
