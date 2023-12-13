@@ -7,6 +7,7 @@
 	import { navigating, page, updated } from '$app/stores';
 	import { beforeNavigate } from '$app/navigation';
 	import { browser, dev } from '$app/environment';
+	import posthog from 'posthog-js';
 
 	import lodash from 'lodash';
 	import * as Sentry from '@sentry/svelte';
@@ -29,6 +30,7 @@
 
 	const { isEmpty } = lodash;
 	const flash = getFlash(page);
+	let currentPath = '';
 
 	beforeNavigate(({ willUnload, to, from }) => {
 		// https://kit.svelte.dev/docs/configuration#version
@@ -50,6 +52,17 @@
 				_hsq.push(['trackPageView']);
 			}
 		});
+
+		posthog.init('phc_g3DmFJkVOQwUMd3LIpvB6NEXfcoH64NLzM6se5Lra4', {
+			api_host: 'https://thatconference.com/ingest',
+			capture_pageview: false,
+			capture_pageleave: false,
+			loaded(ph) {
+				if (ph.isFeatureEnabled('enable-session-recording')) {
+					ph.config.disable_session_recording = false;
+				}
+			}
+		});
 	}
 
 	onMount(() => {
@@ -67,6 +80,26 @@
 				useDefaultLauncher: true
 			});
 		}
+		if (typeof window !== 'undefined') {
+			const unsubscribePage = page.subscribe(($page) => {
+				if (currentPath && currentPath !== $page.url.pathname) {
+					posthog.capture('$pageleave');
+				}
+
+				currentPath = $page.url.pathname;
+				posthog.capture('$pageview');
+			});
+
+			const handleBeforeUnload = () => {
+				posthog.capture('$pageleave');
+			};
+			window.addEventListener('beforeunload', handleBeforeUnload);
+
+			return () => {
+				unsubscribePage();
+				window.removeEventListener('beforeunload', handleBeforeUnload);
+			};
+		}
 	});
 
 	$: if (!isEmpty(data.user.profile)) {
@@ -76,6 +109,13 @@
 			Sentry.setUser({
 				email,
 				id
+			});
+
+			console.log('identify');
+			posthog.identify(id, {
+				email,
+				firstName,
+				lastName
 			});
 
 			let _hsq = (window._hsq = window._hsq || []);
