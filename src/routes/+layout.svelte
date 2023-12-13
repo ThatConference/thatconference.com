@@ -21,12 +21,20 @@
 	import ErrorFlashBanner from '$components/banners/Error.svelte';
 	import Preloading from '$components/preloading.svelte';
 	import { recaptcha } from '$lib/config.public';
+	import { memberSharingStore } from '$lib/stores/memberSharing';
+	import { meFollowingStore } from '$lib/stores/meFollowing';
 
 	// setup the context on the cart for later usage
 	setContext('claimTicket', claimTicket);
 	setContext('cart', cart);
 	setContext('correlationId', data.correlationId);
 	setContext('DROP_DOWN_KEY_VALUE_PAIRS', data.dropDownKeyValuePairs);
+
+	const { memberSharing, meFollowing = [] } = data;
+	memberSharingStore.set(memberSharing);
+	setContext('memberSharing', memberSharingStore);
+	meFollowingStore.set(meFollowing);
+	setContext('meFollowing', meFollowingStore);
 
 	const { isEmpty } = lodash;
 	const flash = getFlash(page);

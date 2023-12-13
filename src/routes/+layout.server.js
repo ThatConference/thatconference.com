@@ -1,32 +1,27 @@
-import config from '$lib/config.public';
+import gFetch from '$lib/gfetch';
 import { QUERY_ME } from '$dataSources/api.that.tech/me';
+import sharingQueryApi from '$dataSources/api.that.tech/memberShareWith/queries';
+import meQueryApi from '$dataSources/api.that.tech/me/queries';
 import { loadFlashMessage } from 'sveltekit-flash-message/server';
 
-const body = {
-	query: `
-	${QUERY_ME}
-	`,
-	variables: {}
-};
+async function queryMe(_fetch) {
+	// @HERE
 
-async function queryMe(fetch, accessToken) {
-	return await fetch(config.api.direct, {
-		method: 'POST',
-		headers: {
-			credentials: 'include',
-			'Content-Type': 'application/json',
-			Authorization: `Bearer ${accessToken}`,
-			'that-site': 'thatconference.com'
-		},
-		body: JSON.stringify(body)
-	})
-		.then((r) => r.json())
-		.then((results) => results.data.members?.me);
+	const body = {
+		query: `
+		${QUERY_ME}
+		`,
+		variables: {}
+	};
+	const client = _fetch ? gFetch(_fetch) : gFetch();
+	return await client.secureQuery(body).then((results) => results.data.members?.me);
 }
 
 export const load = loadFlashMessage(async (event) => {
 	let { locals, fetch } = event;
 	const auth0Session = await locals.getSession();
+	const { getSharingData } = sharingQueryApi(fetch);
+	const { queryMeFollowingMembers } = meQueryApi(fetch);
 
 	let user = {
 		isAuthenticated: !!auth0Session?.user,
@@ -34,14 +29,22 @@ export const load = loadFlashMessage(async (event) => {
 		profile: auth0Session?.thatProfile || {},
 		accessToken: auth0Session?.accessToken || {}
 	};
+	let memberSharing = [];
+	let meFollowing = [];
 
 	if (user.isAuthenticated) {
-		user.profile = await queryMe(fetch, user.accessToken);
+		[user.profile, memberSharing, meFollowing] = await Promise.all([
+			queryMe(fetch),
+			getSharingData(),
+			queryMeFollowingMembers()
+		]);
 	}
 
 	locals.user = user;
 
 	return {
-		user
+		user,
+		memberSharing,
+		meFollowing
 	};
 });
