@@ -56,7 +56,7 @@
 
 					<div class="flex justify-end space-x-4">
 						{#if $page.data.user.isAuthenticated}
-							<MemberConnecting memberId={member.id} {member} />
+							<MemberConnecting {member} />
 						{/if}
 					</div>
 				</div>

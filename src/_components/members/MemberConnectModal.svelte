@@ -61,6 +61,7 @@
 
 	function handleStopSharing() {
 		notes = '';
+		formData.notes = '';
 		dispatch('STOP_SHARING');
 		// dispatch('closeDetail');
 	}
