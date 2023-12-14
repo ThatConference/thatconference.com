@@ -8,7 +8,6 @@ const store = writable([]);
 const { subscribe, set, update } = store;
 
 function createSharingStore() {
-	console.log('createSharingStore()');
 	const { getSharingData } = sharingQueryApi();
 
 	async function shareMyInfoWith(memberId) {

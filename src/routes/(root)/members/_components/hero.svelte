@@ -11,11 +11,8 @@
 
 	import { Tag } from '$elements';
 	import Header from '$elements/layouts/profile/_Header.svelte';
-	// import { Standard as StandardButton } from '$elements/buttons';
 	import { SocialLink } from '$components/social';
 	import MemberConnecting from '$components/members/MemberConnecting.svelte';
-
-	// const dispatch = createEventDispatcher();
 
 	const imageCrop = '?mask=ellipse&w=500&h=500&fit=crop';
 
@@ -59,9 +56,6 @@
 
 					<div class="flex justify-end space-x-4">
 						{#if $page.data.user.isAuthenticated}
-							<!-- <StandardButton class="h-3/4" on:click={() => dispatch('TOGGLE_FOLLOW')}>
-								{#if !isFollowing}Follow{:else}Un-Follow{/if}
-							</StandardButton> -->
 							<MemberConnecting memberId={member.id} {member} />
 						{/if}
 					</div>

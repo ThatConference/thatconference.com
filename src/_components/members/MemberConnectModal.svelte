@@ -1,7 +1,4 @@
 <script>
-	// export let sharedWithMeProfile;
-	// export let rowIndex;
-	// export let shareWithId; // sharing with memberId
 	export let firstName;
 	export let lastName;
 	export let isSHaringWithMe;
@@ -166,10 +163,6 @@
 										{:else}
 											<button type="submit" class="anchorButtonHighlight"> Update Notes </button>
 										{/if}
-
-										<!-- <button on:click={handleStopSharing} class="anchorButton">
-											Stop Sharing
-										</button> -->
 									</div>
 								</form>
 							{/if}
@@ -182,7 +175,7 @@
 </div>
 
 <style lang="postcss">
-	.anchorButton {
+	/* .anchorButton {
 		@apply rounded-md bg-slate-50 px-4 py-2 text-center font-normal tracking-wide text-thatBlue-500 shadow-md md:text-xl;
 	}
 
@@ -191,7 +184,7 @@
 	}
 	.anchorButton:focus {
 		@apply underline underline-offset-4;
-	}
+	} */
 
 	.anchorButtonHighlight {
 		@apply rounded-md bg-thatBlue-500 px-4 py-2 text-center font-normal tracking-wide text-white shadow-md md:text-xl;

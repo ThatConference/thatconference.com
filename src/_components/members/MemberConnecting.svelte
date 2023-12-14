@@ -1,5 +1,4 @@
 <script>
-	export let memberId;
 	export let member;
 
 	import { getContext } from 'svelte';
@@ -7,6 +6,7 @@
 	import { Standard as StandardButton } from '$elements/buttons';
 	import MemberConnectModal from '$components/members/MemberConnectModal.svelte';
 
+	const { id: memberId } = member;
 	const memberSharing = getContext('memberSharing') ?? [];
 	const meFollowing = getContext('meFollowing') ?? [];
 	const { isMeSharingWithMember, isMemberSharingWithMe, shareMyInfoWith, stopSharingWith } =
@@ -45,15 +45,6 @@
 		on:START_SHARING={() => shareWith()}></MemberConnectModal>
 {/if}
 <div>
-	<!-- <p>I am sharing: {meSharing}</p>
-	<p>Sharing with me: {sharingWithMe}</p>
-	<button on:click={() => shareWith(memberId)}>Share With</button><br />
-	<button on:click={() => stopShareWith(memberId)}>Stop Sharing</button> -->
-	<!--
-		Shares with you
-		You share with
-		No Sharing
-	-->
 	<StandardButton on:click={() => (showMemberConnectModal = true)}>
 		<div class="flex items-center space-x-2">
 			<span class="">Connect</span>

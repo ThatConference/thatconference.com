@@ -5,7 +5,6 @@ const store = writable([]);
 // const { update } = store;
 
 function createFollowingStore() {
-	console.log('createFollowingStore()');
 	const { toggleFollowById } = memberMutationApi();
 
 	async function toggleFollow(memberId) {
