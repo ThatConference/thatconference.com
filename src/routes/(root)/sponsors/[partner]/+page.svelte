@@ -18,8 +18,10 @@
 	import { Action as ActionModal } from '$elements/modals';
 	import { Standard as StandardLink } from '$elements/links';
 	import createMachine from '../_machines/partner';
+	import ShareWithSponsorModal from '../_components/ShareWithSponsor.svelte';
 
 	const { partner } = $page.params;
+	const eventId = $page.url.searchParams.get('eventId');
 
 	const { state, send } = useMachine(createMachine(partner), {
 		devTools: debug.xstate
@@ -59,6 +61,7 @@
 		if (reset) delayCounter = 200;
 		return current;
 	}
+	let showShareWithSponsorModal = false;
 </script>
 
 <Seo title={metaTags?.title || ''} tags={metaTags?.tags || []} />
@@ -74,20 +77,26 @@
 			</div>
 		</ActionModal>
 	{/if}
+	{#if showShareWithSponsorModal}
+		<ShareWithSponsorModal
+			on:HIDE_SHARE_SPONSOR_MODAL={() => (showShareWithSponsorModal = false)}
+			partner={$state.context.profile}
+			{eventId} />
+	{/if}
+
 	<div class="flex flex-col">
 		<div in:fade={{ delay: getDelay() }}>
 			<Hero
 				partner={$state.context.profile}
 				isFollowing={$state.context.isFollowing}
 				wasContactExchanged={$state.context.leadAdded}
+				{eventId}
 				on:TOGGLE_FOLLOW={() =>
 					send('FOLLOW', {
 						id: $state.context.profile.id
 					})}
-				on:XCHANGE_CONTACT={() =>
-					send('XCHANGE_CONTACT', {
-						id: $state.context.profile.id
-					})} />
+				on:SHOW_SHARE_SPONSOR_MODAL={() => (showShareWithSponsorModal = true)}
+				on:HIDE_SHARE_SPONSOR_MODAL={() => (showShareWithSponsorModal = false)} />
 		</div>
 
 		{#if $state?.context?.profile?.members?.length > 0}
@@ -130,10 +139,13 @@
 			<CTA
 				partner={$state.context.profile}
 				isFollowing={$state.context.isFollowing}
+				{eventId}
 				on:TOGGLE_FOLLOW={() =>
 					send('FOLLOW', {
 						id: $state.context.profile.id
-					})} />
+					})}
+				on:SHOW_SHARE_SPONSOR_MODAL={() => (showShareWithSponsorModal = true)}
+				on:HIDE_SHARE_SPONSOR_MODAL={() => (showShareWithSponsorModal = false)} />
 		</div>
 	</div>
 {/if}
