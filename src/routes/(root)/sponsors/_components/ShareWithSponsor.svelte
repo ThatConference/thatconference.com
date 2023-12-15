@@ -15,7 +15,8 @@
 	const actionTitle = `Share with ${companyName}`;
 	const actionText = `By clicking the button below you agree to share your shared profile with <span class="font-bold">${companyName}</span>. 
 		See what you're sharing in your 
-		<a class="text-thatBlue-500 hover:text-thatOrange-500" href="/my/profiles/primary">Shared Profile</>.`;
+		<a class="font-medium text-thatBlue-500 hover:text-thatOrange-500" href="/my/profiles/primary">Shared Profile<a/>,
+			located in your settings.`;
 
 	function shareWithSponsorAction() {
 		if (partnerId) {
@@ -25,6 +26,8 @@
 </script>
 
 <ActionModal title={actionTitle} text={actionText}>
-	<StandardButton on:click={() => shareWithSponsorAction()}>Share with Sponsor</StandardButton>
-	<StandardButton on:click={() => dispatch('HIDE_SHARE_SPONSOR_MODAL')}>Cancel</StandardButton>
+	<div class="flex justify-center space-x-4">
+		<StandardButton on:click={() => shareWithSponsorAction()}>Share with Sponsor</StandardButton>
+		<StandardButton on:click={() => dispatch('HIDE_SHARE_SPONSOR_MODAL')}>Cancel</StandardButton>
+	</div>
 </ActionModal>
