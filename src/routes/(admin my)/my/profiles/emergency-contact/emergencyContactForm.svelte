@@ -141,7 +141,7 @@
 								type="email"
 								bind:value={$form.email}
 								{...constraints.email}
-								placeholder="E.g. hello@that.us"
+								placeholder="E.g. hello@thatconference.com"
 								size="30"
 								class="form-imput mt-4 block w-full rounded-md shadow-sm" />
 							{#if $errors.email}

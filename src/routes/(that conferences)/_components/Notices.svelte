@@ -50,8 +50,10 @@
 
 						<div class="prose mt-4 text-lg text-gray-500">
 							Ordering 10 or more tickets? Contact us at
-							<a href="mailto:hello@that.us?subject=Ticket Discounts" rel="noopener" target="_blank"
-								>hello@that.us</a>
+							<a
+								href="mailto:hello@thatconference.com?subject=Ticket Discounts"
+								rel="noopener"
+								target="_blank">hello@thatconference.com</a>
 							to ask about direct invoicing with volume discounts.
 						</div>
 					</div>
@@ -59,7 +61,7 @@
 					<div
 						class="flex w-48 flex-shrink-0 justify-center rounded-md bg-gray-100 shadow-md hover:bg-gray-200">
 						<a
-							href="mailto:hello@that.us"
+							href="mailto:hello@thatconference.com"
 							class=" border border-transparent px-5 py-3 text-base font-medium text-gray-900">
 							Volume Discounts
 						</a>
@@ -78,8 +80,10 @@
 
 						<div class="prose mt-4 text-lg text-gray-500">
 							Are you in College, or maybe even High School? Let us help, Contact us at
-							<a href="mailto:hello@that.us?subject=Ticket Discounts" rel="noopener" target="_blank"
-								>hello@that.us</a>
+							<a
+								href="mailto:hello@thatconference.com?subject=Ticket Discounts"
+								rel="noopener"
+								target="_blank">hello@thatconference.com</a>
 							to ask about our EDU discounts. You must present a valid EDU email address or current picture
 							id.
 						</div>
@@ -88,7 +92,7 @@
 					<div
 						class="flex w-48 flex-shrink-0 justify-center rounded-md bg-gray-100 shadow-md hover:bg-gray-200">
 						<a
-							href="mailto:hello@that.us"
+							href="mailto:hello@thatconference.com"
 							class="border border-transparent px-5 py-3 text-base font-medium text-gray-900">
 							Student Discounts
 						</a>

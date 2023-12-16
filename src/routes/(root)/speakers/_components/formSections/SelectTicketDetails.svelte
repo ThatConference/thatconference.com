@@ -47,7 +47,7 @@
 		</p>
 		<div class="mt-4 flex">
 			<a
-				href={`mailto:hello@that.us?subject=Error Creating My Speaker Tickets&body=The robots have failed us. Order Id ${orderId}`}
+				href={`mailto:hello@thatconference.com?subject=Error Creating My Speaker Tickets&body=The robots have failed us. Order Id ${orderId}`}
 				rel="noopener"
 				target="_blank">
 				<Shell>

@@ -12,7 +12,7 @@
 		},
 		{
 			q: 'Can I buy bulk tickets?',
-			a: 'Yes, although if you would like a bulk discount please email us @ hello@that.us.'
+			a: 'Yes, although if you would like a bulk discount please email us @ hello@thatconference.com.'
 		},
 		{
 			q: "I'm interested in becoming a sponsor.",

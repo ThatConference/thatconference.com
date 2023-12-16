@@ -12,7 +12,7 @@
 				<p class="text-lg text-gray-500">
 					Can’t find the answer you’re looking for? Feel free to
 					<a
-						href="mailto:hello@that.us"
+						href="mailto:hello@thatconference.com"
 						class="font-medium text-thatOrange-400 hover:text-thatOrange-500">email us</a>
 					or reach out in the chat.
 				</p>

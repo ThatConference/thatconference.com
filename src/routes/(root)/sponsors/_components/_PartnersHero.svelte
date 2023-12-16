@@ -21,7 +21,8 @@
 				appreciate their support! Are you interested in partnering with us? Email us at
 				<a
 					href="/sponsorships/apply/#prospectus"
-					class="text-thatOrange-400 hover:text-thatOrange-500 hover:underline">hello@that.us</a
+					class="text-thatOrange-400 hover:text-thatOrange-500 hover:underline"
+					>hello@thatconference.com</a
 				>.
 			</p>
 		</div>
