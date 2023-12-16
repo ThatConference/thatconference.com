@@ -237,6 +237,7 @@ export const QUERY_EVENT_PARTNERS = `
 		events {
 			event (findBy: { slug: $slug }) {
 				get {
+					id
 					logo
 					name
 					slug

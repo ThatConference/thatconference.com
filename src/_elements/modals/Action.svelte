@@ -16,8 +16,7 @@
 				<div class="absolute inset-0 bg-gray-500 opacity-75" />
 			</div>
 			<div
-				class="transform overflow-hidden rounded-lg bg-white px-4 pb-4
-		pt-5 shadow-xl transition-all sm:w-full sm:max-w-sm sm:p-6 md:max-w-2xl"
+				class="transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 shadow-xl transition-all sm:w-full sm:max-w-sm sm:p-6 md:max-w-2xl"
 				role="dialog"
 				aria-modal="true"
 				aria-labelledby="modal-headline">
