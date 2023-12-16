@@ -48,10 +48,10 @@
 									class="font-extrabold">please logout and login again</span
 								>. Still having issues, then please ask us in chat, or email us at
 								<a
-									href="mailto:hello@that.us?subject=Account Verification Problem"
+									href="mailto:hello@thatconference.com?subject=Account Verification Problem"
 									target="_blank"
 									class="text-thatOrange-400 hover:text-thatOrange-500 hover:underline"
-									>hello@that.us</a
+									>hello@thatconference.com</a
 								>.
 							</p>
 						</div>

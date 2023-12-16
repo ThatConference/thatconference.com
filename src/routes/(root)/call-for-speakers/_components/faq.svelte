@@ -54,10 +54,11 @@
 		<p class="prose-lg pt-4 text-center text-gray-500">
 			Have more questions? Just drop us an email or hit us up in the chat.
 			<a
-				href="mailto:hello@that.us?subject=Adding a new community to THAT.us"
+				href="mailto:hello@thatconference.com?subject=Adding a new community to THAT.us"
 				rel="external noopener"
 				target="_blank"
-				class="text-thatOrange-400 hover:text-thatOrange-500 hover:underline">hello@that.us</a
+				class="text-thatOrange-400 hover:text-thatOrange-500 hover:underline"
+				>hello@thatconference.com</a
 			>.
 		</p>
 	</div>

@@ -85,7 +85,7 @@
 						bind:value={$form.emailAddress}
 						{...constraints.emailAddress}
 						name="emailAddress"
-						placeholder="E.g. hello@that.us"
+						placeholder="E.g. hello@thatconference.com"
 						class="form-input block h-12 w-full hover:border-gray-700 sm:text-sm sm:leading-5" />
 				</div>
 				{#if $errors.emailAddress}

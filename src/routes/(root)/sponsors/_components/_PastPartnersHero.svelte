@@ -20,9 +20,10 @@
 				support! Please take a few minutes to learn about our partners and let them know you
 				appreciate their support! Are you interested in partnering with us? Email us at
 				<a
-					href="mailto:hello@that.us?subject=Let's Partner"
+					href="mailto:hello@thatconference.com?subject=Let's Partner"
 					target="_blank"
-					class="text-thatOrange-400 hover:text-thatOrange-500 hover:underline">hello@that.us</a
+					class="text-thatOrange-400 hover:text-thatOrange-500 hover:underline"
+					>hello@thatconference.com</a
 				>.
 			</p>
 		</div>

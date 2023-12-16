@@ -109,10 +109,10 @@
 						to provide gluten-free, vegetarian and vegan options. Menus are posted daily and labels
 						are displayed next to each food item to help you make the best decision based on your
 						needs. If you have a severe dietary requirement, please email us at <a
-							href="mailto:hello@that.us"
+							href="mailto:hello@thatconference.com"
 							target="_blank"
-							class="hover">hello@that.us</a> so we can work together in finding the right solution to
-						fit your needs.
+							class="hover">hello@thatconference.com</a> so we can work together in finding the right
+						solution to fit your needs.
 					</p>
 					<p>
 						All Camper, Campmate and Geekling tickets include an official THAT t-shirt. During
@@ -232,9 +232,9 @@
 			</p>
 			<p>
 				At any time feel free to drop us a line <a
-					href="mailto:hello@that.us"
+					href="mailto:hello@thatconference.com"
 					target="_blank"
-					class="hover">hello@that.us</a>
+					class="hover">hello@thatconference.com</a>
 			</p>
 		</div>
 	</div>
