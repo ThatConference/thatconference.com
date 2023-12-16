@@ -12,10 +12,10 @@
 	const { companyName = '', id: partnerId } = partner;
 	const { addLead } = partnerLeadMutationApi();
 
-	const actionTitle = `Share with ${companyName}`;
+	const actionTitle = `Connect with ${companyName}`;
 	const actionText = `By clicking the button below you agree to share your shared profile with <span class="font-bold">${companyName}</span>. 
 		See what you're sharing in your 
-		<a class="font-medium text-thatBlue-500 hover:text-thatOrange-500" href="/my/profiles/primary">Shared Profile<a/>,
+		<a class="a-decorate" href="/my/profiles/primary">Shared Profile<a/>,
 			located in your settings.`;
 
 	function shareWithSponsorAction() {

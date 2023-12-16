@@ -184,6 +184,23 @@
 		color: #f3f4f6;
 	}
 
+	:global(.a-decorate) {
+		color: #26529a;
+		text-decoration: underline;
+		text-decoration-style: line;
+		text-decoration-color: #26529a;
+		text-decoration-thickness: 0.01em;
+		text-underline-offset: 6px;
+	}
+	:global(.a-decorate:hover) {
+		color: #26529a;
+		text-decoration: underline;
+		text-decoration-style: line;
+		text-decoration-color: #26529a;
+		text-decoration-thickness: 0.1em;
+		text-underline-offset: 3px;
+	}
+
 	:global(.lineBreaks) {
 		white-space: pre-line;
 	}

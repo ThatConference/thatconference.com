@@ -32,7 +32,7 @@
 			{#if $page.data.user.isAuthenticated}
 				{#if eventId}
 					<StandardButton on:click={() => dispatch('SHOW_SHARE_SPONSOR_MODAL')}
-						>Share</StandardButton>
+						>Connect With</StandardButton>
 				{/if}
 				<StandardButton class="h-3/4" on:click={() => dispatch('TOGGLE_FOLLOW')}>
 					{#if isFollowing}Un-Follow{:else}Follow{/if}

@@ -47,13 +47,13 @@
 						</StandardLink>
 
 						{#if $page.data.user.isAuthenticated}
-							{#if eventId}
-								<StandardButton on:click={() => dispatch('SHOW_SHARE_SPONSOR_MODAL')}
-									>Share</StandardButton>
-							{/if}
 							<StandardButton class="h-3/4" on:click={() => dispatch('TOGGLE_FOLLOW')}>
 								{#if !isFollowing}Follow{:else}Un-Follow{/if}
 							</StandardButton>
+							{#if eventId}
+								<StandardButton on:click={() => dispatch('SHOW_SHARE_SPONSOR_MODAL')}
+									>Connect With</StandardButton>
+							{/if}
 						{/if}
 					</div>
 				</div>

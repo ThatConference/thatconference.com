@@ -2,7 +2,7 @@
 	export let member;
 
 	import { getContext } from 'svelte';
-	import { Heart, ChevronDownCircle, ChevronUpCircle } from 'lucide-svelte';
+	import { Heart, ArrowDown, ArrowUp } from 'lucide-svelte';
 	import { Standard as StandardButton } from '$elements/buttons';
 	import MemberConnectModal from '$components/members/MemberConnectModal.svelte';
 
@@ -44,15 +44,22 @@
 		on:STOP_SHARING={() => stopShareWith()}
 		on:START_SHARING={() => shareWith()}></MemberConnectModal>
 {/if}
-<div>
+<div class="group">
 	<StandardButton on:click={() => (showMemberConnectModal = true)}>
-		<div class="flex items-center space-x-2">
-			<span class="">Connect</span>
-			<div>
-				<ChevronUpCircle class={meSharingWith ? 'fill-thatOrange-400' : ''} />
-				<ChevronDownCircle class={sharingWithMe ? 'fill-thatOrange-400' : ''} />
+		<div class="flex items-center space-x-4">
+			<span class="uppercase">Connect</span>
+
+			<div class="flex text-gray-300">
+				<span class="group-hover:text-white" class:text-that-blue={isFollowing}>
+					<Heart />
+				</span>
+				<span class="group-hover:text-white" class:text-that-blue={meSharingWith}>
+					<ArrowUp />
+				</span>
+				<span class="group-hover:text-white" class:text-that-blue={sharingWithMe}>
+					<ArrowDown />
+				</span>
 			</div>
-			<Heart class={isFollowing ? 'fill-red-500' : ''} />
 		</div>
 	</StandardButton>
 </div>

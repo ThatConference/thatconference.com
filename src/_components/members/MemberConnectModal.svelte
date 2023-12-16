@@ -99,47 +99,44 @@
 								{lastName}
 							</p>
 							{#if sharingWithMe}
-								<p class="text-md mb-2 text-gray-600">
+								<p class="prose prose-lg">
 									Started sharing with you on {sharedWithMeOn}
 								</p>
 							{:else}
-								<p class="text-md mb-2 text-gray-600">Is currently not sharing with you</p>
+								<p class="prose prose-lg">
+									{firstName} is not currently sharing their contact information with you.
+								</p>
 							{/if}
+
 							{#if email}
 								<p class="text-sm text-gray-600">{email}</p>
 							{/if}
+
 							{#if phone}
 								<p class="text-sm text-gray-600">{phone}</p>
 							{/if}
+
 							{#if shareStatus}
 								<p class="mt-4 text-sm font-semibold text-thatBlue-700">{shareStatus}</p>
 							{/if}
 
-							<div class="my-10 space-y-2">
+							<div class="my-10 space-x-4">
 								<StandardButton on:click={() => toggleFollowAction()}>
-									<span
-										>{#if !isFollowing}Follow{:else}Un-Follow{/if}
-										{firstName}</span>
+									<span>
+										{#if !isFollowing}Follow{:else}Un-Follow{/if}
+									</span>
 								</StandardButton>
 
 								{#if meSharingWith}
-									<StandardButton on:click={() => handleStopSharing()}>
-										Stop Sharing with {firstName}
-									</StandardButton>
+									<StandardButton on:click={() => handleStopSharing()}>Stop Sharing</StandardButton>
 								{:else}
 									<StandardButton on:click={() => dispatch('START_SHARING')}>
-										Share With {firstName}
+										Share Contact Card
 									</StandardButton>
 								{/if}
 							</div>
 
 							{#if meSharingWith}
-								<p class="text-md mt-4 text-gray-600">
-									You are sharing your <a
-										class="text-thatBlue-500 hover:text-thatOrange-500"
-										href="/my/profiles/shared">Shared Profile</a>
-									with {firstName}
-								</p>
 								<form use:enhance method="POST" action="/my/network/members">
 									<div class="mt-2">
 										<label for="notes" class="my-2 block text-sm font-medium text-gray-500"
@@ -159,14 +156,24 @@
 									<div class="mt-2 flex flex-row-reverse space-x-4 space-x-reverse">
 										{#if $allErrors?.length > 0}
 											<DisabledShell>
-												<div class="px-8 py-2 font-medium">Update Notes</div>
+												<div class="px-8 py-2 font-medium">Update My Notes</div>
 											</DisabledShell>
 										{:else}
-											<button type="submit" class="anchorButtonHighlight"> Update Notes </button>
+											<button type="submit" class="anchorButtonHighlight"> Update My Notes </button>
 										{/if}
 									</div>
 								</form>
 							{/if}
+						</div>
+					</div>
+					<div class="mt-12 flex flex-col justify-center text-sm text-gray-500">
+						<div class="space-x-4">
+							<span>
+								View your <a class="a-decorate" href="/my/network/members">network</a>.
+							</span>
+							<span>
+								Update your <a class="a-decorate" href="/my/profiles/shared">shared profile</a>.
+							</span>
 						</div>
 					</div>
 				</div>
@@ -176,17 +183,6 @@
 </div>
 
 <style lang="postcss">
-	/* .anchorButton {
-		@apply rounded-md bg-slate-50 px-4 py-2 text-center font-normal tracking-wide text-thatBlue-500 shadow-md md:text-xl;
-	}
-
-	.anchorButton:hover {
-		@apply bg-slate-200 transition duration-150 ease-in-out;
-	}
-	.anchorButton:focus {
-		@apply underline underline-offset-4;
-	} */
-
 	.anchorButtonHighlight {
 		@apply rounded-md bg-thatBlue-500 px-4 py-2 text-center font-normal tracking-wide text-white shadow-md md:text-xl;
 	}
