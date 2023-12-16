@@ -26,10 +26,10 @@ export const ticketBreakdown = [
 			{
 				title: 'Event Access',
 				includes: [
-					// { title: 'Monday' },
+					{ title: 'Monday' },
 					{ title: 'Tuesday' },
-					{ title: 'Wednesday' },
-					{ title: 'Thursday' }
+					{ title: 'Wednesday' }
+					// { title: 'Thursday' }
 				]
 			},
 			{
@@ -57,17 +57,17 @@ export const ticketBreakdown = [
 			{
 				title: 'Event Access',
 				includes: [
-					// { title: 'Monday' },
+					{ title: 'Monday' },
 					{ title: 'Tuesday' },
-					{ title: 'Wednesday' },
-					{ title: 'Thursday' }
+					{ title: 'Wednesday' }
+					// { title: 'Thursday' }
 				]
 			},
 			{
 				title: 'Food and Beverage',
 				includes: [
 					{ title: 'Tuesday Breakfast & Lunch' },
-					{ title: 'Happy Hour' },
+					{ title: 'Happy Hour on the Patio' },
 					{ title: 'Wednesday Breakfast & Lunch' },
 					{ title: 'Wednesday Pig Roast' },
 					{ title: 'Thursday Breakfast & Lunch' },
@@ -144,10 +144,10 @@ const pricingBreakdown = [
 	{
 		title: 'Event Access',
 		includes: [
-			// {
-			// 	title: 'Monday',
-			// 	isIncluded: [true, true]
-			// },
+			{
+				title: 'Monday',
+				isIncluded: [true, true]
+			},
 			{
 				title: 'Tuesday',
 				isIncluded: [true, true]
@@ -155,11 +155,11 @@ const pricingBreakdown = [
 			{
 				title: 'Wednesday',
 				isIncluded: [true, true]
-			},
-			{
-				title: 'Thursday',
-				isIncluded: [true, true]
 			}
+			// {
+			// 	title: 'Thursday',
+			// 	isIncluded: [true, true]
+			// }
 		]
 	},
 	{
@@ -167,20 +167,20 @@ const pricingBreakdown = [
 		includes: [
 			// { title: 'Monday Lunch', isIncluded: [false, true] },
 			{
+				title: 'Monday Breakfast & Lunch',
+				isIncluded: [false, true]
+			},
+			{ title: 'Monday Happy Hour on the Patio', isIncluded: [false, true] },
+			{
 				title: 'Tuesday Breakfast & Lunch',
 				isIncluded: [false, true]
 			},
-			{ title: 'Tuesday Happy Hour', isIncluded: [false, true] },
+			{
+				title: 'Tuesday BBQ in the Barn',
+				isIncluded: [false, true]
+			},
 			{
 				title: 'Wednesday Breakfast & Lunch',
-				isIncluded: [false, true]
-			},
-			{
-				title: 'Wednesday BBQ',
-				isIncluded: [false, true]
-			},
-			{
-				title: 'Thursday Breakfast & Lunch',
 				isIncluded: [false, true]
 			},
 			{
