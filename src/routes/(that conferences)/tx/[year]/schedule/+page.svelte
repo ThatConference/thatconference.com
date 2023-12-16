@@ -26,7 +26,7 @@
 
 <div>
 	<section>
-		<Hero {event} days={['Tuesday', 'Wednesday', 'Thursday']} />
+		<Hero {event} days={['Monday', 'Tuesday', 'Wednesday']} />
 	</section>
 
 	<section>
