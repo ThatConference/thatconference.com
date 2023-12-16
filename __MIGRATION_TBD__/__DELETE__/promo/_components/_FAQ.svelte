@@ -16,7 +16,7 @@
 		},
 		{
 			q: "I'm interested in becoming a sponsor.",
-			a: "That's wonderful to hear. Please contact us at partnerships@that.us."
+			a: "That's wonderful to hear. Please contact us at partnerships@thatconference.com."
 		},
 		{
 			q: 'I already bought these tickets at a higher price, can I get a refund.',
