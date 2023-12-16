@@ -1,8 +1,11 @@
 <script>
 	export let header;
 	export let partners = [];
+	export let eventId = '';
 
 	import PartnerCard from '$components/partners/PartnerCard.svelte';
+
+	const q = eventId ? `?eventId=${eventId}` : '';
 </script>
 
 <div class="py-12">
@@ -15,7 +18,7 @@
 			{#each partners as p, _i (p.id)}
 				<li
 					class="col-span-1 flex transform flex-col rounded-lg bg-white text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-that-offWhite">
-					<a href={`/sponsors/${p.slug}`}>
+					<a href={`/sponsors/${p.slug}${q}`}>
 						<PartnerCard {...p} />
 					</a>
 				</li>

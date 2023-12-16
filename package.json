@@ -1,6 +1,6 @@
 {
 	"name": "thatconference.com",
-	"version": "5.2.4",
+	"version": "5.2.5",
 	"description": "THATConference.com website",
 	"main": "index.js",
 	"type": "module",

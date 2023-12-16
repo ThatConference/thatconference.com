@@ -170,9 +170,7 @@ export default (fetch) => {
 		});
 	}
 
-	function toggleFollow(slug) {
-		const variables = { target: { slug } };
-
+	function toggleFollowBase(variables) {
 		return client
 			.mutation({ mutation: MUTATION_FOLLOW_MEMBER_TOGGLE, variables })
 			.then(({ data, errors }) => {
@@ -186,6 +184,18 @@ export default (fetch) => {
 
 				return results;
 			});
+	}
+
+	function toggleFollowById(memberId) {
+		const variables = { target: { id: memberId } };
+
+		return toggleFollowBase(variables);
+	}
+
+	function toggleFollow(slug) {
+		const variables = { target: { slug } };
+
+		return toggleFollowBase(variables);
 	}
 
 	function requestSlackInvite() {
@@ -205,6 +215,7 @@ export default (fetch) => {
 		updateProfile,
 		claimTicket,
 		toggleFollow,
+		toggleFollowById,
 		requestSlackInvite,
 		updateEmergencyContact
 	};

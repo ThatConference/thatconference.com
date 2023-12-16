@@ -1,6 +1,7 @@
 <script>
 	export let partner;
 	export let isFollowing = false;
+	export let eventId;
 
 	import { createEventDispatcher } from 'svelte';
 	import { page } from '$app/stores';
@@ -27,14 +28,20 @@
 	</h2>
 
 	<span slot="actionPrimary">
-		{#if $page.data.user.isAuthenticated}
-			<StandardButton class="h-3/4" on:click={() => dispatch('TOGGLE_FOLLOW')}>
-				{#if isFollowing}Un-Follow{:else}Follow{/if}
-				{handle}
-			</StandardButton>
-		{:else}
-			<StandardLink rel="external" class="h-3/4" href="/login/"
-				>Login and Follow Today</StandardLink>
-		{/if}
+		<div class="flex justify-end space-x-4">
+			{#if $page.data.user.isAuthenticated}
+				{#if eventId}
+					<StandardButton on:click={() => dispatch('SHOW_SHARE_SPONSOR_MODAL')}
+						>Connect With</StandardButton>
+				{/if}
+				<StandardButton class="h-3/4" on:click={() => dispatch('TOGGLE_FOLLOW')}>
+					{#if isFollowing}Un-Follow{:else}Follow{/if}
+					{handle}
+				</StandardButton>
+			{:else}
+				<StandardLink rel="external" class="h-3/4" href="/login/"
+					>Login and Follow Today</StandardLink>
+			{/if}
+		</div>
 	</span>
 </CTA>

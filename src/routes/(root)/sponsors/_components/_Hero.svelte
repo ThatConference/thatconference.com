@@ -1,7 +1,7 @@
 <script>
 	export let partner;
 	export let isFollowing = false;
-	// export let wasContactExchanged = false;
+	export let eventId;
 
 	import { createEventDispatcher } from 'svelte';
 	import { page } from '$app/stores';
@@ -47,20 +47,13 @@
 						</StandardLink>
 
 						{#if $page.data.user.isAuthenticated}
-							<!-- TODO.. Needs a bit of work.
-                <StandardButton
-                  class="h-3/4"
-                  on:click="{() => dispatch('XCHANGE_CONTACT')}">
-                  {#if !wasContactExchanged}
-                    Exhange Contact Information
-                  {:else}
-                    Contact Exchang ed
-                  {/if}
-                </StandardButton> -->
-
 							<StandardButton class="h-3/4" on:click={() => dispatch('TOGGLE_FOLLOW')}>
 								{#if !isFollowing}Follow{:else}Un-Follow{/if}
 							</StandardButton>
+							{#if eventId}
+								<StandardButton on:click={() => dispatch('SHOW_SHARE_SPONSOR_MODAL')}
+									>Connect With</StandardButton>
+							{/if}
 						{/if}
 					</div>
 				</div>

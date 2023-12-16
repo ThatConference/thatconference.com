@@ -1,9 +1,9 @@
 <script>
 	export let member;
-	export let isFollowing = false;
+	// export let isFollowing = false;
 
 	import { page } from '$app/stores';
-	import { createEventDispatcher } from 'svelte';
+	// import { createEventDispatcher, getContext } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import dayjs from 'dayjs';
 
@@ -11,10 +11,8 @@
 
 	import { Tag } from '$elements';
 	import Header from '$elements/layouts/profile/_Header.svelte';
-	import { Standard as StandardButton } from '$elements/buttons';
 	import { SocialLink } from '$components/social';
-
-	const dispatch = createEventDispatcher();
+	import MemberConnecting from '$components/members/MemberConnecting.svelte';
 
 	const imageCrop = '?mask=ellipse&w=500&h=500&fit=crop';
 
@@ -58,9 +56,7 @@
 
 					<div class="flex justify-end space-x-4">
 						{#if $page.data.user.isAuthenticated}
-							<StandardButton class="h-3/4" on:click={() => dispatch('TOGGLE_FOLLOW')}>
-								{#if !isFollowing}Follow{:else}Un-Follow{/if}
-							</StandardButton>
+							<MemberConnecting {member} />
 						{/if}
 					</div>
 				</div>
