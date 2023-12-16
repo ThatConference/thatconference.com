@@ -1,6 +1,6 @@
 {
 	"name": "thatconference.com",
-	"version": "5.2.5",
+	"version": "5.2.6",
 	"description": "THATConference.com website",
 	"main": "index.js",
 	"type": "module",
@@ -32,8 +32,6 @@
 	"devDependencies": {
 		"@auth/core": "^0.17.0",
 		"@auth/sveltekit": "^0.3.10",
-		"@commitlint/cli": "^17.8.0",
-		"@commitlint/config-conventional": "^17.8.0",
 		"@fortawesome/free-regular-svg-icons": "^6.4.2",
 		"@fullhuman/postcss-purgecss": "^5.0.0",
 		"@playwright/test": "^1.39.0",
