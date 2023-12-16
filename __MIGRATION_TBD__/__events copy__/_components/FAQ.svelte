@@ -16,7 +16,7 @@
 		},
 		{
 			q: "I'm interested in becoming a sponsor.",
-			a: "That's wonderful to hear. Please contact us at partnerships@that.us."
+			a: "That's wonderful to hear. Please contact us at partnerships@thatconference.com."
 		}
 	];
 </script>
