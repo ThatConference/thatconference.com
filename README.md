@@ -7,11 +7,11 @@
 
 ## Get started
 
-THAT.us is a SvelteKit application. It uses Tailwind for styling, and makes GraphQL calls against our Api, <https://api.that.tech/view>.
+thatconference.com is a SvelteKit application. It uses Tailwind for styling, and makes GraphQL calls against our Api, https://api.that.tech.
 
 ### local dependencies
 
-- nodejs v18.x
+- nodejs v20.x
 - npm v8.0.0
 
 ### project dependencies
@@ -53,11 +53,9 @@ Mind you the build servers will run the following:
 
 The only difference is how we're managing env settings.
 
-## Commiting
+## Development and PRs
 
-We now follow the commitlint conventional spec.
-
-<https://www.npmjs.com/package/@commitlint/config-conventional>
+We currently build and ship by following stacking prs https://stacking.dev/ and use a tool to aid us called graphite https://graphite.dev/.
 
 ## Contributors ✨
 
