@@ -1,14 +1,10 @@
 <script>
 	export let member;
-	// export let isFollowing = false;
 
-	import { page } from '$app/stores';
-	// import { createEventDispatcher, getContext } from 'svelte';
 	import { fade } from 'svelte/transition';
 	import dayjs from 'dayjs';
 
 	import config from '$lib/config.public';
-
 	import { Tag } from '$elements';
 	import Header from '$elements/layouts/profile/_Header.svelte';
 	import { SocialLink } from '$components/social';
@@ -55,9 +51,7 @@
 					</div>
 
 					<div class="flex justify-end space-x-4">
-						{#if $page.data.user.isAuthenticated}
-							<MemberConnecting {member} />
-						{/if}
+						<MemberConnecting {member} />
 					</div>
 				</div>
 
