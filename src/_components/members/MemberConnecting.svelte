@@ -2,8 +2,10 @@
 	export let member;
 
 	import { getContext } from 'svelte';
+	import { page } from '$app/stores';
 	import { Heart, ArrowDown, ArrowUp } from 'lucide-svelte';
 	import { Standard as StandardButton } from '$elements/buttons';
+	import { Standard as StandardLink } from '$elements/links';
 	import MemberConnectModal from '$components/members/MemberConnectModal.svelte';
 
 	const { id: memberId } = member;
@@ -44,22 +46,36 @@
 		on:STOP_SHARING={() => stopShareWith()}
 		on:START_SHARING={() => shareWith()}></MemberConnectModal>
 {/if}
-<div class="group">
-	<StandardButton on:click={() => (showMemberConnectModal = true)}>
+{#if $page.data.user.isAuthenticated}
+	<div class="group">
+		<StandardButton on:click={() => (showMemberConnectModal = true)}>
+			<div class="flex items-center space-x-4">
+				<span class="uppercase">Connect</span>
+
+				<div class="flex text-gray-300">
+					<span class="group-hover:text-white" class:text-that-blue={isFollowing}>
+						<Heart />
+					</span>
+					<span class="group-hover:text-white" class:text-that-blue={meSharingWith}>
+						<ArrowUp />
+					</span>
+					<span class="group-hover:text-white" class:text-that-blue={sharingWithMe}>
+						<ArrowDown />
+					</span>
+				</div>
+			</div>
+		</StandardButton>
+	</div>
+{:else}
+	<StandardLink href={`/login?returnTo=/members/${member.profileSlug}`}>
 		<div class="flex items-center space-x-4">
 			<span class="uppercase">Connect</span>
 
 			<div class="flex text-gray-300">
-				<span class="group-hover:text-white" class:text-that-blue={isFollowing}>
-					<Heart />
-				</span>
-				<span class="group-hover:text-white" class:text-that-blue={meSharingWith}>
-					<ArrowUp />
-				</span>
-				<span class="group-hover:text-white" class:text-that-blue={sharingWithMe}>
-					<ArrowDown />
-				</span>
+				<Heart />
+				<ArrowUp />
+				<ArrowDown />
 			</div>
 		</div>
-	</StandardButton>
-</div>
+	</StandardLink>
+{/if}
