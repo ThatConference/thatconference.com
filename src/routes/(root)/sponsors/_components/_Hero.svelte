@@ -54,6 +54,20 @@
 								<StandardButton on:click={() => dispatch('SHOW_SHARE_SPONSOR_MODAL')}
 									>Connect With</StandardButton>
 							{/if}
+						{:else if eventId}
+							<StandardLink href={`/login?returnTo=/sponsors/${partner.slug}&eventId=${eventId}`}>
+								<span>Follow</span>
+							</StandardLink>
+							<StandardLink href={`/login?returnTo=/sponsors/${partner.slug}&eventId=${eventId}`}>
+								<span>Connect With</span>
+							</StandardLink>
+						{:else}
+							<StandardLink href={`/login?returnTo=/sponsors/${partner.slug}`}>
+								<span>Follow</span>
+							</StandardLink>
+							<StandardLink href={`/login?returnTo=/sponsors/${partner.slug}`}>
+								<span>Connect With</span>
+							</StandardLink>
 						{/if}
 					</div>
 				</div>
