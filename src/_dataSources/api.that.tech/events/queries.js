@@ -122,7 +122,7 @@ const eventFieldsFragment = `
 			...productBaseFields
 		}
 
-		sessions {
+		sessions(pageSize: 150) {
 			sessions {
 				...coreSessionFields
 				speakers {
@@ -131,7 +131,8 @@ const eventFieldsFragment = `
 			}
 		}
 
-		followers {
+		followers(pageSize: 100) {
+			cursor
 			members {
 				...memberFields
 			}
@@ -515,6 +516,24 @@ export const QUERY_EVENTS_VENUE_PRODUCTS = `
 	}
 `;
 
+export const QUERY_EVENT_FOLLOWERS = `
+	${userFragment}
+	query QUERY_EVENT_FOLLOWERS ($slug: String!, $cursor: String) {
+		events {
+			event (findBy: {slug: $slug}) {
+				get {
+					followers(pageSize: 100, cursor: $cursor) {
+						cursor 
+						members {
+							...memberFields
+						}
+					}
+				}
+			}
+		}
+	}
+`;
+
 export default (fetch) => {
 	const client = fetch ? gFetch(fetch) : gFetch();
 
@@ -679,6 +698,16 @@ export default (fetch) => {
 			});
 	}
 
+	function queryEventFollowers(eventSlug, cursor) {
+		const variables = { slug: eventSlug, cursor };
+
+		return client.query({ query: QUERY_EVENT_FOLLOWERS, variables }).then(({ data, errors }) => {
+			if (errors) log({ errors, tag: 'QUERY_EVENT_FOLLOWERS' });
+
+			return data?.events?.event?.get.followers;
+		});
+	}
+
 	return {
 		queryEvents,
 		queryEventsByCommunity,
@@ -693,6 +722,7 @@ export default (fetch) => {
 		queryActiveEventsByCommunitiesForJobs,
 		queryActiveEventsForProducts,
 		queryEventsForVenueAndProducts,
-		queryEventSpeakers
+		queryEventSpeakers,
+		queryEventFollowers
 	};
 };

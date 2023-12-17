@@ -15,17 +15,18 @@
 		.slice(0, 9);
 </script>
 
-<section class="bg-thatBlue-700 py-12 lg:py-16">
+<section class="bg-thatBlue-700 py-12 lg:py-24">
 	<div class="relative mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
 		<div class="space-y-12">
 			<div class="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-				<h2 class="text-3xl font-extrabold leading-9 tracking-tight text-white sm:text-4xl">
-					Featured Activities
+				<h2
+					class="text mb-8 mt-8 text-4xl font-bold leading-8 tracking-tight text-white sm:text-5xl sm:leading-10">
+					Session Spotlights
 				</h2>
+
 				<p class="text-xl leading-7 text-gray-300">
-					Do you have a ticket?
 					<span class="pl:2 text-that-orange hover:text-thatOrange-500">
-						<a href={`/activities/${event.slug}`}>View the full schedule.</a>
+						<a href={`schedule`}>View the full schedule.</a>
 					</span>
 				</p>
 			</div>
@@ -38,10 +39,6 @@
 						</li>
 					{/each}
 				{/if}
-
-				<!-- <li class="h-full w-full" in:fade>
-					<FeaturedActivityAdd eventId={event.id} />
-				</li> -->
 			</ul>
 
 			<div class="flex justify-end">

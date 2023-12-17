@@ -14,18 +14,25 @@
 	}
 </script>
 
-<div id="dates" class="my-24">
-	<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+<div id="dates">
+	<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="lg:grid lg:grid-cols-1 lg:items-start lg:gap-32">
 			<!-- left side -->
 			<div class="mt-8 flex flex-col space-y-12">
 				<div class="flex items-center space-x-12">
-					<div class="w-full">
+					<header class="pb-24">
+						<h3 class="font-extrabold uppercase tracking-wider text-thatRed-500">
+							A Good Scout is Always Prepared
+						</h3>
 						<h2
-							class="text-center text-2xl font-extrabold uppercase text-thatBlue-700 antialiased sm:text-left sm:text-3xl lg:text-4xl xl:text-5xl">
-							Key Dates You Need To Know
+							class="text mb-8 mt-8 text-4xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-5xl sm:leading-10">
+							Mark Your Calendar <span class="text-that-red">!important </span>
 						</h2>
-					</div>
+						<p class="mt-6 text-2xl text-gray-500">
+							THAT Conference will be here before you know it. All of our planning milestone date
+							are listed below and like any good software project, change from time to time.
+						</p>
+					</header>
 
 					<div class="hidden sm:block">
 						<img

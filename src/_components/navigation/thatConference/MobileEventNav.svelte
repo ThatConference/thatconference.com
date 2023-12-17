@@ -78,6 +78,7 @@
 					<NavLink href={buildUrl('tickets')}>Tickets</NavLink>
 					<NavLink href={buildUrl('speakers')}>Speakers</NavLink>
 					<NavLink href={buildUrl('schedule')}>Schedule</NavLink>
+					<NavLink href={buildUrl('attendees')}>Attendees</NavLink>
 					<NavLink href={buildUrl('sponsors')}>Sponsors</NavLink>
 					<NavLink href={buildAnchorLink('dates')}>Dates</NavLink>
 					<NavLink href={buildAnchorLink('faq')}>FAQ</NavLink>

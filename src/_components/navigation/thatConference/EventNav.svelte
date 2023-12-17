@@ -14,7 +14,7 @@
 </script>
 
 <div class=" bg-white py-12">
-	<div class="mx-auto flex max-w-screen-xl items-center justify-between">
+	<div class="mx-auto flex max-w-screen-2xl items-center justify-between">
 		<!-- logo -->
 		<div class="flex items-center">
 			<div class="cursor">
@@ -27,6 +27,7 @@
 			<div class="ml-8 flex space-x-4 text-lg font-bold">
 				<NavLink href={buildUrl('speakers')}>Speakers</NavLink>
 				<NavLink href={buildUrl('schedule')}>Schedule</NavLink>
+				<NavLink href={buildUrl('attendees')}>Attendees</NavLink>
 				<NavLink href={buildUrl('sponsors')}>Sponsors</NavLink>
 				<NavLink href={buildAnchorLink('dates')}>Dates</NavLink>
 				<NavLink href={buildUrl('travel')}>Travel</NavLink>

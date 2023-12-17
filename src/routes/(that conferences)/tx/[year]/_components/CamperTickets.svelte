@@ -34,12 +34,12 @@
 	}
 </script>
 
-<div id="tickets">
-	<div class="bg-thatBlue-800 px-4 pt-12 sm:px-6 lg:px-8 lg:pt-20">
+<div class="mt-48 bg-gradient-to-t from-thatBlue-400 to-thatBlue-800 px-4 sm:px-6 lg:px-8 lg:py-20">
+	<div id="tickets">
 		<div class="relative flex flex-col items-center justify-center space-y-12">
 			<p
 				class=" text-2xl font-extrabold uppercase text-white antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
-				Camper Tickets
+				Conference Tickets
 			</p>
 
 			<p class="mx-auto max-w-6xl text-center text-xl text-gray-300 sm:mt-5 sm:text-2xl">
@@ -53,94 +53,23 @@
 		</div>
 	</div>
 
-	<div class="bg-thatBlue-100 bg-opacity-25 pb-6 lg:pb-10">
-		<div class="bg-gradient-to-b from-thatBlue-800">
-			<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-				<div class="relative pt-20 lg:grid lg:grid-cols-7">
+	<div class=" pb-6 lg:pb-10">
+		<div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+			<div class="relative pt-20 lg:grid lg:grid-cols-7">
+				<div
+					class="mx-auto max-w-md lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:mx-0 lg:max-w-none">
 					<div
-						class="mx-auto max-w-md lg:col-start-1 lg:col-end-3 lg:row-start-2 lg:row-end-3 lg:mx-0 lg:max-w-none">
-						<div
-							class="flex h-full flex-col overflow-hidden rounded-lg shadow-lg lg:rounded-none lg:rounded-l-lg">
-							<div class="flex flex-1 flex-col">
-								<div class="bg-white px-6 py-10">
-									<div>
-										<h3 class="text-center text-2xl font-bold uppercase text-gray-500">
-											{eventTickets['CAMPER_NO_FOOD'].name}
-										</h3>
-										<div class="mt-4 flex items-center justify-center">
-											<span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-												<span class="mr-2 mt-2 text-4xl font-medium">$</span>
-												<span class="font-extrabold">{eventTickets['CAMPER_NO_FOOD'].price}</span>
-												<span class="ml-2 mt-2 text-xl font-medium tracking-wide text-gray-400">
-													USD
-												</span>
-											</span>
-										</div>
-									</div>
-								</div>
-								<div
-									class="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
-									<ul class="space-y-4">
-										<li class="flex items-start">
-											<div class="flex-shrink-0">
-												<span class="text-green-500"><Check /></span>
-											</div>
-											<p class="ml-3 text-base font-medium text-gray-500">
-												Full Access to All Sessions
-											</p>
-										</li>
-
-										<li class="flex items-start">
-											<div class="flex-shrink-0">
-												<span class="text-green-500"><Check /></span>
-											</div>
-											<p class="ml-3 text-base font-medium text-gray-500">
-												THAT t-shirt, badge, and swag
-											</p>
-										</li>
-										<li class="flex items-start">
-											<div class="flex-shrink-0">
-												<span class="text-red-500"><Ban /></span>
-											</div>
-											<p class="ml-3 text-base font-medium text-gray-500">Meals and Food Items</p>
-										</li>
-									</ul>
-									<div class="mt-8">
-										<div class="flex flex-col">
-											<StandardButton on:click={() => handleAddToCart('CAMPER_NO_FOOD')}>
-												Purchase
-											</StandardButton>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div
-						class="mx-auto mt-10 max-w-lg lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-4 lg:mx-0 lg:mt-0 lg:max-w-none">
-						<div class="relative rounded-lg shadow-xl">
-							<div
-								class="pointer-events-none absolute inset-0 rounded-lg border-2 border-thatOrange-400"
-								aria-hidden="true" />
-							<div class="absolute inset-x-0 top-0 translate-y-px transform">
-								<div class="flex -translate-y-1/2 transform justify-center">
-									<span
-										class="inline-flex rounded-full bg-thatOrange-400 px-4 py-1 text-sm font-bold uppercase tracking-wider text-white">
-										Best Value
-									</span>
-								</div>
-							</div>
-							<div class="rounded-t-lg bg-white px-6 pb-10 pt-12">
+						class="flex h-full flex-col overflow-hidden rounded-lg shadow-lg lg:rounded-none lg:rounded-l-lg">
+						<div class="flex flex-1 flex-col">
+							<div class="bg-white px-6 py-10">
 								<div>
 									<h3 class="text-center text-2xl font-bold uppercase text-gray-500">
-										{eventTickets['CAMPER'].name}
+										{eventTickets['CAMPER_NO_FOOD'].name}
 									</h3>
 									<div class="mt-4 flex items-center justify-center">
 										<span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-											<span class="mr-2 mt-2 text-4xl font-medium"> $ </span>
-											<span class="font-extrabold">
-												{eventTickets['CAMPER'].price}
-											</span>
+											<span class="mr-2 mt-2 text-4xl font-medium">$</span>
+											<span class="font-extrabold">{eventTickets['CAMPER_NO_FOOD'].price}</span>
 											<span class="ml-2 mt-2 text-xl font-medium tracking-wide text-gray-400">
 												USD
 											</span>
@@ -149,23 +78,14 @@
 								</div>
 							</div>
 							<div
-								class="rounded-b-lg border-t-2 border-gray-100 bg-gray-50 px-6 pb-8 pt-10 sm:px-10 sm:py-10">
+								class="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
 								<ul class="space-y-4">
 									<li class="flex items-start">
 										<div class="flex-shrink-0">
 											<span class="text-green-500"><Check /></span>
 										</div>
 										<p class="ml-3 text-base font-medium text-gray-500">
-											Full access to all Sessions
-										</p>
-									</li>
-
-									<li class="flex items-start">
-										<div class="flex-shrink-0">
-											<span class="text-green-500"><Check /></span>
-										</div>
-										<p class="ml-3 text-base font-medium text-gray-500">
-											Daily Breakfast, Lunch and Beverages
+											Full Access to All Sessions
 										</p>
 									</li>
 
@@ -179,82 +99,160 @@
 									</li>
 									<li class="flex items-start">
 										<div class="flex-shrink-0">
-											<span class="text-green-500"><Check /></span>
+											<span class="text-red-500"><Ban /></span>
 										</div>
-										<p class="ml-3 text-base font-medium text-gray-500">
-											Welcome Reception and Happy Hour
-										</p>
-									</li>
-									<li class="flex items-start">
-										<div class="flex-shrink-0">
-											<span class="text-green-500"><Check /></span>
-										</div>
-										<p class="ml-3 text-base font-medium text-gray-500">BBQ</p>
+										<p class="ml-3 text-base font-medium text-gray-500">Meals and Food Items</p>
 									</li>
 								</ul>
-								<div class="mt-10">
+								<div class="mt-8">
 									<div class="flex flex-col">
-										<HighlightButton on:click={() => handleAddToCart('CAMPER')}>
+										<StandardButton on:click={() => handleAddToCart('CAMPER_NO_FOOD')}>
 											Purchase
-										</HighlightButton>
+										</StandardButton>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div
-						class="mx-auto mt-10 max-w-md lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:row-end-3 lg:m-0 lg:max-w-none">
+				</div>
+				<div
+					class="mx-auto mt-10 max-w-lg lg:col-start-3 lg:col-end-6 lg:row-start-1 lg:row-end-4 lg:mx-0 lg:mt-0 lg:max-w-none">
+					<div class="relative rounded-lg shadow-xl">
 						<div
-							class="flex h-full flex-col overflow-hidden rounded-lg shadow-lg lg:rounded-none lg:rounded-r-lg">
-							<div class="flex flex-1 flex-col">
-								<div class="bg-white px-6 py-10">
-									<div>
-										<h3 class="text-center text-2xl font-bold uppercase text-gray-500">
-											Family Campers
-										</h3>
-										<div class="mt-4 flex items-center justify-center">
-											<span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
-												<span class="mr-2 mt-2 text-4xl font-medium">$</span>
-												<span class="font-extrabold"> 99 </span>
-												<span class="ml-2 mt-2 text-xl font-medium tracking-wide text-gray-400">
-													USD
-												</span>
+							class="pointer-events-none absolute inset-0 rounded-lg border-2 border-thatOrange-400"
+							aria-hidden="true" />
+						<div class="absolute inset-x-0 top-0 translate-y-px transform">
+							<div class="flex -translate-y-1/2 transform justify-center">
+								<span
+									class="inline-flex rounded-full bg-thatOrange-400 px-4 py-1 text-sm font-bold uppercase tracking-wider text-white">
+									Best Value
+								</span>
+							</div>
+						</div>
+						<div class="rounded-t-lg bg-white px-6 pb-10 pt-12">
+							<div>
+								<h3 class="text-center text-2xl font-bold uppercase text-gray-500">
+									{eventTickets['CAMPER'].name}
+								</h3>
+								<div class="mt-4 flex items-center justify-center">
+									<span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
+										<span class="mr-2 mt-2 text-4xl font-medium"> $ </span>
+										<span class="font-extrabold">
+											{eventTickets['CAMPER'].price}
+										</span>
+										<span class="ml-2 mt-2 text-xl font-medium tracking-wide text-gray-400">
+											USD
+										</span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div
+							class="rounded-b-lg border-t-2 border-gray-100 bg-gray-50 px-6 pb-8 pt-10 sm:px-10 sm:py-10">
+							<ul class="space-y-4">
+								<li class="flex items-start">
+									<div class="flex-shrink-0">
+										<span class="text-green-500"><Check /></span>
+									</div>
+									<p class="ml-3 text-base font-medium text-gray-500">
+										Full access to all Sessions
+									</p>
+								</li>
+
+								<li class="flex items-start">
+									<div class="flex-shrink-0">
+										<span class="text-green-500"><Check /></span>
+									</div>
+									<p class="ml-3 text-base font-medium text-gray-500">
+										Daily Breakfast, Lunch and Beverages
+									</p>
+								</li>
+
+								<li class="flex items-start">
+									<div class="flex-shrink-0">
+										<span class="text-green-500"><Check /></span>
+									</div>
+									<p class="ml-3 text-base font-medium text-gray-500">
+										THAT t-shirt, badge, and swag
+									</p>
+								</li>
+								<li class="flex items-start">
+									<div class="flex-shrink-0">
+										<span class="text-green-500"><Check /></span>
+									</div>
+									<p class="ml-3 text-base font-medium text-gray-500">
+										Welcome Reception and Happy Hour
+									</p>
+								</li>
+								<li class="flex items-start">
+									<div class="flex-shrink-0">
+										<span class="text-green-500"><Check /></span>
+									</div>
+									<p class="ml-3 text-base font-medium text-gray-500">BBQ</p>
+								</li>
+							</ul>
+							<div class="mt-10">
+								<div class="flex flex-col">
+									<HighlightButton on:click={() => handleAddToCart('CAMPER')}>
+										Purchase
+									</HighlightButton>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div
+					class="mx-auto mt-10 max-w-md lg:col-start-6 lg:col-end-8 lg:row-start-2 lg:row-end-3 lg:m-0 lg:max-w-none">
+					<div
+						class="flex h-full flex-col overflow-hidden rounded-lg shadow-lg lg:rounded-none lg:rounded-r-lg">
+						<div class="flex flex-1 flex-col">
+							<div class="bg-white px-6 py-10">
+								<div>
+									<h3 class="text-center text-2xl font-bold uppercase text-gray-500">
+										Family Campers
+									</h3>
+									<div class="mt-4 flex items-center justify-center">
+										<span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
+											<span class="mr-2 mt-2 text-4xl font-medium">$</span>
+											<span class="font-extrabold"> 99 </span>
+											<span class="ml-2 mt-2 text-xl font-medium tracking-wide text-gray-400">
+												USD
 											</span>
-										</div>
+										</span>
 									</div>
 								</div>
-								<div
-									class="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
-									<ul class="space-y-4">
-										<li class="flex items-start">
-											<div class="flex-shrink-0">
-												<span class="text-green-500"><Check /></span>
-											</div>
-											<p class="ml-3 text-base font-medium text-gray-500">Family Activities</p>
-										</li>
-
-										<li class="flex items-start">
-											<div class="flex-shrink-0">
-												<span class="text-green-500"><Check /></span>
-											</div>
-											<p class="ml-3 text-base font-medium text-gray-500">BBQ and Happy Hour</p>
-										</li>
-
-										<li class="flex items-start">
-											<div class="flex-shrink-0">
-												<span class="text-green-500"><Check /></span>
-											</div>
-											<p class="ml-3 text-base font-medium text-gray-500">THAT t-shirt</p>
-										</li>
-									</ul>
-									<div class="mt-8">
-										<div class="flex flex-col">
-											<ShellButton>
-												<a data-sveltekit-prefetch class="py-2" href="tickets#families">
-													More Information
-												</a>
-											</ShellButton>
+							</div>
+							<div
+								class="flex flex-1 flex-col justify-between border-t-2 border-gray-100 bg-gray-50 p-6 sm:p-10 lg:p-6 xl:p-10">
+								<ul class="space-y-4">
+									<li class="flex items-start">
+										<div class="flex-shrink-0">
+											<span class="text-green-500"><Check /></span>
 										</div>
+										<p class="ml-3 text-base font-medium text-gray-500">Family Activities</p>
+									</li>
+
+									<li class="flex items-start">
+										<div class="flex-shrink-0">
+											<span class="text-green-500"><Check /></span>
+										</div>
+										<p class="ml-3 text-base font-medium text-gray-500">BBQ and Happy Hour</p>
+									</li>
+
+									<li class="flex items-start">
+										<div class="flex-shrink-0">
+											<span class="text-green-500"><Check /></span>
+										</div>
+										<p class="ml-3 text-base font-medium text-gray-500">THAT t-shirt</p>
+									</li>
+								</ul>
+								<div class="mt-8">
+									<div class="flex flex-col">
+										<ShellButton>
+											<a data-sveltekit-prefetch class="py-2" href="tickets#families">
+												More Information
+											</a>
+										</ShellButton>
 									</div>
 								</div>
 							</div>

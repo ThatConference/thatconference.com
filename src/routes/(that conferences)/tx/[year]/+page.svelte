@@ -4,18 +4,17 @@
 	import seoMetaTags from '$lib/seo/metaTags';
 	import Seo from '$components/Seo.svelte';
 
-	import { Highlight as HighlightLink } from '$elements/links';
 	import NewsletterWide from '$components/newsletter/Wide.svelte';
 	import UpNextEvent from '$components/activities/UpNextEvent.svelte';
 	import CallForSpeakers from '$components/cta/_CallForSpeakers.svelte';
 
 	// event level
 	import Speakers from '../../_components/speakers/Speakers.svelte';
-
-	//layout level
+	import Attendees from '../../_components/Attendees.svelte';
 	import Partners from '../../_components/Partners.svelte';
 	import FAQ from '../../_components/FAQ.svelte';
 	import Dates from '../../_components/Dates.svelte';
+	import Keynoters from '../../_components/Keynoters.svelte';
 
 	// component level
 	import Gallery from './_components/Gallery.svelte';
@@ -24,7 +23,7 @@
 	import What from './_components/What.svelte';
 	import CamperTickets from './_components/CamperTickets.svelte';
 
-	let { event } = data;
+	let { event, keynoters } = data;
 
 	const metaTags = ((title = `${event.name} - THAT`) => ({
 		title,
@@ -48,50 +47,57 @@
 
 	<section>
 		<WhatIs {event} />
+		<div class="my-48">
+			<What {event} />
+		</div>
 	</section>
 
-	<section id="tickets">
+	<section class="my-48" id="tickets">
 		<CamperTickets {event} />
 	</section>
 
-	<section>
-		<What {event} />
-	</section>
-
-	<section>
+	<section class="my-48">
 		<Gallery />
 	</section>
 
-	{#if event.isCallForSpeakersOpen === true}
-		<section id="upnext">
-			<CallForSpeakers {event} />
-		</section>
-	{:else}
-		<section>
-			<Speakers {event} />
-		</section>
-		<section id="upnext">
-			<UpNextEvent {event}>
-				<div slot="action">
-					<HighlightLink href={`schedule`}>View the entire schedule</HighlightLink>
-				</div>
-			</UpNextEvent>
+	<section class="my-48">
+		<Keynoters {keynoters} />
+	</section>
+
+	<section class="my-48">
+		{#if event.isCallForSpeakersOpen === true}
+			<div id="upnext">
+				<CallForSpeakers {event} />
+			</div>
+		{:else}
+			<div>
+				<Speakers {event} />
+			</div>
+			<div id="upnext">
+				<UpNextEvent {event} />
+			</div>
+		{/if}
+	</section>
+
+	{#if event.followers.members.length > 0}
+		<section class="my-48">
+			<Attendees followers={event.followers.members} />
 		</section>
 	{/if}
 
-	<!--dates-->
-	<section>
+	<section class="my-48">
 		<Dates milestones={event.milestones} />
 	</section>
 
-	<section>
+	<section class="my-48">
 		<NewsletterWide />
 	</section>
 
-	<section id="sponsors">
+	<section class="my-48" id="sponsors">
 		<Partners {event} />
 	</section>
 
-	<section id="faq" />
-	<FAQ />
+	<section id="faq">
+		<FAQ />
+	</section>
 </div>
