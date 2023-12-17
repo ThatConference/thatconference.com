@@ -4,7 +4,7 @@
 	import { Action as ActionLink } from '$elements/links';
 </script>
 
-<div class="relative mx-auto mb-24 mt-48 max-w-screen-xl">
+<div class="relative mx-auto mt-48 max-w-screen-xl">
 	<div class="flex grid-cols-2 flex-col gap-12 lg:grid">
 		<div class="place-self-center p-4 lg:p-0">
 			<div class="absolute -top-24 left-1/4 hidden lg:block xl:left-3/4">

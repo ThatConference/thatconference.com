@@ -57,10 +57,10 @@
 			<div class="relative overflow-hidden">
 				<div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
 					<div class="my-12 flex flex-col items-start sm:items-center">
-						<h1
+						<h2
 							class="text-2xl font-extrabold uppercase text-thatBlue-700 antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
 							Our Featured Camp Sponsors
-						</h1>
+						</h2>
 					</div>
 
 					<div class="flex grid-cols-6 flex-col gap-8 sm:grid">

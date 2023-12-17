@@ -20,16 +20,17 @@
 	const profileImage = host.profileImage ? host.profileImage : config.defaultProfileImage;
 
 	const userProfileImage = profileImage || config.defaultProfileImage;
-	const srcset = buildImageSrc(userProfileImage, ['128', '500']);
+	const srcset = buildImageSrc(userProfileImage, ['160', '224']);
 </script>
 
 <a data-sveltekit-prefetch href="/activities/{id}">
 	<div
 		class="h-full w-full transform rounded-lg bg-that-blue px-6 py-10 text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-thatBlue-400 xl:px-10 xl:text-left">
 		<div class="space-y-6 xl:space-y-10">
-			<div>
+			<div
+				class="mx-auto h-40 w-40 rounded-full bg-gradient-to-t from-thatRed-500 to-thatOrange-500 xl:h-56 xl:w-56">
 				<img
-					class="lazyload mx-auto h-40 w-40 rounded-full xl:h-56 xl:w-56"
+					class="lazyload h-40 w-40 rounded-full p-1 xl:h-56 xl:w-56"
 					data-sizes="auto"
 					data-src={srcset.src}
 					data-srcset={srcset.srcset}

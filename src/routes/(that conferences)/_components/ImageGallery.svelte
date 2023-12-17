@@ -35,7 +35,7 @@
 	}
 </script>
 
-<div id="gallery" class="relative my-24 overflow-hidden">
+<div id="gallery" class="relative overflow-hidden">
 	<div class="grid grid-cols-5 gap-2 text-white">
 		{#each displayItems as item, i}
 			{#if i % 2 === 0}
@@ -43,7 +43,7 @@
 					<div class="h-full w-full duration-500 ease-in-out hover:scale-105">
 						<a href={item.url} target="_blank" rel="external noreferrer">
 							<img
-								class="lazyload h-full w-full object-none object-center blur-sm "
+								class="lazyload h-full w-full object-none object-center blur-sm"
 								src={item.src}
 								alt=""
 								class:rounded-r-2xl={i === 0}

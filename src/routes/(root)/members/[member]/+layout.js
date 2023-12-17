@@ -17,8 +17,8 @@ export async function load({ params, parent, fetch }) {
 		}
 	}
 	let queries = getQueries(member);
-
 	let [profile, followers, myFollowers = []] = await Promise.all(queries);
+
 	if (!profile) throw error(404);
 
 	return {

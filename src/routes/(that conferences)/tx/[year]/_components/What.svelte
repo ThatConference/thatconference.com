@@ -35,12 +35,12 @@
 	];
 </script>
 
-<div class="overflow-hidden py-16 lg:py-24">
-	<div class="relative mx-auto mt-12 flex max-w-7xl flex-col space-y-8 px-4 sm:px-6 lg:px-8">
-		<h2
+<div class="mt-48 overflow-hidden">
+	<div class="relative mx-auto flex max-w-7xl flex-col space-y-8 px-4 sm:px-6 lg:px-8">
+		<!-- <h2
 			class="py-12 text-center text-2xl font-extrabold uppercase text-thatBlue-700 antialiased sm:text-3xl lg:text-4xl xl:text-5xl">
 			Here's What You Can Expect At That!
-		</h2>
+		</h2> -->
 
 		<div class="grid grid-cols-2 gap-6 lg:grid-cols-4 lg:gap-12">
 			{#each expectations as e}
