@@ -12,7 +12,7 @@
 </script>
 
 <Hero imagePath="/images/heros/attendees.jpg">
-	<div class="flex flex-col justify-between">
+	<div class="flex flex-col justify-between px-4">
 		<div class="flex max-w-3xl flex-col space-y-8">
 			<h2 class="text-2xl font-bold uppercase tracking-wider text-white antialiased">
 				<span class="text-green-500">{`${venue.city}, ${venue.state}`}</span> / {dayjs(
