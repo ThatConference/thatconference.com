@@ -75,14 +75,22 @@
 		<div class="mx-4 mt-6">
 			<div class=" border-t">
 				<div class="flex w-full flex-col space-y-2 py-6 text-base font-medium">
-					<NavLink href={buildUrl('tickets')}>Tickets</NavLink>
-					<NavLink href={buildUrl('speakers')}>Speakers</NavLink>
-					<NavLink href={buildUrl('schedule')}>Schedule</NavLink>
-					<NavLink href={buildUrl('attendees')}>Attendees</NavLink>
-					<NavLink href={buildUrl('sponsors')}>Sponsors</NavLink>
-					<NavLink href={buildAnchorLink('dates')}>Dates</NavLink>
-					<NavLink href={buildAnchorLink('faq')}>FAQ</NavLink>
-					<NavLink href={buildUrl('travel')}>Travel</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildUrl('tickets')}
+						>Tickets</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildUrl('speakers')}
+						>Speakers</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildUrl('schedule')}
+						>Schedule</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildUrl('attendees')}
+						>Attendees</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildUrl('sponsors')}
+						>Sponsors</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildAnchorLink('dates')}
+						>Dates</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildAnchorLink('faq')}
+						>FAQ</NavLink>
+					<NavLink on:click={() => dispatch('show', true)} href={buildUrl('travel')}
+						>Travel</NavLink>
 				</div>
 
 				<div class="py-6">
