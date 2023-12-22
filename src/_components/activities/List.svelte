@@ -16,6 +16,7 @@
 	import timezone from 'dayjs/plugin/timezone.js';
 	import advancedFormat from 'dayjs/plugin/advancedFormat.js';
 
+	import { Breakpoints } from '$components/breakpoints';
 	import Card from './Card.svelte';
 	import KeynoteCard from './KeynoteCard.svelte';
 	import FilterSlideOver from './FilterSlideOver.svelte';
@@ -56,6 +57,7 @@
 	let workshop = true;
 	let openSpace = true;
 	let dense = false;
+	let currentBreakpoint;
 
 	$: {
 		const tagsSet = new Set();
@@ -200,6 +202,8 @@
 	}
 </script>
 
+<Breakpoints bind:value={currentBreakpoint} />
+
 <div class="relative">
 	<div class="sticky top-0 z-30">
 		<div class="absolute right-0 top-0 flex content-center border-gray-200 pt-4">
@@ -257,16 +261,19 @@
 				{#if day.dayOfYear !== 'Invalid Date'}
 					<h2
 						id={dayjs(day.dayOfYear).format('dddd').toLowerCase()}
-						class="sticky top-0 z-20 -ml-5 -mr-5 mb-7 whitespace-nowrap
-                 bg-gray-100 pl-5 pt-4 text-xl
-                 font-extrabold leading-9 tracking-tight text-thatBlue-800 sm:-ml-6 sm:-mr-6 sm:mb-9 sm:pl-6 sm:leading-10 md:text-4xl">
-						{dayjs(day.dayOfYear).format("dddd, MMMM D, 'YY")}
+						class="text sticky top-0 z-20 mb-8 mt-8
+									whitespace-nowrap
+										bg-gray-100 py-4 text-3xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-4xl sm:leading-10 lg:text-5xl">
+						{#if ['xs', 'sm', 'md'].includes(currentBreakpoint)}
+							{dayjs(day.dayOfYear).format('dddd')}
+						{:else}
+							{dayjs(day.dayOfYear).format("dddd, MMMM Do, 'YY")}
+						{/if}
 					</h2>
 				{:else}
 					<h2
-						class="sticky top-0 z-20 -ml-5 -mr-5 mb-7 whitespace-nowrap
-                 bg-gray-100 pl-5 pt-4 text-xl
-                 font-extrabold leading-9 tracking-tight text-thatBlue-800 sm:-ml-6 sm:-mr-6 sm:mb-9 sm:pl-6 sm:leading-10 md:text-4xl">
+						class="text sticky top-0 z-20 mb-8 mt-8 whitespace-nowrap
+									bg-gray-100 py-4 text-3xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-4xl sm:leading-10 lg:text-5xl">
 						Unscheduled
 					</h2>
 				{/if}
@@ -274,9 +281,9 @@
 				{#each day.timeSlots as ts}
 					<div class="relative">
 						<h2
-							class="sm:top-13 sticky top-11 z-10 -ml-5 -mr-5 whitespace-nowrap bg-gray-100
-                     pl-5 pt-2 text-xl font-extrabold
-                     leading-9 tracking-tight text-thatOrange-400 sm:-ml-6 sm:-mr-6 sm:pl-6 sm:leading-10 md:text-4xl">
+							class="sticky top-16 z-10 whitespace-nowrap bg-gray-100 pb-6 pt-2 text-3xl
+                     font-bold leading-9
+                     tracking-tight text-thatOrange-400 sm:text-4xl sm:leading-10 lg:top-20 lg:text-5xl">
 							{#if !dayjs(ts.timeSlot).isValid()}
 								Unscheduled
 							{:else}
