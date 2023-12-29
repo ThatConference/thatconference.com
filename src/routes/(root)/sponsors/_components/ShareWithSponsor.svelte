@@ -2,7 +2,6 @@
 	export let partner;
 	export let eventId;
 
-	console.log('🦛 partner', partner);
 	import { Standard as StandardButton } from '$elements/buttons';
 	import { Action as ActionModal } from '$elements/modals';
 	import { createEventDispatcher } from 'svelte';

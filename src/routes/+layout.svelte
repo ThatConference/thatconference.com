@@ -119,7 +119,6 @@
 				id
 			});
 
-			console.log('identify');
 			posthog.identify(id, {
 				email,
 				firstName,
