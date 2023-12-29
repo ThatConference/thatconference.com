@@ -1,11 +1,19 @@
-import { fail } from '@sveltejs/kit';
+import { fail, error } from '@sveltejs/kit';
 import { superValidate } from 'sveltekit-superforms/server';
 import { redirect, setFlash } from 'sveltekit-flash-message/server';
 
 import eventSchema from '$lib/formSchemas/event.js';
 import eventMutations from '$dataSources/api.that.tech/admin/events/mutations.js';
 
-export const load = async () => {
+import isInRole from '$lib/isInRole';
+
+export const load = async ({ locals }) => {
+	const session = await locals.getSession();
+
+	if (!isInRole({ userRoles: session.user?.permissions, requiredRoles: ['admin'] })) {
+		throw error(401, 'Required Administrative Privileges');
+	}
+
 	const form = await superValidate(eventSchema);
 
 	return {

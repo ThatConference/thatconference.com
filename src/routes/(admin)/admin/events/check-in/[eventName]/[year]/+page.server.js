@@ -2,14 +2,17 @@ import { error } from '@sveltejs/kit';
 import lodash from 'lodash';
 import checkinQueryApi from '$dataSources/api.that.tech/checkin/queries';
 
+import isInRole from '$lib/isInRole';
+
 const { sortBy } = lodash;
 
 export async function load({ params, fetch, locals }) {
 	const session = await locals.getSession();
-	const permissions = session?.user?.permissions ?? [];
-	if (!permissions.includes('volunteer')) {
-		throw error(401, 'Unauthorized');
+
+	if (!isInRole({ userRoles: session.user?.permissions, requiredRoles: ['admin', 'volunteer'] })) {
+		throw error(401, 'Required Privileges Not Met');
 	}
+
 	const { eventName, year } = params;
 	const eventSlug = `${eventName}/${year}`;
 

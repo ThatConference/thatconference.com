@@ -6,7 +6,15 @@ import eventQueries from '$dataSources/api.that.tech/admin/events/queries.js';
 import eventSchema from '$lib/formSchemas/event.js';
 import eventMutations from '$dataSources/api.that.tech/admin/events/mutations.js';
 
-export const load = async ({ params, fetch }) => {
+import isInRole from '$lib/isInRole';
+
+export const load = async ({ params, fetch, locals }) => {
+	const session = await locals.getSession();
+
+	if (!isInRole({ userRoles: session.user?.permissions, requiredRoles: ['admin'] })) {
+		throw error(401, 'Required Administrative Privileges');
+	}
+
 	const { id } = params;
 
 	const { getEventById } = eventQueries(fetch);

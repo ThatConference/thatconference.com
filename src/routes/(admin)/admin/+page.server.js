@@ -1,19 +1,15 @@
-/* This empty page is intentional
- * having this +page.server page here forces the hooks.server handler to execute
- * regardless if page.svelte is fully loaded or not
- * https://github.com/sveltejs/kit/issues/6315
- */
+import { redirect, error } from '@sveltejs/kit';
 
-import { error, redirect } from '@sveltejs/kit';
+import isInRole from '$lib/isInRole';
 
 export async function load({ locals, url }) {
 	const session = await locals.getSession();
 
-	if (!session) {
-		redirect(303, `/login-redirect?returnTo=${url.pathname}`);
+	if (!isInRole({ userRoles: session.user?.permissions, requiredRoles: ['admin', 'volunteer'] })) {
+		throw error(401, 'Required Privileges Not Met');
 	}
 
-	if (!session.user?.permissions.includes('admin')) {
-		throw error(401, 'requires admin');
+	if (!session) {
+		redirect(303, `/login-redirect?returnTo=${url.pathname}`);
 	}
 }
