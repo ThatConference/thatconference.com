@@ -26,8 +26,8 @@
 		"format": "prettier --write ./src",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"build:sitemap": "npx sitemap-generator-cli https://thatconference.com --last-mod --change-freq weekly --filepath ./static/sitemap.xml --priority-map 1.0",
-		"validate": "concurrently npm:lint npm:check"
+		"validate:test": "vitest run",
+		"validate": "concurrently -g npm:lint npm:check npm:validate:test"
 	},
 	"devDependencies": {
 		"@auth/core": "^0.19.0",
