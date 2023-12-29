@@ -116,7 +116,7 @@
 				type="button"
 				on:click={() => handleTicketSelection(key)}
 				disabled={ticket.isSpeakerTicket}
-				class="w-full transform text-left transition duration-500 ease-in-out "
+				class="w-full transform text-left transition duration-500 ease-in-out"
 				class:hover:scale-105={!ticket.isSpeakerTicket}
 				class:cursor-default={ticket.isSpeakerTicket}>
 				<div class="mt-4">

@@ -92,7 +92,7 @@ function createServices() {
 								name: event.eventDetails.name,
 								slug: event.eventDetails.slug,
 								type: event.eventDetails.type
-						  }
+							}
 						: context.eventDetails,
 				eventId: (context, event) => context.eventId || event.eventId,
 				productId: (context, event) => context.productId || event.productId,
@@ -102,7 +102,7 @@ function createServices() {
 								name: event.productDetails.name,
 								eventActivities: event.productDetails.eventActivities,
 								uiReference: event.productDetails.uiReference
-						  }
+							}
 						: context.productDetails
 			}),
 

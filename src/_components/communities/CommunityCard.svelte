@@ -3,7 +3,7 @@
 </script>
 
 <span class="relative flex">
-	<img class="lazyload mx-auto max-h-32 " src={community.logo} alt={community.name} />
+	<img class="lazyload mx-auto max-h-32" src={community.logo} alt={community.name} />
 </span>
 
 <h3 class="text-md mt-4 font-bold uppercase leading-5 tracking-tight text-gray-500">

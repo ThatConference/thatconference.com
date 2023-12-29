@@ -139,7 +139,7 @@
 		</div>
 
 		<!-- lg+ -->
-		<div class="hidden rounded-lg bg-white py-16 shadow-lg sm:px-6 sm:py-20 lg:block lg:px-8 ">
+		<div class="hidden rounded-lg bg-white py-16 shadow-lg sm:px-6 sm:py-20 lg:block lg:px-8">
 			<table class="h-px w-full table-fixed">
 				<caption class="sr-only">Pricing plan comparison</caption>
 
@@ -165,7 +165,7 @@
 
 						{#each ticketBreakdown as ticket}
 							<td class="h-full px-6 py-8 align-top">
-								<div class="flex h-full flex-col ">
+								<div class="flex h-full flex-col">
 									<div class="mt-4 flex items-center">
 										<span class="flex items-start px-3 text-6xl tracking-tight text-gray-900">
 											<span class="mr-2 mt-2 text-4xl font-medium">$</span>

@@ -112,7 +112,7 @@
 						selectedFilterTerms.some((tag) =>
 							activity.communities.some((c) => c.toLowerCase() === tag.replace('@', ''))
 						)
-			  )
+				)
 			: activitiesLocationCategoryFiltered;
 
 	$: sorted = _(activitiesTaggedFiltered)

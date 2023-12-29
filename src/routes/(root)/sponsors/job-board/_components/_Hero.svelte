@@ -7,7 +7,7 @@
 	</h2>
 	<p
 		class="mt-3 text-base text-gray-500 sm:mx-auto sm:mt-5
-			sm:max-w-5xl sm:text-lg  
+			sm:max-w-5xl sm:text-lg
 			md:mt-5 md:text-xl
 			lg:mx-0">
 		THAT Conference is grateful for the invaluable support and partnership provided by our sponsors,

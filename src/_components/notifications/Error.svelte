@@ -26,9 +26,9 @@
 					<div class="order-2 flex-shrink-0 sm:order-3 sm:ml-2">
 						<button
 							type="button"
-							class="-mr-1 flex rounded-md p-2 
+							class="-mr-1 flex rounded-md p-2
               transition
-              duration-150 ease-in-out 
+              duration-150 ease-in-out
               hover:bg-thatBlue-500 focus:bg-thatBlue-500 focus:outline-none"
 							aria-label="Dismiss"
 							on:click={() => (dismissed = !dismissed)}>
