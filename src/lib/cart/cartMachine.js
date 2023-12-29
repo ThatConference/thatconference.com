@@ -139,7 +139,7 @@ function createServices() {
 								logo: event.eventDetails.logo,
 								name: event.eventDetails.name,
 								slug: event.eventDetails.slug
-						  }
+							}
 						: context.eventDetails,
 				eventId: (context, event) => context.eventId || event.eventId,
 				productTypes: (context, event) => [...context.productTypes, event.productType],

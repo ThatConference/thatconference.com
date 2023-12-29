@@ -7,7 +7,7 @@
 
 <div>
 	<div
-		class="fixed inset-0 z-50 overflow-y-auto overscroll-none pt-20 "
+		class="fixed inset-0 z-50 overflow-y-auto overscroll-none pt-20"
 		aria-labelledby="modal-title"
 		role="dialog"
 		aria-modal="true">

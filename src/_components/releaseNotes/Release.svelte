@@ -14,23 +14,23 @@
 
 {#await getRelease then release}
 	<div class="relative px-4 sm:px-6 lg:px-8">
-		<div class="text-lg max-w-prose mx-auto mb-6">
+		<div class="mx-auto mb-6 max-w-prose text-lg">
 			<p
-				class="text-base text-center leading-6 text-indigo-600 font-semibold
-          tracking-wide uppercase">
+				class="text-center text-base font-semibold uppercase leading-6
+          tracking-wide text-indigo-600">
 				{release.versionNumber}
 			</p>
 			<h1
-				class="mt-2 mb-8 text-3xl text-center leading-8 font-extrabold
+				class="mb-8 mt-2 text-center text-3xl font-extrabold leading-8
           tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
 				{release.date}
 			</h1>
-			<p class="text-xl text-gray-500 leading-8">{release.notes}</p>
+			<p class="text-xl leading-8 text-gray-500">{release.notes}</p>
 		</div>
-		<div class="max-w-prose mx-auto">
+		<div class="mx-auto max-w-prose">
 			<h1
-				class="mt-2 mb-8 text-3xl sm:text-lg leading-8 font-extrabold
-          tracking-tight text-gray-900">
+				class="mb-8 mt-2 text-3xl font-extrabold leading-8 tracking-tight
+          text-gray-900 sm:text-lg">
 				Major items included:
 			</h1>
 			<div class="mx-auto">
@@ -38,8 +38,8 @@
 					{#each release.features as f, i (i)}
 						<li>
 							<div
-								class="flex space-x-3 items-center hover:text-that-blue
-                  cursor-pointer pb-2">
+								class="flex cursor-pointer items-center space-x-3
+                  pb-2 hover:text-that-blue">
 								<div>
 									<Icon data={externalLink} class="h-4 w-4" />
 								</div>

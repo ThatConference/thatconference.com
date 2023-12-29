@@ -15,7 +15,7 @@
 </script>
 
 <div id="dates" class="my-24">
-	<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ">
+	<div class="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
 		<div class="lg:grid lg:grid-cols-1 lg:items-start lg:gap-32">
 			<!-- left side -->
 			<div class="mt-8 flex flex-col space-y-12">

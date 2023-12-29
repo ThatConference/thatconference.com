@@ -9,12 +9,12 @@
 </script>
 
 <div class="mt-12">
-	<div class="flex flex-col space-y-6 ">
+	<div class="flex flex-col space-y-6">
 		<div class="shado rounded-lg bg-gray-200" class:bg-white={!disabled}>
 			<div class="divide-y divide-gray-200">
 				<div class="flex items-center space-x-12 px-4 py-4 sm:px-6">
 					<div class="flex-grow">
-						<div class="flex flex-col space-x-4 space-y-4 ">
+						<div class="flex flex-col space-x-4 space-y-4">
 							<div class="flex justify-between">
 								<div>
 									<p class="text-xl font-bold leading-6 text-thatBlue-500">{title}</p>

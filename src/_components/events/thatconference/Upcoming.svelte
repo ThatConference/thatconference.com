@@ -7,7 +7,7 @@
 	import Trees from '$elements/svgs/Trees.svelte';
 </script>
 
-<div class="relative overflow-hidden ">
+<div class="relative overflow-hidden">
 	<div class="-mt-32 flex translate-y-32 flex-col items-center">
 		<Trees classes="h-64 w-64 text-thatRed-500" />
 	</div>

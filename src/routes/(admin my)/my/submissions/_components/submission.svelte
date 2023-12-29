@@ -88,7 +88,7 @@
 					<ShellButton>
 						<a
 							href={`/activities/edit/${activity.id}`}
-							class="w-full px-8 py-1 text-sm font-medium leading-5 md:px-10 ">
+							class="w-full px-8 py-1 text-sm font-medium leading-5 md:px-10">
 							<span>
 								<Icon data={pencilSquareO} class="-ml-1 mr-2 h-4 w-4" />
 							</span>
@@ -98,7 +98,7 @@
 					<ShellButton>
 						<a
 							href={`/activities/clone/?id=${activity.id}`}
-							class="w-full px-8 py-1 text-sm font-medium leading-5 md:px-10 ">
+							class="w-full px-8 py-1 text-sm font-medium leading-5 md:px-10">
 							<span>
 								<Icon data={clone} class="-ml-1 mr-2 h-4 w-4" />
 							</span>
