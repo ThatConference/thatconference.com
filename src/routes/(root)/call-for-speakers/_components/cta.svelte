@@ -29,13 +29,13 @@
 		<div class="mt-8 flex lg:mt-0 lg:flex-shrink-0">
 			<div class="inline-flex rounded-md shadow">
 				<a
-					href={`/activities/create/?event=${event.id}`}
+					href={`https://that.us/activities/create/?event=${event.id}`}
 					class="rounded-md border-2 border-transparent bg-thatOrange-400 px-8 py-3
             text-base font-medium leading-6 text-white shadow
             transition duration-150
             ease-in-out hover:bg-thatOrange-500
             focus:border-thatOrange-700 focus:outline-none focus:ring-that-orange md:px-10 md:py-4 md:text-lg">
-					Get Started
+					Submit Abstracts
 				</a>
 			</div>
 		</div>

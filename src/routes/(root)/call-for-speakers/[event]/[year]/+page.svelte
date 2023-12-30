@@ -73,8 +73,8 @@
 				<div class="flex justify-center space-x-4 pt-12">
 					{#if showBecomeCounselorButt}
 						<div class="flex-none">
-							<StandardLink href={`/activities/create/?event=${event.id}`}>
-								Become a Counselor
+							<StandardLink href={`https://that.us/activities/create/?event=${event.id}`}>
+								Submit Abstracts
 							</StandardLink>
 						</div>
 					{/if}
