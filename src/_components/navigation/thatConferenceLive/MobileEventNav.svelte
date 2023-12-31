@@ -29,7 +29,7 @@
 		<!-- logo -->
 		<div class="cursor">
 			<a href={`/${event.slug}`}>
-				<img class="h-16" src="/images/ThatConferenceLogo.svg" alt="THAT Logo" />
+				<img class="h-16" src="/images/That-Conference-Online-Logo.svg" alt="THAT Logo" />
 			</a>
 		</div>
 
