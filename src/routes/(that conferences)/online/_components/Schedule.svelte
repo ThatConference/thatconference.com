@@ -5,7 +5,7 @@
 	const days = [
 		{
 			date: '2024-01-29T08:30:00.000Z',
-			summary: 'The first day of the conference is focused on dark patterns for ecommerce.',
+			summary: `Day one of THAT Conference Online.`,
 			sessions: [
 				{
 					name: 'Shaundai Person',
@@ -14,34 +14,34 @@
 				},
 				{
 					name: 'Panel Conversation',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '10:30 AM'
 				},
 				{
 					name: 'Lunch / Break',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '11:30 AM'
 				},
 				{
 					name: 'Compressed FM Live',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '1:00 PM'
 				},
 				{
 					name: 'Panelist Conversation',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '2:30 PM'
 				},
 				{
 					name: 'Panelist Conversation',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '4:00 AM'
 				}
 			]
 		},
 		{
 			date: '2024-01-30T08:30:00.000Z',
-			summary: 'The first day of the conference is focused on dark patterns for ecommerce.',
+			summary: 'Day two of THAT Conference Online.',
 			sessions: [
 				{
 					name: 'Danny Thompson',
@@ -50,34 +50,34 @@
 				},
 				{
 					name: 'Panelist Conversation',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '10:30 AM'
 				},
 				{
 					name: 'Lunch Break',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '11:30 AM'
 				},
 				{
 					name: 'Tech Commute Live',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '1:00 PM'
 				},
 				{
 					name: 'Panelist Conversation',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '2:30 PM'
 				},
 				{
 					name: 'Whiskey Web and Whatnot Live',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '4:00 PM'
 				}
 			]
 		},
 		{
 			date: '2024-01-31T08:30:00.000Z',
-			summary: 'The first day of the conference is focused on dark patterns for ecommerce.',
+			summary: 'The last day of THAT Conference Online',
 			sessions: [
 				{
 					name: 'Kelly Vaughn',
@@ -86,27 +86,27 @@
 				},
 				{
 					name: 'Panelist Conversation',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '10:30 AM'
 				},
 				{
 					name: 'Lunch Break',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '11:30 AM'
 				},
 				{
 					name: 'Podcast Live',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '1:00 PM'
 				},
 				{
 					name: 'Panelist Conversation',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '2:30 PM'
 				},
 				{
 					name: 'Closing',
-					description: 'Not so one-time payments',
+					description: '',
 					start: '4:00 AM'
 				}
 			]
