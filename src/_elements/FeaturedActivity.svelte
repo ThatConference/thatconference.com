@@ -25,7 +25,7 @@
 
 <a data-sveltekit-prefetch href="/activities/{id}">
 	<div
-		class="h-full w-full transform rounded-lg bg-that-blue px-6 py-10 text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-thatBlue-400 xl:px-10 xl:text-left">
+		class="h-full w-full transform rounded-lg bg-white/5 px-3 py-6 text-center text-white shadow ring-1 ring-white/10 transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-50 hover:text-gray-500 xl:px-10 xl:text-left">
 		<div class="space-y-6 xl:space-y-10">
 			<div
 				class="mx-auto h-40 w-40 rounded-full bg-gradient-to-t from-thatRed-500 to-thatOrange-500 xl:h-56 xl:w-56">
@@ -37,14 +37,14 @@
 					alt={`${host.firstName} ${host.lastName}`} />
 			</div>
 
-			<div class="flex flex-col text-lg font-medium leading-6">
-				<h4 class="text-white">{title}</h4>
+			<div class="flex flex-col text-center text-lg font-bold">
+				<h4>{title}</h4>
 
-				<p class="text-sm italic text-thatBlue-200">
+				<p class="mt-2 text-sm font-light">
 					{dayjs(startTime).format('dddd, MMMM D, YYYY - h:mm A z')}
 				</p>
 
-				<p class="text-right text-thatBlue-200">
+				<p class="mt-2 text-right text-lg font-bold leading-9">
 					{`${host.firstName} ${host.lastName}`}
 				</p>
 			</div>
