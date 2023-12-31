@@ -81,7 +81,21 @@
 									<div class="flex-shrink-0">
 										<span class="text-green-500"><Check /></span>
 									</div>
-									<p class="ml-3 text-base text-gray-700">Create or Join Any Virtual Open Space</p>
+									<p class="ml-3 text-base text-gray-700">Keynotes and Panelist Discussions</p>
+								</li>
+								<li class="flex items-start">
+									<div class="flex-shrink-0">
+										<span class="text-green-500"><Check /></span>
+									</div>
+									<p class="ml-3 text-base text-gray-700">
+										Network with Other Attendees and Sponsors
+									</p>
+								</li>
+								<li class="flex items-start">
+									<div class="flex-shrink-0">
+										<span class="text-green-500"><Check /></span>
+									</div>
+									<p class="ml-3 text-base text-gray-700">Discount Code for THAT Store</p>
 								</li>
 							</ul>
 
@@ -135,7 +149,23 @@
 								<div class="flex-shrink-0">
 									<span class="text-green-500"><Check /></span>
 								</div>
-								<p class="ml-3 text-base text-gray-700">Create or Join Any Virtual Open Space</p>
+								<p class="ml-3 text-base text-gray-700">Keynotes and Panelist Discussions</p>
+							</li>
+
+							<li class="flex items-start">
+								<div class="flex-shrink-0">
+									<span class="text-green-500"><Check /></span>
+								</div>
+								<p class="ml-3 text-base text-gray-700">
+									Network with Other Attendees and Sponsors
+								</p>
+							</li>
+
+							<li class="flex items-start">
+								<div class="flex-shrink-0">
+									<span class="text-green-500"><Check /></span>
+								</div>
+								<p class="ml-3 text-base text-gray-700">Discount Code for THAT Store</p>
 							</li>
 
 							<li class="flex items-start">
