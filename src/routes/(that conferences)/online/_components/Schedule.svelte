@@ -13,7 +13,7 @@
 					start: '8:30 AM'
 				},
 				{
-					name: 'Panel Conversation',
+					name: 'Panelist Conversation',
 					description: '',
 					start: '10:30 AM'
 				},
