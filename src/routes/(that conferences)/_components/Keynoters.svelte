@@ -3,7 +3,7 @@
 </script>
 
 <div class="relative">
-	<div class="mx-auto max-w-2xl lg:max-w-7xl">
+	<div class="mx-auto max-w-2xl px-4 lg:max-w-7xl">
 		<header class="pb-24">
 			<h3 class="font-extrabold uppercase tracking-wider text-thatRed-500">
 				This Year's Keynoters

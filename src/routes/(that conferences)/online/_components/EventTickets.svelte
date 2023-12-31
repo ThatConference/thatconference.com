@@ -28,7 +28,8 @@
 	const claimableTicket = eventTickets['CLAIMABLE_TICKET'] ?? {};
 </script>
 
-<div class="mt-48 bg-gradient-to-t from-thatBlue-400 to-thatBlue-800 px-4 sm:px-6 lg:px-8 lg:py-20">
+<div
+	class="mt-48 bg-gradient-to-t from-thatBlue-400 to-thatBlue-800 px-4 py-10 sm:px-6 lg:px-8 lg:py-20">
 	<div>
 		<div class="relative flex flex-col items-center justify-center space-y-12">
 			<p
@@ -51,7 +52,7 @@
 								<div>
 									<span
 										class="rounded-full bg-thatRed-500 px-4 py-1 text-sm font-semibold uppercase leading-5 tracking-wide text-white">
-										THAT Conference Online - Event Ticket
+										Event Ticket
 									</span>
 								</div>
 							</div>
@@ -116,7 +117,7 @@
 							<div>
 								<span
 									class="rounded-full bg-thatRed-500 px-4 py-1 text-sm font-semibold uppercase leading-5 tracking-wide text-white">
-									THAT Conference Online - Event Ticket
+									Event Ticket
 								</span>
 							</div>
 						</div>
