@@ -21,7 +21,7 @@
 					</span>
 				</h1>
 				<p class="text-5xl font-extrabold tracking-wider text-white antialiased">
-					The Live Conversations From The Main Stage At THAT Conference
+					Join The Live Conversations From The Main Stage At THAT Conference
 				</p>
 				<div class="flex pt-12">
 					<a href={`/${event.slug}#${`tickets`}`}>
