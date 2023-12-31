@@ -2,7 +2,7 @@
 	import HubspotForm from './HubspotForm.svelte';
 </script>
 
-<section class="overflow-clip bg-thatBlue-700 py-12 lg:py-36">
+<section class="overflow-clip bg-thatBlue-800 py-12 lg:py-36">
 	<div
 		class="relative isolate mx-auto max-w-screen-xl px-4 sm:px-6 lg:flex lg:items-center lg:px-8">
 		<div class="lg:w-0 lg:flex-1">

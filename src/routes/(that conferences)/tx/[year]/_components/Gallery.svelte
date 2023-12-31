@@ -195,7 +195,7 @@
 		<h3 class="font-extrabold uppercase tracking-wider text-thatRed-500">Our Portal To The Past</h3>
 		<h2
 			class="text mb-8 mt-8 text-4xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-5xl sm:leading-10">
-			let you = new Memories;
+			let you = new Memories();
 		</h2>
 	</header>
 	<ImageGallery {items} />

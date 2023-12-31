@@ -15,6 +15,7 @@
 	import FAQ from '../../_components/FAQ.svelte';
 	import Dates from '../../_components/Dates.svelte';
 	import Keynoters from '../../_components/Keynoters.svelte';
+	import OnlineCTA from '../../_components/OnlineCTA.svelte';
 
 	// component level
 	import Gallery from './_components/Gallery.svelte';
@@ -84,6 +85,10 @@
 			<Attendees followers={event.followers.members} />
 		</section>
 	{/if}
+
+	<section class="my-48">
+		<OnlineCTA />
+	</section>
 
 	<section class="my-48">
 		<Dates milestones={event.milestones} />

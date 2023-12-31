@@ -7,6 +7,7 @@
 	export let profileSlug;
 	export let earnedMeritBadges = [];
 	export let profileLinks = [];
+	export let darkMode = false;
 
 	import buildImageSrc from '$lib/image';
 	import config from '$lib/config.public';
@@ -18,7 +19,9 @@
 
 <a href="/members/{profileSlug}">
 	<div
-		class="h-full transform rounded-lg bg-white text-center shadow transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-100">
+		class="h-full transform rounded-lg bg-white/5 text-center shadow ring-1 ring-white/10 transition duration-500 ease-in-out hover:scale-105 hover:bg-gray-50/90"
+		class:text-white={darkMode}
+		class:hover:text-gray-500={darkMode}>
 		<div class="flex flex-col p-4">
 			<div>
 				<span class="relative inline-block">
@@ -39,7 +42,7 @@
 					{/if}
 				</span>
 
-				<h3 class="text-md mt-4 font-bold leading-5 tracking-tight text-gray-500">
+				<h3 class="mt-4 text-lg font-bold leading-9">
 					{`${firstName} ${lastName}`}
 				</h3>
 			</div>
@@ -47,12 +50,12 @@
 				<dl class="mt-1 flex flex-col justify-between">
 					{#if jobTitle}
 						<dt class="sr-only">Title</dt>
-						<dd class="text-sm leading-5 text-gray-500">{jobTitle}</dd>
+						<dd class="text-sm font-light leading-5">{jobTitle}</dd>
 					{/if}
 
 					{#if company}
 						<dt class="sr-only">Company</dt>
-						<dd class="text-sm leading-5 text-gray-500">{company}</dd>
+						<dd class="text-sm font-light leading-5">{company}</dd>
 					{/if}
 
 					<dt class="sr-only">Social Links</dt>
