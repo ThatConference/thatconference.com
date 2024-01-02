@@ -36,6 +36,10 @@
 			{#if levels['TRAILBLAZER']}
 				<Level header="Trailblazer Sponsors" partners={levels['TRAILBLAZER']} {eventId} />
 			{/if}
+
+			{#if levels['MEDIA']}
+				<Level header="Partners" partners={levels['MEDIA']} {eventId} />
+			{/if}
 		</div>
 	</div>
 </main>
