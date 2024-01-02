@@ -175,12 +175,21 @@
 	}
 
 	:global(.prose a) {
-		text-decoration: none;
 		color: #26529a;
+		text-decoration: underline;
+		text-decoration-style: line;
+		text-decoration-color: #26529a;
+		text-decoration-thickness: 0.01em;
+		text-underline-offset: 6px;
 	}
 
 	:global(.prose a:hover) {
-		color: #f3f4f6;
+		color: #26529a;
+		text-decoration: underline;
+		text-decoration-style: line;
+		text-decoration-color: #26529a;
+		text-decoration-thickness: 0.1em;
+		text-underline-offset: 3px;
 	}
 
 	:global(.a-decorate) {
