@@ -1,9 +1,12 @@
 <script>
+	import { onMount, getContext } from 'svelte';
 	import { page } from '$app/stores';
 
 	import seoMetaTags from '$lib/seo/metaTags';
 	import Seo from '$components/Seo.svelte';
 	import { Standard as StandardLink } from '$elements/links';
+
+	const { send } = getContext('cart');
 
 	const metaTags = ((title = 'Payment Received - THAT') => ({
 		title,
@@ -40,6 +43,10 @@
 		targetLocations = $page.url.searchParams.getAll('TL');
 		targetLocations = targetLocations.map((tl) => tl.toUpperCase());
 	}
+
+	onMount(() => {
+		send('CLEAR_CART');
+	});
 </script>
 
 <Seo title={metaTags.title} tags={metaTags.tags} />

@@ -2,66 +2,68 @@
 	<p
 		class="text-base font-semibold uppercase leading-6 tracking-wide
 			text-thatOrange-400">
-		WELCOME TO THAT CONFERENCE
+		WELCOME TO THAT CONFERENCE ONLINE
 	</p>
 	<h1
-		class="mb-8 mt-2 text-3xl font-extrabold leading-8 tracking-tight
-			text-gray-900 sm:text-4xl sm:leading-10">
+		class="tracking-normaltext-gray-900 mb-8 mt-2 text-3xl font-extrabold leading-8 sm:text-4xl sm:leading-10">
 		Your ticket has been claimed!
 	</h1>
 </div>
 
 <div
-	class="prose relative mx-auto mb-8 max-w-prose leading-7 text-gray-500 lg:mx-0 lg:max-w-5xl lg:pr-72">
-	<p>
-		Welcome to THAT Conference, we are excited you’re joining us. Here are details about your Expo
-		Hall Only ticket and next steps you need to complete.
-	</p>
+	class="prose prose-lg relative mx-auto mb-8 max-w-prose leading-7 text-gray-500 lg:mx-0 lg:max-w-5xl lg:pr-72">
+	<p>Welcome to THAT Conference Online, we are excited to have you joining us.</p>
 
-	<p>
-		The Expo Hall Only ticket provides access only to the Expo Hall (sponsor booths), Open Spaces,
-		Game Night, the Waterpark Party, and the Closing Ceremony. It does not provide food, beverages,
-		access to sessions or any other activities not listed above.
-	</p>
+	<h2>Here are a few items to do next:</h2>
 
-	<h2>What you need to do next</h2>
+	<ol class="prose prose-lg">
+		<li>
+			<span class="font-bold"
+				>Create or update your <a href="/my/profiles/public">public profile</a>.</span> If you have a
+			public profile you'll be listed as an attendee on the event website. This is a great way for folks
+			to to create a connection request with you.
+		</li>
 
-	<ol>
 		<li>
-			Ensure your <a href="/my/profiles/primary/">profile</a> is up-to-date with a photo. This is a great
-			way for folks who have visited your booth another way to get in contact with you after the event.
+			<span class="font-bold"
+				>Create or update your <a href="/my/profiles/public">shared profile</a>.</span> Your shared profile
+			is what will get shared when you choose to connect with someone.
 		</li>
+
 		<li>
-			Your company has a Spotlight page on our website. Let the attendees put a name with your face
-			by adding your profile to your company’s Spotlight page. Simply contact us and we can quickly
-			add your profile.
+			<span class="font-bold">View your <a href="/my/network">network</a>.</span> All this business about
+			public and shared profiles is for a very good reason. It's to help you grow your network. As your
+			network grows you can see your connections in our my network section.
 		</li>
+
 		<li>
-			You will need access to our lead generation system if you plan on using the system during our
-			event. Simply contact us and we will get you setup.
+			<span class="font-bold"
+				>Enable <a href="/my/notification-preferences">Meet THAT Camper</a>.</span> Meeting people is
+			hard, we get that. That's why we created Meet THAT Camper. Every monday morning we will do a randomized
+			email introduction to another person also attending the upcoming event.
 		</li>
+
 		<li>
-			If you haven’t done so already, make sure you’ve booked your hotel room. All booking
-			information can be found here: <a href="/support/travel/">https://that.us/support/travel/</a>
+			<span class="font-bold">Join us in <a href="/my/profiles/primary">Slack or Discord</a>.</span>
+			We have the chat channels too. Both our Slack or Discord channels are a great way to interact with
+			folks all year round but you knew that already.
 		</li>
+
 		<li>
-			When you get to the event make sure you check in at registration to get your sponsor badge.
+			<span class="font-bold"
+				>Connect with our <a href="/online/tx/2024/sponsors">sponsors and partners</a>.</span> If you
+			have a public profile you'll be listed as an attendee on the event website. This is a great way
+			for folks to get in contact with you after the event.
 		</li>
+
 		<li>
-			On <span class="font-bold">Monday at 1:00 PM</span> there will be a sponsor meeting in the Open
-			Spaces area. This is an opportunity to meet one another, discuss the event, answer any questions,
-			and get things kicked off before the early registration meet and greet that evening.
+			How will I join when it's time? We will send further instructions closer to the event but we
+			will stream everything on all major channels.
 		</li>
 	</ol>
 
 	<p>
-		Visit <a href="/support/sponsors/forms/">https://sponsor.that.us</a> for a one-stop resource for
-		your sponsorship. It contains links to lead generation, a sponsor handbook and many other important
-		resources.
-	</p>
-	<p>
-		If you have any questions you can <a href="email:partners@thatconference.com">email us</a> or speak
-		to anyone onsite with a staff t-shirt.
+		If you have any questions you can always <a href="email:hello@thatconference.com">email us</a>.
 	</p>
 
 	<p>Thank you for your support and we look forward to seeing you soon.</p>
