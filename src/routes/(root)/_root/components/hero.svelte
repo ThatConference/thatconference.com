@@ -60,8 +60,4 @@
 	.anchorButton:focus {
 		@apply underline underline-offset-4;
 	}
-
-	.anchorButtonLight {
-		@apply rounded-md  border-2 border-thatBlue-500 px-4 py-4 text-center font-medium tracking-wide text-thatBlue-500 shadow-md md:text-xl;
-	}
 </style>
