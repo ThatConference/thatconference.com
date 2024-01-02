@@ -53,7 +53,7 @@
 
 <main>
 	<header>
-		<Hero {event} />
+		<Hero {event} isOnline={true} />
 	</header>
 
 	<div class="relative mx-auto my-24 max-w-2xl px-4 lg:max-w-7xl">

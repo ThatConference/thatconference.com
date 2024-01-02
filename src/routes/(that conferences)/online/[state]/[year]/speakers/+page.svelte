@@ -9,7 +9,7 @@
 
 <main>
 	<header>
-		<Hero {event} />
+		<Hero {event} isOnline={true} />
 	</header>
 
 	<section class="mx-auto my-24 max-w-2xl lg:max-w-7xl">

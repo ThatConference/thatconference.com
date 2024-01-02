@@ -1,4 +1,5 @@
 <script>
+	export let event;
 	import { LeftArrow } from '$elements/svgs';
 
 	import UserProfile from '$components/navigation/_components/UserProfile.svelte';
@@ -23,7 +24,7 @@
 		</div>
 		<div class="flex items-center space-x-12">
 			<div class="flex items-center space-x-3">
-				<a href={`/`}>
+				<a href={`/${event.slug}`}>
 					<div class="flex space-x-4 font-semibold uppercase tracking-wide antialiased">
 						<div>THAT Conference Online</div>
 					</div>

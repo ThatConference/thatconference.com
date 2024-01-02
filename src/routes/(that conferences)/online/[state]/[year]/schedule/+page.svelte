@@ -26,7 +26,7 @@
 
 <div class="relative">
 	<section>
-		<Hero {event} days={['Monday', 'Tuesday', 'Wednesday']} />
+		<Hero {event} days={['Monday', 'Tuesday', 'Wednesday']} isOnline={true} />
 	</section>
 
 	<section>
