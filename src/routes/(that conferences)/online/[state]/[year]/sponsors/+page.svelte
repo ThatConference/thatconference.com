@@ -26,7 +26,7 @@
 <Seo title={metaTags.title} tags={metaTags.tags} />
 
 <main>
-	<Hero {event} />
+	<Hero {event} isOnline={true} />
 	<div class="relative">
 		<div class="mx-auto max-w-2xl lg:max-w-7xl">
 			{#if levels['RANGER']}

@@ -23,6 +23,12 @@
 					<img class="w-32" src="/images/characters/TestLongHorn.svg" alt="THAT Logo" />
 				</div>
 			</button>
+			<button on:click={() => dispatch('eventSelected', { event: 'ONLINE' })}>
+				<div
+					class="flex h-32 w-32 transform cursor-pointer items-center rounded-md p-2 shadow-lg transition duration-500 ease-in-out hover:scale-110 hover:bg-slate-200">
+					<img class="w-32" src="/images/That-Conference-Online-Logo.svg" alt="THAT Logo" />
+				</div>
+			</button>
 			<button on:click={() => dispatch('eventSelected', { event: 'WI' })}>
 				<div
 					class="flex h-32 w-32 transform cursor-pointer items-center rounded-md p-2 shadow-lg transition duration-500 ease-in-out hover:scale-110 hover:bg-slate-200">

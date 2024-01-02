@@ -19,7 +19,7 @@
 			<div class="col-span-5">
 				<h3
 					class="text-center text-4xl font-extrabold uppercase tracking-wide text-white sm:text-left">
-					Call For Counselors is Open
+					Call For Counselors is Now Open
 				</h3>
 			</div>
 
@@ -33,7 +33,7 @@
 				</p>
 
 				<div class="pt-12">
-					<HighlightLink href={`/call-for-counselors/${event.slug}`}>Learn More</HighlightLink>
+					<HighlightLink href={`/cfp`}>Learn More</HighlightLink>
 				</div>
 			</div>
 

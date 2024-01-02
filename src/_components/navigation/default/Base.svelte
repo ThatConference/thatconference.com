@@ -28,6 +28,9 @@
 						case 'WI':
 							goto('/wi');
 							break;
+						case 'ONLINE':
+							goto('/online');
+							break;
 					}
 				}}>
 				<span>Upcoming Conferences</span>

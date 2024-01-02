@@ -14,11 +14,10 @@
 		<div class="col-span-5">
 			<div class="flex flex-col items-center space-y-8 sm:items-start">
 				<h1 class="text-2xl font-bold uppercase tracking-wider text-white antialiased">
-					<span class="text-green-500">
-						{dayjs(event.startDate).format('MMMM Do')} - {dayjs(event.endDate).format(
-							'MMMM Do, YYYY'
-						)}
-					</span>
+					<span class="text-green-500">ONLINE </span> /
+					{dayjs(event.startDate).format('MMMM Do')} - {dayjs(event.endDate).format(
+						'MMMM Do, YYYY'
+					)}
 				</h1>
 				<p class="text-5xl font-extrabold tracking-wider text-white antialiased">
 					Join The Live Conversations From The Main Stage At THAT Conference
