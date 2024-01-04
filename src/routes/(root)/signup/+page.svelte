@@ -54,7 +54,7 @@
 											Create Your Login
 										</p>
 										<p class="flex text-left text-lg text-gray-500">
-											You will need an account to create or join any activities.
+											You need a login to access all things THAT. It's free and easy to create.
 										</p>
 									</div>
 									<div class="flex h-20 flex-col justify-center text-thatOrange-500">
@@ -66,7 +66,7 @@
 						<li class="relative pb-10" in:fade={{ delay: 300, duration: 500 }}>
 							<div class="absolute left-12 top-4 ml-0.5 mt-0.5 h-full w-1 bg-thatOrange-500" />
 
-							<a href="/my/profiles/primary" class="group relative flex items-center p-3">
+							<a href="/my/profiles/primary" class="group relative flex p-3">
 								<span class="flex h-20 items-center">
 									<span
 										class="relative z-10 flex h-20 w-20 items-center justify-center rounded-full bg-white p-3 ring-4 ring-thatOrange-500 group-hover:bg-thatOrange-500 group-hover:text-white">
@@ -75,9 +75,10 @@
 								</span>
 								<span class="ml-4 flex min-w-0 flex-col">
 									<span class="text-xl font-semibold uppercase tracking-wide"
-										>Tell Us About Yourself</span>
+										>Create Your Profile</span>
 									<span class="text-lg text-gray-500">
-										Tell everyone a bit about who you are and where to find you on the internet.
+										On THAT there are three different profiles: system, public and shared. Each of
+										these serves a different role when it comes to your interactions around THAT.
 									</span>
 								</span>
 								<div class="flex h-20 flex-col justify-center text-thatOrange-500">
