@@ -12,6 +12,7 @@ export const QUERY_ORDERS_BY_EVENT = `
 					member {
 						firstName
 						lastName
+						email
 					}
 					lineItems {
 						product {
