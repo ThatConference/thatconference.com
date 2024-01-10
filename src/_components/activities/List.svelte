@@ -133,6 +133,11 @@
 		sorted.reverse();
 	}
 
+	$: if (sorted[0].dayOfYear === 'Invalid Date') {
+		const firstItem = sorted.shift();
+		sorted.push(firstItem);
+	}
+
 	$: {
 		if (searchterm === '') {
 			activitiesFiltered = activities;
