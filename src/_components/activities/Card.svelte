@@ -292,8 +292,9 @@
 						{#if $page.data.user.isAuthenticated}
 							{#if canEdit()}
 								<div class="border-l pl-1 text-center">
+									<!--todo: to be fixed once CRUD is brought over -->
 									<a
-										href="/activities/edit/{id}"
+										href="https://that.us/activities/edit/{id}"
 										class="focus:ring-blue relative inline-flex flex-1 basis-0 items-center
 											justify-center rounded-br-lg border border-transparent py-2 text-xs
 											font-medium leading-4 text-gray-700
@@ -486,8 +487,9 @@
 			{#if $page.data.user.isAuthenticated}
 				{#if canEdit()}
 					<div class="-ml-px flex flex-1 basis-0 border-l border-gray-200">
+						<!--todo: to be fixed once CRUD is brought over -->
 						<a
-							href="/activities/edit/{id}"
+							href="https://that.us/activities/edit/{id}"
 							class="focus:ring-blue relative inline-flex flex-1 basis-0 items-center
                 justify-center rounded-br-lg border border-transparent py-2 text-xs
                 font-medium leading-4 text-gray-700

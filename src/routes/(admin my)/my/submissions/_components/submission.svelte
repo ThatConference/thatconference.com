@@ -4,7 +4,7 @@
 	import { goto } from '$app/navigation';
 	import dayjs from 'dayjs';
 	import Icon from 'svelte-awesome';
-	import { pencilSquareO, clone } from '$components/svelte-awesome-icons';
+	import { pencilSquareO } from '$components/svelte-awesome-icons';
 
 	import { CheckFull, Ban, Warning } from '$elements/svgs';
 	import { Shell as ShellButton } from '$elements/buttons';
@@ -85,9 +85,10 @@
 
 			<div>
 				<div class="flex flex-col space-y-4">
+					<!-- todo: to be fixed once the new form is pulled over -->
 					<ShellButton>
 						<a
-							href={`/activities/edit/${activity.id}`}
+							href={`https://that.us/activities/edit/${activity.id}`}
 							class="w-full px-8 py-1 text-sm font-medium leading-5 md:px-10">
 							<span>
 								<Icon data={pencilSquareO} class="-ml-1 mr-2 h-4 w-4" />
@@ -95,7 +96,7 @@
 							Edit
 						</a>
 					</ShellButton>
-					<ShellButton>
+					<!-- <ShellButton>
 						<a
 							href={`/activities/clone/?id=${activity.id}`}
 							class="w-full px-8 py-1 text-sm font-medium leading-5 md:px-10">
@@ -104,7 +105,7 @@
 							</span>
 							Clone
 						</a>
-					</ShellButton>
+					</ShellButton> -->
 				</div>
 			</div>
 		</div>

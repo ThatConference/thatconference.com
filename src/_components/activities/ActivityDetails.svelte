@@ -290,8 +290,9 @@
 				{#if $page.data.user.isAuthenticated && !incompleteProfile}
 					{#if canEdit()}
 						<div class="mx-2 mt-2 rounded-md shadow-sm">
+							<!--todo: to be fixed once CRUD is brought over -->
 							<a
-								href={`/activities/edit/${id}`}
+								href={`https://that.us/activities/edit/${id}`}
 								class="inline-flex justify-center rounded-md border-2 border-thatBlue-500
                   bg-white px-4 py-2 text-sm font-medium
                   leading-5 text-thatBlue-500 transition
