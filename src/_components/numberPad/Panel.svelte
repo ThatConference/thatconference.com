@@ -4,7 +4,7 @@
 	import PanelButton from './PanelButton.svelte';
 </script>
 
-<div id="panel" class="col-span-1 col-start-5 row-span-4 row-start-2 grid grid-cols-3 grid-rows-7">
+<div id="panel" class="grid grid-cols-3">
 	<PanelButton
 		bold
 		on:press={() => dispatch('digit', 1)}
