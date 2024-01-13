@@ -4,7 +4,7 @@ import { SvelteKitAuth } from '@auth/sveltekit';
 import Auth0Provider from '@auth/core/providers/auth0';
 import * as Sentry from '@sentry/sveltekit';
 
-import { logging } from '$lib/config.public';
+import config, { logging } from '$lib/config.public';
 import { parseOnly } from '$lib/svelteAuth/parseJwt';
 
 import { securityConfig as publicConfig } from '$lib/config.public';
@@ -14,6 +14,7 @@ const { clientID, issuerBaseURL } = publicConfig();
 const { clientSecret, secret } = privateConfig();
 
 Sentry.init({
+	enabled: config.nodeEnv !== 'development',
 	dsn: logging.dsn,
 	attachStacktrace: true,
 	environment: logging.environment,
