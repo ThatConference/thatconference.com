@@ -17,7 +17,7 @@
 	} from './links';
 </script>
 
-<footer class="z-10 border-t border-gray-200 bg-gray-50" aria-labelledby="footerHeading">
+<footer class="relative border-t border-gray-200 bg-gray-50" aria-labelledby="footerHeading">
 	<h2 id="footerHeading" class="sr-only">Footer</h2>
 
 	<div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
