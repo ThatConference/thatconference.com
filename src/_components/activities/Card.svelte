@@ -236,7 +236,10 @@
 					</div>
 					{#if status === 'CANCELLED'}
 						<div class="flex-grow justify-self-end pb-1 pr-3 sm:-mt-2">
-							<img class="lazyload h-10" alt="canceled session" src="/images/canceled-stamp.svg" />
+							<img
+								class="lazyload h-10 -rotate-45"
+								alt="canceled session"
+								src="/images/canceled-stamp.svg" />
 						</div>
 					{/if}
 				</div>
@@ -408,7 +411,7 @@
 			{#if status === 'CANCELLED'}
 				<div class="flex items-center justify-center">
 					<img
-						class="lazyload relative h-28"
+						class="lazyload relative h-28 -rotate-45"
 						alt="canceled session"
 						src="/images/canceled-stamp.svg" />
 				</div>
@@ -518,7 +521,11 @@
 
 								<div class="flex justify-center space-x-2">
 									<Icon data={mapMarker} class="h-4 w-4" />
-									<span>{lookupEnumLabel(location?.destination)}</span>
+									{#if location?.destination}
+										<span>{lookupEnumLabel(location?.destination)}</span>
+									{:else}
+										<span>Unscheduled</span>
+									{/if}
 								</div>
 							</div>
 						</div>

@@ -285,16 +285,18 @@
 
 				{#each day.timeSlots as ts}
 					<div class="relative">
-						<h2
-							class="sticky top-16 z-10 whitespace-nowrap bg-gray-100 pb-6 pt-2 text-3xl
+						{#if day.dayOfYear !== 'Invalid Date'}
+							<h2
+								class="sticky top-16 z-10 whitespace-nowrap bg-gray-100 pb-6 pt-2 text-3xl
                      font-bold leading-9
                      tracking-tight text-thatOrange-400 sm:text-4xl sm:leading-10 lg:top-20 lg:text-5xl">
-							{#if !dayjs(ts.timeSlot).isValid()}
-								Unscheduled
-							{:else}
-								{dayjs(ts.timeSlot).format('h:mm A z')}
-							{/if}
-						</h2>
+								{#if !dayjs(ts.timeSlot).isValid()}
+									Unscheduled
+								{:else}
+									{dayjs(ts.timeSlot).format('h:mm A z')}
+								{/if}
+							</h2>
+						{/if}
 
 						<div class="mb-12">
 							<ul
