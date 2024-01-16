@@ -1,7 +1,8 @@
 import * as Sentry from '@sentry/sveltekit';
-import { logging } from '$lib/config.public';
+import config, { logging } from '$lib/config.public';
 
 Sentry.init({
+	enabled: config.nodeEnv !== 'development',
 	dsn: logging.dsn,
 	attachStacktrace: true,
 	tracesSampleRate: 1,
