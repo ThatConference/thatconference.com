@@ -193,7 +193,6 @@
 		return _.pick(a, [
 			'id',
 			'title',
-			'type',
 			'speakers',
 			'startTime',
 			'durationInMinutes',
@@ -202,7 +201,8 @@
 			'targetLocation',
 			'location',
 			'eventId',
-			'status'
+			'status',
+			'category'
 		]);
 	}
 </script>

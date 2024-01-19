@@ -2,7 +2,6 @@
 	export let editMode = false;
 	export let id;
 	export let title;
-	export let type;
 	export let shortDescription;
 	export let startTime;
 	export let durationInMinutes;
@@ -13,6 +12,7 @@
 	export let location;
 	export let dense = false;
 	export let status;
+	export let category;
 
 	// 3rd party
 	import { onMount, getContext } from 'svelte';
@@ -358,13 +358,13 @@
 		class={`flex h-full w-full flex-col ${
 			requiresAccessToJoin ? 'rounded-lg border-t-4 border-red-500' : ''
 		}`}>
-		{#if type !== 'OPEN_SPACE' && host.profileSlug != 'thatconference'}
+		{#if category === 'FAMILY' && host.profileSlug != 'thatconference'}
 			<div class="relative w-full text-center">
 				<div
 					class="absolute right-0 top-8 inline-block rounded-l-xl bg-that-red p-2 pl-3 shadow-sm">
-					<div class="flex flex-col items-center">
-						<span class="text-xs uppercase text-white">Camp</span>
-						<span class="text-xs uppercase text-white">Counselor</span>
+					<div class="flex flex-col items-center px-6">
+						<span class="text-xs font-semibold uppercase text-white">Family</span>
+						<span class="text-xs font-semibold uppercase text-white">Track</span>
 					</div>
 				</div>
 			</div>
