@@ -2,12 +2,12 @@
 	export let sessions;
 </script>
 
-<ol class="space-y-8 bg-white/60 px-10 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur">
+<ol class="space-y-6 bg-white/60 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur">
 	{#each sessions as session, i}
 		<!-- make each of these a button -->
 		<li>
 			{#if i > 0}
-				<div class="mx-auto mb-8 h-px w-48 bg-indigo-500/10" />
+				<div class="mx-auto mb-6 h-px w-48 bg-indigo-500/10" />
 			{/if}
 
 			<h4 class="text-lg font-semibold tracking-tight text-thatBlue-700">

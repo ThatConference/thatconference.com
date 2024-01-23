@@ -13,27 +13,48 @@
 					start: '8:30 AM'
 				},
 				{
-					name: 'Panelist Conversation',
+					name: 'Break',
+					description: '',
+					start: '10:00 AM'
+				},
+				{
+					name: 'Keynote Reflections',
 					description: '',
 					start: '10:30 AM'
 				},
 				{
-					name: 'Lunch / Break',
+					name: 'Breaking into Tech',
 					description: '',
 					start: '11:30 AM'
 				},
 				{
-					name: 'Compressed FM Live',
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '12:30 PM'
+				},
+				{
+					name: 'Navigating Hard Times in Tech',
 					description: '',
 					start: '1:00 PM'
 				},
 				{
-					name: 'Panelist Conversation',
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '2:00 PM'
+				},
+
+				{
+					name: 'Compressed FM Live',
 					description: '',
 					start: '2:30 PM'
 				},
 				{
-					name: 'Panelist Conversation',
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '3:30 PM'
+				},
+				{
+					name: 'Live Podcast',
 					description: '',
 					start: '4:00 AM'
 				}
@@ -49,24 +70,45 @@
 					start: '8:30 AM'
 				},
 				{
-					name: 'Panelist Conversation',
+					name: 'Break',
+					description: '',
+					start: '10:00 AM'
+				},
+				{
+					name: 'Keynote Reflections',
 					description: '',
 					start: '10:30 AM'
 				},
 				{
-					name: 'Lunch Break',
+					name: 'Common Accessibility Mistakes',
 					description: '',
 					start: '11:30 AM'
 				},
 				{
-					name: 'Tech Commute Live',
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '12:30 PM'
+				},
+				{
+					name: 'The Future of AI and VR',
 					description: '',
 					start: '1:00 PM'
 				},
 				{
-					name: 'Panelist Conversation',
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '2:00 PM'
+				},
+
+				{
+					name: 'Whiskey Web and Whatnot Live',
 					description: '',
 					start: '2:30 PM'
+				},
+				{
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '3:30 PM'
 				},
 				{
 					name: 'Whiskey Web and Whatnot Live',
@@ -85,29 +127,55 @@
 					start: '8:30 AM'
 				},
 				{
-					name: 'Panelist Conversation',
+					name: 'Break',
+					description: '',
+					start: '10:00 AM'
+				},
+				{
+					name: 'Keynote Reflections',
 					description: '',
 					start: '10:30 AM'
 				},
 				{
-					name: 'Lunch Break',
+					name: 'Comparing Modern JavaScript Frameworks',
 					description: '',
 					start: '11:30 AM'
 				},
 				{
-					name: 'Podcast Live',
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '12:30 PM'
+				},
+				{
+					name: 'Modern Web Development Best Practices',
 					description: '',
 					start: '1:00 PM'
 				},
 				{
-					name: 'Panelist Conversation',
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '2:00 PM'
+				},
+
+				{
+					name: 'Whiskey Web and Whatnot Live',
 					description: '',
 					start: '2:30 PM'
 				},
 				{
+					name: 'Break / Live Q&A',
+					description: '',
+					start: '3:30 PM'
+				},
+				{
+					name: 'Whiskey Web and Whatnot Live',
+					description: '',
+					start: '4:00 PM'
+				},
+				{
 					name: 'Closing',
 					description: '',
-					start: '4:00 AM'
+					start: '5:00 PM'
 				}
 			]
 		}
