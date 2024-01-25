@@ -10,7 +10,8 @@ Sentry.init({
 	replaysOnErrorSampleRate: 1,
 	integrations: [new Sentry.Replay()],
 	environment: logging.environment,
-	denyUrls: logging.denyUrls
+	denyUrls: logging.denyUrls,
+	enableTracing: false
 });
 
 export const handleError = Sentry.handleErrorWithSentry();

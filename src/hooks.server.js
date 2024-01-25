@@ -19,7 +19,8 @@ Sentry.init({
 	attachStacktrace: true,
 	environment: logging.environment,
 	tracesSampleRate: 1,
-	denyUrls: logging.denyUrls
+	denyUrls: logging.denyUrls,
+	enableTracing: false
 });
 
 const loginRedirectPaths = ['/my', '/sponsor-admin', '/admin', '/speakers'];
