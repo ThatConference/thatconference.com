@@ -149,7 +149,9 @@
 	function isKeynote(activity) {
 		let results = false;
 
-		if (activity.type === 'KEYNOTE' || activity.type === 'PANEL') results = true;
+		if (activity.status === 'ACCEPTED') {
+			if (activity.type === 'KEYNOTE' || activity.type === 'PANEL') results = true;
+		}
 
 		return results;
 	}
