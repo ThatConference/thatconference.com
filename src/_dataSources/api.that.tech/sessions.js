@@ -36,6 +36,7 @@ const coreSessionFields = `
 			url
 			description
 		}
+		isFamilyApproved
 	}
 `;
 
