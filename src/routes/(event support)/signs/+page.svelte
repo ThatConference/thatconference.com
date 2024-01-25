@@ -12,26 +12,32 @@
 	let interval = 6000;
 
 	// initially displayed
-	currentImage = pioneer[pioneerCounter]?.companyLogo;
+	currentImage = '/images/THAT-Full-Wide.svg';
 	pioneerCounter += 1;
 	counter += 1;
 
 	(function loop() {
 		setTimeout(() => {
 			if (counter % 2 === 0) {
-				currentImage = pioneer[pioneerCounter]?.companyLogo;
-				pioneerCounter += 1;
-				if (pioneerCounter === pioneer.length) {
-					pioneerCounter = 0;
+				const pioneerImage = pioneer[pioneerCounter]?.companyLogo;
+				if (pioneerImage) {
+					currentImage = pioneerImage;
+					pioneerCounter += 1;
+					if (pioneerCounter === pioneer.length) {
+						pioneerCounter = 0;
+					}
+					interval = 6000;
 				}
-				interval = 6000;
 			} else {
-				currentImage = explorer[explorerCounter]?.companyLogo;
-				explorerCounter += 1;
-				if (explorerCounter === explorer.length) {
-					explorerCounter = 0;
+				const explorerImage = explorer[explorerCounter]?.companyLogo;
+				if (explorerImage) {
+					currentImage = explorerImage;
+					explorerCounter += 1;
+					if (explorerCounter === explorer.length) {
+						explorerCounter = 0;
+					}
+					interval = 3000;
 				}
-				interval = 3000;
 			}
 			counter += 1;
 			loop();
