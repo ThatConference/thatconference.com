@@ -54,7 +54,7 @@
 					start: '3:30 PM'
 				},
 				{
-					name: 'Live Podcast',
+					name: 'The Changelog Live',
 					description: '',
 					start: '4:00 AM'
 				}
