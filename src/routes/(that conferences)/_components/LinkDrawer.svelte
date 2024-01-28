@@ -22,15 +22,14 @@
 	<Drawer.Portal>
 		<Drawer.Overlay class="fixed inset-0 bg-black/40" />
 		<Drawer.Content
-			class="fixed bottom-0 left-0 right-0 z-50 mt-24 flex h-[90%] flex-col rounded-t-[10px]  bg-zinc-100">
+			class="fixed bottom-0 left-0 right-0 z-50 mt-24 flex h-[96%] flex-col rounded-t-[10px]  bg-zinc-100">
 			<div class="bottom-3 flex-1 rounded-t-[10px] bg-zinc-200 p-4">
 				<div class="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-zinc-600" />
 				<div class="mx-auto max-w-md">
-					<h3 class="font-extrabold uppercase tracking-wider text-thatRed-500">THAT Campsite</h3>
-					<h2 class="hText mb-8 mt-4">Quick Links</h2>
+					<h3 class="mb-4 font-extrabold uppercase tracking-wider text-thatRed-500">Quick Links</h3>
 
-					<div class="flex flex-col space-y-8">
-						<div class="space-y-4">
+					<div class="flex flex-col space-y-4">
+						<div class="space-y-2">
 							<h2 class="h2Text">My Profiles</h2>
 							<div class="flex flex-wrap">
 								<a href="/my/profiles/primary" class="anchorButton m-2 grow">
@@ -98,7 +97,7 @@
 
 <style lang="postcss">
 	.anchorButton {
-		@apply rounded-md bg-thatBlue-500 px-4 py-4 text-center font-medium tracking-wide text-white shadow-md md:text-xl;
+		@apply rounded-md bg-thatBlue-500 px-4 py-2 text-center font-medium tracking-wide text-white shadow-md md:text-xl;
 	}
 
 	.anchorButton:hover {
@@ -109,10 +108,10 @@
 	}
 
 	.hText {
-		@apply text-4xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-5xl sm:leading-10;
+		@apply text-2xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-5xl sm:leading-10;
 	}
 
 	.h2Text {
-		@apply text-2xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-5xl sm:leading-10;
+		@apply text-xl font-bold leading-8 tracking-tight text-thatBlue-700 sm:text-5xl sm:leading-10;
 	}
 </style>
