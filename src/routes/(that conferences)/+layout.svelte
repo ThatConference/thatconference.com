@@ -6,6 +6,7 @@
 	import { Trees } from '$elements/svgs';
 	import Footer from '$components/footer/Footer.svelte';
 	import Nav from '$components/navigation/thatConference/Nav.svelte';
+	import LinkDrawer from './_components/LinkDrawer.svelte';
 
 	let { event } = data;
 	const [venue] = event.venues;
@@ -59,6 +60,7 @@
 			<slot />
 		</main>
 
+		<LinkDrawer {event} />
 		<Footer />
 	</div>
 </div>
