@@ -19,25 +19,27 @@
 
 		<div class="keynoteGrid mt-16">
 			{#each keynoters as keynoter}
-				<div>
-					<div class="flex flex-col items-center pb-8">
-						<span class="hText">{keynoter.speakers[0].firstName}</span>
+				{#if keynoter.status === 'ACCEPTED'}
+					<div>
+						<div class="flex flex-col items-center pb-8">
+							<span class="hText">{keynoter.speakers[0].firstName}</span>
 
-						<span class="text-5xl font-thin">{keynoter.speakers[0].lastName}</span>
-					</div>
-					<div class="kgItem grid">
-						<div class="overflow-hidden">
-							<div class="kgItemHover">
-								<a href={`/members/${keynoter.speakers[0].profileSlug}`}>
-									<img
-										class="object-fit w-full object-scale-down"
-										src={keynoter.speakers[0].profileImage}
-										alt={keynoter.speakers[0].firstName + ' ' + keynoter.speakers[0].lastName} />
-								</a>
+							<span class="text-5xl font-thin">{keynoter.speakers[0].lastName}</span>
+						</div>
+						<div class="kgItem grid">
+							<div class="overflow-hidden">
+								<div class="kgItemHover">
+									<a href={`/members/${keynoter.speakers[0].profileSlug}`}>
+										<img
+											class="object-fit w-full object-scale-down"
+											src={keynoter.speakers[0].profileImage}
+											alt={keynoter.speakers[0].firstName + ' ' + keynoter.speakers[0].lastName} />
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				{/if}
 			{/each}
 		</div>
 
