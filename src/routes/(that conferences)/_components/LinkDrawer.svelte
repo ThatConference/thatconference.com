@@ -9,7 +9,7 @@
 
 <Drawer.Root shouldScaleBackground>
 	<Drawer.Trigger>
-		<div class="fixed bottom-0 w-full">
+		<div class="fixed bottom-0 z-50 w-full">
 			<button
 				class="my-8 rounded-md bg-thatRed-500 px-5 py-2 text-sm font-bold tracking-wide text-white focus:outline-none">
 				<div class="flex items-center space-x-4">
