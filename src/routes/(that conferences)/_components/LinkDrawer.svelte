@@ -23,7 +23,7 @@
 		<Drawer.Overlay class="fixed inset-0 bg-black/40" />
 		<Drawer.Content
 			class="fixed bottom-0 left-0 right-0 z-50 mt-24 flex h-[96%] flex-col rounded-t-[10px]  bg-zinc-100">
-			<div class="bottom-3 flex-1 rounded-t-[10px] bg-zinc-200 p-4">
+			<div class="bottom-3 flex-1 overflow-auto rounded-t-[10px] bg-zinc-200 p-4">
 				<div class="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-zinc-600" />
 				<div class="mx-auto max-w-md">
 					<h3 class="mb-4 font-extrabold uppercase tracking-wider text-thatRed-500">Quick Links</h3>
