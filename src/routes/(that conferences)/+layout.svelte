@@ -4,10 +4,12 @@
 	import { fade } from 'svelte/transition';
 
 	import { Trees } from '$elements/svgs';
+	import { Breakpoints } from '$components/breakpoints';
 	import Footer from '$components/footer/Footer.svelte';
 	import Nav from '$components/navigation/thatConference/Nav.svelte';
 	import LinkDrawer from './_components/LinkDrawer.svelte';
 
+	let currentBreakpoint;
 	let { event } = data;
 	const [venue] = event.venues;
 
@@ -43,6 +45,8 @@
 	};
 </script>
 
+<Breakpoints bind:value={currentBreakpoint} />
+
 <div class="bg-thatBlue-100 bg-opacity-25">
 	<div class="flex min-h-screen flex-col bg-gray-50">
 		<div class="z-50">
@@ -60,7 +64,10 @@
 			<slot />
 		</main>
 
-		<LinkDrawer {event} />
+		{#if ['xs', 'sm', 'md'].includes(currentBreakpoint)}
+			<LinkDrawer {event} />
+		{/if}
+
 		<Footer />
 	</div>
 </div>
