@@ -2,7 +2,6 @@
 	import dayjs from 'dayjs';
 	import isBetween from 'dayjs/plugin/isBetween.js';
 
-	import { Standard as StandardLink } from '$elements/links';
 	import { kalahari } from '$lib/config.public';
 	import seoMetaTags from '$lib/seo/metaTags';
 	import Seo from '$components/Seo.svelte';
@@ -56,8 +55,8 @@
 	<div class="flex flex-col space-y-8 sm:flex-row sm:space-x-8 sm:space-y-0">
 		<!-- <div class="flex flex-col items-center space-y-8 sm:space-x-8 sm:space-y-0"> -->
 		<div class="rounded-md bg-gray-100 px-12 shadow-md">
-			<div class="prose-md prose text-gray-500">
-				<div class="flex flex-col pb-12">
+			<div class="py-12 text-gray-500">
+				<div class="prose-md prose flex flex-col">
 					<h2>Kalahari Resorts and Convention Center</h2>
 
 					<p>
@@ -108,10 +107,11 @@
 					{#if !isRoomBlockOpen}
 						<p class="text-red-500">Our room blocks are currently closed.</p>
 					{/if}
-
-					<div class="flex justify-center">
-						<StandardLink open={true} href={kalahari.passkey.wi.url}>Book Today</StandardLink>
-					</div>
+				</div>
+				<div class="mt-8 flex justify-center">
+					<a href={kalahari.passkey.wi.url} target="_blank" class="anchorButton px-4 py-2">
+						<div>Book Online</div>
+					</a>
 				</div>
 			</div>
 		</div>
@@ -142,7 +142,9 @@
 					</p>
 
 					<div class="flex justify-center">
-						<StandardLink open={true} href="https://www.staybridge.com/">Book Today</StandardLink>
+						<a href="https://www.staybridge.com/" target="_blank" class="anchorButton m-2 grow">
+							<div>ONLINE</div>
+						</a>
 					</div>
 				</div>
 			</div>

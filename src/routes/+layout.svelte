@@ -169,7 +169,7 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
 	:global(.strike) {
 		text-decoration: line-through;
 	}
@@ -207,6 +207,18 @@
 		text-decoration-color: #26529a;
 		text-decoration-thickness: 0.1em;
 		text-underline-offset: 3px;
+	}
+
+	:global(.anchorButton) {
+		@apply rounded-md bg-thatBlue-500 px-4 py-4 text-center font-medium tracking-wide text-white shadow-md md:text-xl;
+	}
+
+	:global(.anchorButton:hover) {
+		@apply bg-thatBlue-400 transition duration-150 ease-in-out;
+	}
+
+	:global(.anchorButton:focus) {
+		@apply underline underline-offset-4;
 	}
 
 	:global(.lineBreaks) {
