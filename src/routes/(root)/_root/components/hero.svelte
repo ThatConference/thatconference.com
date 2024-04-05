@@ -48,16 +48,3 @@
 		</div>
 	</div>
 </section>
-
-<style lang="postcss">
-	.anchorButton {
-		@apply rounded-md bg-thatBlue-500 px-4 py-4 text-center font-medium tracking-wide text-white shadow-md md:text-xl;
-	}
-
-	.anchorButton:hover {
-		@apply bg-thatBlue-400 transition duration-150 ease-in-out;
-	}
-	.anchorButton:focus {
-		@apply underline underline-offset-4;
-	}
-</style>
