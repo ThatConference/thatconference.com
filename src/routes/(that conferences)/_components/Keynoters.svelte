@@ -31,8 +31,7 @@
 								<div class="kgItemHover">
 									<a href={`/members/${keynoter.speakers[0].profileSlug}`}>
 										<img
-											class="object-fit w-full object-scale-down"
-											src={keynoter.speakers[0].profileImage}
+											src={`${keynoter.speakers[0].profileImage}?w=500&h=500&fit=clamp&fm=jpg`}
 											alt={keynoter.speakers[0].firstName + ' ' + keynoter.speakers[0].lastName} />
 									</a>
 								</div>
