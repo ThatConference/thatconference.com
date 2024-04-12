@@ -270,7 +270,7 @@
 						name="profileImageFile"
 						on:change={(e) => postProfilePicture(e).then((r) => ($form.profileImage = r))}
 						type="file"
-						accept="image/x-png,image/png,.png,image/jpeg,.jpg,.jpeg,image/gif,.gif"
+						accept="image/*"
 						class="focus:ring-blue rounded-md border border-gray-300 px-3 py-2
                   text-sm font-medium leading-4 text-gray-700
                   transition duration-150
