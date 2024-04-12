@@ -128,14 +128,16 @@ export const kalahari = {
 			start: '04/5/2024',
 			end: '06/29/2024',
 			blockCloseDate: '06/29/2024',
-			accessCode: null
+			accessCode: null,
+			roomPriceCredit: 249
 		},
 		'tx/2024': {
 			bookingUrl: 'https://book.passkey.com/e/50671918',
 			start: '09/19/2023',
 			end: '01/08/2024',
 			blockCloseDate: '01/08/2023',
-			accessCode: 'THATSPEAK'
+			accessCode: 'THATSPEAK',
+			roomPriceCredit: 179
 		}
 	}
 };

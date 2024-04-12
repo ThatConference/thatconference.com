@@ -14,6 +14,7 @@
 	const startDate = kalahari.speakerPasskey[eventDetails.slug].start;
 	const endDate = kalahari.speakerPasskey[eventDetails.slug].end;
 	const blockCloseDate = kalahari.speakerPasskey[eventDetails.slug].blockCloseDate;
+	const roomPriceCredit = kalahari.speakerPasskey[eventDetails.slug].roomPriceCredit;
 
 	let declinedRoomComp = false;
 
@@ -88,16 +89,16 @@
 
 	<p class="prose prose-lg mt-4 text-gray-500">
 		As a thank you for being a Counselor, we will reimburse you for two nights' lodging in a Double
-		Queen Sofa room (up to $179/day) for each day that you speak (up to a total of three nights per
-		family of multiple speakers).
+		Queen Sofa room (up to ${roomPriceCredit}/day) for each day that you speak (up to a total of
+		three nights per family of multiple speakers).
 	</p>
 	<p class="prose prose-lg mt-4 text-gray-500">
 		To reserve the room, the Kalahari requires a deposit of one night's stay plus tax and fees. THAT
 		Conference works directly with the Kalahari to apply the appropriate credits to your account
 		during the conference. You will see the proper credits applied to your final bill upon checkout.
 		Please note that you are welcome to upgrade your room, however, you will be responsible for the
-		difference at any rate above $179/day. Speaking sessions from sponsorships are excluded from
-		this benefit.
+		difference at any rate above ${roomPriceCredit}/day. Speaking sessions from sponsorships are
+		excluded from this benefit.
 	</p>
 
 	<div class="mt-6 antialiased">
