@@ -8,11 +8,12 @@
 
 	let { thatActiveEvents } = data;
 
-	const metaTags = ((title = 'Newsletter subscription') => ({
+	const metaTags = ((title = 'Subscribed to THAT Newsletter') => ({
 		title,
 		tags: seoMetaTags({
 			title,
-			description: '.',
+			description:
+				"You did it! You're in and welcome to THAT. It's our passion to see people of all ages grow while helping them reach their full potential.",
 			openGraph: {
 				url: `https://thatconference.com/newsletter/what-now`
 			}

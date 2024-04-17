@@ -4,13 +4,14 @@
 
 	import HubspotForm from '$components/newsletter/HubspotForm.svelte';
 
-	const metaTags = ((title = 'Create your THAT account and profile today and get involved.') => ({
+	const metaTags = ((title = 'Join THAT Newsletter.') => ({
 		title,
 		tags: seoMetaTags({
 			title,
-			description: 'aafsdfa.',
+			description:
+				'Get the 5-minute newsletter teaching geeks how to grow their network and create the career they love in tech. Oh and stay up to date with everything happening at THAT Conference.',
 			openGraph: {
-				url: `https://thatconference.com/newsletter/what-now`
+				url: `https://thatconference.com/newsletter/`
 			}
 		})
 	}))();
