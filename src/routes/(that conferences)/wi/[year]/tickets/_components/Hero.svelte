@@ -10,15 +10,22 @@
 	dayjs.extend(advancedFormat);
 
 	const venue = event.venues[0];
+
+	function isSameMonthAndYear(startDate, endDate) {
+    return dayjs(startDate).month() === dayjs(endDate).month() &&
+           dayjs(startDate).year() === dayjs(endDate).year();
+  }
 </script>
 
 <Hero imagePath="/images/heros/wi/badge.jpg">
 	<div class="flex flex-col px-4">
 		<div class="flex max-w-3xl flex-col space-y-8">
 			<h2 class="text-2xl font-bold uppercase tracking-wider text-white antialiased">
-				<span class="text-green-500">{`${venue.city}, ${venue.state}`}</span> / {dayjs(
-					event.startDate
-				).format('MMMM Do')} - {dayjs(event.endDate).format('Do, YYYY')}
+				<span class="text-green-500">{`${venue.city}, ${venue.state}`}</span> / {#if isSameMonthAndYear(event.startDate, event.endDate)}
+					{dayjs(event.startDate).format('MMMM Do')} - {dayjs(event.endDate).format('Do, YYYY')}
+				{:else}
+					{dayjs(event.startDate).format('MMMM Do, YYYY')} - {dayjs(event.endDate).format('MMMM Do, YYYY')}
+				{/if}
 			</h2>
 			<h1
 				class="text-4xl font-extrabold uppercase text-white sm:text-5xl md:text-6xl lg:text-5xl xl:text-6xl">
