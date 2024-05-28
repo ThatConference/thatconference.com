@@ -18,10 +18,14 @@
 			<h2 class="text-2xl font-bold uppercase tracking-wider text-white antialiased">
 				{#if !isOnline}
 					<span class="text-green-500">{`${venue.city}, ${venue.state}`}</span> /
-					{dayjs(event.startDate).format('MMMM Do')} - {dayjs(event.endDate).format('Do, YYYY')}
+					{dayjs(event.startDate).format('MMMM Do')} - {dayjs(event.endDate).format(
+						'MMMM Do, YYYY'
+					)}
 				{:else}
 					<span class="text-green-500">ONLINE</span> /
-					{dayjs(event.startDate).format('MMMM Do')} - {dayjs(event.endDate).format('Do, YYYY')}
+					{dayjs(event.startDate).format('MMMM Do')} - {dayjs(event.endDate).format(
+						'MMMM Do, YYYY'
+					)}
 				{/if}
 			</h2>
 			<h1
