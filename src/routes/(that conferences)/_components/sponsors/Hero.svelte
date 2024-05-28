@@ -21,7 +21,7 @@
 			{:else}
 				<span class="text-green-500">{`${venue.city}, ${venue.state}`}</span> / {dayjs(
 					event.startDate
-				).format('MMMM Do')} - {dayjs(event.endDate).format('Do, YYYY')}
+				).format('MMMM Do')} - {dayjs(event.endDate).format('MMMM Do, YYYY')}
 			{/if}
 		</h2>
 
