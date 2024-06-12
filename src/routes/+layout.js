@@ -15,7 +15,7 @@ const correlationId = uuidv4();
 inject({ mode: dev ? 'development' : 'production' });
 
 if (!dev) {
-	Sentry.configureScope((scope) => {
+	Sentry.withScope((scope) => {
 		scope.setTag('correlationId', correlationId);
 	});
 }

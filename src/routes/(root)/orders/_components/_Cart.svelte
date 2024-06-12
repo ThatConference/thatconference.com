@@ -25,7 +25,7 @@
 		});
 
 		va.track('cart:handle-checkout');
-		Sentry.configureScope((scope) => scope.setTransactionName('Handle Checkout'));
+		Sentry.getCurrentScope().setTransactionName('Handle Checkout');
 
 		const { eventId, cart } = $state.context;
 		Sentry.setContext('cart', cart);
