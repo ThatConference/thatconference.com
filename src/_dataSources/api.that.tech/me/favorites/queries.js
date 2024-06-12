@@ -9,6 +9,7 @@ const favoriteFragment = `
       eventId
       title
       shortDescription
+      longDescription
       durationInMinutes
       status
       startTime

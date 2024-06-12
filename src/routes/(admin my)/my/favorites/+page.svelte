@@ -28,8 +28,12 @@
 		})
 	}))();
 
-	const isDate = (checkDate) => dayjs(checkDate).isValid;
+	function excapeText(text) {
+		let escapedText = text.replace(/"/g, '""'); // Escape double quotes
+		return escapedText;
+	}
 
+	const isDate = (checkDate) => dayjs(checkDate).isValid;
 	const csvDownloadHandler = () => {
 		const csvdata = activities.map((a) => ({
 			id: a.id,
@@ -38,6 +42,8 @@
 			slot: isDate(a.startTime) ? dayjs(a.startTime).format('HH:mm') : '',
 			room: a.location?.destination ? a.location?.destination : '',
 			title: a.title ? a.title : '',
+			shortDescription: a.shortDescription ? excapeText(a.shortDescription) : '',
+			longDescription: a.longDescription ? excapeText(a.longDescription) : '',
 			speakers: a.speakers.map((s) => `${s.firstName} ${s.lastName}`).join(';'),
 			priCategory: a.priCategory ? a.priCategory : '',
 			sessionLink: `https://thatconference.com/activities/${a.id}/`,
@@ -51,6 +57,8 @@
 			'Slot',
 			'Room',
 			'Title',
+			'Short Description',
+			'Long Description',
 			'Speakers',
 			'Category',
 			'Link',
