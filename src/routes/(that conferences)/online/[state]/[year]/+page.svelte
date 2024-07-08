@@ -11,7 +11,7 @@
 	import Attendees from '../../../_components/Attendees.svelte';
 
 	import Hero from '../../_components/Hero.svelte';
-	import Live from '../../_components/Live.svelte';
+	// import Live from '../../_components/Live.svelte';
 	import EventTickets from '../../_components/EventTickets.svelte';
 	import FAQ from '../../_components/FAQ.svelte';
 	import Schedule from '../../_components/Schedule.svelte';
@@ -37,7 +37,7 @@
 	function handleAddEventTicketClick(eventId, eventProducts, quantity = 1) {
 		const eventTicket = eventProducts
 			.filter((f) => f.isEnabled)
-			.find((e) => e.productType === 'TICKET');
+			.find((e) => e.uiReference === 'VIRTUAL_CAMPER');
 		const isBulkPurchase = quantity > 1 ? true : false;
 
 		cart.send('ADD_ITEM', {
@@ -57,7 +57,8 @@
 	</section>
 
 	<section class="my-48">
-		<Live />
+		<!-- todo: once scheduled -->
+		<!-- <Live /> -->
 	</section>
 
 	<section class="my-48">

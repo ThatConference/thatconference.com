@@ -9,14 +9,14 @@
 
 	let { event, sessions } = data;
 
-	const metaTags = ((title = 'THAT Conference Texas Speakers and Schedule.') => ({
+	const metaTags = ((title = 'THAT Conference Online Speakers and Schedule.') => ({
 		title,
 		tags: seoMetaTags({
 			title,
-			description: 'That Conference Texas Speakers and Schedule',
+			description: 'That Conference Online Speakers and Schedule',
 			openGraph: {
 				type: 'website',
-				url: `https://thatconference.com/tx/${event.slug}/schedule`
+				url: `https://thatconference.com/${event.slug}/schedule`
 			}
 		})
 	}))();
@@ -26,7 +26,7 @@
 
 <div class="relative">
 	<section>
-		<Hero {event} days={['Monday', 'Tuesday', 'Wednesday']} isOnline={true} />
+		<Hero {event} days={['Tuesday', 'Wednesday', 'Thursday']} isOnline={true} />
 	</section>
 
 	<section>
