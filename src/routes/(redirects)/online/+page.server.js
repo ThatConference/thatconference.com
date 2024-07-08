@@ -3,5 +3,5 @@ import { redirect } from '@sveltejs/kit';
 
 export async function load() {
 	//todo: grab from the config
-	throw redirect(302, `/online/tx/2024`);
+	throw redirect(302, `/online/wi/2024`);
 }

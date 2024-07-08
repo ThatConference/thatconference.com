@@ -4,11 +4,11 @@
 
 	const days = [
 		{
-			date: '2024-01-29T08:30:00.000Z',
+			date: '2024-07-30T08:30:00.000Z',
 			summary: `Day one of THAT Conference Online.`,
 			sessions: [
 				{
-					name: 'Shaundai Person',
+					name: 'Kent C. Dodds',
 					description: 'Keynote',
 					start: '8:30 AM'
 				},
@@ -23,7 +23,7 @@
 					start: '10:30 AM'
 				},
 				{
-					name: 'Breaking into Tech',
+					name: 'TBD',
 					description: '',
 					start: '11:30 AM'
 				},
@@ -33,7 +33,7 @@
 					start: '12:30 PM'
 				},
 				{
-					name: 'Navigating Hard Times in Tech',
+					name: 'TBD',
 					description: '',
 					start: '1:00 PM'
 				},
@@ -44,7 +44,7 @@
 				},
 
 				{
-					name: 'Compressed FM Live',
+					name: 'TBD',
 					description: '',
 					start: '2:30 PM'
 				},
@@ -54,18 +54,18 @@
 					start: '3:30 PM'
 				},
 				{
-					name: 'The Changelog Live',
+					name: 'TBD',
 					description: '',
 					start: '4:00 AM'
 				}
 			]
 		},
 		{
-			date: '2024-01-30T08:30:00.000Z',
+			date: '2024-07-31T08:30:00.000Z',
 			summary: 'Day two of THAT Conference Online.',
 			sessions: [
 				{
-					name: 'Danny Thompson',
+					name: 'Mark Techson',
 					description: 'Keynote',
 					start: '8:30 AM'
 				},
@@ -80,7 +80,7 @@
 					start: '10:30 AM'
 				},
 				{
-					name: 'Common Accessibility Mistakes',
+					name: 'TBD',
 					description: '',
 					start: '11:30 AM'
 				},
@@ -90,7 +90,7 @@
 					start: '12:30 PM'
 				},
 				{
-					name: 'The Future of AI and VR',
+					name: 'TBD',
 					description: '',
 					start: '1:00 PM'
 				},
@@ -101,7 +101,7 @@
 				},
 
 				{
-					name: 'Whiskey Web and Whatnot Live',
+					name: 'TBD',
 					description: '',
 					start: '2:30 PM'
 				},
@@ -111,18 +111,18 @@
 					start: '3:30 PM'
 				},
 				{
-					name: 'Whiskey Web and Whatnot Live',
+					name: 'TBD',
 					description: '',
 					start: '4:00 PM'
 				}
 			]
 		},
 		{
-			date: '2024-01-31T08:30:00.000Z',
+			date: '2024-08-01T08:30:00.000Z',
 			summary: 'The last day of THAT Conference Online',
 			sessions: [
 				{
-					name: 'Kelly Vaughn',
+					name: 'June Syndesi Kramer',
 					description: 'Keynote',
 					start: '8:30 AM'
 				},
@@ -137,7 +137,7 @@
 					start: '10:30 AM'
 				},
 				{
-					name: 'Comparing Modern JavaScript Frameworks',
+					name: 'TBD',
 					description: '',
 					start: '11:30 AM'
 				},
@@ -147,7 +147,7 @@
 					start: '12:30 PM'
 				},
 				{
-					name: 'Modern Web Development Best Practices',
+					name: 'TBD',
 					description: '',
 					start: '1:00 PM'
 				},
@@ -158,7 +158,7 @@
 				},
 
 				{
-					name: 'Whiskey Web and Whatnot Live',
+					name: 'TBD',
 					description: '',
 					start: '2:30 PM'
 				},
@@ -168,14 +168,9 @@
 					start: '3:30 PM'
 				},
 				{
-					name: 'Whiskey Web and Whatnot Live',
-					description: '',
-					start: '4:00 PM'
-				},
-				{
 					name: 'Closing',
 					description: '',
-					start: '5:00 PM'
+					start: '4:00 PM'
 				}
 			]
 		}
