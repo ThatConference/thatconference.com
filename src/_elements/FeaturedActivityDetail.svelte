@@ -48,7 +48,7 @@
 			</div>
 
 			<p class="text-sm italic text-thatBlue-200">
-				{dayjs(startTime).format('dddd, MMMM D, YYYY - h:mm A z')}
+				{dayjs(startTime).tz('America/Chicago').format('dddd, MMMM D, YYYY - h:mm A z')}
 			</p>
 		</div>
 	</div>

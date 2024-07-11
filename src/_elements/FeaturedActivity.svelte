@@ -41,7 +41,7 @@
 				<h4>{title}</h4>
 
 				<p class="mt-2 text-sm font-light">
-					{dayjs(startTime).format('dddd, MMMM D, YYYY - h:mm A z')}
+					{dayjs(startTime).tz('America/Chicago').format('dddd, MMMM D, YYYY - h:mm A z')}
 				</p>
 
 				<p class="mt-2 text-right text-lg font-bold leading-9">

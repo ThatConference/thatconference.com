@@ -53,8 +53,7 @@
 		</div>
 
 		<div class="pt-10 text-center text-2xl font-bold tracking-wider text-green-500">
-			<p>Times are represented in your browser's timezone.</p>
-			<p>THAT Conference is in Central Time.</p>
+			<p>THAT schedule is represented in our timezone, central time.</p>
 		</div>
 	</div>
 </Hero>

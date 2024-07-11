@@ -121,7 +121,9 @@
 										<div>
 											<p class="text-sm text-gray-900">
 												<time datetime="2020-01-07"
-													>{dayjs(c.createdAt).format('dddd, MMMM D, YYYY - h:mm A')}</time>
+													>{dayjs(c.createdAt)
+														.tz('America/Chicago')
+														.format('dddd, MMMM D, YYYY - h:mm A z')}</time>
 											</p>
 											<p class="mt-2 flex items-center text-sm text-gray-500">
 												<svg
