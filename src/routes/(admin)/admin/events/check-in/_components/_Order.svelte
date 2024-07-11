@@ -50,7 +50,9 @@
 							<p class="flex text-sm text-gray-900">
 								Purchased On:
 								<time class="pl-2 font-extrabold" datetime={registration.orderDate}>
-									{dayjs(registration.orderDate).format('dddd, MMMM D, YYYY - h:mm A')}
+									{dayjs(registration.orderDate)
+										.tz('America/Chicago')
+										.format('dddd, MMMM D, YYYY - h:mm A z')}
 								</time>
 							</p>
 							<div class="mt-2 flex items-center space-x-2 text-sm text-gray-500">

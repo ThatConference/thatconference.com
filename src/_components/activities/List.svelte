@@ -295,7 +295,7 @@
 								{#if !dayjs(ts.timeSlot).isValid()}
 									Unscheduled
 								{:else}
-									{dayjs(ts.timeSlot).format('h:mm A z')}
+									{dayjs(ts.timeSlot).tz('America/Chicago').format('h:mm A z')}
 								{/if}
 							</h2>
 						{/if}
