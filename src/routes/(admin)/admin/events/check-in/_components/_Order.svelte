@@ -2,10 +2,15 @@
 	export let registration;
 
 	import dayjs from 'dayjs';
+	import timezone from 'dayjs/plugin/timezone.js';
+	import utc from 'dayjs/plugin/utc.js';
 
 	import config from '$lib/config.public';
 	import { Chevron } from '$elements/svgs';
 	import Ticket from './_Ticket.svelte';
+
+	dayjs.extend(utc);
+	dayjs.extend(timezone);
 
 	let userClicked = false;
 	const { member } = registration;

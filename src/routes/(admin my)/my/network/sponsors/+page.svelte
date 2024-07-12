@@ -2,19 +2,13 @@
 	export let data;
 
 	import dayjs from 'dayjs';
+	import timezone from 'dayjs/plugin/timezone.js';
+	import utc from 'dayjs/plugin/utc.js';
+
 	let { contacts = [] } = data;
 
-	//todo add seo
-	// metaTagsStore.set({
-	// 	title: 'Your Sponsor Network - THAT',
-	// 	description: '',
-	// 	nofollow: true,
-	// 	noindex: true,
-	// 	openGraph: {
-	// 		type: 'website',
-	// 		url: `https://that.us/my/network/sponsors`
-	// 	}
-	// });
+	dayjs.extend(utc);
+	dayjs.extend(timezone);
 </script>
 
 <div>

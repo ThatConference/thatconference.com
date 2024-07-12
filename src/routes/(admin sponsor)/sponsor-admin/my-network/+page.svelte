@@ -2,11 +2,16 @@
 	export let data;
 
 	import dayjs from 'dayjs';
+	import timezone from 'dayjs/plugin/timezone.js';
+	import utc from 'dayjs/plugin/utc.js';
 
 	import seoMetaTags from '$lib/seo/metaTags';
 	import { csvGenerator } from '$lib/csv';
 	import Seo from '$components/Seo.svelte';
 	import { Shell } from '$elements/buttons';
+
+	dayjs.extend(utc);
+	dayjs.extend(timezone);
 
 	let { contacts } = data;
 	const metaTags = ((title = 'Partner Network - THAT') => ({
