@@ -4,6 +4,7 @@
 	import dayjs from 'dayjs';
 	import timezone from 'dayjs/plugin/timezone.js';
 	import utc from 'dayjs/plugin/utc.js';
+	import advancedFormat from 'dayjs/plugin/advancedFormat.js';
 
 	import config from '$lib/config.public';
 	import { Chevron } from '$elements/svgs';
@@ -11,6 +12,7 @@
 
 	dayjs.extend(utc);
 	dayjs.extend(timezone);
+	dayjs.extend(advancedFormat);
 
 	let userClicked = false;
 	const { member } = registration;

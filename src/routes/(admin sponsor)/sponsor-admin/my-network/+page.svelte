@@ -4,6 +4,7 @@
 	import dayjs from 'dayjs';
 	import timezone from 'dayjs/plugin/timezone.js';
 	import utc from 'dayjs/plugin/utc.js';
+	import advancedFormat from 'dayjs/plugin/advancedFormat.js';
 
 	import seoMetaTags from '$lib/seo/metaTags';
 	import { csvGenerator } from '$lib/csv';
@@ -12,9 +13,10 @@
 
 	dayjs.extend(utc);
 	dayjs.extend(timezone);
+	dayjs.extend(advancedFormat);
 
 	let { contacts } = data;
-	const metaTags = ((title = 'Partner Network - THAT') => ({
+	const metaTags = ((title = 'Sponsor Network - THAT') => ({
 		title,
 		tags: seoMetaTags({
 			title,
@@ -142,24 +144,19 @@
 														d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
 														clip-rule="evenodd" />
 												</svg>
-												Contact exchanged
+
+												{#if c.partnerContact}
+													{c.partnerContact?.firstName} {c.partnerContact?.lastName}
+												{:else}
+													Contact Exchanged
+												{/if}
 											</p>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div>
-								<svg
-									class="h-5 w-5 text-gray-400"
-									xmlns="http://www.w3.org/2000/svg"
-									viewBox="0 0 20 20"
-									fill="currentColor"
-									aria-hidden="true">
-									<path
-										fill-rule="evenodd"
-										d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
-										clip-rule="evenodd" />
-								</svg>
+							<div class="w-20 text-sm text-gray-500">
+								{c.partnerPin}
 							</div>
 						</div>
 					</li>
