@@ -122,7 +122,7 @@ const eventFieldsFragment = `
 			...productBaseFields
 		}
 
-		sessions(pageSize: 150) {
+		sessions(pageSize: 200) {
 			sessions {
 				...coreSessionFields
 				speakers {
