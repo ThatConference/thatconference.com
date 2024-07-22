@@ -7,9 +7,7 @@
 </script>
 
 <CTA>
-	<h2
-		class="max-w-3xl text-3xl font-extrabold leading-9 tracking-tight text-thatOrange-500
-    sm:text-4xl sm:leading-10">
+	<h2 class="lineBreaks max-w-4xl text-3xl tracking-normal text-thatOrange-500">
 		{action}
 	</h2>
 
