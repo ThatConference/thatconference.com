@@ -58,7 +58,7 @@
 
 	<section class="my-48">
 		<!-- todo: once scheduled -->
-		<!-- <Live /> -->
+		<Live />
 	</section>
 
 	<section class="my-48">
