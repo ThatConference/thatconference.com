@@ -2,30 +2,21 @@
 	export let sessions;
 </script>
 
-<ol class="space-y-6 bg-white/60 py-14 text-center shadow-xl shadow-blue-900/5 backdrop-blur">
-	{#each sessions as session, i}
-		<!-- make each of these a button -->
-		<li>
-			{#if i > 0}
-				<div class="mx-auto mb-6 h-px w-48 bg-indigo-500/10" />
-			{/if}
+<ol class="space-y-14 bg-white/60 py-14 shadow-xl shadow-blue-900/5 backdrop-blur">
+	{#each sessions as session}
+		<li class="px-4">
+			<p class="font-mono text-col flex items-center justify-center pb-8 text-center text-lg">
+				<span class="flex-grow border-t border-gray-300"></span>
+				<span class="px-3 text-gray-400">{session.start}</span>
+				<span class="flex-grow border-t border-gray-300"></span>
+			</p>
 
 			<h4 class="text-lg font-semibold tracking-tight text-thatBlue-700">
 				{session.name}
 			</h4>
 
-			<p class="mt-1 tracking-tight text-thatBlue-700">
+			<p class="mt-4 tracking-tight text-thatBlue-700">
 				{session.description}
-			</p>
-
-			<p class="font-mono mt-1 text-sm text-slate-500">
-				{session.start}
-				<!-- <time dateTime={`${day.dateTime}T${timeSlot.start}-08:00`}> {timeSlot.start}</time>
-					{' '}-{' '}
-					<time dateTime={`${day.dateTime}T${timeSlot.end}-08:00`}>
-						{timeSlot.end}
-					</time>
-					{' '} PST -->
 			</p>
 		</li>
 	{/each}

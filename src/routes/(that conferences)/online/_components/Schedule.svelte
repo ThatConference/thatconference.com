@@ -38,8 +38,8 @@
 					start: '1:00 PM'
 				},
 				{
-					name: 'Break / Live Q&A',
-					description: '',
+					name: 'Developers of the World',
+					description: 'Sharing your story with the world.',
 					start: '2:00 PM'
 				},
 
@@ -80,8 +80,9 @@
 					start: '10:30 AM'
 				},
 				{
-					name: 'TBD',
-					description: '',
+					name: 'Developer Hedbanz',
+					description:
+						'Get ready for Developer Headbandz with Andrew! Participants will hold cards with tech terms on their foreheads while the audience provides clues to help them guess. It’s a timed, high-energy game that promises excitement and lots of laughs!',
 					start: '11:30 AM'
 				},
 				{
@@ -90,19 +91,21 @@
 					start: '12:30 PM'
 				},
 				{
-					name: 'TBD',
-					description: '',
+					name: 'Camper Conversations',
+					description:
+						"Join Shashi for Camper Conversations at THAT Conference, where campers share their experiences and insights from the conference so far. Hear first hand stories, highlights, and memorable moments that make THAT Conference truly special. Don't miss this chance to connect and reflect with fellow campers!",
 					start: '1:00 PM'
 				},
 				{
-					name: 'Break / Live Q&A',
-					description: '',
+					name: 'Developers of the World',
+					description: 'Sharing your story with the world.',
 					start: '2:00 PM'
 				},
 
 				{
-					name: 'TBD',
-					description: '',
+					name: 'Tech Commute Live',
+					description:
+						'A sit down Q&A tech commute style with questions from the live stream. About life in and around tech. It’s the Tech Commute at THAT. On Thursday we will do a retrospective of the event. ',
 					start: '2:30 PM'
 				},
 				{
@@ -111,8 +114,9 @@
 					start: '3:30 PM'
 				},
 				{
-					name: 'TBD',
-					description: '',
+					name: 'Ready Set Battlesnake!',
+					description:
+						'Dive into the thrilling world of AI programming with Andrew in Ready Set Battlesnake! Watch as live coding brings AI snakes to life, navigating and outsmarting opponents in a dynamic, competitive arena. It’s coding like you’ve never seen before!',
 					start: '4:00 PM'
 				}
 			]
@@ -137,8 +141,9 @@
 					start: '10:30 AM'
 				},
 				{
-					name: 'TBD',
-					description: '',
+					name: 'Tech Trivia Challenge',
+					description:
+						"Test your tech knowledge in the Tech Trivia Challenge, hosted by Pj! Join in for a fun and interactive quiz session where campers compete to answer tech-related questions. It's a fast-paced, exciting game that promises great fun and plenty of learning moments.",
 					start: '11:30 AM'
 				},
 				{
@@ -147,19 +152,21 @@
 					start: '12:30 PM'
 				},
 				{
-					name: 'TBD',
-					description: '',
+					name: 'Tech Commute Live',
+					description:
+						'A sit down Q&A tech commute style with questions from the live stream. About life in and around tech. It’s the Tech Commute at THAT. On Thursday we will do a retrospective of the event.',
 					start: '1:00 PM'
 				},
 				{
-					name: 'Break / Live Q&A',
-					description: '',
+					name: 'Developers of the World',
+					description: 'Sharing your story with the world.',
 					start: '2:00 PM'
 				},
 
 				{
-					name: 'TBD',
-					description: '',
+					name: 'Code Confessions',
+					description:
+						'Prepare for some hearty laughs with Code Confessions. Step into our “confession booth” and hear anonymously submitted, hilarious coding blunders from fellow developers. It’s a session that proves we’re all human!',
 					start: '2:30 PM'
 				},
 				{
