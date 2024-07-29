@@ -12,7 +12,7 @@ layout: support
 
 Welcome to THAT Conference, we're so glad you're here. This Handbook should have the answers you need to successfully navigate the rapids leading up to and right on through the big event. Even if you've been to THAT Conference before, things may have changed. This Field Guide is your best source for up-to-date guides on what to do and where to go. Check back periodically for updates as well, as we'll be answering Frequently Asked Questions as they come up.
 
-Last updated on **June 8th, 2023**
+Last updated on **July 26th, 2024**
 
 ## Registration
 
@@ -43,7 +43,7 @@ After Tuesday morning the registration Desk turns into THAT Ranger Station where
 
 ### Schedule
 
-With over 100 sessions, activities and Open Spaces sessions, keeping track of it all can be quite challenging. All regular sessions and THAT Conference activities are listed in the schedule [here](/activities/). All the Open Spaces sessions are managed on the Open Spaces boards located in the Open Spaces room.
+With over 100 sessions, activities and Open Spaces sessions, keeping track of it all can be quite challenging. All regular sessions and THAT Conference activities are listed in the schedule [here](/camp/). All the Open Spaces sessions are managed on the Open Spaces boards located in the Open Spaces room.
 
 ### Favorites
 
@@ -101,7 +101,7 @@ To verify and update what information is being shared, head to your profile's [s
 
 ### Profile
 
-Your profile can be made public or private. Public profiles will show under our [members]('/members/') page and be picked up by search engines. Private profiles are not shown or discoverable by search engines. All counselors must have a public profile.
+Your profile can be made public or private. Public profiles will show under our [members](/members/) page and be picked up by search engines. Private profiles are not shown or discoverable by search engines. All counselors must have a public profile.
 
 ## Dealing with Uncomfortable Situations
 
