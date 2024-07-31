@@ -1,7 +1,7 @@
 <script>
 	import StandardLink from '$elements/links/Standard.svelte';
 
-	const streamId = 'uf5fZd4YB2Eb';
+	const streamId = '7W9v9giezqde';
 </script>
 
 <div class="relative mx-auto max-w-screen-xl px-8">
