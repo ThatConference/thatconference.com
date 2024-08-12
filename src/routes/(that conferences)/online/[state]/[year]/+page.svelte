@@ -10,7 +10,7 @@
 	import SpeakersLight from '../../../_components/speakers/SpeakersLight.svelte';
 	import Attendees from '../../../_components/Attendees.svelte';
 
-	import Live from '../../_components/Live.svelte';
+	//	import Live from '../../_components/Live.svelte';
 	import Hero from '../../_components/Hero.svelte';
 	import EventTickets from '../../_components/EventTickets.svelte';
 	import FAQ from '../../_components/FAQ.svelte';
@@ -56,10 +56,9 @@
 		<Hero {event} />
 	</section>
 
-	<section class="my-48">
-		<!-- todo: once scheduled -->
+	<!-- <section class="my-48">
 		<Live />
-	</section>
+	</section> -->
 
 	<section class="my-48">
 		<Keynoters {keynoters} />
