@@ -29,7 +29,6 @@
 					<p>
 						Made with <span class="pr-2">💙</span> in Spring Grove, IL
 					</p>
-					<p>+1-484-302-8428</p>
 				</div>
 				<div class="flex space-x-2">
 					{#each socials as s}
