@@ -82,12 +82,6 @@
 			});
 		}
 
-		if (window.FrontChat) {
-			window.FrontChat('init', {
-				chatId: '7b05ee77044ae53947facbe0aae7d894',
-				useDefaultLauncher: true
-			});
-		}
 		if (typeof window !== 'undefined') {
 			const unsubscribePage = page.subscribe(($page) => {
 				if (currentPath && currentPath !== $page.url.pathname) {
